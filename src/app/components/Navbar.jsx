@@ -25,6 +25,9 @@ import angular from "@/assets/angular.png";
 import reactnative from "@/assets/reactnative.png";
 import react from "@/assets/reactnative.png";
 import flutter from "@/assets/flutter.png";
+import logo from "@/assets/favicon.png";
+import right_arrow_orange from "@/assets/right_arrow_orange.png";
+import right_arrow_white from "@/assets/right_arrow_white.png";
 
 import { motion } from "framer-motion";
 import store from "../store/store";
@@ -73,19 +76,30 @@ const Navbar = ({ style }) => {
                   handleOptionClick();
                   setRequestDemoClick(false);
                 }}
+                className="flex"
               >
+                <Image src={logo} alt={`${logo}`} width={35} height={35} className="mr-2" />
                 <h1
-                  className={`hover:cursor-pointer text-[#506BBB] font-Poppins font-semibold text-[3vh] leading-[110%]`}
+                  className={`hover:cursor-pointer text-[#FD5F03] font-Poppins font-semibold text-[4vh] leading-[110%]`}
                 >
                   AppStorys
                 </h1>
-                {/* <Image src={main_logo_crop} alt={`${main_logo_crop}`} className='h-[100px]'/> */}
               </Link>
             </div>
             <div
               className={`hidden min-[1078px]:flex justify-center items-center gap-x-[2.8vw] max-[1236px]:gap-x-[2vw] h-full ${style === "dark" ? "text-[#fff]" : "text-[#000]"
                 }`}
             >
+              <Link
+                href="/about"
+                className="text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer "
+                onClick={() => {
+                  handleOptionClick;
+                  setRequestDemoClick(false);
+                }}
+              >
+                About Us
+              </Link>
               <div className="relative">
                 <button
                   onClick={() => {
@@ -110,14 +124,14 @@ const Navbar = ({ style }) => {
                 </button>
               </div>
               <Link
-                href="/security"
+                href="/overview"
                 className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer "
                 onClick={() => {
                   handleOptionClick;
                   setRequestDemoClick(false);
                 }}
               >
-                Security
+                Platform Overview
               </Link>
               <div className="relative">
                 <button
@@ -142,16 +156,7 @@ const Navbar = ({ style }) => {
                   />
                 </button>
               </div>
-              <Link
-                href="/about"
-                className="text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer "
-                onClick={() => {
-                  handleOptionClick;
-                  setRequestDemoClick(false);
-                }}
-              >
-                About Us
-              </Link>
+
               <Link
                 href="/getintouch"
                 className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer "
@@ -160,36 +165,118 @@ const Navbar = ({ style }) => {
                   setRequestDemoClick(false);
                 }}
               >
-                Contact Us
+                Support
               </Link>
             </div>
           </div>
           <div className="hidden min-[1078px]:flex justify-center items-center gap-x-[1vw] h-full">
-            <button
-              className="flex justify-center items-center bg-[#d64830] text-[1.6vh] font-InstrumentSans gap-x-[0.6vw] text-white font-bold tracking-[1.18px] h-[6vh] w-[12vw]"
+
+            {/* Request Demo Button */}
+            <motion.button
+              className="relative overflow-hidden flex border-3 border-[#FD5F03] justify-center items-center text-[1.6vh] font-InstrumentSans gap-x-[0.6vw] text-[#FD5F03] font-bold tracking-[1.18px] h-[6vh] w-[10vw] bg-white rounded-lg hover:shadow-[0_0_30px_5px_rgba(253,95,3,0.7)] transition-shadow duration-300 "
               onClick={() => {
-                handleOptionClick;
+                handleOptionClick();
                 setRequestDemoClick(true);
               }}
+              whileHover="hover"
             >
-              <div className="w-[0.6vh] h-[0.6vh] bg-white rounded-full"></div>
-              REQUEST A DEMO
-            </button>
-            <a
-              href="https://admin.appstorys.com/"
-              target="/blank"
-              className="flex justify-center items-center bg-[#d64830] text-[1.6vh] font-InstrumentSans gap-x-[0.6vw] text-white font-bold tracking-[1.18px] h-[6vh] w-[12vw]"
+              {/* Background Animation */}
+              <motion.div
+                variants={{
+                  initial: { top: "0%" },
+                  hover: { top: "-100%" },
+                }}
+                transition={{ duration: 0.3 }}
+                className="absolute top-0 left-0 w-full h-full bg-white z-0"
+              />
+              <motion.div
+                variants={{
+                  initial: { top: "100%" },
+                  hover: { top: "0%" },
+                }}
+                transition={{ duration: 0.3 }}
+                className="absolute top-full left-0 w-full h-full bg-orange-500 z-0"
+              />
+
+              {/* Text Layer */}
+              <motion.span
+                variants={{
+                  initial: { y: 0 },
+                  hover: { y: "-100%" },
+                }}
+                transition={{ duration: 0.3 }}
+                className="absolute w-full h-full flex items-center justify-center text-orange-500 font-semibold text-lg z-20"
+              >
+                Demo <Image src={right_arrow_orange} height={10} width={10} className="ml-2" alt="right arrow " />
+              </motion.span>
+              <motion.span
+                variants={{
+                  initial: { y: "100%" },
+                  hover: { y: "0%" },
+                }}
+                transition={{ duration: 0.3 }}
+                className="absolute w-full h-full flex items-center justify-center text-white font-semibold text-lg z-10"
+              >
+                Demo <Image src={right_arrow_white} height={10} width={10} className="ml-2" alt="right arrow " />
+              </motion.span>
+            </motion.button>
+
+            {/* Login Button */}
+            <motion.div
+              className="relative overflow-hidden flex border-3 border-[#FD5F03] justify-center items-center text-[1.6vh] font-InstrumentSans gap-x-[0.6vw] text-[#FD5F03] font-bold tracking-[1.18px] h-[6vh] w-[10vw] cursor-pointer hover:shadow-[0_0_30px_5px_rgba(253,95,3,0.7)] transition-shadow duration-300 bg-white rounded-lg"
               onClick={() => {
-                handleOptionClick;
+                handleOptionClick();
                 setRequestDemoClick(false);
               }}
+              whileHover="hover"
             >
-              <div className="w-[0.6vh] h-[0.6vh] bg-white rounded-full"></div>
-              LOG IN
-            </a>
+              <Link href="https://admin.appstorys.com/" target="_blank" className="w-full h-full flex items-center justify-center relative">
+                {/* Background Animation */}
+                <motion.div
+                  variants={{
+                    initial: { top: "0%" },
+                    hover: { top: "-100%" },
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute top-0 left-0 w-full h-full bg-white z-0"
+                />
+                <motion.div
+                  variants={{
+                    initial: { top: "100%" },
+                    hover: { top: "0%" },
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute top-full left-0 w-full h-full bg-orange-500 z-0"
+                />
+
+                {/* Text Layer */}
+                <motion.span
+                  variants={{
+                    initial: { y: 0 },
+                    hover: { y: "-100%" },
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute w-full h-full flex items-center justify-center text-[#FD5F03] font-bold text-lg z-20"
+                >
+                  Login <Image src={right_arrow_orange} height={10} width={10} className="ml-2" alt="right arrow " />
+                </motion.span>
+                <motion.span
+                  variants={{
+                    initial: { y: "100%" },
+                    hover: { y: "0%" },
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute w-full h-full flex items-center justify-center text-white font-bold text-lg z-10"
+                >
+                  Login <Image src={right_arrow_white} height={10} width={10} className="ml-2" alt="right arrow " />
+                </motion.span>
+              </Link>
+            </motion.div>
+
           </div>
           <Image
-            fill
+            height={10}
+            width={10}
             src={`${style === "dark" ? hamburger_white.src : hamburger_black.src}`}
             alt={`${style === "dark"
               ? "AppStorys hamburger_white"
@@ -667,8 +754,9 @@ const Navbar = ({ style }) => {
               >
                 Features
                 <Image
-                  fill
-                  src={`${style === "dark" ? down_arrow_white : down_arrow_black
+                  height={10}
+                  width={10}
+                  src={`${style === "dark" ? down_arrow_white.src : down_arrow_black.src
                     }`}
                   alt={`${style === "dark"
                     ? "AppStorys down_arrow_white"
@@ -702,7 +790,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={floater}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -726,7 +815,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={story}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -750,7 +840,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={pip}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -774,7 +865,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={coach}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -798,7 +890,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={banner}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -822,7 +915,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={survey}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -846,7 +940,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={quiz}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -870,7 +965,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={csat}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -894,7 +990,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={widget}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -918,7 +1015,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={spot}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -942,7 +1040,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={reel}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -966,7 +1065,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] max-[450px]:gap-x-[5vw] hover:cursor-pointer w-full">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={scratch}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -1003,10 +1103,11 @@ const Navbar = ({ style }) => {
               >
                 Resources
                 <Image
-                  fill
-                  src={`${style === "dark" ? down_arrow_white : down_arrow_black
+                  width={10}
+                  height={10}
+                  src={`${style === "dark" ? down_arrow_white.src : down_arrow_black.src
                     }`}
-                  alt={`${style === "dark" ? down_arrow_white : down_arrow_black
+                  alt={`${style === "dark" ? down_arrow_white.src : down_arrow_black.src
                     }`}
                   className={`h-[2vh] ${dropdownOpen.resources
                     ? "rotate-180 ease-in duration-150"
@@ -1036,7 +1137,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={blog}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -1060,7 +1162,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={career}
                             alt="AppStorys check_black"
                             className="h-[4vh]"
@@ -1084,7 +1187,8 @@ const Navbar = ({ style }) => {
                       >
                         <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
                           <Image
-                            fill
+                            width={10}
+                            height={10}
                             src={bulb}
                             alt="AppStorys check_black"
                             className="h-[4vh]"

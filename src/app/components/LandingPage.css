@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 3s ease-out;
+}
+.elevate{
+    font-family: "Satisfy", cursive;
+}
