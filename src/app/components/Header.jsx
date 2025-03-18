@@ -32,7 +32,7 @@ import right_arrow_white from "@/assets/right_arrow_white.png";
 import { motion } from "framer-motion";
 import store from "../store/store";
 
-const Navbar = ({ style }) => {
+const Header = ({ style }) => {
   const [dropdownOpen, setDropdownOpen] = useState({
     feature: false,
     resources: false,
@@ -62,7 +62,7 @@ const Navbar = ({ style }) => {
   return (
     <>
       <div
-        className={`w-full z-[1000] flex flex-col justify-start items-center bg-[#fff] h-full py-[15px] px-[8%] max-[1129px]:px-[2%] min-[927px]:px-[0%] min-[927px]:py-[20px]`}
+        className={`w-full bg-transparent relative z-[1000] flex flex-col justify-start items-center h-full py-[15px] px-[8%] max-[1129px]:px-[2%] min-[927px]:px-[0%] min-[927px]:py-[20px]`}
       >
         <div className="flex justify-between items-center w-full min-[1158px]:px-[3%] max-[1158px]:px-[3%] h-full">
           <div className="flex justify-start items-center gap-x-[4vw] max-[1158px]:gap-x-[3vw]">
@@ -1256,4 +1256,4 @@ const Navbar = ({ style }) => {
   );
 };
 
-export default Navbar;
+export default Header;

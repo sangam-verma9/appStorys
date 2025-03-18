@@ -13,6 +13,7 @@ import stories_popup from "@/assets/stories_popup.png"
 import pipvideo_popup from "@/assets/pipvideo_popup.png"
 import floter_popup from "@/assets/floter_popup.png"
 import banner_popup from "@/assets/banner_popup.png"
+import letter_icon from "@/assets/letter_icon.png"
 const LandingPage = () => {
     const texts = [
         { text: "User Experiences", color: "text-orange-500" },
@@ -154,6 +155,14 @@ const LandingPage = () => {
                     animate={{ opacity: 1, scale: 1, x: scrollAmount * 0.7, y: -scrollAmount * 0.97 }}
                     transition={{ duration: 0.5 }}
                 />
+            </div>
+            <div className="w-full flex justify-center">
+                <div className="flex py-1.5 px-4 border rounded-lg justify-center items-center bg-white hover:bg-[#FD5F03] text-[#4A4A4A] hover:text-white cursor-pointer">
+                    <p className="text-[20px] font-normal mr-2 ">Request A Demo</p>
+                    <div className="bg-[#FD5F03] w-[4vw] h-[6vh] flex justify-center items-center rounded-lg">
+                        <Image src={letter_icon.src} alt="letter icon" width={33} height={33} />
+                    </div>
+                </div>
             </div>
         </div>
     )
