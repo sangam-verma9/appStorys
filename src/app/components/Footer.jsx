@@ -53,74 +53,74 @@ const Footer = () => {
         <div className='grid grid-cols-1 sm:grid-cols-4 my-4 mt-6'>
           <div className='flex justify-center sm:justify-normal'>
             <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-              <h3 className={`${bricolageGrotesque.className} capitalize`}>Integratable growth Tools</h3>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Stories</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>reels/Short videos</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>PiP Videos</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>banners</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Floaters</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Widgets</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Quizzes</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Surveys</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>CSAT Feedback</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Coachmarks</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>tooltips</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Scratch Cards</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>bottom Sheets</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>Spotlight</p>
+              <h3 className={`${bricolageGrotesque.className} capitalize text-[18px]`}>Integratable growth Tools</h3>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Stories</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>reels/Short videos</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>PiP Videos</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>banners</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Floaters</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Widgets</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Quizzes</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Surveys</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>CSAT Feedback</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Coachmarks</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>tooltips</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Scratch Cards</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>bottom Sheets</p>
+              <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>Spotlight</p>
             </div>
           </div>
           <div className='flex justify-center'>
             <div className='flex flex-col justify-between'>
               <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-                <h3 className={`${bricolageGrotesque.className} capitalize  `}>Our SDKs</h3>
-                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] `}>iOS</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>android</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>flutter</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>react native</p>
-                <p className={`${outfit.className} font-extralight  text-[#606060] hover:text-[#000000] text-[14px]`}>React.js</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>angular</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>wordpress</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>shopify</p>
+                <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>Our SDKs</h3>
+                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  `}>iOS</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>android</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>flutter</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>react native</p>
+                <p className={`${outfit.className} font-extralight  text-[#606060] hover:text-[#000000] `}>React.js</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>angular</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>wordpress</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>shopify</p>
               </div>
               <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-                <h3 className={`${bricolageGrotesque.className} capitalize  `}>resources</h3>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>blog</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>inspiration gallery</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>appStorys book</p>
+                <h3 className={`${bricolageGrotesque.className} capitalize  text-[18px]`}>resources</h3>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>blog</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>inspiration gallery</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>appStorys book</p>
               </div>
             </div>
           </div>
 
           <div className='flex justify-center'>
             <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-              <h3 className={`${bricolageGrotesque.className} capitalize  `}>Integrations</h3>
-              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] capitalize`}>cleverTap</p>
-              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px]`}>MoEngage</p>
-              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px]`}>Mixpanel</p>
-              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px]`}>mParticle</p>
-              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px]`}>Custom Audiences</p>
+              <h3 className={`${bricolageGrotesque.className} capitalize  text-[18px]`}>Integrations</h3>
+              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  capitalize`}>cleverTap</p>
+              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] `}>MoEngage</p>
+              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] `}>Mixpanel</p>
+              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] `}>mParticle</p>
+              <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] `}>Custom Audiences</p>
             </div>
           </div>
           <div className='flex sm:justify-end justify-center'>
             <div className='flex flex-col justify-between'>
               <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-                <h3 className={`${bricolageGrotesque.className} capitalize  `}>security</h3>
-                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] capitalize`}>SOC 2 verified</p>
-                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] capitalize`}>encrypted</p>
-                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] capitalize`}>24/7 Global Fraud Monitoring</p>
-                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] capitalize`}>AWS Servers - No data collected</p>
-                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] capitalize`}>GDPR Compliant</p>
-                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000] text-[14px] capitalize`}>RBI Compliant</p>
+                <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>security</h3>
+                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  capitalize`}>SOC 2 verified</p>
+                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  capitalize`}>encrypted</p>
+                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  capitalize`}>24/7 Global Fraud Monitoring</p>
+                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  capitalize`}>AWS Servers - No data collected</p>
+                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  capitalize`}>GDPR Compliant</p>
+                <p className={`${outfit.className} font-extralight text-[#606060] hover:text-[#000000]  capitalize`}>RBI Compliant</p>
               </div>
               <div className='flex flex-col text-center sm:text-left'>
-                <h3 className={`${bricolageGrotesque.className} capitalize  `}>company</h3>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>about</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>contact us</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>careers</p>
-                <p className={`${outfit.className} font-extralight  text-[#606060] hover:text-[#000000] text-[14px]`}>Terms of Service</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>privacy Policy</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] text-[14px]`}>refund policy</p>
+                <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>company</h3>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>about</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>contact us</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>careers</p>
+                <p className={`${outfit.className} font-extralight  text-[#606060] hover:text-[#000000] `}>Terms of Service</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>privacy Policy</p>
+                <p className={`${outfit.className} font-extralight capitalize text-[#606060] hover:text-[#000000] `}>refund policy</p>
               </div>
             </div>
           </div>
