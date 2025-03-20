@@ -21,16 +21,16 @@ const poppins = Poppins({
 const Footer = () => {
   return (
     <div className='w-full bg-gradient-to-b from-white to-[#FFEBE0]'>
-      <div className='sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1280px] px-10 py-8 mx-auto'>
+      <div className='sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1200px] px-10 py-8 mx-auto'>
         <div className={`flex flex-col sm:flex-row sm:justify-between sm:items-center`}>
           <h2 className={`text-[28px] ${bricolageGrotesque.className} leading-tight`}>Get started today or schedule<br /> a quick 15 min demo</h2>
           <div className='mt-5 sm:mt-0'><button className={` ${outfit.className} px-8 py-3 bg-[#FD5F03] cursor-pointer rounded-md text-white text-md sm:text-xl font-bold`}>BOOK A DEMO</button></div>
         </div>
         <div className='w-[100%] h-[0.8px] bg-[#fcf1e4] relative my-4'></div>
         <div className='flex flex-col sm:flex-row justify-between sm:items-center my-4 py-2'>
-          <div className='flex mb-5 sm:mb-0 justify-center sm:justify-normal'>
-            <img src={logo.src} alt={`${logo}`} width={30} height={30} className="mr-2" />
-            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-Poppins font-semibold text-[4vh] leading-[110%] ${poppins.className}`}>
+          <div className='flex mb-5 sm:mb-0 justify-center sm:justify-normal items-center'>
+            <img src={logo.src} alt={`${logo}`} className="mr-2 w-[7%]" />
+            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-Poppins font-semibold text-[40px] leading-[110%] ${poppins.className}`}>
               AppStorys
             </h1>
           </div>
