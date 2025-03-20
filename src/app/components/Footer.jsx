@@ -30,7 +30,7 @@ const Footer = () => {
         <div className='flex flex-col sm:flex-row justify-between sm:items-center my-4 py-2'>
           <div className='flex mb-5 sm:mb-0 justify-center sm:justify-normal items-center'>
             <img src={logo.src} alt={`${logo}`} className="mr-2 w-[5%] " />
-            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-Poppins font-semibold text-[30px] leading-[110%] ${poppins.className}`}>
+            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-semibold text-[30px] leading-[110%] ${poppins.className}`}>
               AppStorys
             </h1>
           </div>

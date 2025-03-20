@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
+import { Outfit, Bricolage_Grotesque, Poppins } from 'next/font/google';
 import down_arrow_black from "@/assets/down_arrow_black.png";
 import down_arrow_white from "@/assets/down_arrow_white.png";
 import hamburger_black from "@/assets/hamburger_black.png";
@@ -31,6 +32,10 @@ import right_arrow_white from "@/assets/right_arrow_white.png";
 
 import { motion } from "framer-motion";
 import store from "../store/store";
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
 
 const Header = ({ style }) => {
   const [dropdownOpen, setDropdownOpen] = useState({
@@ -76,11 +81,11 @@ const Header = ({ style }) => {
                   handleOptionClick();
                   setRequestDemoClick(false);
                 }}
-                className="flex"
+                className="flex items-center"
               >
-                <Image src={logo} alt={`${logo}`} width={35} height={35} className="mr-2" />
+                <img src={logo.src} alt={`${logo}`} width={35} height={35} className="mr-2" />
                 <h1
-                  className={`hover:cursor-pointer text-[#FD5F03] font-Poppins font-semibold text-[4vh] leading-[110%]`}
+                  className={`hover:cursor-pointer text-[#FD5F03] ${poppins.className} font-semibold text-[4vh] leading-[110%]`}
                 >
                   AppStorys
                 </h1>
@@ -1234,7 +1239,7 @@ const Header = ({ style }) => {
                 }}
               >
                 <div className="w-[0.6vh] h-[0.6vh] bg-white rounded-full"></div>
-                REQUEST A DEMO
+                Demo
               </button>
               <a
                 href="https://admin.appstorys.com/"
@@ -1246,7 +1251,7 @@ const Header = ({ style }) => {
                 }}
               >
                 <div className="w-[0.6vh] h-[0.6vh] bg-white rounded-full"></div>
-                LOG IN
+                Login
               </a>
             </div>
           </motion.div>
