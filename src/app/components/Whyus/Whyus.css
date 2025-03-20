@@ -1,8 +1,0 @@
-.cards {
-    box-shadow: 2px 4px 38px 0px rgba(0, 0, 0, 0.07);
-    scale: 0.9;
-}
-
-.cards:hover {
-    scale: 0.93;
-}

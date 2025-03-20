@@ -7,9 +7,9 @@ import HowItWorks from "./components/Howitworks/HowItWorks";
 export default function Home() {
   return (
     <>
-      <LandingPage />
-      <Whyus />
-      <HowItWorks/>
+      {/* <LandingPage /> */}
+      {/* <Whyus /> */}
+      {/* <HowItWorks/> */}
     </>
   );
 }
