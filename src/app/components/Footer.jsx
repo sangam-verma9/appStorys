@@ -2,10 +2,10 @@ import Image from 'next/image'
 import React from 'react'
 import logo from "@/assets/favicon.png";
 import { Outfit, Bricolage_Grotesque, Poppins } from 'next/font/google';
-import linkedin_icon from "@/assets/linkedin_icon.png"
-import insta_icon from "@/assets/insta_icon.png"
-import x_icon from "@/assets/x_icon.png"
-import youtube_icon from "@/assets/youtube_icon.png"
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 import footer_img1 from "@/assets/footer_img1.png"
 import footer_img2 from "@/assets/footer_img2.png"
 
@@ -29,23 +29,23 @@ const Footer = () => {
         <div className='w-[100%] h-[0.8px] bg-[#fcf1e4] relative my-4'></div>
         <div className='flex flex-col sm:flex-row justify-between sm:items-center my-4 py-2'>
           <div className='flex mb-5 sm:mb-0 justify-center sm:justify-normal items-center'>
-            <img src={logo.src} alt={`${logo}`} className="mr-2 w-[7%]" />
-            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-Poppins font-semibold text-[40px] leading-[110%] ${poppins.className}`}>
+            <img src={logo.src} alt={`${logo}`} className="mr-2 w-[5%] " />
+            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-Poppins font-semibold text-[30px] leading-[110%] ${poppins.className}`}>
               AppStorys
             </h1>
           </div>
           <div className='flex justify-center sm:justify-normal'>
             <p >
-              <Image src={linkedin_icon.src} width={25} height={20} alt='pedin' className='mr-3' />
+              <FaLinkedin className='w-[35px] h-[35px] mr-3 cursor-pointer' />
             </p>
             <p >
-              <Image src={insta_icon.src} width={25} height={20} alt='Instagram' className='mx-3' />
+              <FaInstagram className='w-[35px] h-[35px] mr-3 cursor-pointer' />
             </p>
             <p>
-              <Image src={x_icon.src} width={25} height={20} alt='X' className='mx-3' />
+              <FaXTwitter className='w-[35px] h-[35px] mr-3 cursor-pointer' />
             </p>
             <p >
-              <Image src={youtube_icon.src} width={30} height={20} alt='You Tube' className='mx-3' />
+              <FaYoutube className='w-[35px] h-[35px] mr-3 cursor-pointer' />
             </p>
           </div>
         </div>
