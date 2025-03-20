@@ -3,6 +3,14 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Outfit, Bricolage_Grotesque, Poppins } from 'next/font/google';
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { AiFillAndroid } from "react-icons/ai";
+import { FaApple } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { FaFlutter } from "react-icons/fa6";
+import { FaAngular } from "react-icons/fa6";
+import { FaWordpressSimple } from "react-icons/fa";
+import { FaShopify } from "react-icons/fa";
 import down_arrow_black from "@/assets/down_arrow_black.png";
 import down_arrow_white from "@/assets/down_arrow_white.png";
 import hamburger_black from "@/assets/hamburger_black.png";
@@ -29,7 +37,10 @@ import flutter from "@/assets/flutter.png";
 import logo from "@/assets/favicon.png";
 import right_arrow_orange from "@/assets/right_arrow_orange.png";
 import right_arrow_white from "@/assets/right_arrow_white.png";
-
+import mparticle_icon from "@/assets/mparticel_icon.png";
+import clevertap_icon from "@/assets/clevertap_icon.png";
+import moengage_icon from "@/assets/moengage_icon.png"
+import custom_audienec_icon from "@/assets/custom_audience_icon.png"
 import { motion } from "framer-motion";
 import store from "../store/store";
 const poppins = Poppins({
@@ -40,6 +51,7 @@ const poppins = Poppins({
 const Header = ({ style }) => {
   const [dropdownOpen, setDropdownOpen] = useState({
     feature: false,
+    advanceSolutions: false,
     resources: false,
     sdks: false,
   });
@@ -48,17 +60,18 @@ const Header = ({ style }) => {
 
   const handleClick = (link) => {
     setDropdownOpen((prevState) => ({
-      feature: link === "feature" ? !prevState.feature : false, // Toggle 'feature' only when clicking 'features'
+      feature: link === "feature" ? !prevState.feature : false,
+      advanceSolutions: link === "advanceSolutions" ? !prevState.advanceSolutions : false,
       resources: link === "resources" ? !prevState.resources : false,
-      sdks: link === "sdks" ? !prevState.sdks : false, // Toggle 'resources' only when clicking 'resources'
+      sdks: link === "sdks" ? !prevState.sdks : false,
     }));
   };
 
   const handleOptionClick = () => {
     setDropdownOpen({ feature: false });
+    setDropdownOpen({ advanceSolutions: false });
     setDropdownOpen({ resources: false });
     setDropdownOpen({ sdks: false });
-
     setListVisible(false);
   };
 
@@ -72,9 +85,7 @@ const Header = ({ style }) => {
         <div className="flex justify-between items-center w-full min-[1158px]:px-[3%] max-[1158px]:px-[3%] h-full">
           <div className="flex justify-start items-center gap-x-[4vw] max-[1158px]:gap-x-[3vw]">
             <div
-              className={`flex flex-col justify-center items-center h-full ${style === "dark" ? "text-[#fff]" : "text-[#000]"
-                }`}
-            >
+              className={`flex flex-col justify-center items-center h-full ${style === "dark" ? "text-[#fff]" : "text-[#000]"}`}>
               <Link
                 href="/"
                 onClick={() => {
@@ -114,30 +125,27 @@ const Header = ({ style }) => {
                   className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer  flex justify-center items-center gap-x-[0.5vw]"
                 >
                   Features
-                  <Image
-                    src={`${style === "dark" ? down_arrow_white.src : down_arrow_black.src
-                      }`}
-                    alt={`${style === "dark" ? down_arrow_white.src : down_arrow_black.src
-                      }`}
-                    className={`h-[2vh] ${dropdownOpen.feature
-                      ? "rotate-180 ease-in duration-150"
-                      : ""
-                      }`}
-                    width={15}
-                    height={15}
-                  />
+                  <RiArrowDropDownLine className={`h-[25px] w-[25px] ${dropdownOpen.feature
+                    ? "rotate-180 ease-in duration-150"
+                    : ""
+                    }`} />
                 </button>
               </div>
-              <Link
-                href="/overview"
-                className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer "
-                onClick={() => {
-                  handleOptionClick;
-                  setRequestDemoClick(false);
-                }}
-              >
-                Platform Overview
-              </Link>
+              <div className="relative">
+                <button
+                  onClick={() => {
+                    handleClick("advanceSolutions");
+                    setRequestDemoClick(false);
+                  }}
+                  className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer  flex justify-center items-center gap-x-[0.5vw]"
+                >
+                  Advanced Solutions
+                  <RiArrowDropDownLine className={`h-[25px] w-[25px] ${dropdownOpen.advanceSolutions
+                    ? "rotate-180 ease-in duration-150"
+                    : ""
+                    }`} />
+                </button>
+              </div>
               <div className="relative">
                 <button
                   onClick={() => {
@@ -147,31 +155,27 @@ const Header = ({ style }) => {
                   className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer  flex justify-center items-center gap-x-[0.5vw]"
                 >
                   Resources
-                  <Image
-                    src={`${style === "dark" ? down_arrow_white.src : down_arrow_black.src
-                      }`}
-                    alt={`${style === "dark" ? down_arrow_white.src : down_arrow_black.src
-                      }`}
-                    className={`h-[2vh] ${dropdownOpen.resources
-                      ? "rotate-180 ease-in duration-150"
-                      : ""
-                      }`}
-                    width={15}
-                    height={15}
-                  />
+                  <RiArrowDropDownLine className={`h-[25px] w-[25px] ${dropdownOpen.resources
+                    ? "rotate-180 ease-in duration-150"
+                    : ""
+                    }`} />
                 </button>
               </div>
-
-              <Link
-                href="/getintouch"
-                className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer "
-                onClick={() => {
-                  handleOptionClick;
-                  setRequestDemoClick(false);
-                }}
-              >
-                Support
-              </Link>
+              <div className="relative">
+                <button
+                  onClick={() => {
+                    handleClick("sdks");
+                    setRequestDemoClick(false);
+                  }}
+                  className="text-[2vh] font-InstrumentSans tracking-[0.6px]  hover:cursor-pointer  flex justify-center items-center gap-x-[0.5vw]"
+                >
+                  Our SDKs
+                  <RiArrowDropDownLine className={`h-[25px] w-[25px] ${dropdownOpen.sdks
+                    ? "rotate-180 ease-in duration-150"
+                    : ""
+                    }`} />
+                </button>
+              </div>
             </div>
           </div>
           <div className="hidden min-[1078px]:flex justify-center items-center gap-x-[1vw] h-full">
@@ -294,448 +298,506 @@ const Header = ({ style }) => {
 
         {dropdownOpen.feature && (
           <motion.div
-            className={`hidden border-b-[#f0f0f0] text-[#1F4D9C] font-normal   border-b-[2px] min-[1078px]:flex justify-start mt-[7vh] items-start w-auto mr-[40vw] shadow-lg rounded-b-xl z-50 absolute gap-x-[4vw] py-[4vh] max-[927px]:py-[22.5px] px-[0%] max-[1129px]:px-[8%] max-[463px]:px-[0%] bg-[#EAF1FD] font-InstrumentSans  `}
+            className="hidden min-[1078px]:flex absolute top-[80px] z-50 bg-white rounded-b-xl shadow-lg w-[98%]"
             initial={{ y: -30, opacity: 0.9 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.5 }}
           >
-            <ul className="flex flex-col justify-center font-medium  items-start px-[1vw] py-[1vh] gap-y-[1vh] w-[40%]">
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/stories"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex  justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      src={story}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                      width={20}
-                      height={100}
-                    />
-                    <div className="flex flex-col  justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh]   font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Stories
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/pipVideos"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={pip}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        PiP Videos
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/floaters"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={floater}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
+            <div className="flex w-full p-6 gap-x-8">
+              {/* Rich Media Content Column */}
+              <div className="flex flex-col w-1/4">
+                <h3 className="text-sm font-medium text-gray-500 mb-4">RICH MEDIA CONTENT</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/stories" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={story} alt="Stories" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Stories</p>
+                        <p className="text-xs text-gray-500">Rich media full-sized content</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/reels" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={reel} alt="Reels" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Reels</p>
+                        <p className="text-xs text-gray-500">Present vertically scrolling short videos</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/pipVideos" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={pip} alt="PIP Videos" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">PIP Videos</p>
+                        <p className="text-xs text-gray-500">Non-intrusive movable in-screen video</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/floaters" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={floater} alt="Bottom Sheets" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Bottom Sheets</p>
+                        <p className="text-xs text-gray-500">Rich media full-sized content</p>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Floaters
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/csats"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={csat}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        CSATs
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/widgets"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={widget}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Widgets
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/scratchCards"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={scratch}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Scratch Cards
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-            <ul className="flex flex-col justify-center font-medium  items-start px-[1vw] py-[1vh] gap-y-[1vh] w-[40%]">
-              <li className="w-full flex hover:text-[#1A345A] justify-start items-center">
-                <Link
-                  href="/banners"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={banner}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Banners
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full flex hover:text-[#1A345A] justify-start items-center">
-                <Link
-                  href="/coachmarks"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={coach}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Coachmarks
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/surveys"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={survey}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Surveys
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/quizzes"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={quiz}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Quizzes
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w- hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/spotlights"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={spot}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Spotlights
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-              <li className="w-full hover:text-[#1A345A] flex justify-start items-center">
-                <Link
-                  href="/reels"
-                  className={`block px-4 py-2 w-full ${style === "dark"
-                    ? "hover:bg-[#2a2a2b]"
-                    : "hover:bg-[#f3f4f6]"
-                    }`}
-                  onClick={handleOptionClick}
-                >
-                  <div className="flex justify-start items-center gap-x-[1vw] hover:cursor-pointer">
-                    <Image
-                      width={20}
-                      height={100}
-                      src={reel}
-                      alt="AppStorys check_black"
-                      className="h-[5vh]"
-                    />
-                    <div className="flex flex-col justify-center items-start hover:cursor-pointer">
-                      <h1 className=" text-[2vh] font-InstrumentSans tracking-[0.6px] hover:cursor-pointer">
-                        Reels
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-            </ul>
+              {/* Interactive Elements Column */}
+              <div className="flex flex-col w-1/4">
+                <h3 className="text-sm font-medium text-gray-500 mb-4">INTERACTIVE ELEMENTS</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/banners" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={banner} alt="Banner" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Banner</p>
+                        <p className="text-xs text-gray-500">Automatic banner routing with screen</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/csats" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={csat} alt="Widgets" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Widgets</p>
+                        <p className="text-xs text-gray-500">Small hover/pull on screen floating with content</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/widgets" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={widget} alt="Widgets" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Widgets</p>
+                        <p className="text-xs text-gray-500">Customizable scalable images/animation</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scratchCards" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={scratch} alt="Scratch Card" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Scratch Card</p>
+                        <p className="text-xs text-gray-500">Gamification option to engage users</p>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Take Action Column */}
+              <div className="flex flex-col w-1/4">
+                <h3 className="text-sm font-medium text-gray-500 mb-4">TAKE ACTION</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/quizzes" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={quiz} alt="Quiz" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Quiz</p>
+                        <p className="text-xs text-gray-500">Ask users questions and engage them</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/surveys" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={survey} alt="Survey" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Survey</p>
+                        <p className="text-xs text-gray-500">Get user inputs</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/csats" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={csat} alt="CSAT Feedback" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">CSAT Feedback</p>
+                        <p className="text-xs text-gray-500">Measure services via feedback</p>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Onboarding Column */}
+              <div className="flex flex-col w-1/4">
+                <h3 className="text-sm font-medium text-gray-500 mb-4">ONBOARDING</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/coachmarks" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={coach} alt="Tooltips" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Tooltips</p>
+                        <p className="text-xs text-gray-500">Onboarding journey for users</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/coachmarks" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={coach} alt="Coachmarks" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Coachmarks</p>
+                        <p className="text-xs text-gray-500">Highlight new features with arrows</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/spotlights" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={spot} alt="Spotlight" width={20} height={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium group-hover:text-blue-600">Spotlight</p>
+                        <p className="text-xs text-gray-500">Call-outs attention to specific features</p>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </motion.div>
         )}
         {dropdownOpen.resources && (
           <motion.div
-            className={`absolute z-50 w-[30vw] mr-40 mt-[7vh] border-b-2 border-gray-200 rounded-b-xl bg-[#EAF1FD] shadow-lg max-[1078px]:hidden min-[2000px]:mr-96`}
+            className="hidden min-[1078px]:flex absolute top-[80px] w-[95%] z-50 bg-white rounded-b-xl shadow-lg "
             initial={{ y: -30, opacity: 0.9 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex flex-wrap justify-center px-4 py-6">
-              {/* Other Resource Links */}
-              <ul className="flex-1 w-[20%] font-medium text-[#1F4D9C]">
-                <li className="mb-0">
-                  <Link
-                    href="/blogs"
-                    className={`block p-2 rounded-md ${style === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
-                      }`}
-                    onClick={handleOptionClick}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Image
-                        width={30}
-                        height={100}
-                        src={blog} alt="Check" className="h-8" />
-                      <h1 className="text-[2vh] font-medium tracking-wide">Blog</h1>
-                    </div>
-                  </Link>
-                </li>
-                <li className="mb-0">
-                  <Link
-                    href="/career"
-                    className={`block p-2 rounded-md ${style === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
-                      }`}
-                    onClick={handleOptionClick}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Image
-                        width={30}
-                        height={100}
-                        src={career} alt="Check" className="h-8" />
-                      <h1 className="text-[2vh] font-medium tracking-wide">Careers</h1>
-                    </div>
-                  </Link>
-                </li>
-              </ul>
-              <ul className="flex-1 w-[20%] text-[#1F4D9C]">
-                <li className="mb-2">
-                  <Link
-                    href="/inspirationGallery"
-                    className={`block p-2 rounded-md ${style === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
-                      }`}
-                    onClick={handleOptionClick}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Image
-                        width={30}
-                        height={100}
-                        src={bulb} alt="Check" className="h-8" />
-                      <h1 className="text-[2vh] font-medium tracking-wide">
-                        Inspiration Gallery
-                      </h1>
-                    </div>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="px-4">
-              <h2 className="text-lg font-semibold text-black mt-1 px-2">
-                SDKs & Frameworks
-              </h2>
-            </div>
+            <div className="flex w-full p-6">
+              <div className="flex flex-col w-full">
+                {/* Main resources section */}
+                <div className="flex mb-6">
+                  {/* Left column */}
+                  <div className="flex flex-col">
+                    <h3 className="text-sm font-medium text-gray-500 mb-4">RESOURCES</h3>
+                    <ul className="space-y-4 flex ">
+                      <li>
+                        <Link href="/blogs" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                          <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <Image src={blog} alt="Blog" width={20} height={20} />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Blog</p>
+                            <p className="text-xs text-gray-500">Latest articles and updates</p>
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/career" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                          <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <Image src={career} alt="Careers" width={20} height={20} />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Careers</p>
+                            <p className="text-xs text-gray-500">Join our growing team</p>
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/inspirationGallery" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                          <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <Image src={bulb} alt="Inspiration Gallery" width={20} height={20} />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Inspiration Gallery</p>
+                            <p className="text-xs text-gray-500">Find ideas for your next project</p>
+                          </div>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
 
-            <div className="flex flex-wrap justify-center px-4 py-3">
-              <ul className="flex-1 w-[20%] font-medium text-[#1F4D9C] space-y-2">
-                <li>
-                  <Link
-                    href="#"
-                    className={` p-2 rounded-md flex items-center gap-3 ${style === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
-                      }`}
-                    onClick={handleOptionClick}
-                  >
-                    <Image
-                      width={100}
-                      height={100} src={react} alt="React" className="h-6 w-6 object-contain" />
-                    <span className="text-[2vh] font-medium tracking-wide">React</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className={` p-2 rounded-md flex items-center gap-3 ${style === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
-                      }`}
-                    onClick={handleOptionClick}
-                  >
-                    <Image
-                      width={100}
-                      height={100} src={flutter} alt="Flutter" className="h-6 w-6 object-contain" />
-                    <span className="text-[2vh] font-medium tracking-wide">Flutter</span>
-                  </Link>
-                </li>
-              </ul>
+                  {/* Empty space for balance */}
+                  <div className="w-3/4"></div>
+                </div>
 
-              <ul className="flex-1 w-[20%] text-[#1F4D9C] space-y-2">
-                <li>
-                  <Link
-                    href="#"
-                    className={` p-2 rounded-md flex items-center gap-3 ${style === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
-                      }`}
-                    onClick={handleOptionClick}
-                  >
-                    <Image
-                      width={100}
-                      height={100} src={angular} alt="Angular" className="h-6 w-6 object-contain" />
-                    <span className="text-[2vh] font-medium tracking-wide">Angular</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className={` p-2 rounded-md flex items-center gap-3 ${style === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
-                      }`}
-                    onClick={handleOptionClick}
-                  >
-                    <Image
-                      width={100}
-                      height={100} src={reactnative} alt="React Native" className="h-6 w-6 object-contain" />
-                    <span className="text-[2vh] font-medium tracking-wide">React Native</span>
-                  </Link>
-                </li>
-              </ul>
+                {/* SDKs & Frameworks section */}
+                <div>
+                  <h3 className="text-sm font-medium text-gray-500 mb-4">SDKs & FRAMEWORKS</h3>
+                  <div className="grid grid-cols-4 gap-4">
+                    <Link href="#" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={react} alt="React" width={20} height={20} className="object-contain" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">React</p>
+                        <p className="text-xs text-gray-500">Web framework</p>
+                      </div>
+                    </Link>
+
+                    <Link href="#" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={flutter} alt="Flutter" width={20} height={20} className="object-contain" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Flutter</p>
+                        <p className="text-xs text-gray-500">Cross-platform framework</p>
+                      </div>
+                    </Link>
+
+                    <Link href="#" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={angular} alt="Angular" width={20} height={20} className="object-contain" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Angular</p>
+                        <p className="text-xs text-gray-500">Web framework</p>
+                      </div>
+                    </Link>
+
+                    <Link href="#" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                        <Image src={reactnative} alt="React Native" width={20} height={20} className="object-contain" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">React Native</p>
+                        <p className="text-xs text-gray-500">Mobile framework</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
+          </motion.div>
+        )}
+        {dropdownOpen.advanceSolutions && (
+          <motion.div
+            className="hidden min-[1078px]:flex absolute top-[80px] z-50 bg-white rounded-b-xl shadow-lg w-[95%]"
+            initial={{ y: -30, opacity: 0.9 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex flex-col w-full py-4">
+              <div className="px-5">
+                <h2>CORE FEATURES</h2>
+              </div>
+              <div className="w-full grid grid-cols-4 gap-x-6 px-6 my-2">
+                {/* Column 1: Integrations */}
+                <div className="flex flex-col">
+                  <h3 className="text-xs font-medium text-gray-500 uppercase mb-4">Integrations</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <Link href="/integrations/mixpanel" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={mparticle_icon.src} alt="Mixpanel" width={18} height={18} />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Mixpanel</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/integrations/clevertap" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={clevertap_icon.src} alt="CleverTap" width={18} height={18} />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">CleverTap</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/integrations/moengage" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={moengage_icon.src} alt="MoEngage" width={18} height={18} />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">MoEngage</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/integrations/custom" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={custom_audienec_icon.src} alt="Custom Audiences" width={18} height={18} />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Custom Audiences</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
 
+                {/* Segmentation & Cohorts */}
+                <div className="flex flex-col">
+                  <h3 className="text-xs font-medium text-gray-500 uppercase mb-4">Segmentation & Cohorts</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <span className="text-sm font-medium group-hover:text-blue-600">Real-Time Targeting</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <span className="text-sm font-medium group-hover:text-blue-600">Feature Adoption Insights</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <span className="text-sm font-medium group-hover:text-blue-600">Automated Growth Journeys</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+
+
+                {/* Column 3: Measurement */}
+                <div className="flex flex-col">
+                  <h3 className="text-xs font-medium text-gray-500 uppercase mb-4">Goals & Impact Measurement</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <span className="text-sm font-medium group-hover:text-blue-600">Setup Goals</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <span className="text-sm font-medium group-hover:text-blue-600">Measure Impact</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <span className="text-sm font-medium group-hover:text-blue-600">Goal-Based Event Tracking</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+        {dropdownOpen.sdks && (
+          <motion.div
+            className="hidden min-[1078px]:flex absolute top-[80px] z-50 bg-white rounded-b-xl shadow-lg w-[95%]"
+            initial={{ y: -30, opacity: 0.9 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex flex-col w-full py-4">
+              <h2 className="px-5 text-center border-[#D9D9D9] border-b-2">OUR SDKs</h2>
+              <div className="w-[50%] grid grid-cols-2 gap-x-6 px-6 my-2 mx-auto">
+                {/* Column 1: Mobile */}
+                <div className="flex flex-col">
+                  <h3 className="text-sm font-medium text-gray-800 py-3">Mobile</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaApple className="w-[30px] h-[30px] text-black" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">iOS</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <AiFillAndroid className="w-[30px] h-[30px] text-green-400" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Android</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaReact className="w-[30px] h-[30px] text-sky-500" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">React Native</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaFlutter className="w-[30px] h-[30px] text-sky-500" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Flutter</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaReact className="w-[30px] h-[30px] text-sky-500" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">React.js</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group" >
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaAngular className="w-[30px] h-[30px] text-red-600" />
+
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Angular</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Column 2: Web */}
+                <div className="flex flex-col">
+                  <h3 className="text-sm font-medium text-gray-800 py-3">Web</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaReact className="w-[30px] h-[30px] text-sky-500" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">React.js</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaAngular className="w-[30px] h-[30px] text-red-600" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Angular</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaWordpressSimple className="w-[30px] h-[30px] text-black" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Wordpress</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex items-center gap-x-3 group">
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          <FaShopify className="w-[30px] h-[30px] text-green-600" />
+                        </div>
+                        <span className="text-sm font-medium group-hover:text-blue-600">Shopify</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
 
