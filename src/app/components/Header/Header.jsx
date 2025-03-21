@@ -1,4 +1,5 @@
 "use client";
+import "./Header.css"
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -11,6 +12,7 @@ import { FaFlutter } from "react-icons/fa6";
 import { FaAngular } from "react-icons/fa6";
 import { FaWordpressSimple } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
 import down_arrow_black from "@/assets/down_arrow_black.png";
 import down_arrow_white from "@/assets/down_arrow_white.png";
 import hamburger_black from "@/assets/hamburger_black.png";
@@ -18,6 +20,8 @@ import hamburger_white from "@/assets/hamburger_white.png";
 import banner from "@/assets/banner.png";
 import floater from "@/assets/floater.png";
 import pip from "@/assets/pip.png";
+import bottom_sheet from "@/assets/bottom_sheet.png";
+import tooltip from "@/assets/tooltip.png";
 import spot from "@/assets/spotlight.png";
 import scratch from "@/assets/scratchcard.png";
 import reel from "@/assets/reel.png";
@@ -42,11 +46,13 @@ import clevertap_icon from "@/assets/clevertap_icon.png";
 import moengage_icon from "@/assets/moengage_icon.png"
 import custom_audienec_icon from "@/assets/custom_audience_icon.png"
 import { motion } from "framer-motion";
-import store from "../store/store";
+import store from "../../store/store";
+const outfit = Outfit({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
+const bricolageGrotesque = Bricolage_Grotesque({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600', '700', '800'] });
 
 const Header = ({ style }) => {
   const [dropdownOpen, setDropdownOpen] = useState({
@@ -298,192 +304,197 @@ const Header = ({ style }) => {
 
         {dropdownOpen.feature && (
           <motion.div
-            className="hidden min-[1078px]:flex absolute top-[80px] z-50 bg-white rounded-b-xl shadow-lg w-[98%]"
+            className="hidden min-[1078px]:flex absolute top-[80px] z-50 bg-white shadow-lg w-[100%]"
             initial={{ y: -30, opacity: 0.9 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex w-full p-6 gap-x-8">
-              {/* Rich Media Content Column */}
-              <div className="flex flex-col w-1/4">
-                <h3 className="text-sm font-medium text-gray-500 mb-4">RICH MEDIA CONTENT</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <Link href="/stories" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={story} alt="Stories" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Stories</p>
-                        <p className="text-xs text-gray-500">Rich media full-sized content</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/reels" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={reel} alt="Reels" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Reels</p>
-                        <p className="text-xs text-gray-500">Present vertically scrolling short videos</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/pipVideos" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={pip} alt="PIP Videos" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">PIP Videos</p>
-                        <p className="text-xs text-gray-500">Non-intrusive movable in-screen video</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/floaters" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={floater} alt="Bottom Sheets" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Bottom Sheets</p>
-                        <p className="text-xs text-gray-500">Rich media full-sized content</p>
-                      </div>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+            <div className="w-full ">
+              <h3 className={`text-left mb-4 py-3 px-40 ${outfit.className} font-light text-[#000] text-[12px] border-b-2 border-t-2 border-[#D9D9D9]`}> CORE FEATURES </h3>
+              <div className="flex w-full pt-2 pb-5 px-40 gap-x-8">
+                {/* Rich Media Content Column */}
+                <div className="flex flex-col w-1/4">
+                  <h3 className={`${outfit.className} text-[12px] text-[#000] font-light  mb-4  border-[#D9D9D9] border-b-2 pb-2`}>RICH MEDIA CONTENT</h3>
+                  <ul className="space-y-4">
+                    <li className="hover:bg-sky-100 flex w-full">
+                      <Link href="/stories" className="flex w-[100%] items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={story} alt="Stories" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Stories</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Rich media bite sized content</p>
+                        </div>
+                        <FaArrowRight className="relative right-0" />
+                      </Link>
+                    </li>
+                    <li className="hover:bg-sky-100 flex w-full">
+                      <Link href="/reels" className="flex w-[100%] items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={reel} alt="Reels" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Reels</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Present constantly scrolling short videos</p>
+                        </div>
+                        <FaArrowRight className="" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/pipVideos" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={pip} alt="PIP Videos" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>PIP Videos</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Non-intrusive movable on-screen video</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/floaters" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={bottom_sheet} alt="Bottom Sheets" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Bottom Sheets</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Rich media bite sized content</p>
+                        </div>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
 
-              {/* Interactive Elements Column */}
-              <div className="flex flex-col w-1/4">
-                <h3 className="text-sm font-medium text-gray-500 mb-4">INTERACTIVE ELEMENTS</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <Link href="/banners" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={banner} alt="Banner" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Banner</p>
-                        <p className="text-xs text-gray-500">Automatic banner routing with screen</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/csats" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={csat} alt="Widgets" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Widgets</p>
-                        <p className="text-xs text-gray-500">Small hover/pull on screen floating with content</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/widgets" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={widget} alt="Widgets" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Widgets</p>
-                        <p className="text-xs text-gray-500">Customizable scalable images/animation</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/scratchCards" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={scratch} alt="Scratch Card" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Scratch Card</p>
-                        <p className="text-xs text-gray-500">Gamification option to engage users</p>
-                      </div>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+                {/* Interactive Elements Column */}
+                <div className="flex flex-col w-1/4">
+                  <h3 className={`${outfit.className} text-[12px] text-[#000] font-light  mb-4  border-[#D9D9D9] border-b-2 pb-2`}>INTERACTIVE ELEMENTS</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <Link href="/banners" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={banner} alt="Banner" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Banner</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Automatic banner moving with screen</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/csats" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={floater} alt="Widgets" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Widgets</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Small Image/GIF on screen floating with content</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/widgets" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={widget} alt="Widgets" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Widgets</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Customizable scalable images/animation</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/scratchCards" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={scratch} alt="Scratch Card" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Scratch Card</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Gamification option to engage users</p>
+                        </div>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
 
-              {/* Take Action Column */}
-              <div className="flex flex-col w-1/4">
-                <h3 className="text-sm font-medium text-gray-500 mb-4">TAKE ACTION</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <Link href="/quizzes" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={quiz} alt="Quiz" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Quiz</p>
-                        <p className="text-xs text-gray-500">Ask users questions and engage them</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/surveys" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={survey} alt="Survey" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Survey</p>
-                        <p className="text-xs text-gray-500">Get user inputs</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/csats" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={csat} alt="CSAT Feedback" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">CSAT Feedback</p>
-                        <p className="text-xs text-gray-500">Measure services via feedback</p>
-                      </div>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+                {/* Take Action Column */}
+                <div className="flex flex-col w-1/4">
+                  <h3 className={`${outfit.className} text-[12px] text-[#000] font-light  mb-4  border-[#D9D9D9] border-b-2 pb-2`}>TAKE ACTION</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <Link href="/quizzes" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={quiz} alt="Quiz" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Quiz</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Ask users questions and engage them</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/surveys" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={survey} alt="Survey" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Survey</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Get user inputs</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/csats" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={csat} alt="CSAT Feedback" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>CSAT Feedback</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Measure services via feedback</p>
+                        </div>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
 
-              {/* Onboarding Column */}
-              <div className="flex flex-col w-1/4">
-                <h3 className="text-sm font-medium text-gray-500 mb-4">ONBOARDING</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <Link href="/coachmarks" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={coach} alt="Tooltips" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Tooltips</p>
-                        <p className="text-xs text-gray-500">Onboarding journey for users</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/coachmarks" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={coach} alt="Coachmarks" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Coachmarks</p>
-                        <p className="text-xs text-gray-500">Highlight new features with arrows</p>
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/spotlights" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
-                      <div className="w-6 h-6 flex items-center justify-center text-blue-600">
-                        <Image src={spot} alt="Spotlight" width={20} height={20} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium group-hover:text-blue-600">Spotlight</p>
-                        <p className="text-xs text-gray-500">Call-outs attention to specific features</p>
-                      </div>
-                    </Link>
-                  </li>
-                </ul>
+                {/* Onboarding Column */}
+                <div className="flex flex-col w-1/4">
+                  <h3 className={`${outfit.className} text-[12px] text-[#000] font-light  mb-4  border-[#D9D9D9] border-b-2 pb-2`}>ONBOARDING</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <Link href="/coachmarks" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={tooltip} alt="Tooltips" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Tooltips</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Onboarding journey for users</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/coachmarks" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={coach} alt="Coachmarks" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Coachmarks</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Highlight new features with wrapper</p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/spotlights" className="flex items-center gap-x-3 group border-[#D9D9D9] border-b-2 pb-2" onClick={handleOptionClick}>
+                        <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                          <Image src={spot} alt="Spotlight" width={20} height={20} />
+                        </div>
+                        <div>
+                          <p className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Spotlight</p>
+                          <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Get user attention to specific features</p>
+                        </div>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -501,7 +512,7 @@ const Header = ({ style }) => {
                 <div className="flex mb-6">
                   {/* Left column */}
                   <div className="flex flex-col">
-                    <h3 className="text-sm font-medium text-gray-500 mb-4">RESOURCES</h3>
+                    <h3 className={`${outfit.className} text-[12px] text-[#000] font-light  mb-4`}>RESOURCES</h3>
                     <ul className="space-y-4 flex ">
                       <li>
                         <Link href="/blogs" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
@@ -509,8 +520,8 @@ const Header = ({ style }) => {
                             <Image src={blog} alt="Blog" width={20} height={20} />
                           </div>
                           <div>
-                            <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Blog</p>
-                            <p className="text-xs text-gray-500">Latest articles and updates</p>
+                            <p className="font-medium text-blue-700 group-hover:text-blue-800">Blog</p>
+                            <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Latest articles and updates</p>
                           </div>
                         </Link>
                       </li>
@@ -520,8 +531,8 @@ const Header = ({ style }) => {
                             <Image src={career} alt="Careers" width={20} height={20} />
                           </div>
                           <div>
-                            <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Careers</p>
-                            <p className="text-xs text-gray-500">Join our growing team</p>
+                            <p className="font-medium text-blue-700 group-hover:text-blue-800">Careers</p>
+                            <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Join our growing team</p>
                           </div>
                         </Link>
                       </li>
@@ -531,8 +542,8 @@ const Header = ({ style }) => {
                             <Image src={bulb} alt="Inspiration Gallery" width={20} height={20} />
                           </div>
                           <div>
-                            <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Inspiration Gallery</p>
-                            <p className="text-xs text-gray-500">Find ideas for your next project</p>
+                            <p className="font-medium text-blue-700 group-hover:text-blue-800">Inspiration Gallery</p>
+                            <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Find ideas for your next project</p>
                           </div>
                         </Link>
                       </li>
@@ -545,15 +556,15 @@ const Header = ({ style }) => {
 
                 {/* SDKs & Frameworks section */}
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500 mb-4">SDKs & FRAMEWORKS</h3>
+                  <h3 className={`${outfit.className} text-[12px] text-[#000] font-light  mb-4`}>SDKs & FRAMEWORKS</h3>
                   <div className="grid grid-cols-4 gap-4">
                     <Link href="#" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
                       <div className="w-6 h-6 flex items-center justify-center text-blue-600">
                         <Image src={react} alt="React" width={20} height={20} className="object-contain" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">React</p>
-                        <p className="text-xs text-gray-500">Web framework</p>
+                        <p className="font-medium text-blue-700 group-hover:text-blue-800">React</p>
+                        <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Web framework</p>
                       </div>
                     </Link>
 
@@ -562,8 +573,8 @@ const Header = ({ style }) => {
                         <Image src={flutter} alt="Flutter" width={20} height={20} className="object-contain" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Flutter</p>
-                        <p className="text-xs text-gray-500">Cross-platform framework</p>
+                        <p className="font-medium text-blue-700 group-hover:text-blue-800">Flutter</p>
+                        <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Cross-platform framework</p>
                       </div>
                     </Link>
 
@@ -572,8 +583,8 @@ const Header = ({ style }) => {
                         <Image src={angular} alt="Angular" width={20} height={20} className="object-contain" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">Angular</p>
-                        <p className="text-xs text-gray-500">Web framework</p>
+                        <p className="font-medium text-blue-700 group-hover:text-blue-800">Angular</p>
+                        <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Web framework</p>
                       </div>
                     </Link>
 
@@ -582,8 +593,8 @@ const Header = ({ style }) => {
                         <Image src={reactnative} alt="React Native" width={20} height={20} className="object-contain" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-blue-700 group-hover:text-blue-800">React Native</p>
-                        <p className="text-xs text-gray-500">Mobile framework</p>
+                        <p className="font-medium text-blue-700 group-hover:text-blue-800">React Native</p>
+                        <p className={`text-xs  ${outfit.className} font-light text-[10px] text-[#898989]`}>Mobile framework</p>
                       </div>
                     </Link>
                   </div>
@@ -606,14 +617,14 @@ const Header = ({ style }) => {
               <div className="w-full grid grid-cols-4 gap-x-6 px-6 my-2">
                 {/* Column 1: Integrations */}
                 <div className="flex flex-col">
-                  <h3 className="text-xs font-medium text-gray-500 uppercase mb-4">Integrations</h3>
+                  <h3 className="text-xs  uppercase mb-4">Integrations</h3>
                   <ul className="space-y-4">
                     <li>
                       <Link href="/integrations/mixpanel" className="flex items-center gap-x-3 group" onClick={handleOptionClick}>
                         <div className="w-6 h-6 flex items-center justify-center text-blue-600">
                           <Image src={mparticle_icon.src} alt="Mixpanel" width={18} height={18} />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Mixpanel</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Mixpanel</span>
                       </Link>
                     </li>
                     <li>
@@ -621,7 +632,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center text-blue-600">
                           <Image src={clevertap_icon.src} alt="CleverTap" width={18} height={18} />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">CleverTap</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>CleverTap</span>
                       </Link>
                     </li>
                     <li>
@@ -629,7 +640,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center text-blue-600">
                           <Image src={moengage_icon.src} alt="MoEngage" width={18} height={18} />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">MoEngage</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>MoEngage</span>
                       </Link>
                     </li>
                     <li>
@@ -637,7 +648,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center text-blue-600">
                           <Image src={custom_audienec_icon.src} alt="Custom Audiences" width={18} height={18} />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Custom Audiences</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Custom Audiences</span>
                       </Link>
                     </li>
                   </ul>
@@ -645,21 +656,21 @@ const Header = ({ style }) => {
 
                 {/* Segmentation & Cohorts */}
                 <div className="flex flex-col">
-                  <h3 className="text-xs font-medium text-gray-500 uppercase mb-4">Segmentation & Cohorts</h3>
+                  <h3 className="text-xs  uppercase mb-4">Segmentation & Cohorts</h3>
                   <ul className="space-y-4">
                     <li>
                       <div className="flex items-center gap-x-3 group">
-                        <span className="text-sm font-medium group-hover:text-blue-600">Real-Time Targeting</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Real-Time Targeting</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center gap-x-3 group" >
-                        <span className="text-sm font-medium group-hover:text-blue-600">Feature Adoption Insights</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Feature Adoption Insights</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center gap-x-3 group">
-                        <span className="text-sm font-medium group-hover:text-blue-600">Automated Growth Journeys</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Automated Growth Journeys</span>
                       </div>
                     </li>
                   </ul>
@@ -669,21 +680,21 @@ const Header = ({ style }) => {
 
                 {/* Column 3: Measurement */}
                 <div className="flex flex-col">
-                  <h3 className="text-xs font-medium text-gray-500 uppercase mb-4">Goals & Impact Measurement</h3>
+                  <h3 className="text-xs  uppercase mb-4">Goals & Impact Measurement</h3>
                   <ul className="space-y-4">
                     <li>
                       <div className="flex items-center gap-x-3 group">
-                        <span className="text-sm font-medium group-hover:text-blue-600">Setup Goals</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Setup Goals</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center gap-x-3 group" >
-                        <span className="text-sm font-medium group-hover:text-blue-600">Measure Impact</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Measure Impact</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center gap-x-3 group">
-                        <span className="text-sm font-medium group-hover:text-blue-600">Goal-Based Event Tracking</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Goal-Based Event Tracking</span>
                       </div>
                     </li>
                   </ul>
@@ -704,14 +715,14 @@ const Header = ({ style }) => {
               <div className="w-[50%] grid grid-cols-2 gap-x-6 px-6 my-2 mx-auto">
                 {/* Column 1: Mobile */}
                 <div className="flex flex-col">
-                  <h3 className="text-sm font-medium text-gray-800 py-3">Mobile</h3>
+                  <h3 className="font-medium text-gray-800 py-3">Mobile</h3>
                   <ul className="space-y-4">
                     <li>
                       <div className="flex items-center gap-x-3 group" >
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaApple className="w-[30px] h-[30px] text-black" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">iOS</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>iOS</span>
                       </div>
                     </li>
                     <li>
@@ -719,7 +730,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center">
                           <AiFillAndroid className="w-[30px] h-[30px] text-green-400" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Android</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Android</span>
                       </div>
                     </li>
                     <li>
@@ -727,7 +738,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaReact className="w-[30px] h-[30px] text-sky-500" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">React Native</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>React Native</span>
                       </div>
                     </li>
                     <li>
@@ -735,7 +746,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaFlutter className="w-[30px] h-[30px] text-sky-500" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Flutter</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Flutter</span>
                       </div>
                     </li>
                     <li>
@@ -743,7 +754,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaReact className="w-[30px] h-[30px] text-sky-500" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">React.js</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>React.js</span>
                       </div>
                     </li>
                     <li>
@@ -752,7 +763,7 @@ const Header = ({ style }) => {
                           <FaAngular className="w-[30px] h-[30px] text-red-600" />
 
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Angular</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Angular</span>
                       </div>
                     </li>
                   </ul>
@@ -760,14 +771,14 @@ const Header = ({ style }) => {
 
                 {/* Column 2: Web */}
                 <div className="flex flex-col">
-                  <h3 className="text-sm font-medium text-gray-800 py-3">Web</h3>
+                  <h3 className="font-medium text-gray-800 py-3">Web</h3>
                   <ul className="space-y-4">
                     <li>
                       <div className="flex items-center gap-x-3 group">
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaReact className="w-[30px] h-[30px] text-sky-500" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">React.js</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>React.js</span>
                       </div>
                     </li>
                     <li>
@@ -775,7 +786,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaAngular className="w-[30px] h-[30px] text-red-600" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Angular</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Angular</span>
                       </div>
                     </li>
                     <li>
@@ -783,7 +794,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaWordpressSimple className="w-[30px] h-[30px] text-black" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Wordpress</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Wordpress</span>
                       </div>
                     </li>
                     <li>
@@ -791,7 +802,7 @@ const Header = ({ style }) => {
                         <div className="w-6 h-6 flex items-center justify-center">
                           <FaShopify className="w-[30px] h-[30px] text-green-600" />
                         </div>
-                        <span className="text-sm font-medium group-hover:text-blue-600">Shopify</span>
+                        <span className={`text-[12px] ${bricolageGrotesque.className} text-black group-hover:text-gray-600`}>Shopify</span>
                       </div>
                     </li>
                   </ul>
