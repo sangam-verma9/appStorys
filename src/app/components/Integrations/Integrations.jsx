@@ -44,7 +44,7 @@ const Integrations = () => {
           <h3 className={`${satisfy.className} text-[#FD5F03] text-[22px] md:text-[26px] text-center`}>
             How It Works
           </h3>
-          <h1 className={`${bricolageGrotesque.className} text-[32px] sm:text-[38px] md:text-[46px] lg:text-[56px] font-medium text-center mb-4`}>
+          <h1 className={`${bricolageGrotesque.className} text-[32px] sm:text-[38px] md:text-[46px] lg:text-[56px] font-medium text-center mb-2`}>
             Our Integrations
           </h1>
           <p className={`${inter.className} text-center max-w-md mx-auto text-[#141414] text-base md:text-[16px] font-normal`}>
