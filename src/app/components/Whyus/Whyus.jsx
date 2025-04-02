@@ -13,7 +13,7 @@ const satisfy = Satisfy({ subsets: ['latin'], weight: ['400'] });
 const Whyus = () => {
 
     return (
-        <div className='w-full bg-[#F1F9FF]'>
+        <div className='w-full bg-[#FFF7F3]'>
             <div className='sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1200px] py-5  flex flex-col justify-center mx-auto'>
                 <h3 className={`${satisfy.className} text-[#FD5F03] text-[26px] text-center`}>Why us</h3>
                 <h1 className={`${bricolageGrotesque.className} text-[46px] capitalize text-center mb-2 leading-none`}>Add Dynamic Elements to your App with AI</h1>
