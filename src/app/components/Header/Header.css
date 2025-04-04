@@ -1,0 +1,120 @@
+/* Header.css */
+
+/* Base header styling */
+header {
+    transition: all 0.3s ease;
+  }
+  
+  /* Dropdown animation */
+  .dropdown-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .dropdown-exit {
+    opacity: 1;
+  }
+  
+  .dropdown-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  /* Feature dropdown item hover effect */
+  .feature-item {
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  
+  .feature-item:hover {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+  }
+  
+  .feature-item:hover .feature-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .feature-arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+  }
+  
+  /* Contact Sales button */
+  .contact-sales-btn {
+    border-radius: 30px;
+    background: #FD5F03;
+    width: 152px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .contact-sales-btn:hover {
+    background: #e55502;
+    box-shadow: 0 4px 8px rgba(253, 95, 3, 0.25);
+  }
+  
+  .contact-sales-btn svg {
+    transition: transform 0.2s ease;
+  }
+  
+  .contact-sales-btn:hover svg {
+    transform: translateX(3px);
+  }
+  
+  /* Login button */
+  .login-btn {
+    font-weight: 500;
+    color: #FD5F03;
+    transition: all 0.2s ease;
+  }
+  
+  .login-btn:hover {
+    color: #e55502;
+  }
+  
+  /* Mobile menu */
+  .mobile-menu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .mobile-menu.open {
+    max-height: 100vh;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1023px) {
+    .desktop-menu {
+      display: none;
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .mobile-menu-btn {
+      display: none;
+    }
+    
+    .mobile-menu {
+      display: none;
+    }
+  }

@@ -1,5 +1,3 @@
-
-
 // import React, { useState, useEffect } from "react";
 // import { Inter, Bricolage_Grotesque, Satisfy } from "next/font/google";
 // import pipf from "@/assets/pipf.png";
@@ -19,19 +17,19 @@
 // const CoreFeatures = () => {
 //   const [activeIndex, setActiveIndex] = useState(1);
 //   const [isMobile, setIsMobile] = useState(false);
-  
+
 //   // Track screen size to adjust mobile experience
 //   useEffect(() => {
 //     const handleResize = () => {
 //       setIsMobile(window.innerWidth < 640);
 //     };
-    
+
 //     // Initial check
 //     handleResize();
-    
+
 //     // Add event listener
 //     window.addEventListener('resize', handleResize);
-    
+
 //     // Cleanup
 //     return () => window.removeEventListener('resize', handleResize);
 //   }, []);
@@ -120,7 +118,7 @@
 //                 }`}
 //                 style={{
 //                   display:
-//                     (isMobile && index !== activeIndex) || 
+//                     (isMobile && index !== activeIndex) ||
 //                     (!isMobile && Math.abs(index - activeIndex) > 1 &&
 //                     !(activeIndex === 0 && index === features.length - 1) &&
 //                     !(activeIndex === features.length - 1 && index === 0))
@@ -130,16 +128,16 @@
 //               >
 //                 {/* Card Header */}
 //                 <div className={`rounded-full inline-block px-4 sm:px-5 md:px-6 py-1 sm:py-2 mb-3 md:mb-4 ${
-//                   index === 0 
-//                     ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white" 
-//                     : index === 1 
-//                       ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white" 
+//                   index === 0
+//                     ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+//                     : index === 1
+//                       ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
 //                       : "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
 //                 }`} style={{
 //                   borderRadius: index === 0 ? "28.752px" : index === 1 ? "32px" : "28.774px",
 //                   borderWidth: index === 0 || index === 2 ? "0.899px" : "1px"
 //                 }}>
-//                   <h3 style={{ 
+//                   <h3 style={{
 //                     color: "#000",
 //                     fontFamily: "SF Pro, sans-serif",
 //                     fontSize: "18px",
@@ -284,7 +282,6 @@
 
 // export default CoreFeatures;
 
-
 import React, { useState, useEffect } from "react";
 import { Inter, Bricolage_Grotesque, Satisfy } from "next/font/google";
 import pipf from "@/assets/pipf.png";
@@ -299,10 +296,6 @@ import toolf from "@/assets/toolf.png";
 import scratchf from "@/assets/scratchf.png";
 import widgetf from "@/assets/widgetf.png";
 
-
-
-
-
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -316,21 +309,21 @@ const satisfy = Satisfy({ subsets: ["latin"], weight: ["400"] });
 const CoreFeatures = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   // Track screen size to adjust mobile experience
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
     };
-    
+
     // Initial check
     handleResize();
-    
+
     // Add event listener
-    window.addEventListener('resize', handleResize);
-    
+    window.addEventListener("resize", handleResize);
+
     // Cleanup
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Auto slide functionality
@@ -338,7 +331,7 @@ const CoreFeatures = () => {
     const autoSlideInterval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
     }, 3000); // Change slide every 3 seconds
-    
+
     // Clean up the interval when component unmounts
     return () => clearInterval(autoSlideInterval);
   }, []);
@@ -384,6 +377,8 @@ const CoreFeatures = () => {
       stats: [
         { value: "60%", label: "Increase in KYC Retention" },
         { value: "150%", label: "Increase in Session Duration" },
+        { value: "15%", label: "Higher Daily Retention " },
+
       ],
       bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
       textColor: "text-[#F200EA]",
@@ -394,10 +389,13 @@ const CoreFeatures = () => {
     {
       id: 3,
       title: "Banners",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "2.1x", label: "Higher CTRs" },
-        { value: "1.1x", label: "More In-App Purchases" }
+        { value: "1.1x", label: "More In-App Purchases" },
+        { value: "55%", label: "Boost in Session Duration" },
+
       ],
       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
       textColor: "text-[#0CB600]",
@@ -408,11 +406,12 @@ const CoreFeatures = () => {
     {
       id: 4,
       title: "Floater",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "4.2x", label: "Increase In Feature Discovery" },
         { value: "35%", label: "Improve in User Engagement" },
-        { value: "3.3x", label: "More Interactions With In-App Offers" }
+        { value: "3.3x", label: "More Interactions With In-App Offers" },
       ],
       bgStyle: "bg-gradient-to-b from-[#F3FBFF] to-white",
       textColor: "text-[#008FFF]",
@@ -423,11 +422,12 @@ const CoreFeatures = () => {
     {
       id: 5,
       title: "Widgets",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "8%", label: "Boost 8% CTR" },
         { value: "75%", label: "Higher Response Rate" },
-        { value: "2%", label: "Increase in AOV" }
+        { value: "2%", label: "Increase in AOV" },
       ],
       bgStyle: "bg-gradient-to-b from-[#FFEBFE] to-white",
       textColor: "text-[#EF13E8]",
@@ -438,10 +438,13 @@ const CoreFeatures = () => {
     {
       id: 6,
       title: "Scratch Cards",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "15%", label: "Boost in App Stickness" },
-        { value: "5x", label: "Increase in User Engagement" }
+        { value: "5x", label: "Increase in User Engagement" },
+        { value: "2x", label: "Increase in User Participation" },
+
       ],
       bgStyle: "bg-gradient-to-b from-[#F3ECFF] to-white",
       textColor: "text-[#793BDE]",
@@ -452,11 +455,12 @@ const CoreFeatures = () => {
     {
       id: 7,
       title: "Quizzes",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "2x", label: "More User Engagement" },
         { value: "30%", label: "Increase In Knowledge Retention" },
-        { value: "20%", label: "Growth in Daily Active Users (DAU)" }
+        { value: "20%", label: "Growth in Daily Active Users (DAU)" },
       ],
       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
       textColor: "text-[#0CB600]",
@@ -467,10 +471,16 @@ const CoreFeatures = () => {
     {
       id: 8,
       title: "Survey",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
-        { value: "15%", label: "Customer Feedback-driven Changes Increase Feature Usage" },
-        { value: "35%", label: "Improvement in NPS Score" }
+        {
+          value: "15%",
+          label: "Customer Feedback-driven Changes Increase Feature Usage",
+        },
+        { value: "35%", label: "Improvement in NPS Score" },
+        { value: "3x", label: "Increase in User Feedback" },
+
       ],
       bgStyle: "bg-gradient-to-b from-[#F3FBFF] to-white",
       textColor: "text-[#008FFF]",
@@ -481,11 +491,12 @@ const CoreFeatures = () => {
     {
       id: 9,
       title: "CSAT Feedback",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "15%", label: "Increase in Customer Retention" },
         { value: "20%", label: "Improvement in CSAT Score" },
-        { value: "85%", label: "Higher Response Rate" }
+        { value: "85%", label: "Higher Response Rate" },
       ],
       bgStyle: "bg-gradient-to-b from-[#FFEBFE] to-white",
       textColor: "text-[#EF13E8]",
@@ -496,10 +507,13 @@ const CoreFeatures = () => {
     {
       id: 10,
       title: "Tooltips",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "30%", label: "Increase in Product Adoption" },
-        { value: "2x", label: "Users Engage with Feature" }
+        { value: "2x", label: "Users Engage with Feature" },
+        { value: "2x", label: "Users Engage with Feature" },
+
       ],
       bgStyle: "bg-gradient-to-b from-[#F3ECFF] to-white",
       textColor: "text-[#793BDE]",
@@ -510,17 +524,37 @@ const CoreFeatures = () => {
     {
       id: 11,
       title: "Coachmarks",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
       stats: [
         { value: "3.5x", label: "Faster Feature Adoption" },
-        { value: "30%", label: "Improvement In User Onboarding" }
+        { value: "30%", label: "Improvement In User Onboarding" },
+        { value: "35%", label: "Reduction in User Confusion" },
+
       ],
       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
       textColor: "text-[#0CB600]",
       borderColor: "border-[#0CB600]",
       borderWidth: "border-2",
       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
-    }
+    },
+    {
+      id: 12,
+      title: "Spotlight",
+      description:
+        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      stats: [
+        { value: "3.5x", label: "Faster Feature Adoption" },
+        { value: "30%", label: "Improvement In User Onboarding" },
+        { value: "35%", label: "Reduction in User Confusion" },
+
+      ],
+      bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
+      textColor: "text-[#F200EA]",
+      borderColor: "border-[#F200EA]",
+      borderWidth: "border-2",
+      boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+    },
   ];
 
   return (
@@ -532,7 +566,7 @@ const CoreFeatures = () => {
           Core Features
         </h3>
         <h1
-          className={`${bricolageGrotesque.className} text-[32px] sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-14 leading-tight`}
+          className={` font-sf-pro text-[32px] font-medium sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-7 leading-tight -mt-[5px]`}
         >
           Incredible User Experiences
         </h1>
@@ -543,7 +577,7 @@ const CoreFeatures = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                className={`absolute transition-all duration-500 w-[90%] xs:w-[90%] sm:w-[85%] md:w-[85%] max-w-[380px] h-auto sm:h-[580px] md:h-[600px] rounded-[32px] ${
+                className={`absolute transition-all duration-500 w-[90%] xs:w-[90%] sm:w-[85%] md:w-[85%] max-w-[420px] h-auto sm:h-[580px] md:h-[600px] rounded-[32px] ${
                   feature.borderWidth
                 } ${feature.borderColor} ${feature.bgStyle} ${
                   feature.boxShadow
@@ -557,74 +591,109 @@ const CoreFeatures = () => {
                 }`}
                 style={{
                   display:
-                    (isMobile && index !== activeIndex) || 
-                    (!isMobile && Math.abs(index - activeIndex) > 1 &&
-                    !(activeIndex === 0 && index === features.length - 1) &&
-                    !(activeIndex === features.length - 1 && index === 0))
+                    (isMobile && index !== activeIndex) ||
+                    (!isMobile &&
+                      Math.abs(index - activeIndex) > 1 &&
+                      !(activeIndex === 0 && index === features.length - 1) &&
+                      !(activeIndex === features.length - 1 && index === 0))
                       ? "none"
                       : "block",
                 }}
               >
                 {/* Card Header */}
-              
-                <div className={`rounded-full inline-block px-4 sm:px-5 md:px-6 py-1 sm:py-2 mb-3 md:mb-4 ${
-  index === 0 
-    ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white" 
-    : index === 1 
-      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white" 
+
+                <div
+  className={`rounded-full inline-block px-4 sm:px-5 md:px-6 py-1 sm:py-2 mb-3 md:mb-4 ${
+    index === 0
+      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+      : index === 1
+      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
       : index === 2
-        ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-        : index === 3
-          ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
-          : index === 4
-            ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
-            : index === 5
-              ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-              : index === 6
-                ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
-                : index === 7
-                  ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
-                  : index === 8
-                    ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
-                    : index === 9
-                      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-                      : index === 10
-                        ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
-                        : "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
-}`} style={{
-  borderRadius: 
-    index === 0 ? "28.752px" : 
-    index === 1 ? "32px" : 
-    index === 2 ? "28.774px" : 
-    index === 3 ? "32px" : 
-    index === 4 ? "28.752px" : 
-    index === 5 ? "32px" : 
-    index === 6 ? "28.752px" : 
-    index === 7 ? "32px" : 
-    index === 8 ? "28.752px" : 
-    index === 9 ? "32px" : 
-    index === 10 ? "28.752px" : "32px",
-  borderWidth: 
-    index === 0 ? "0.899px" : 
-    index === 1 ? "1px" : 
-    index === 2 ? "0.899px" : 
-    index === 3 ? "1px" : 
-    index === 4 ? "0.899px" : 
-    index === 5 ? "1px" : 
-    index === 6 ? "0.899px" : 
-    index === 7 ? "1px" : 
-    index === 8 ? "0.899px" : 
-    index === 9 ? "1px" : 
-    index === 10 ? "0.899px" : "1px"
-}}>
-                  <h3 style={{ 
-                    color: "#000",
-                    fontFamily: "SF Pro, sans-serif",
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    lineHeight: "19.285px",
-                    textTransform: "capitalize"
-                  }} className="text-base sm:text-lg md:text-2xl">
+      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+      : index === 3
+      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+      : index === 4
+      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+      : index === 5
+      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+      : index === 6
+      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
+      : index === 7
+      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+      : index === 8
+      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+      : index === 9
+      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+      : index === 10
+      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
+      : index === 11
+      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+      : index === 12
+      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+      : "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+  }`}
+                  style={{
+                    borderRadius:
+                      index === 0
+                        ? "28.752px"
+                        : index === 1
+                        ? "32px"
+                        : index === 2
+                        ? "28.774px"
+                        : index === 3
+                        ? "32px"
+                        : index === 4
+                        ? "28.752px"
+                        : index === 5
+                        ? "32px"
+                        : index === 6
+                        ? "28.752px"
+                        : index === 7
+                        ? "32px"
+                        : index === 8
+                        ? "28.752px"
+                        : index === 9
+                        ? "32px"
+                        : index === 10
+                        ? "28.752px"
+                        : "32px",
+                    borderWidth:
+                      index === 0
+                        ? "0.899px"
+                        : index === 1
+                        ? "1px"
+                        : index === 2
+                        ? "0.899px"
+                        : index === 3
+                        ? "1px"
+                        : index === 4
+                        ? "0.899px"
+                        : index === 5
+                        ? "1px"
+                        : index === 6
+                        ? "0.899px"
+                        : index === 7
+                        ? "1px"
+                        : index === 8
+                        ? "0.899px"
+                        : index === 9
+                        ? "1px"
+                        : index === 10
+                        ? "0.899px"
+                        : "1px",
+                  }}
+                >
+                  <h3
+                    style={{
+                      color: "#000",
+                      fontFamily: "SF Pro, sans-serif",
+                      fontSize: "18px",
+                      fontWeight: "500",
+                      lineHeight: "19.285px",
+                      textTransform: "capitalize",
+                    }}
+                    className="text-base sm:text-lg md:text-2xl"
+                  >
                     {feature.title}
                   </h3>
                 </div>
@@ -633,24 +702,25 @@ const CoreFeatures = () => {
                 <p
                   style={{
                     color: "#2F2F2F",
-                    fontFamily: "Inter, sans-serif",
+                    fontFamily: "SF Pro, sans-serif",
                     fontWeight: "400",
                     lineHeight: "128%",
                     textTransform: "capitalize",
+                    letterSpacing: "1px",
                   }}
-                  className="mb-4 md:mb-8 text-xs sm:text-sm md:text-[13.975px]"
+                  className="mb-4 md:mb-6 text-xs sm:text-sm md:text-[13.975px]"
                 >
                   {feature.description}
                 </p>
 
                 {/* Stats Section */}
-                <div className="flex flex-wrap justify-around gap-1 sm:gap-2 mb-4 md:mb-8">
+                <div className="flex flex-wrap justify-around gap-1 sm:gap-4 mb-4 md:mb-8">
                   {feature.stats.map((stat, i) => (
                     <div key={i} className="text-center">
                       <p
                         style={{
                           color: index === 2 ? "#F200EA" : "#008FFF",
-                          textAlign: "center",
+                          textAlign: "start",
                           fontFamily: "'Product Sans', sans-serif",
                           fontWeight: "700",
                           lineHeight: "128%",
@@ -663,7 +733,8 @@ const CoreFeatures = () => {
                       <p
                         style={{
                           color: "#2F2F2F",
-                          fontFamily: "Outfit, sans-serif",
+                          textAlign: "start",
+                          fontFamily: "SF Pro, sans-serif",
                           fontWeight: "400",
                           lineHeight: "110%",
                           textTransform: "capitalize",
@@ -679,99 +750,97 @@ const CoreFeatures = () => {
 
                 {/* Device Mockup */}
                 <div className="w-full max-w-[200px] xs:max-w-[220px] sm:max-w-[250px] md:w-[278.828px] h-[220px] xs:h-[250px] sm:h-[290px] md:h-[328px] mx-auto rounded-xl flex items-center justify-center overflow-hidden">
-  {index === 0 && (
-    <img
-      src={storyf.src}
-      alt="Stories"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 1 && (
-    <img
-      src={pipf.src}
-      alt="PiP Video Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 2 && (
-    <img
-      src={reelf.src}
-      alt="Reels Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 3 && (
-    <img
-      src={banf.src}
-      alt="Banners Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 4 && (
-    <img
-      src={floatf.src}
-      alt="Floater Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 5 && (
-    <img
-      src={widgetf.src}
-      alt="Widgets Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 6 && (
-    <img
-      src={scratchf.src}
-      alt="Scratch Cards Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 7 && (
-    <img
-      src={csatf.src}
-      alt="Quizzes Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 8 && (
-    <img
-      src={surveyf.src}
-      alt="Survey Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 9 && (
-    <img
-      src={csatf.src}
-      alt="CSAT Feedback Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 10 && (
-    <img
-      src={toolf.src}
-      alt="Tooltips Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-  {index === 11 && (
-    <img
-      src={coachf.src}
-      alt="Coachmarks Feature"
-      className="w-full h-full object-contain"
-    />
-  )}
-</div>
+                  {index === 0 && (
+                    <img
+                      src={storyf.src}
+                      alt="Stories"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 1 && (
+                    <img
+                      src={pipf.src}
+                      alt="PiP Video Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 2 && (
+                    <img
+                      src={reelf.src}
+                      alt="Reels Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 3 && (
+                    <img
+                      src={banf.src}
+                      alt="Banners Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 4 && (
+                    <img
+                      src={floatf.src}
+                      alt="Floater Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 5 && (
+                    <img
+                      src={widgetf.src}
+                      alt="Widgets Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 6 && (
+                    <img
+                      src={scratchf.src}
+                      alt="Scratch Cards Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 7 && (
+                    <img
+                      src={csatf.src}
+                      alt="Quizzes Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 8 && (
+                    <img
+                      src={surveyf.src}
+                      alt="Survey Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 9 && (
+                    <img
+                      src={csatf.src}
+                      alt="CSAT Feedback Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 10 && (
+                    <img
+                      src={toolf.src}
+                      alt="Tooltips Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                  {index === 11 && (
+                    <img
+                      src={coachf.src}
+                      alt="Coachmarks Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                </div>
               </div>
             ))}
           </div>
 
           {/* Navigation buttons - repositioned for better mobile experience */}
-          <div
-            className="absolute w-full z-30 flex justify-between top-1/2 -translate-y-1/2 pointer-events-none px-1 xs:px-2 sm:px-3 md:px-4"
-          >
+          <div className="absolute w-full z-30 flex justify-between top-1/2 -translate-y-1/2 pointer-events-none px-1 xs:px-2 sm:px-3 md:px-4">
             <button
               className="bg-[#FD5F03] text-white w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg pointer-events-auto transform -translate-x-0 sm:-translate-x-1"
               onClick={() =>
