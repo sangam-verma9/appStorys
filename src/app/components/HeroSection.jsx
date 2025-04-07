@@ -23,7 +23,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="bg-[#FFF7F3] w-full py-16 md:py-24 lg:py-32 -mt-[100px]">
+    <section className="bg-[#FFF7F3] w-full py-16 md:py-24 lg:py-32 md:-mt-[100px]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           {/* Heading */}
