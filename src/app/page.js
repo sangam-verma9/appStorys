@@ -9,7 +9,7 @@ import Sdks from "./components/Sdks/Sdks";
 import TrustSection from "./components/TrustSection/TrustSection";
 import TestimonialsSection from "./components/Testimonials/Testimonials";
 import BlogSection from "./components/BlogSection";
-import HeroSection from "./components/Herosection";
+import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
