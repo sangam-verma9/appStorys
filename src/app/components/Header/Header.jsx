@@ -117,7 +117,7 @@ const Header = ({ style }) => {
   const { setRequestDemoClick } = store();
 
   return (
-    <header className="sticky top-0 z-50 bg-white/[0.71] w-full shadow-sm">
+    <header className="sticky top-0 z-50 bg-[#FFF7F3]/[0.71] w-full shadow-sm">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -1163,14 +1163,14 @@ const Header = ({ style }) => {
 
             <Link
               href="/contact"
-              className="rounded-full bg-[#FD5F03] h-[50px] text-white font-medium px-6 py-2.5 transition duration-150 hover:bg-[#e05303] flex items-center"
+              className="rounded-full bg-[#FD5F03] h-[50px] text-white font-medium px-2 py-2.5 transition duration-150 hover:bg-[#e05303] flex items-center  "
               onClick={() => {
                 handleOptionClick();
                 setRequestDemoClick(true);
               }}
             >
-              <span>Contact Sales</span>
-              <div className="ml-2 bg-white rounded-full w-[32px] h-[32px] flex items-center justify-center">
+              <span className="ml-4">Contact Sales</span>
+              <div className="ml-5 bg-white rounded-full w-[32px] h-[32px] flex items-center justify-center">
                 <svg
                   width="18"
                   height="18"

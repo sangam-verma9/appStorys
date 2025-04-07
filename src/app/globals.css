@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+
+.feature-list {
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.feature-list::marker {
+    color: #d64830;
+    height: 30px;
+}
+
+
+
+/* Add these styles to your globals.css file for the gradient effect */
+
+.gradient-orange {
+    background: rgba(255, 94, 0, 0.20);
+    filter: blur(100px);
+    will-change: filter;
+  }
+  
+  /* Making sure backdrop-filter works properly */
+  @supports (backdrop-filter: blur(9px)) {
+    .glass-card {
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+    }
+  }
