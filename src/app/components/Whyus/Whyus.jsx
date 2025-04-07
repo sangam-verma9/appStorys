@@ -239,7 +239,7 @@ const Whyus = () => {
                                         <img src={security_whyus.src} alt='security' className="max-h-full" />
                                     </div>
                                     <br />
-                                    <p className={`font-sfpro text-[#737373] font-normal text-[16px] card-paragraph mt-5`}>AppStorys powers seamless experiences with top-tier security! Our lightweight SDK drives growth while safeguarding user data with end-to-end encryption—no storage on our servers, all hosted on AWS.</p>
+                                    <p className={`font-sfpro text-[#737373] font-normal text-[16px] card-paragraph mt-5`}>SOC 2 Type 2 Certified by a leading auditor. AWS infrastructure in place with AES 256 encryption.</p>
                                 </div>
                             </TiltedCard>
                         </div>

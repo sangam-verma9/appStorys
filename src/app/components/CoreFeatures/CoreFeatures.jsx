@@ -340,8 +340,7 @@ const CoreFeatures = () => {
     {
       id: 0,
       title: "Stories",
-      description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description: "Add Instagram like stories. Each with dedicated CTA.",
       stats: [
         { value: "5x", label: "More Content Consumption" },
         { value: "23%", label: "Increase in Page Views" },
@@ -356,8 +355,7 @@ const CoreFeatures = () => {
     {
       id: 1,
       title: "PiP Videos",
-      description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description: "Movable small video which can be expanded to full screen.",
       stats: [
         { value: "24%", label: "Boost in Multitasking Engagement" },
         { value: "64%", label: "Increase in Feature Adoption" },
@@ -372,13 +370,11 @@ const CoreFeatures = () => {
     {
       id: 2,
       title: "Reels",
-      description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description: "TikTok style endless scrolling videos.",
       stats: [
         { value: "60%", label: "Increase in KYC Retention" },
         { value: "150%", label: "Increase in Session Duration" },
         { value: "15%", label: "Higher Daily Retention " },
-
       ],
       bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
       textColor: "text-[#F200EA]",
@@ -390,12 +386,11 @@ const CoreFeatures = () => {
       id: 3,
       title: "Banners",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Static or animated strips shown at the top or bottom of the screen. Perfect for announcements, offers, or important updates.",
       stats: [
         { value: "2.1x", label: "Higher CTRs" },
         { value: "1.1x", label: "More In-App Purchases" },
         { value: "55%", label: "Boost in Session Duration" },
-
       ],
       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
       textColor: "text-[#0CB600]",
@@ -406,8 +401,7 @@ const CoreFeatures = () => {
     {
       id: 4,
       title: "Floater",
-      description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description: "Small image which stays constant side of the screen.",
       stats: [
         { value: "4.2x", label: "Increase In Feature Discovery" },
         { value: "35%", label: "Improve in User Engagement" },
@@ -423,7 +417,7 @@ const CoreFeatures = () => {
       id: 5,
       title: "Widgets",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
       stats: [
         { value: "8%", label: "Boost 8% CTR" },
         { value: "75%", label: "Higher Response Rate" },
@@ -439,12 +433,11 @@ const CoreFeatures = () => {
       id: 6,
       title: "Scratch Cards",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Interactive reward cards users can scratch to reveal offers, points, or surprises. Fun way to boost engagement.",
       stats: [
         { value: "15%", label: "Boost in App Stickness" },
         { value: "5x", label: "Increase in User Engagement" },
         { value: "2x", label: "Increase in User Participation" },
-
       ],
       bgStyle: "bg-gradient-to-b from-[#F3ECFF] to-white",
       textColor: "text-[#793BDE]",
@@ -456,7 +449,7 @@ const CoreFeatures = () => {
       id: 7,
       title: "Quizzes",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Levels of different questions with multiple choice with one correct answer",
       stats: [
         { value: "2x", label: "More User Engagement" },
         { value: "30%", label: "Increase In Knowledge Retention" },
@@ -472,7 +465,7 @@ const CoreFeatures = () => {
       id: 8,
       title: "Survey",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Take user input with a short survey. Get deep user insights.",
       stats: [
         {
           value: "15%",
@@ -480,7 +473,6 @@ const CoreFeatures = () => {
         },
         { value: "35%", label: "Improvement in NPS Score" },
         { value: "3x", label: "Increase in User Feedback" },
-
       ],
       bgStyle: "bg-gradient-to-b from-[#F3FBFF] to-white",
       textColor: "text-[#008FFF]",
@@ -492,7 +484,7 @@ const CoreFeatures = () => {
       id: 9,
       title: "CSAT Feedback",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Simple rating popup to measure how happy users are with your app. Redirect to App Store or Play Store.",
       stats: [
         { value: "15%", label: "Increase in Customer Retention" },
         { value: "20%", label: "Improvement in CSAT Score" },
@@ -508,12 +500,11 @@ const CoreFeatures = () => {
       id: 10,
       title: "Tooltips",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
       stats: [
         { value: "30%", label: "Increase in Product Adoption" },
         { value: "2x", label: "Users Engage with Feature" },
         { value: "2x", label: "Users Engage with Feature" },
-
       ],
       bgStyle: "bg-gradient-to-b from-[#F3ECFF] to-white",
       textColor: "text-[#793BDE]",
@@ -525,12 +516,11 @@ const CoreFeatures = () => {
       id: 11,
       title: "Coachmarks",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Highlight a new feature. Perfect for feature launches and walkthroughs.",
       stats: [
         { value: "3.5x", label: "Faster Feature Adoption" },
         { value: "30%", label: "Improvement In User Onboarding" },
         { value: "35%", label: "Reduction in User Confusion" },
-
       ],
       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
       textColor: "text-[#0CB600]",
@@ -542,12 +532,11 @@ const CoreFeatures = () => {
       id: 12,
       title: "Spotlight",
       description:
-        "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+        "Dim the screen to focus on one element. Great for drawing attention to new features or key actions.",
       stats: [
         { value: "3.5x", label: "Faster Feature Adoption" },
         { value: "30%", label: "Improvement In User Onboarding" },
         { value: "35%", label: "Reduction in User Confusion" },
-
       ],
       bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
       textColor: "text-[#F200EA]",
@@ -603,35 +592,35 @@ const CoreFeatures = () => {
                 {/* Card Header */}
 
                 <div
-  className={`rounded-full inline-block px-4 sm:px-5 md:px-6 py-1 sm:py-2 mb-3 md:mb-4 ${
-    index === 0
-      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
-      : index === 1
-      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
-      : index === 2
-      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-      : index === 3
-      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
-      : index === 4
-      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
-      : index === 5
-      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-      : index === 6
-      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
-      : index === 7
-      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
-      : index === 8
-      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
-      : index === 9
-      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-      : index === 10
-      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
-      : index === 11
-      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
-      : index === 12
-      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-      : "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
-  }`}
+                  className={`rounded-full inline-block px-4 sm:px-5 md:px-6 py-1 sm:py-2 mb-3 md:mb-4 ${
+                    index === 0
+                      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+                      : index === 1
+                      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
+                      : index === 2
+                      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+                      : index === 3
+                      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+                      : index === 4
+                      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+                      : index === 5
+                      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+                      : index === 6
+                      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
+                      : index === 7
+                      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+                      : index === 8
+                      ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+                      : index === 9
+                      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+                      : index === 10
+                      ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
+                      : index === 11
+                      ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+                      : index === 12
+                      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+                      : "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+                  }`}
                   style={{
                     borderRadius:
                       index === 0
@@ -705,7 +694,7 @@ const CoreFeatures = () => {
                     fontFamily: "SF Pro, sans-serif",
                     fontWeight: "400",
                     lineHeight: "128%",
-                    textTransform: "capitalize",
+                    // textTransform: "capitalize",
                     letterSpacing: "1px",
                   }}
                   className="mb-4 md:mb-6 text-xs sm:text-sm md:text-[13.975px]"

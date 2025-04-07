@@ -21,7 +21,7 @@ const poppins = Poppins({
 const Footer = () => {
   return (
     <div className='w-full bg-gradient-to-b from-white to-[#FFEBE0]'>
-      <div className='sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1200px] px-10 py-8 mx-auto'>
+      <div className='sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-8 mx-auto'>
         <div className={`flex flex-col sm:flex-row sm:justify-between sm:items-center`}>
           <h2 className={`text-[28px] ${bricolageGrotesque.className} leading-tight`}>Get started today or schedule<br /> a quick 15 min demo</h2>
           <div className='mt-5 sm:mt-0'><button className={` ${outfit.className} px-8 py-3 bg-[#FD5F03] cursor-pointer rounded-md text-white text-md sm:text-xl font-bold`}>BOOK A DEMO</button></div>
