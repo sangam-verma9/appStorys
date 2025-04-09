@@ -4,12 +4,12 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureStory from '../../assets/feature_story.png';
-import storyBanner1 from '../../assets/story_banner_1.png';
-import storyBanner2 from '../../assets/story_banner_2.png';
-import storyBanner3 from '../../assets/story_banner_3.png';
+import featureWidget from '../../assets/feature_Widget.png';
+import widgetBanner1 from '../../assets/widget_banner_1.png';
+import widgetBanner2 from '../../assets/widget_banner_2.png';
+import widgetBanner3 from '../../assets/widget_banner_3.png';
 
-export default function Stories() {
+export default function Widgets() {
   const setRequestDemoClick = () => {
     // This will be implemented when we set up the store
     console.log("Request demo clicked");
@@ -24,20 +24,21 @@ export default function Stories() {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
                 <Image
-                  src={featureStory}
-                  alt="AppStorys feature story"
+                  src={featureWidget}
+                  alt="AppStorys feature widget"
                   width={400}
-                  height={557}
+                  height={502}
                   style={{ objectFit: "contain", width: "auto", height: "100%" }}
                   priority
                 />
               </div>
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[0.5]">Boost User</h1>
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.07]">Engagement With Stories</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[59px] text-black font-semibold leading-tight md:leading-[0.97]">
+                Elevate Your App's Functionality with Custom Widgets
+              </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
-                Keep users engaged with floating PiP videos, allowing them to watch content while continuing to browse your app. Enhance multitasking and improve user retention effortlessly.
+                Enhance your app with custom widgets that offer personalized, interactive features. Easily integrate and customize for a seamless user experience, boosting engagement and app performance.
               </p>
               <button 
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
@@ -53,14 +54,14 @@ export default function Stories() {
 
       {/* Ticker/Marquee - Full width with centered content */}
       <section className="w-full">
-        <div className=" mx-auto">
+        <div className="mx-auto">
           <FeatureTicker
-            number1="5x"
-            number2="23%"
-            number3="37%"
-            heading1="more content consumption"
-            heading2="increase in page views"
-            heading3="Decrease in bounce rate"
+            number1="3.5x"
+            number2="30%"
+            number3="3.6x"
+            heading1="More Accurate Insights"
+            heading2="Improvement in feedback response rates"
+            heading3="Relevant Insights Gain"
           />
         </div>
       </section>
@@ -74,8 +75,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner1}
-                    alt="AppStorys story banner 1"
+                    src={widgetBanner1}
+                    alt="AppStorys widget banner 1"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -86,14 +87,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Add Stories To Your App
+                    Boost Your App's Functionality with Custom Widgets
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Give your platform a personalized touch by adding stories.
+                      Enhance user experience by integrating custom widgets into your app.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Build rapport with users in an interactive way using stories.
+                      Offer interactive, personalized features that engage users and simplify their journey.
                     </li>
                   </ul>
                 </div>
@@ -105,14 +106,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Present Content In An All New Manner
+                    Personalized Widgets for Optimal User Engagement
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Make experience enjoyable for your users in an innovative way
+                      Deliver personalized, dynamic widgets that adjust to user behavior.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Offer personalised, shoppable, and authentic content to your users to impact retention
+                      Use smart triggers to show relevant content at the right time, boosting engagement and satisfaction.
                     </li>
                   </ul>
                 </div>
@@ -120,8 +121,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner2}
-                    alt="AppStorys story banner 2"
+                    src={widgetBanner2}
+                    alt="AppStorys widget banner 2"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -136,8 +137,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner3}
-                    alt="AppStorys story banner 3"
+                    src={widgetBanner3}
+                    alt="AppStorys widget banner 3"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -148,14 +149,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Introduce Interactive Elements Within Stories
+                    Unlock Real-Time Insights with Interactive Widgets
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Engage and interact more with users using stories.
+                      Collect valuable feedback instantly with interactive widgets.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Add interactive components like emoji reactions, feedback polls, and quizzes.
+                      Leverage real-time data to make informed decisions that drive retention and growth.
                     </li>
                   </ul>
                 </div>
@@ -166,7 +167,7 @@ export default function Stories() {
       </section>
 
       {/* Steps Section - Already full width in the component */}
-      <StepsSection keyword="Stories" />
+      <StepsSection keyword="Widgets" />
     </main>
   );
 }
