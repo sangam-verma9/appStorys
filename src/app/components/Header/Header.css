@@ -118,3 +118,64 @@ header {
       display: none;
     }
   }
+
+
+  /* contactButton.css */
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.contact-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FD5F03;
+  color: white;
+  font-weight: 500;
+  border-radius: 9999px;
+  height: 50px;
+  padding: 0 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-text {
+  position: relative;
+  margin-left: 16px;
+  margin-right: 54px;
+  z-index: 2;
+  transition: color 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.circle {
+  position: absolute;
+  right: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.arrow-icon {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* Hover effect */
+.contact-button:hover .circle {
+  width: 100%;
+  right: 0;
+}
+
+.contact-button:hover .button-text {
+  color: #FD5F03;
+}

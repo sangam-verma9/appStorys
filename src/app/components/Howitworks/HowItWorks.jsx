@@ -393,12 +393,12 @@ const StackedCards = () => {
 
   // Section header component
   const Header = () => (
-    <div className="text-center mb-12">
+    <div className="text-center mb-6">
       <h3 className={`${satisfy.className} text-[#FD5F03] text-xl md:text-[26px] mb-2`}>How It Works</h3>
-      <h1 className={`${bricolageGrotesque.className} text-3xl font-normal md:text-[56px] capitalize mb-2 leading-none`}>Integration Process &lt; 30 Mins</h1>
-      <p className={`${outfit.className} text-center my-2 text-[16px] md:text-base`}>
-        Install our SDK in less than 30 minutes and use our<br className="hidden md:block" />
-        dashboards that say a lot more than just graphs.
+      <h1 className={`font-sf-pro text-3xl font-normal md:text-[56px] capitalize mb-2 leading-none`}>Integration Process &lt; 30 Mins</h1>
+      <p className={`font-sf-pro text-center my-4 text-[16px] md:text-base`}>
+      Install our SDK, launch campaigns from the dashboard and experience them go live magically in your App in real time.<br className="hidden md:block" />
+      Watch users interact with AppStorys’ elements and improve their in-app journey.
       </p>
     </div>
   );
@@ -620,7 +620,7 @@ const StackedCards = () => {
   );
 
   return (
-    <div className="bg-gradient-to-b from-white to-[#FFEBE0] py-10 md:py-16 px-4 overflow-hidden">
+    <div className="bg-[#FFF7F3] py-10 md:py-16 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <Header />
         

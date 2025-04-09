@@ -555,10 +555,10 @@ const TestimonialsSection = () => {
                 left: '0',
                 transform: 'translateX(-65%) scale(0.95)',
                 zIndex: 10,
-                width: '85%',
+                width: '20%',
                 height: getCardHeight(),
                 background: 'radial-gradient(90.08% 90.08% at 97.01% 0%, #844D0A 0%, #151517 100%)',
-                opacity: 0.5
+                opacity: 0.7
               };
             } else if (position === 'right') {
               cardStyle = {
@@ -566,10 +566,10 @@ const TestimonialsSection = () => {
                 right: '0',
                 transform: 'translateX(65%) scale(0.95)',
                 zIndex: 10,
-                width: '85%',
+                width: '20%',
                 height: getCardHeight(),
                 background: 'radial-gradient(90.08% 90.08% at 3% 0%, #844D0A 0%, #151517 100%)',
-                opacity: 0.5
+                opacity: 0.7
               };
             } else {
               // Hidden cards - still in DOM but not visible
@@ -591,7 +591,7 @@ const TestimonialsSection = () => {
                 {position === 'center' && (
                   <>
                     {/* Stars in top right */}
-                    <div className="absolute top-4 sm:top-8 md:top-12 right-4 sm:right-8 md:right-12">
+                    <div className="absolute top-4 sm:top-8 md:top-8 right-4 sm:right-8 md:right-12">
                       <Image 
                         src={star}
                         alt="5 Star Rating" 

@@ -295,6 +295,12 @@ import surveyf from "@/assets/surveyf.png";
 import toolf from "@/assets/toolf.png";
 import scratchf from "@/assets/scratchf.png";
 import widgetf from "@/assets/widgetf.png";
+import quizf from "@/assets/quizf.png";
+import bottomf from "@/assets/bottomf.png";
+import spotlightf from "@/assets/spotlightf.png";
+
+
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -339,7 +345,7 @@ const CoreFeatures = () => {
   const features = [
     {
       id: 0,
-      title: "Stories",
+      title: "1. Stories",
       description: "Add Instagram like stories. Each with dedicated CTA.",
       stats: [
         { value: "5x", label: "More Content Consumption" },
@@ -354,7 +360,7 @@ const CoreFeatures = () => {
     },
     {
       id: 1,
-      title: "PiP Videos",
+      title: "2. PiP Videos",
       description: "Movable small video which can be expanded to full screen.",
       stats: [
         { value: "24%", label: "Boost in Multitasking Engagement" },
@@ -369,7 +375,7 @@ const CoreFeatures = () => {
     },
     {
       id: 2,
-      title: "Reels",
+      title: "3. Reels",
       description: "TikTok style endless scrolling videos.",
       stats: [
         { value: "60%", label: "Increase in KYC Retention" },
@@ -384,7 +390,7 @@ const CoreFeatures = () => {
     },
     {
       id: 3,
-      title: "Banners",
+      title: "4. Banners",
       description:
         "Static or animated strips shown at the top or bottom of the screen. Perfect for announcements, offers, or important updates.",
       stats: [
@@ -400,7 +406,7 @@ const CoreFeatures = () => {
     },
     {
       id: 4,
-      title: "Floater",
+      title: "5. Floater",
       description: "Small image which stays constant side of the screen.",
       stats: [
         { value: "4.2x", label: "Increase In Feature Discovery" },
@@ -415,7 +421,7 @@ const CoreFeatures = () => {
     },
     {
       id: 5,
-      title: "Widgets",
+      title: "6. Widgets",
       description:
         "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
       stats: [
@@ -431,7 +437,7 @@ const CoreFeatures = () => {
     },
     {
       id: 6,
-      title: "Scratch Cards",
+      title: "7. Scratch Cards",
       description:
         "Interactive reward cards users can scratch to reveal offers, points, or surprises. Fun way to boost engagement.",
       stats: [
@@ -447,7 +453,7 @@ const CoreFeatures = () => {
     },
     {
       id: 7,
-      title: "Quizzes",
+      title: "8. Quizzes",
       description:
         "Levels of different questions with multiple choice with one correct answer",
       stats: [
@@ -463,7 +469,7 @@ const CoreFeatures = () => {
     },
     {
       id: 8,
-      title: "Survey",
+      title: "9. Survey",
       description:
         "Take user input with a short survey. Get deep user insights.",
       stats: [
@@ -482,7 +488,7 @@ const CoreFeatures = () => {
     },
     {
       id: 9,
-      title: "CSAT Feedback",
+      title: "10. CSAT Feedback",
       description:
         "Simple rating popup to measure how happy users are with your app. Redirect to App Store or Play Store.",
       stats: [
@@ -498,7 +504,7 @@ const CoreFeatures = () => {
     },
     {
       id: 10,
-      title: "Tooltips",
+      title: "11. Tooltips",
       description:
         "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
       stats: [
@@ -514,7 +520,7 @@ const CoreFeatures = () => {
     },
     {
       id: 11,
-      title: "Coachmarks",
+      title: "12. Coachmarks",
       description:
         "Highlight a new feature. Perfect for feature launches and walkthroughs.",
       stats: [
@@ -530,7 +536,23 @@ const CoreFeatures = () => {
     },
     {
       id: 12,
-      title: "Spotlight",
+      title: "13. Spotlight",
+      description:
+        "Dim the screen to focus on one element. Great for drawing attention to new features or key actions.",
+      stats: [
+        { value: "3.5x", label: "Faster Feature Adoption" },
+        { value: "30%", label: "Improvement In User Onboarding" },
+        { value: "35%", label: "Reduction in User Confusion" },
+      ],
+      bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
+      textColor: "text-[#F200EA]",
+      borderColor: "border-[#F200EA]",
+      borderWidth: "border-2",
+      boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+    },
+    {
+      id: 13,
+      title: "14. BottomSheets",
       description:
         "Dim the screen to focus on one element. Great for drawing attention to new features or key actions.",
       stats: [
@@ -547,6 +569,7 @@ const CoreFeatures = () => {
   ];
 
   return (
+    
     <div className="w-full bg-[#FFF7F3]">
       <div className="sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1200px] py-8 md:py-12 lg:py-16 flex flex-col justify-center mx-auto px-4 sm:px-6 md:px-0">
         <h3
@@ -677,9 +700,10 @@ const CoreFeatures = () => {
                       color: "#000",
                       fontFamily: "SF Pro, sans-serif",
                       fontSize: "18px",
-                      fontWeight: "500",
+                      fontWeight: "600",
                       lineHeight: "19.285px",
                       textTransform: "capitalize",
+                      letterSpacing:"1px"
                     }}
                     className="text-base sm:text-lg md:text-2xl"
                   >
@@ -690,7 +714,7 @@ const CoreFeatures = () => {
                 {/* Description */}
                 <p
                   style={{
-                    color: "#2F2F2F",
+                    color: "#000",
                     fontFamily: "SF Pro, sans-serif",
                     fontWeight: "400",
                     lineHeight: "128%",
@@ -721,7 +745,7 @@ const CoreFeatures = () => {
                       </p>
                       <p
                         style={{
-                          color: "#2F2F2F",
+                          color: "#000",
                           textAlign: "start",
                           fontFamily: "SF Pro, sans-serif",
                           fontWeight: "400",
@@ -790,7 +814,7 @@ const CoreFeatures = () => {
                   )}
                   {index === 7 && (
                     <img
-                      src={csatf.src}
+                      src={quizf.src}
                       alt="Quizzes Feature"
                       className="w-full h-full object-contain"
                     />
@@ -799,7 +823,7 @@ const CoreFeatures = () => {
                     <img
                       src={surveyf.src}
                       alt="Survey Feature"
-                      className="w-full h-full object-contain"
+                      className="w-full h-[90%] object-contain"
                     />
                   )}
                   {index === 9 && (
@@ -819,6 +843,20 @@ const CoreFeatures = () => {
                   {index === 11 && (
                     <img
                       src={coachf.src}
+                      alt="Coachmarks Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                    {index === 12 && (
+                    <img
+                      src={spotlightf.src}
+                      alt="Coachmarks Feature"
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                     {index === 13 && (
+                    <img
+                      src={bottomf.src}
                       alt="Coachmarks Feature"
                       className="w-full h-full object-contain"
                     />

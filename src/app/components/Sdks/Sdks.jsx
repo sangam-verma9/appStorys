@@ -28,17 +28,17 @@ const Sdks = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h3 className={`${satisfy.className} text-[26px] mb-4 capitalize`}
+          <h3 className={`${satisfy.className} text-[26px] mb-2 capitalize`}
               style={{
                 letterSpacing: '1px',
                 lineHeight: '27.6px'
               }}>
-            How It Works
+            Powerful Plug & Play
           </h3>
           <h1 className="text-white text-[30px] md:text-[56px] font-[500] leading-[102%] capitalize">
-            Enterprise Ready SDKs
+            Enterprise-Ready SDKs
           </h1>
-          <p className="text-white text-[16px] max-w-[400px] mx-auto mt-4"
+          <p className="text-white text-[16px] max-w-[400px] mx-auto mt-5"
              style={{
                lineHeight: '128%',
                letterSpacing: '0.48px'
