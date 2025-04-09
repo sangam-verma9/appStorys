@@ -21,6 +21,7 @@ export default function Home() {
       <Whyus />
       <Integrations/>
       <Sdks/>
+      {/* <div className="h-[2px] w-full bg-white"></div> */}
       <TestimonialsSection/>
       <TrustSection/>
      

@@ -23,9 +23,9 @@ const TrustSection = () => {
     <div className="py-16 px-4 flex flex-col md:flex-row items-center justify-between max-w-[1200px] mx-auto">
       {/* Right Side - Text (now appears first on mobile) */}
       <div className="md:max-w-[450px] text-center md:text-left order-first md:order-last mb-8 md:mb-0">
-        <h3 className={`${satisfy.className} text-[#FD5F03] text-2xl mb-2`}>
+        {/* <h3 className={`${satisfy.className} text-[#FD5F03] text-2xl mb-2`}>
           How It Works
-        </h3>
+        </h3> */}
         <h2 className="text-4xl md:text-5xl font-medium leading-tight">
           AppStorys is <br></br>
            trusted by developers globally

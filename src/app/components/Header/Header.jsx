@@ -74,6 +74,7 @@ const Header = ({ style }) => {
 
   const [listVisible, setListVisible] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -117,8 +118,8 @@ const Header = ({ style }) => {
   const { setRequestDemoClick } = store();
 
   return (
-    <header className="sticky top-0 z-50 bg-[#FFF7F3]/[0.71] w-full shadow-sm">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 bg-[#FFF7F3] w-full shadow-sm">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
@@ -143,7 +144,7 @@ const Header = ({ style }) => {
           </div>
 
           {/* Navigation - Desktop */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-9">
             <div className="relative dropdown-container">
               <button
                 onClick={() => handleClick("feature")}
@@ -158,8 +159,6 @@ const Header = ({ style }) => {
               </button>
 
               {dropdownOpen.feature && (
-                // <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen bg-white shadow-lg mt-1 py-4 z-20">
-                //   <div className="container mx-auto">
                 <div className="fixed top-16 md:top-20 left-0 right-0 w-full bg-white shadow-lg mt-1 py-4 z-20">
                   <div className="w-full max-w-6xl mx-auto px-4">
                     <h3
@@ -177,17 +176,15 @@ const Header = ({ style }) => {
                           RICH MEDIA CONTENT
                         </h4>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("stories")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/stories"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("stories")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={story}
                                 alt="Stories"
@@ -217,17 +214,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("reels")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/reels"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("reels")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={reel}
                                 alt="Reels"
@@ -257,17 +252,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("pip")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/pipVideos"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("pip")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={pip}
                                 alt="PIP Videos"
@@ -297,17 +290,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("bottom")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/bottomSheets"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("bottom")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={bottom_sheet}
                                 alt="Bottom Sheets"
@@ -346,17 +337,15 @@ const Header = ({ style }) => {
                           INTERACTIVE ELEMENTS
                         </h4>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("banner")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/banners"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("banner")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={banner}
                                 alt="Banner"
@@ -386,17 +375,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("floater")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/floaters"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("floater")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={floater}
                                 alt="Floaters"
@@ -426,17 +413,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("widgets")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/widgets"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("widgets")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={widget}
                                 alt="Widgets"
@@ -466,17 +451,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("scratch")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/scratchCards"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("scratch")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={scratch}
                                 alt="Scratch Card"
@@ -515,17 +498,15 @@ const Header = ({ style }) => {
                           TAKE ACTION
                         </h4>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("quiz")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/quizzes"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("quiz")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={quiz}
                                 alt="Quiz"
@@ -555,17 +536,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("survey")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/surveys"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("survey")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={survey}
                                 alt="Survey"
@@ -595,17 +574,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("csat")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/csats"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("csat")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={csat}
                                 alt="CSAT Feedback"
@@ -644,17 +621,15 @@ const Header = ({ style }) => {
                           ONBOARDING
                         </h4>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("tooltip")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/tooltips"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("tooltip")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={tooltip}
                                 alt="Tooltips"
@@ -684,17 +659,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("coach")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/coachmarks"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("coach")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={coach}
                                 alt="Coachmarks"
@@ -724,17 +697,15 @@ const Header = ({ style }) => {
                           </Link>
                         </div>
 
-                        <div
-                          className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2"
-                          onMouseEnter={() => setHoveredItem("spotlight")}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
+                        <div className="group hover:bg-blue-50 rounded-lg transition duration-150 p-2 h-20">
                           <Link
                             href="/spotlights"
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-3 h-full w-full"
                             onClick={handleOptionClick}
+                            onMouseEnter={() => setHoveredItem("spotlight")}
+                            onMouseLeave={() => setHoveredItem(null)}
                           >
-                            <div className="w-6 h-6 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center text-blue-600">
                               <Image
                                 src={spot}
                                 alt="Spotlight"
@@ -1161,40 +1132,122 @@ const Header = ({ style }) => {
               Login
             </Link>
 
-            <Link
-              href="/contact"
-              className="rounded-full bg-[#FD5F03] h-[50px] text-white font-medium px-2 py-2.5 transition duration-150 hover:bg-[#e05303] flex items-center  "
-              onClick={() => {
-                handleOptionClick();
-                setRequestDemoClick(true);
-              }}
-            >
-              <span className="ml-4">Contact Sales</span>
-              <div className="ml-5 bg-white rounded-full w-[32px] h-[32px] flex items-center justify-center">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.91699 7H11.0837"
-                    stroke="#FD5F03"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M7.58301 3.5L11.083 7L7.58301 10.5"
-                    stroke="#FD5F03"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </Link>
+            {/* <Link
+      href="/contact"
+      className="group rounded-full bg-[#FD5F03] h-[50px] text-white font-medium px-2 py-2.5 transition duration-150 hover:bg-[#e05303] flex items-center"
+      onClick={() => {
+        handleOptionClick();
+        setRequestDemoClick(true);
+      }}
+    >
+      <span className="ml-4">Contact Sales</span>
+      <div className="ml-5 bg-white group-hover:bg-[#FD5F03] rounded-full w-[32px] h-[32px] flex items-center justify-center transition-colors duration-300">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="transition-colors duration-300"
+        >
+          <path
+            d="M2.91699 7H11.0837"
+            stroke="currentColor"
+            className="text-[#FD5F03] group-hover:text-white transition-colors duration-300"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.58301 3.5L11.083 7L7.58301 10.5"
+            stroke="currentColor"
+            className="text-[#FD5F03] group-hover:text-white transition-colors duration-300"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+    </Link> */}
+
+<motion.div
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    >
+      <Link
+        href="/contact"
+        className="rounded-full bg-[#FD5F03] h-[50px] text-white font-medium px-2 py-2.5 transition-colors duration-300 flex items-center relative overflow-hidden"
+        onClick={() => {
+          handleOptionClick && handleOptionClick();
+          setRequestDemoClick && setRequestDemoClick(true);
+        }}
+      >
+        {/* Background animation fill */}
+        <motion.div 
+          className="absolute inset-0 bg-[#ff5047] rounded-full"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: isHovered ? 1 : 0 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          style={{ originX: 0 }}
+        />
+        
+        {/* Text with subtle float animation */}
+        <motion.span 
+          className="ml-4 relative z-10"
+          animate={{ x: isHovered ? 2 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          Contact Sales
+        </motion.span>
+        
+        {/* Arrow circle with animation */}
+        <motion.div 
+          className="ml-5 bg-white rounded-full w-[32px] h-[32px] flex items-center justify-center relative z-10"
+          animate={{ 
+            backgroundColor: isHovered ? "#ff5047" : "#ffffff",
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          {/* SVG Arrow with animations */}
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <motion.path
+              d="M2.91699 7H11.0837"
+              stroke={isHovered ? "#FFFFFF" : "#FD5F03"}
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              transition={{ duration: 0.2 }}
+            />
+            <motion.path
+              d="M7.58301 3.5L11.083 7L7.58301 10.5"
+              stroke={isHovered ? "#FFFFFF" : "#FD5F03"}
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              animate={{ x: isHovered ? 2 : 0 }}
+              transition={{ duration: 0.3 }}
+            />
+
+           
+          </svg>
+        </motion.div>
+        
+        {/* Subtle highlight effect */}
+        <motion.div
+          className="absolute inset-0 rounded-full bg-white opacity-0"
+          animate={{ opacity: isHovered ? 0.05 : 0 }}
+          transition={{ duration: 0.2 }}
+        />
+      </Link>
+    </motion.div>
           </div>
 
           {/* Mobile Menu Button */}

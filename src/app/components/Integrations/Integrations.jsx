@@ -42,9 +42,9 @@ const Integrations = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h3 className={`${satisfy.className} text-[#FD5F03] text-[22px] md:text-[26px] text-center`}>
-            How It Works
+           Technology Partners
           </h3>
-          <h1 className={`font-sf-pro text-[32px] sm:text-[38px] md:text-[46px] lg:text-[56px] font-medium text-center mb-2`}>
+          <h1 className={`font-sf-pro text-[32px] sm:text-[38px] md:text-[46px] lg:text-[56px] font-medium text-center mb-2 -mt-[12px]`}>
             Our Integrations
           </h1>
           <p className={`${inter.className} text-center max-w-md mx-auto text-[#141414] text-base md:text-[16px] font-normal`}>
