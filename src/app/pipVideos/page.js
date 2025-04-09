@@ -4,12 +4,12 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureStory from '../../assets/feature_story.png';
-import storyBanner1 from '../../assets/story_banner_1.png';
-import storyBanner2 from '../../assets/story_banner_2.png';
-import storyBanner3 from '../../assets/story_banner_3.png';
+import featurePip from '../../assets/feature_pip.png';
+import pipBanner1 from '../../assets/pip_banner_1.png';
+import pipBanner2 from '../../assets/pip_banner_2.png';
+import pipBanner3 from '../../assets/pip_banner_3.png';
 
-export default function Stories() {
+export default function PiP() {
   const setRequestDemoClick = () => {
     // This will be implemented when we set up the store
     console.log("Request demo clicked");
@@ -24,18 +24,18 @@ export default function Stories() {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
                 <Image
-                  src={featureStory}
-                  alt="AppStorys feature story"
+                  src={featurePip}
+                  alt="AppStorys feature pip"
                   width={400}
-                  height={557}
+                  height={539}
                   style={{ objectFit: "contain", width: "auto", height: "100%" }}
                   priority
                 />
               </div>
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[0.5]">Boost User</h1>
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.07]">Engagement With Stories</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[0.9]">Increase Engagement</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.07]">With PiP Videos</h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
                 Keep users engaged with floating PiP videos, allowing them to watch content while continuing to browse your app. Enhance multitasking and improve user retention effortlessly.
               </p>
@@ -53,14 +53,14 @@ export default function Stories() {
 
       {/* Ticker/Marquee - Full width with centered content */}
       <section className="w-full">
-        <div className=" mx-auto">
+        <div className="mx-auto">
           <FeatureTicker
-            number1="5x"
-            number2="23%"
-            number3="37%"
-            heading1="more content consumption"
-            heading2="increase in page views"
-            heading3="Decrease in bounce rate"
+            number1="24%"
+            number2="64%"
+            number3="4.2x"
+            heading1="boost in multitasking engagement"
+            heading2="increase in feature Adoption"
+            heading3="Increase In Sales"
           />
         </div>
       </section>
@@ -74,8 +74,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner1}
-                    alt="AppStorys story banner 1"
+                    src={pipBanner1}
+                    alt="AppStorys pip banner 1"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -86,14 +86,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Add Stories To Your App
+                    Watch While You Explore
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Give your platform a personalized touch by adding stories.
+                      Watch while you explore: With Picture-in-Picture (PiP) video feature in your App, users can enjoy immersive content without interrupting their app experience.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Build rapport with users in an interactive way using stories.
+                      Whether they're learning about new features, catching up on tutorials, or watching promotional videos, PiP allows users to keep the video in view while navigating through the app.
                     </li>
                   </ul>
                 </div>
@@ -105,14 +105,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Present Content In An All New Manner
+                    Highlight New Deals And Discounts
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Make experience enjoyable for your users in an innovative way
+                      Capture user attention by prominently showcasing the latest deals and discounts within your app.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Offer personalised, shoppable, and authentic content to your users to impact retention
+                      Use vibrant banners and notifications to ensure users are always informed about exciting offers that enhance their shopping experience.
                     </li>
                   </ul>
                 </div>
@@ -120,8 +120,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner2}
-                    alt="AppStorys story banner 2"
+                    src={pipBanner2}
+                    alt="AppStorys pip banner 2"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -136,8 +136,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner3}
-                    alt="AppStorys story banner 3"
+                    src={pipBanner3}
+                    alt="AppStorys pip banner 3"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -148,14 +148,11 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Introduce Interactive Elements Within Stories
+                    Video Glimpse
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Engage and interact more with users using stories.
-                    </li>
-                    <li className="feature-list text-lg md:text-xl">
-                      Add interactive components like emoji reactions, feedback polls, and quizzes.
+                      By emphasizing limited-time promotions and exclusive discounts, you can drive user engagement, increase conversions, and foster a sense of urgency that encourages immediate action
                     </li>
                   </ul>
                 </div>
@@ -166,7 +163,7 @@ export default function Stories() {
       </section>
 
       {/* Steps Section - Already full width in the component */}
-      <StepsSection keyword="Stories" />
+      <StepsSection keyword="PiP Videos" />
     </main>
   );
 }

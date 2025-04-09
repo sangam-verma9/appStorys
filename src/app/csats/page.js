@@ -4,12 +4,12 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureStory from '../../assets/feature_story.png';
-import storyBanner1 from '../../assets/story_banner_1.png';
-import storyBanner2 from '../../assets/story_banner_2.png';
-import storyBanner3 from '../../assets/story_banner_3.png';
+import featureCsat from '../../assets/feature_Csat.png';
+import csatBanner1 from '../../assets/csat_banner_1.png';
+import csatBanner2 from '../../assets/csat_banner_2.png';
+import csatBanner3 from '../../assets/csat_banner_3.png';
 
-export default function Stories() {
+export default function CSATs() {
   const setRequestDemoClick = () => {
     // This will be implemented when we set up the store
     console.log("Request demo clicked");
@@ -24,20 +24,21 @@ export default function Stories() {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
                 <Image
-                  src={featureStory}
-                  alt="AppStorys feature story"
+                  src={featureCsat}
+                  alt="AppStorys feature CSAT"
                   width={400}
-                  height={557}
+                  height={502}
                   style={{ objectFit: "contain", width: "auto", height: "100%" }}
                   priority
                 />
               </div>
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[0.5]">Boost User</h1>
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.07]">Engagement With Stories</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[59px] text-black font-semibold leading-tight md:leading-[0.97]">
+                Transform Feedback into Growth with CSAT Metrics
+              </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
-                Keep users engaged with floating PiP videos, allowing them to watch content while continuing to browse your app. Enhance multitasking and improve user retention effortlessly.
+                Ask users the right questions and get instant, actionable feedback through surveys.
               </p>
               <button 
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
@@ -53,14 +54,14 @@ export default function Stories() {
 
       {/* Ticker/Marquee - Full width with centered content */}
       <section className="w-full">
-        <div className=" mx-auto">
+        <div className="mx-auto">
           <FeatureTicker
-            number1="5x"
-            number2="23%"
-            number3="37%"
-            heading1="more content consumption"
-            heading2="increase in page views"
-            heading3="Decrease in bounce rate"
+            number1="3.5x"
+            number2="30%"
+            number3="3.6x"
+            heading1="More Accurate Insights"
+            heading2="Improvement in feedback response rates"
+            heading3="Relevant Insights Gain"
           />
         </div>
       </section>
@@ -74,8 +75,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner1}
-                    alt="AppStorys story banner 1"
+                    src={csatBanner1}
+                    alt="AppStorys CSAT banner 1"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -86,14 +87,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Add Stories To Your App
+                    Seamless User Experience
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Give your platform a personalized touch by adding stories.
+                      In-app surveys appear naturally, ensuring no disruption to the user's experience.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Build rapport with users in an interactive way using stories.
+                      Users can easily share feedback with minimal effort, making participation simple and convenient.
                     </li>
                   </ul>
                 </div>
@@ -105,14 +106,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Present Content In An All New Manner
+                    Contextual and Targeted Feedback
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Make experience enjoyable for your users in an innovative way
+                      Trigger surveys based on user actions, behaviors, or milestones.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Offer personalised, shoppable, and authentic content to your users to impact retention
+                      Ask one carefully crafted question at the right moment to capture the most insightful and valuable feedback from users.
                     </li>
                   </ul>
                 </div>
@@ -120,8 +121,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner2}
-                    alt="AppStorys story banner 2"
+                    src={csatBanner2}
+                    alt="AppStorys CSAT banner 2"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -136,8 +137,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner3}
-                    alt="AppStorys story banner 3"
+                    src={csatBanner3}
+                    alt="AppStorys CSAT banner 3"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -148,14 +149,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Introduce Interactive Elements Within Stories
+                    Real-Time Analytics for Immediate Action
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Engage and interact more with users using stories.
+                      Access user opinions and preferences instantly.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Add interactive components like emoji reactions, feedback polls, and quizzes.
+                      Use analytics to make data-driven decisions that boost satisfaction and performance.
                     </li>
                   </ul>
                 </div>
@@ -166,7 +167,7 @@ export default function Stories() {
       </section>
 
       {/* Steps Section - Already full width in the component */}
-      <StepsSection keyword="Stories" />
+      <StepsSection keyword="CSATs" />
     </main>
   );
 }

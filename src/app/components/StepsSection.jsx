@@ -170,7 +170,7 @@ const StepsSection = ({ keyword }) => {
               WebkitTextFillColor: "transparent"
             }}
           >
-            Let's Start With App {keyword}?
+            Let's Start With App {keyword}
           </h1>
           <h2 className="text-[16px] md:text-[18px] font-bold text-white mt-[20px]">
             Install SDK &nbsp; ---&gt; &nbsp; Create Campaign &nbsp; ---&gt; &nbsp; Go Live

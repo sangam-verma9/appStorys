@@ -4,12 +4,12 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureStory from '../../assets/feature_story.png';
-import storyBanner1 from '../../assets/story_banner_1.png';
-import storyBanner2 from '../../assets/story_banner_2.png';
-import storyBanner3 from '../../assets/story_banner_3.png';
+import featureFloater from '../../assets/feature_floater.png';
+import floaterBanner1 from '../../assets/floater_banner_1.png';
+import floaterBanner2 from '../../assets/floater_banner_2.png';
+import floaterBanner3 from '../../assets/floater_banner_3.png';
 
-export default function Stories() {
+export default function Floaters() {
   const setRequestDemoClick = () => {
     // This will be implemented when we set up the store
     console.log("Request demo clicked");
@@ -19,25 +19,14 @@ export default function Stories() {
     <main className="flex flex-col items-center w-full">
       {/* Hero Section - Full width background with centered content */}
       <section className="w-full bg-gradient-to-b from-[#FFEADD] to-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-16 lg:px-20">
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-8 md:gap-12 py-16">
-            <div className="w-full md:w-1/2 flex justify-center">
-              <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
-                <Image
-                  src={featureStory}
-                  alt="AppStorys feature story"
-                  width={400}
-                  height={557}
-                  style={{ objectFit: "contain", width: "auto", height: "100%" }}
-                  priority
-                />
-              </div>
-            </div>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-16 lg:px-28">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 py-16">
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[0.5]">Boost User</h1>
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.07]">Engagement With Stories</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight">
+                Guide Users With Floaters
+              </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
-                Keep users engaged with floating PiP videos, allowing them to watch content while continuing to browse your app. Enhance multitasking and improve user retention effortlessly.
+                Floaters provide non-intrusive guidance and reminders to users, helping them discover key features or promotions.
               </p>
               <button 
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
@@ -47,20 +36,32 @@ export default function Stories() {
                 REQUEST A DEMO
               </button>
             </div>
+            <div className="w-full md:w-1/2 flex justify-center">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
+                <Image
+                  src={featureFloater}
+                  alt="AppStorys feature floater"
+                  width={400}
+                  height={509}
+                  style={{ objectFit: "contain", width: "auto", height: "100%" }}
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Ticker/Marquee - Full width with centered content */}
       <section className="w-full">
-        <div className=" mx-auto">
+        <div className="mx-auto">
           <FeatureTicker
-            number1="5x"
-            number2="23%"
-            number3="37%"
-            heading1="more content consumption"
-            heading2="increase in page views"
-            heading3="Decrease in bounce rate"
+            number1="4.2x"
+            number2="35%"
+            number3="4.2x"
+            heading1="Increase In feature discovery"
+            heading2="improvement in user engagement"
+            heading3="more interactions with In-App Offers"
           />
         </div>
       </section>
@@ -74,8 +75,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner1}
-                    alt="AppStorys story banner 1"
+                    src={floaterBanner1}
+                    alt="AppStorys floater banner 1"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -86,14 +87,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Add Stories To Your App
+                    Floating Action Button For Maximum Impact
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Give your platform a personalized touch by adding stories.
+                      Utilize floaters to deliver timely messages, special offers, or helpful tips without disrupting the user experience.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Build rapport with users in an interactive way using stories.
+                      These subtle yet impactful prompts glide into view, guiding users toward important actions or highlighting new features.
                     </li>
                   </ul>
                 </div>
@@ -105,14 +106,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Present Content In An All New Manner
+                    New Feature Adoption
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Make experience enjoyable for your users in an innovative way
+                      By strategically placing floaters at key moments, you can guide users to try out new functionalities, ensuring they fully benefit from your app's evolving capabilities
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Offer personalised, shoppable, and authentic content to your users to impact retention
+                      Boost user engagement and satisfaction by making it easy for them to discover and adopt the innovative features you've introduced.
                     </li>
                   </ul>
                 </div>
@@ -120,8 +121,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner2}
-                    alt="AppStorys story banner 2"
+                    src={floaterBanner2}
+                    alt="AppStorys floater banner 2"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -136,8 +137,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner3}
-                    alt="AppStorys story banner 3"
+                    src={floaterBanner3}
+                    alt="AppStorys floater banner 3"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -148,14 +149,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Introduce Interactive Elements Within Stories
+                    Non-Intrusive Feature Discovery
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Engage and interact more with users using stories.
+                      Help users find the best of features without interrupting their navigation
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Add interactive components like emoji reactions, feedback polls, and quizzes.
+                      Grab user attention and drive them to explore new features.
                     </li>
                   </ul>
                 </div>
@@ -166,7 +167,7 @@ export default function Stories() {
       </section>
 
       {/* Steps Section - Already full width in the component */}
-      <StepsSection keyword="Stories" />
+      <StepsSection keyword="Floater" />
     </main>
   );
 }

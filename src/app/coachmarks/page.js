@@ -4,12 +4,12 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureStory from '../../assets/feature_story.png';
-import storyBanner1 from '../../assets/story_banner_1.png';
-import storyBanner2 from '../../assets/story_banner_2.png';
-import storyBanner3 from '../../assets/story_banner_3.png';
+import featureCoachmark from '../../assets/feature_coachmark.png';
+import coachmarkBanner1 from '../../assets/coachmark_banner_1.png';
+import coachmarkBanner2 from '../../assets/coachmark_banner_2.png';
+import coachmarkBanner3 from '../../assets/coachmark_banner_3.png';
 
-export default function Stories() {
+export default function Coachmarks() {
   const setRequestDemoClick = () => {
     // This will be implemented when we set up the store
     console.log("Request demo clicked");
@@ -24,20 +24,21 @@ export default function Stories() {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
                 <Image
-                  src={featureStory}
-                  alt="AppStorys feature story"
+                  src={featureCoachmark}
+                  alt="AppStorys feature coachmark"
                   width={400}
-                  height={557}
+                  height={512}
                   style={{ objectFit: "contain", width: "auto", height: "100%" }}
                   priority
                 />
               </div>
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[0.5]">Boost User</h1>
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.07]">Engagement With Stories</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.2]">
+                Highlight Features With Coachmarks
+              </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
-                Keep users engaged with floating PiP videos, allowing them to watch content while continuing to browse your app. Enhance multitasking and improve user retention effortlessly.
+                Use Cochmark to highlight important features in your app and use feature adoption.
               </p>
               <button 
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
@@ -53,14 +54,14 @@ export default function Stories() {
 
       {/* Ticker/Marquee - Full width with centered content */}
       <section className="w-full">
-        <div className=" mx-auto">
+        <div className="mx-auto">
           <FeatureTicker
-            number1="5x"
-            number2="23%"
-            number3="37%"
-            heading1="more content consumption"
-            heading2="increase in page views"
-            heading3="Decrease in bounce rate"
+            number1="3.5x"
+            number2="30%"
+            number3="35%"
+            heading1="Faster feature Adoption"
+            heading2="improvement In user Onboarding"
+            heading3="Reduction in user confusion"
           />
         </div>
       </section>
@@ -70,12 +71,12 @@ export default function Stories() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-16">
           <div className="flex flex-col gap-16">
             {/* Feature 1 */}
-            <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-12">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner1}
-                    alt="AppStorys story banner 1"
+                    src={coachmarkBanner1}
+                    alt="AppStorys coachmark banner 1"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -86,14 +87,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Add Stories To Your App
+                    Highlight Important Features
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Give your platform a personalized touch by adding stories.
+                      Use on-screen visual cues to guide, highlight, and inform users about important features
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Build rapport with users in an interactive way using stories.
+                      Draw user attention to key actions and features that they might otherwise overlook
                     </li>
                   </ul>
                 </div>
@@ -105,14 +106,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Present Content In An All New Manner
+                    Attract user Attention
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Make experience enjoyable for your users in an innovative way
+                      Grab user attention to direct them to key features and products smoothly.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Offer personalised, shoppable, and authentic content to your users to impact retention
+                      Encourage exploration and interaction on your platform for higher user engagement
                     </li>
                   </ul>
                 </div>
@@ -120,8 +121,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner2}
-                    alt="AppStorys story banner 2"
+                    src={coachmarkBanner2}
+                    alt="AppStorys coachmark banner 2"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -136,8 +137,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner3}
-                    alt="AppStorys story banner 3"
+                    src={coachmarkBanner3}
+                    alt="AppStorys coachmark banner 3"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -148,14 +149,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Introduce Interactive Elements Within Stories
+                    Higher Click-through Rate
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Engage and interact more with users using stories.
+                      Provide users with immediate access to navigate through the platform, and enhance usability
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Add interactive components like emoji reactions, feedback polls, and quizzes.
+                      Guide users to key features or products to enhance interaction and ultimately more clicks.
                     </li>
                   </ul>
                 </div>
@@ -166,7 +167,7 @@ export default function Stories() {
       </section>
 
       {/* Steps Section - Already full width in the component */}
-      <StepsSection keyword="Stories" />
+      <StepsSection keyword="Coachmark" />
     </main>
   );
 }

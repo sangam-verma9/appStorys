@@ -14,8 +14,9 @@ import HeroSection from "./components/HeroSection";
 export default function Home() {
   return (
     <>
-      {/* <LandingPage /> */}
       <HeroSection/>
+      {/* <LandingPage /> */}
+
       <CoreFeatures/>
       <Whyus />
       <Integrations/>

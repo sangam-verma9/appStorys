@@ -4,12 +4,12 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureStory from '../../assets/feature_story.png';
-import storyBanner1 from '../../assets/story_banner_1.png';
-import storyBanner2 from '../../assets/story_banner_2.png';
-import storyBanner3 from '../../assets/story_banner_3.png';
+import featureBanner from '../../assets/feature_banner.png';
+import bannerBanner1 from '../../assets/banner_banner_1.png';
+import bannerBanner2 from '../../assets/banner_banner_2.png';
+import bannerBanner3 from '../../assets/banner_banner_3.png';
 
-export default function Stories() {
+export default function Banners() {
   const setRequestDemoClick = () => {
     // This will be implemented when we set up the store
     console.log("Request demo clicked");
@@ -20,24 +20,13 @@ export default function Stories() {
       {/* Hero Section - Full width background with centered content */}
       <section className="w-full bg-gradient-to-b from-[#FFEADD] to-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-16 lg:px-20">
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-8 md:gap-12 py-16">
-            <div className="w-full md:w-1/2 flex justify-center">
-              <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
-                <Image
-                  src={featureStory}
-                  alt="AppStorys feature story"
-                  width={400}
-                  height={557}
-                  style={{ objectFit: "contain", width: "auto", height: "100%" }}
-                  priority
-                />
-              </div>
-            </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 py-16">
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[0.5]">Boost User</h1>
-              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight md:leading-[1.07]">Engagement With Stories</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight">
+                Highlight new deals with Banners
+              </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
-                Keep users engaged with floating PiP videos, allowing them to watch content while continuing to browse your app. Enhance multitasking and improve user retention effortlessly.
+                Drive engagement by displaying eye-catching banners within your app, promoting key features, offers, or updates.
               </p>
               <button 
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
@@ -47,20 +36,32 @@ export default function Stories() {
                 REQUEST A DEMO
               </button>
             </div>
+            <div className="w-full md:w-1/2 flex justify-center">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
+                <Image
+                  src={featureBanner}
+                  alt="AppStorys feature banner"
+                  width={400}
+                  height={509}
+                  style={{ objectFit: "contain", width: "auto", height: "100%" }}
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Ticker/Marquee - Full width with centered content */}
       <section className="w-full">
-        <div className=" mx-auto">
+        <div className="mx-auto">
           <FeatureTicker
-            number1="5x"
-            number2="23%"
-            number3="37%"
-            heading1="more content consumption"
-            heading2="increase in page views"
-            heading3="Decrease in bounce rate"
+            number1="2.1x"
+            number2="1.1x"
+            number3="55%"
+            heading1="Increase in user engagement"
+            heading2="More In-App purchases"
+            heading3="Boost In-session Duration"
           />
         </div>
       </section>
@@ -70,12 +71,12 @@ export default function Stories() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-16">
           <div className="flex flex-col gap-16">
             {/* Feature 1 */}
-            <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-12">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner1}
-                    alt="AppStorys story banner 1"
+                    src={bannerBanner1}
+                    alt="AppStorys banner banner 1"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -86,14 +87,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Add Stories To Your App
+                    Grab Attention
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Give your platform a personalized touch by adding stories.
+                      Capture user attention at crucial moments with strategically placed banners that enhance user experience without interrupting app flow.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Build rapport with users in an interactive way using stories.
+                      Easily highlight new deals. Banners help in driving user attention towards new deals, new product launches or maybe a webpage you'd like your users to be redirected to
                     </li>
                   </ul>
                 </div>
@@ -105,14 +106,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Present Content In An All New Manner
+                    Increase Conversions:
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Make experience enjoyable for your users in an innovative way
+                      Turn app traffic into conversions by highlighting promotions, new features, or limited-time offers directly through interactive banners.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Offer personalised, shoppable, and authentic content to your users to impact retention
+                      Since banners are instantly visible, they help in increase conversion and highly click through rates.
                     </li>
                   </ul>
                 </div>
@@ -120,8 +121,8 @@ export default function Stories() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner2}
-                    alt="AppStorys story banner 2"
+                    src={bannerBanner2}
+                    alt="AppStorys banner banner 2"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -132,12 +133,12 @@ export default function Stories() {
             </div>
 
             {/* Feature 3 */}
-            <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-12">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={storyBanner3}
-                    alt="AppStorys story banner 3"
+                    src={bannerBanner3}
+                    alt="AppStorys banner banner 3"
                     width={400}
                     height={421}
                     style={{ objectFit: "contain", width: "auto", height: "100%" }}
@@ -148,14 +149,14 @@ export default function Stories() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Introduce Interactive Elements Within Stories
+                    Your Message Unmissable
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg md:text-xl">
-                      Engage and interact more with users using stories.
+                      Deliver personalized content and promotions to specific user segments with dynamic banners tailored to their preferences.
                     </li>
                     <li className="feature-list text-lg md:text-xl">
-                      Add interactive components like emoji reactions, feedback polls, and quizzes.
+                      Integrate with CleverTap and MoEngage to segment your audience. Show different banners on different screens. Show different banners to different users.
                     </li>
                   </ul>
                 </div>
@@ -166,7 +167,7 @@ export default function Stories() {
       </section>
 
       {/* Steps Section - Already full width in the component */}
-      <StepsSection keyword="Stories" />
+      <StepsSection keyword="Banner" />
     </main>
   );
 }
