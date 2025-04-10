@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from "framer-motion";
-import Why_Us_Card_New from './Why_Us_Card_New';
+import Why_Us_Card_New from './WhyUsCardNew';
 import whyUs1 from '../../assets/why_us_1.png';
 import whyUs2 from '../../assets/why_us_2.png';
 import whyUs3 from '../../assets/why_us_3.png';

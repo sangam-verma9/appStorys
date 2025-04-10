@@ -3,18 +3,18 @@
 import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import axios from 'axios';
 
 // MUI
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
+// import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-import PhoneInput from 'react-phone-number-input';
+// import PhoneInput from 'react-phone-number-input';
 import LocationCard from "../components/LocationCard";
 import tickYellow from '../../assets/tick_yellow.png';
+import axios from 'axios';
+import { Box, InputLabel } from '@mui/material';
 
 const countryCodes = [
     { code: 'RU', name: 'Russia', dialCode: '+7' },
