@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import { motion } from 'framer-motion';
-import Why_Us_Section from "../components/why_Us_Section";
+import WhyUsSection from "../components/WhyUsSection";
 import StepsSection from "../components/StepsSection";
 import aboutBanner from '../../assets/about_banner.jpg';
 import ourMission from '../../assets/our_mission.png';
@@ -145,7 +145,7 @@ export default function AboutUs() {
       </section>
 
       {/* Why Us */}
-      <Why_Us_Section />
+      <WhyUsSection />
 
       {/* Our Offices */}
       <section className='flex justify-between items-start w-full bg-[#1f4d9c] min-h-[60vh] relative overflow-hidden max-[1220px]:flex-col max-[1220px]:h-auto max-[1220px]:gap-y-[20px]'>
