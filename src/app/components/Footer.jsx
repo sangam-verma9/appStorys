@@ -8,6 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import footer_img1 from "@/assets/footer_img1.png"
 import footer_img2 from "@/assets/footer_img2.png"
+import Link from 'next/link';
 
 
 
@@ -51,80 +52,80 @@ const Footer = () => {
         </div>
         <div className='w-[100%] h-[0.8px] bg-[#fcf1e4] relative my-2'></div>
         <div className='grid grid-cols-1 sm:grid-cols-4 my-4 mt-6'>
-          <div className='flex justify-center sm:justify-normal'>
-            <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-              <h3 className={`${bricolageGrotesque.className} capitalize text-[18px]`}>Integratable growth Tools</h3>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Stories</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>reels/Short videos</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>PiP Videos</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>banners</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Floaters</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Widgets</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Quizzes</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Surveys</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>CSAT Feedback</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Coachmarks</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>tooltips</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Scratch Cards</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>bottom Sheets</p>
-              <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Spotlight</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div className='flex flex-col justify-between'>
-              <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-                <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>Our SDKs</h3>
-                <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  `}>iOS</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>android</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>flutter</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>react native</p>
-                <p className={`${outfit.className} font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>React.js</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>angular</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>wordpress</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>shopify</p>
-              </div>
-              <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-                <h3 className={`${bricolageGrotesque.className} capitalize  text-[18px]`}>resources</h3>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>blog</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>inspiration gallery</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>appStorys book</p>
-              </div>
-            </div>
-          </div>
+  <div className='flex justify-center sm:justify-normal'>
+    <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
+      <h3 className={`${bricolageGrotesque.className} capitalize text-[18px]`}>Integratable growth Tools</h3>
+      <Link href="/stories" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Stories</Link>
+      <Link href="/reels" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>reels/Short videos</Link>
+      <Link href="/pipVideos" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>PiP Videos</Link>
+      <Link href="/banners" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>banners</Link>
+      <Link href="/floaters" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Floaters</Link>
+      <Link href="/widgets" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Widgets</Link>
+      <Link href="/quizzes" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Quizzes</Link>
+      <Link href="/surveys" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Surveys</Link>
+      <Link href="/csats" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>CSAT Feedback</Link>
+      <Link href="/coachmarks" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Coachmarks</Link>
+      <Link href="/tooltips" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>tooltips</Link>
+      <Link href="/scratchCards" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Scratch Cards</Link>
+      <Link href="/bottomsheets" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>bottom Sheets</Link>
+      <Link href="/spotlights" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Spotlight</Link>
+    </div>
+  </div>
+  <div className='flex justify-center'>
+    <div className='flex flex-col justify-between'>
+      <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
+        <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>Our SDKs</h3>
+        <Link href="/ios" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  `}>iOS</Link>
+        <Link href="/android" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>android</Link>
+        <Link href="/flutter" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>flutter</Link>
+        <Link href="/react-native" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>react native</Link>
+        <Link href="/reactjs" className={`${outfit.className} font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>React.js</Link>
+        <Link href="/angular" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>angular</Link>
+        <Link href="/wordpress" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>wordpress</Link>
+        <Link href="/shopify" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>shopify</Link>
+      </div>
+      <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
+        <h3 className={`${bricolageGrotesque.className} capitalize  text-[18px]`}>resources</h3>
+        <Link href="/blogs" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>blog</Link>
+        <Link href="/inspiration-gallery" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>inspiration gallery</Link>
+        <Link href="/appstorys-book" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>appStorys book</Link>
+      </div>
+    </div>
+  </div>
 
-          <div className='flex justify-center'>
-            <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-              <h3 className={`${bricolageGrotesque.className} capitalize  text-[18px]`}>Integrations</h3>
-              <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>cleverTap</p>
-              <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>MoEngage</p>
-              <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Mixpanel</p>
-              <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>mParticle</p>
-              <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Custom Audiences</p>
-            </div>
-          </div>
-          <div className='flex sm:justify-end justify-center'>
-            <div className='flex flex-col justify-between'>
-              <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
-                <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>security</h3>
-                <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>SOC 2 verified</p>
-                <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>encrypted</p>
-                <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>24/7 Global Fraud Monitoring</p>
-                <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>AWS Servers - No data collected</p>
-                <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>GDPR Compliant</p>
-                <p className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>RBI Compliant</p>
-              </div>
-              <div className='flex flex-col text-center sm:text-left'>
-                <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>company</h3>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>about</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>contact us</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>careers</p>
-                <p className={`${outfit.className} font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>Terms of Service</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>privacy Policy</p>
-                <p className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>refund policy</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div className='flex justify-center'>
+    <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
+      <h3 className={`${bricolageGrotesque.className} capitalize  text-[18px]`}>Integrations</h3>
+      <Link href="/clevertap" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>cleverTap</Link>
+      <Link href="/moengage" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>MoEngage</Link>
+      <Link href="/mixpanel" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Mixpanel</Link>
+      <Link href="/mparticle" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>mParticle</Link>
+      <Link href="/custom-audiences" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Custom Audiences</Link>
+    </div>
+  </div>
+  <div className='flex sm:justify-end justify-center'>
+    <div className='flex flex-col justify-between'>
+      <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
+        <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>security</h3>
+        <Link href="/soc2" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>SOC 2 verified</Link>
+        <Link href="/encryption" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>encrypted</Link>
+        <Link href="/fraud-monitoring" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>24/7 Global Fraud Monitoring</Link>
+        <Link href="/aws-servers" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>AWS Servers - No data collected</Link>
+        <Link href="/gdpr" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>GDPR Compliant</Link>
+        <Link href="/rbi" className={`${outfit.className} font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>RBI Compliant</Link>
+      </div>
+      <div className='flex flex-col text-center sm:text-left'>
+        <h3 className={`${bricolageGrotesque.className} capitalize text-[18px] `}>company</h3>
+        <Link href="/about" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>about</Link>
+        <Link href="/contact" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>contact us</Link>
+        <Link href="/career" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>careers</Link>
+        <Link href="/privacypolicy" className={`${outfit.className} font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>Terms of Service</Link>
+        <Link href="/privacypolicy" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>privacy Policy</Link>
+        <Link href="/privacypolicy" className={`${outfit.className} font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>refund policy</Link>
+      </div>
+    </div>
+  </div>
+</div>
         <div className='flex-col sm:flex-row flex justify-between mt-20 items-center'>
           <div><p className={`${outfit.className} font-extralight text-[14px] mb-5 sm:mb-0`}>2025 AppStorys Inc. All rights reserved</p></div>
           <div><p className={`${bricolageGrotesque.className} text-[18px] mb-5 sm:mb-0`}>Made with ❤️ in USA & India</p></div>
