@@ -616,8 +616,210 @@
 
 // export default HyperPersonalization;
 
+// "use client";
+// import React, { useState, useEffect, useRef } from "react";
+// import Image from "next/image";
+// import { motion } from "framer-motion";
+// import hp1 from "../../assets/hp1.png";
+// import hp2 from "../../assets/hp2.png";
+// import hp3 from "../../assets/hp3.png";
+// import hp4 from "../../assets/hp4.png";
+// import hp5 from "../../assets/hp5.png";
+// import "../globals.css";
+
+// const HyperPersonalization = () => {
+//   const images = [hp1, hp2, hp3, hp4, hp5];
+//   const [imagesLoaded, setImagesLoaded] = useState(false);
+//   const [activeIndex, setActiveIndex] = useState(0);
+
+//   // Set images as loaded after component mounts
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setImagesLoaded(true);
+//     }, 1000);
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   // Continuous animation cycle
+//   useEffect(() => {
+//     if (!imagesLoaded) return;
+
+//     const animationInterval = setInterval(() => {
+//       setActiveIndex((prev) => (prev + 1) % images.length);
+//     }, 2000); // Change every 2 seconds
+
+//     return () => clearInterval(animationInterval);
+//   }, [imagesLoaded, images.length]);
+
+//   return (
+//     <div className="w-full py-16 bg-[#FFF7F3]">
+//       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+//         {/* Left Column - Text */}
+//         <div className="w-full md:w-1/2 ">
+//           <h2 className="text-[#101010]  text-[56px] font-medium leading-[102%] mb-6 capitalize">
+//             Hyper Personalization Using Cohorts
+//           </h2>
+//           <p
+//             style={{
+//               color: "#2F2F2F",
+//               fontFeatureSettings: "'liga' off, 'clig' off",
+//               // fontFamily: '"SF Pro Display", sans-serif',
+//               fontSize: "16px",
+//               fontStyle: "normal",
+//               fontWeight: "400",
+//               lineHeight: "128%",
+//               maxWidth: "350px",
+//               justifyContent: "center",
+//               // textTransform: 'capitalize'
+//             }}
+//           >
+//             Connect with your CDP to fetch user cohorts (segments) based on
+//             their activity, behavior, or preferences. You can then show
+//             personalized in-app content like stories, videos, or banners to each
+//             user group — helping you boost engagement and conversions without
+//             any manual work.
+//           </p>
+//         </div>
+ 
+//         {/* Right Column - Animated Container */}
+//         <div className="w-full md:w-[731px] h-[500px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">
+//           {/* Loading state */}
+//           {!imagesLoaded && (
+//             <div className="absolute inset-0 flex items-center justify-center">
+//               <p>Loading animation...</p>
+//             </div>
+//           )}
+
+//           {/* Continuous animation */}
+//           {imagesLoaded && (
+//             <>
+//               {images.map((image, index) => {
+//                 // Calculate position in animation cycle
+//                 const position =
+//                   (index - activeIndex + images.length) % images.length;
+
+//                 // Determine if this image is active, entering, or exiting
+//                 const isActive = position === 0;
+//                 const isEntering = position === images.length - 1;
+//                 const isExiting = position === 1;
+
+//                 // Different animation states
+//                 let animateProps = {};
+//                 let initial = {};
+//                 let transition = {};
+
+//                 if (isActive) {
+//                   // Current active image
+//                   animateProps = {
+//                     opacity: 1,
+//                     scale: 1,
+//                     zIndex: 10,
+//                   };
+//                   initial = {
+//                     opacity: 0,
+//                     scale: 1.05,
+//                   };
+//                   transition = {
+//                     opacity: { duration: 0.8, ease: "easeInOut" },
+//                     scale: { duration: 3, ease: "easeOut" },
+//                   };
+//                 } else if (isEntering) {
+//                   // Image about to enter
+//                   animateProps = {
+//                     opacity: 0,
+//                     scale: 1.05,
+//                     zIndex: 5,
+//                   };
+//                   initial = {
+//                     opacity: 0,
+//                     scale: 1.05,
+//                   };
+//                   transition = {
+//                     opacity: { duration: 0.5, ease: "easeIn" },
+//                     scale: { duration: 0.8, ease: "easeIn" },
+//                   };
+//                 } else if (isExiting) {
+//                   // Image that was active and is now exiting
+//                   animateProps = {
+//                     opacity: 0,
+//                     scale: 1,
+//                     zIndex: 8,
+//                   };
+//                   initial = {
+//                     opacity: 1,
+//                     scale: 1,
+//                   };
+//                   transition = {
+//                     opacity: { duration: 1.2, ease: "easeOut" },
+//                     scale: { duration: 0.8, ease: "easeOut" },
+//                   };
+//                 } else {
+//                   // Other images (inactive)
+//                   animateProps = {
+//                     opacity: 0,
+//                     scale: 1,
+//                     zIndex: 1,
+//                   };
+//                   initial = {
+//                     opacity: 0,
+//                     scale: 1,
+//                   };
+//                   transition = {
+//                     opacity: { duration: 0.5 },
+//                     scale: { duration: 0.5 },
+//                   };
+//                 }
+
+//                 return (
+//                   <motion.div
+//                     key={`image-${index}`}
+//                     className="absolute inset-0"
+//                     initial={initial}
+//                     animate={animateProps}
+//                     transition={transition}
+//                   >
+//                     <Image
+//                       src={image}
+//                       alt={`Personalization visualization ${index + 1}`}
+//                       fill
+//                       style={{ objectFit: "contain" }}
+//                       priority
+//                       quality={100}
+//                     />
+//                   </motion.div>
+//                 );
+//               })}
+
+//               {/* Subtle visual enhancement layer */}
+//               <motion.div
+//                 className="absolute inset-0 pointer-events-none"
+//                 animate={{
+//                   opacity: [0.02, 0.08, 0.02],
+//                 }}
+//                 transition={{
+//                   repeat: Infinity,
+//                   duration: 3,
+//                   ease: "easeInOut",
+//                 }}
+//                 style={{
+//                   background:
+//                     "radial-gradient(circle, rgba(255,255,255,0.05) 30%, rgba(255,94,0,0.03) 70%)",
+//                 }}
+//               />
+//             </>
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HyperPersonalization;
+
+
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import hp1 from "../../assets/hp1.png";
@@ -653,27 +855,14 @@ const HyperPersonalization = () => {
   }, [imagesLoaded, images.length]);
 
   return (
-    <div className="w-full py-16 bg-[#FFF7F3]">
-      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div className="w-full py-12 md:py-16 bg-[#FFF7F3]">
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Text */}
-        <div className="w-full md:w-1/2 ">
-          <h2 className="text-[#101010]  text-[56px] font-medium leading-[102%] mb-6 capitalize">
+        <div className="w-full md:w-1/2 mb-8 md:mb-0 order-2 md:order-1">
+          <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] md:leading-[102%] mb-4 md:mb-6 capitalize">
             Hyper Personalization Using Cohorts
           </h2>
-          <p
-            style={{
-              color: "#2F2F2F",
-              fontFeatureSettings: "'liga' off, 'clig' off",
-              // fontFamily: '"SF Pro Display", sans-serif',
-              fontSize: "16px",
-              fontStyle: "normal",
-              fontWeight: "400",
-              lineHeight: "128%",
-              maxWidth: "350px",
-              justifyContent: "center",
-              // textTransform: 'capitalize'
-            }}
-          >
+          <p className="text-[#2F2F2F] text-base font-normal leading-[128%] max-w-[400px]">
             Connect with your CDP to fetch user cohorts (segments) based on
             their activity, behavior, or preferences. You can then show
             personalized in-app content like stories, videos, or banners to each
@@ -681,134 +870,136 @@ const HyperPersonalization = () => {
             any manual work.
           </p>
         </div>
-
+ 
         {/* Right Column - Animated Container */}
-        <div className="w-full md:w-[731px] h-[500px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">
-          {/* Loading state */}
-          {!imagesLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p>Loading animation...</p>
-            </div>
-          )}
+        <div className="w-full md:w-1/2 order-1 md:order-2">
+          <div className="w-full h-[400px] md:h-[500px] lg:h-[616px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">
+            {/* Loading state */}
+            {!imagesLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <p>Loading animation...</p>
+              </div>
+            )}
 
-          {/* Continuous animation */}
-          {imagesLoaded && (
-            <>
-              {images.map((image, index) => {
-                // Calculate position in animation cycle
-                const position =
-                  (index - activeIndex + images.length) % images.length;
+            {/* Continuous animation */}
+            {imagesLoaded && (
+              <>
+                {images.map((image, index) => {
+                  // Calculate position in animation cycle
+                  const position =
+                    (index - activeIndex + images.length) % images.length;
 
-                // Determine if this image is active, entering, or exiting
-                const isActive = position === 0;
-                const isEntering = position === images.length - 1;
-                const isExiting = position === 1;
+                  // Determine if this image is active, entering, or exiting
+                  const isActive = position === 0;
+                  const isEntering = position === images.length - 1;
+                  const isExiting = position === 1;
 
-                // Different animation states
-                let animateProps = {};
-                let initial = {};
-                let transition = {};
+                  // Different animation states
+                  let animateProps = {};
+                  let initial = {};
+                  let transition = {};
 
-                if (isActive) {
-                  // Current active image
-                  animateProps = {
-                    opacity: 1,
-                    scale: 1,
-                    zIndex: 10,
-                  };
-                  initial = {
-                    opacity: 0,
-                    scale: 1.05,
-                  };
-                  transition = {
-                    opacity: { duration: 0.8, ease: "easeInOut" },
-                    scale: { duration: 3, ease: "easeOut" },
-                  };
-                } else if (isEntering) {
-                  // Image about to enter
-                  animateProps = {
-                    opacity: 0,
-                    scale: 1.05,
-                    zIndex: 5,
-                  };
-                  initial = {
-                    opacity: 0,
-                    scale: 1.05,
-                  };
-                  transition = {
-                    opacity: { duration: 0.5, ease: "easeIn" },
-                    scale: { duration: 0.8, ease: "easeIn" },
-                  };
-                } else if (isExiting) {
-                  // Image that was active and is now exiting
-                  animateProps = {
-                    opacity: 0,
-                    scale: 1,
-                    zIndex: 8,
-                  };
-                  initial = {
-                    opacity: 1,
-                    scale: 1,
-                  };
-                  transition = {
-                    opacity: { duration: 1.2, ease: "easeOut" },
-                    scale: { duration: 0.8, ease: "easeOut" },
-                  };
-                } else {
-                  // Other images (inactive)
-                  animateProps = {
-                    opacity: 0,
-                    scale: 1,
-                    zIndex: 1,
-                  };
-                  initial = {
-                    opacity: 0,
-                    scale: 1,
-                  };
-                  transition = {
-                    opacity: { duration: 0.5 },
-                    scale: { duration: 0.5 },
-                  };
-                }
+                  if (isActive) {
+                    // Current active image
+                    animateProps = {
+                      opacity: 1,
+                      scale: 1,
+                      zIndex: 10,
+                    };
+                    initial = {
+                      opacity: 0,
+                      scale: 1.05,
+                    };
+                    transition = {
+                      opacity: { duration: 0.8, ease: "easeInOut" },
+                      scale: { duration: 3, ease: "easeOut" },
+                    };
+                  } else if (isEntering) {
+                    // Image about to enter
+                    animateProps = {
+                      opacity: 0,
+                      scale: 1.05,
+                      zIndex: 5,
+                    };
+                    initial = {
+                      opacity: 0,
+                      scale: 1.05,
+                    };
+                    transition = {
+                      opacity: { duration: 0.5, ease: "easeIn" },
+                      scale: { duration: 0.8, ease: "easeIn" },
+                    };
+                  } else if (isExiting) {
+                    // Image that was active and is now exiting
+                    animateProps = {
+                      opacity: 0,
+                      scale: 1,
+                      zIndex: 8,
+                    };
+                    initial = {
+                      opacity: 1,
+                      scale: 1,
+                    };
+                    transition = {
+                      opacity: { duration: 1.2, ease: "easeOut" },
+                      scale: { duration: 0.8, ease: "easeOut" },
+                    };
+                  } else {
+                    // Other images (inactive)
+                    animateProps = {
+                      opacity: 0,
+                      scale: 1,
+                      zIndex: 1,
+                    };
+                    initial = {
+                      opacity: 0,
+                      scale: 1,
+                    };
+                    transition = {
+                      opacity: { duration: 0.5 },
+                      scale: { duration: 0.5 },
+                    };
+                  }
 
-                return (
-                  <motion.div
-                    key={`image-${index}`}
-                    className="absolute inset-0"
-                    initial={initial}
-                    animate={animateProps}
-                    transition={transition}
-                  >
-                    <Image
-                      src={image}
-                      alt={`Personalization visualization ${index + 1}`}
-                      fill
-                      style={{ objectFit: "contain" }}
-                      priority
-                      quality={100}
-                    />
-                  </motion.div>
-                );
-              })}
+                  return (
+                    <motion.div
+                      key={`image-${index}`}
+                      className="absolute inset-0"
+                      initial={initial}
+                      animate={animateProps}
+                      transition={transition}
+                    >
+                      <Image
+                        src={image}
+                        alt={`Personalization visualization ${index + 1}`}
+                        fill
+                        style={{ objectFit: "contain" }}
+                        priority
+                        quality={100}
+                      />
+                    </motion.div>
+                  );
+                })}
 
-              {/* Subtle visual enhancement layer */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                animate={{
-                  opacity: [0.02, 0.08, 0.02],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 3,
-                  ease: "easeInOut",
-                }}
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(255,255,255,0.05) 30%, rgba(255,94,0,0.03) 70%)",
-                }}
-              />
-            </>
-          )}
+                {/* Subtle visual enhancement layer */}
+                <motion.div
+                  className="absolute inset-0 pointer-events-none"
+                  animate={{
+                    opacity: [0.02, 0.08, 0.02],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 3,
+                    ease: "easeInOut",
+                  }}
+                  style={{
+                    background:
+                      "radial-gradient(circle, rgba(255,255,255,0.05) 30%, rgba(255,94,0,0.03) 70%)",
+                  }}
+                />
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>
