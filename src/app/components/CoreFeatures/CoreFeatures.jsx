@@ -345,7 +345,7 @@ const CoreFeatures = () => {
   const features = [
     {
       id: 0,
-      title: "1. Stories",
+      title: "Stories",
       description: "Add Instagram like stories. Each with dedicated CTA.",
       stats: [
         { value: "5x", label: "More Content Consumption" },
@@ -360,7 +360,7 @@ const CoreFeatures = () => {
     },
     {
       id: 1,
-      title: "2. PiP Videos",
+      title: "PiP Videos",
       description: "Movable small video which can be expanded to full screen.",
       stats: [
         { value: "24%", label: "Boost in Multitasking Engagement" },
@@ -375,7 +375,7 @@ const CoreFeatures = () => {
     },
     {
       id: 2,
-      title: "3. Reels",
+      title: "Reels",
       description: "TikTok style endless scrolling videos.",
       stats: [
         { value: "60%", label: "Increase in KYC Retention" },
@@ -390,7 +390,7 @@ const CoreFeatures = () => {
     },
     {
       id: 3,
-      title: "4. Banners",
+      title: "Banners",
       description:
         "Static or animated strips shown at the top or bottom of the screen. Perfect for announcements, offers, or important updates.",
       stats: [
@@ -406,7 +406,7 @@ const CoreFeatures = () => {
     },
     {
       id: 4,
-      title: "5. Floater",
+      title: "Floater",
       description: "Small image which stays constant side of the screen.",
       stats: [
         { value: "4.2x", label: "Increase In Feature Discovery" },
@@ -421,7 +421,7 @@ const CoreFeatures = () => {
     },
     {
       id: 5,
-      title: "6. Widgets",
+      title: "Widgets",
       description:
         "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
       stats: [
@@ -437,7 +437,7 @@ const CoreFeatures = () => {
     },
     {
       id: 6,
-      title: "7. Scratch Cards",
+      title: "Scratch Cards",
       description:
         "Interactive reward cards users can scratch to reveal offers, points, or surprises. Fun way to boost engagement.",
       stats: [
@@ -453,7 +453,7 @@ const CoreFeatures = () => {
     },
     {
       id: 7,
-      title: "8. Quizzes",
+      title: "Quizzes",
       description:
         "Levels of different questions with multiple choice with one correct answer",
       stats: [
@@ -469,7 +469,7 @@ const CoreFeatures = () => {
     },
     {
       id: 8,
-      title: "9. Survey",
+      title: "Survey",
       description:
         "Take user input with a short survey. Get deep user insights.",
       stats: [
@@ -488,7 +488,7 @@ const CoreFeatures = () => {
     },
     {
       id: 9,
-      title: "10. CSAT Feedback",
+      title: "CSAT Feedback",
       description:
         "Simple rating popup to measure how happy users are with your app. Redirect to App Store or Play Store.",
       stats: [
@@ -504,7 +504,7 @@ const CoreFeatures = () => {
     },
     {
       id: 10,
-      title: "11. Tooltips",
+      title: "Tooltips",
       description:
         "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
       stats: [
@@ -520,7 +520,7 @@ const CoreFeatures = () => {
     },
     {
       id: 11,
-      title: "12. Coachmarks",
+      title: "Coachmarks",
       description:
         "Highlight a new feature. Perfect for feature launches and walkthroughs.",
       stats: [
@@ -536,7 +536,7 @@ const CoreFeatures = () => {
     },
     {
       id: 12,
-      title: "13. Spotlight",
+      title: "Spotlight",
       description:
         "Dim the screen to focus on one element. Great for drawing attention to new features or key actions.",
       stats: [
@@ -552,7 +552,7 @@ const CoreFeatures = () => {
     },
     {
       id: 13,
-      title: "14. BottomSheets",
+      title: "BottomSheets",
       description:
         "Dim the screen to focus on one element. Great for drawing attention to new features or key actions.",
       stats: [
@@ -642,7 +642,7 @@ const CoreFeatures = () => {
                       ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
                       : index === 12
                       ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-                      : "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+                      : "border border-[#F200EA] bg-gradient-to-b from-[#F0FFEF] to-white"
                   }`}
                   style={{
                     borderRadius:

@@ -169,7 +169,7 @@ const BlogSection = () => {
           <div className="lg:col-span-4">
             <p className={`${satisfy.className} text-purple-600 text-[22px] font-normal mb-2`}>Blogs</p>
             <h2 className="font-sf-pro text-4xl md:text-[50px] font-medium text-black ">
-              Read All Our<br />Recent Articles
+              Read all our<br />recent articles
             </h2>
             
             <div className="mt-16">

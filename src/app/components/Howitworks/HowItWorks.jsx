@@ -357,6 +357,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Inter, Bricolage_Grotesque, Satisfy, Outfit } from 'next/font/google';
 import img1 from '@/assets/codeblock.png';
+import "../../globals.css";
 
 // Font definitions
 const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
@@ -395,7 +396,7 @@ const StackedCards = () => {
   const Header = () => (
     <div className="text-center mb-6">
       <h3 className={`${satisfy.className} text-[#FD5F03] text-xl md:text-[26px] mb-2`}>How It Works</h3>
-      <h1 className={`font-sf-pro text-3xl font-normal md:text-[56px] capitalize mb-2 leading-none`}>Integration Process &lt; 30 Mins</h1>
+      <h1 className={`font-sf-pro text-3xl font-medium md:text-[56px] capitalize mb-2 leading-none`}>Integration Process &lt; 30 Mins</h1>
       <p className={`font-sf-pro text-center my-4 text-[16px] md:text-base`}>
       Install our SDK, launch campaigns from the dashboard and experience them go live magically in your App in real time.<br className="hidden md:block" />
       Watch users interact with AppStorys’ elements and improve their in-app journey.
