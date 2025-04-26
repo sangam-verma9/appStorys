@@ -1088,9 +1088,54 @@
 // // export default FrequencyScheduling;
 
 
+// import React from 'react';
+// import Image from 'next/image';
+// import fns from '../../assets/fns.png'
+// const FrequencyScheduling = () => {
+//   return (
+//     <div className="w-full bg-[#FFF8F5] py-8 sm:py-12 md:py-16 flex justify-center">
+//       <div className="w-full max-w-[1002px] mx-auto px-4 sm:px-6 md:px-8">
+//         <h2 className="text-[#101010] text-center sf-pro text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[102%] mb-4 sm:mb-6">
+//           Frequency & Scheduling
+//         </h2>
+//         <p className="text-[#2F2F2F] text-center text-base  sm:text-base font-normal leading-[138%] mb-8 sm:mb-10 md:mb-12 max-w-[1002px] mx-auto">
+//           Control how often users see your campaign, show it just once, repeat it daily, weekly, or monthly, or create custom rules like "up to 5 
+//           times a day" or "only after 2 days of last view." Set triggers based on views, clicks, interactions, or specific events. You can also 
+//           schedule start and end dates, with time zone support to match user locations. For the best experience, limit views to avoid user fatigue
+//           — like showing promos a few times a week or resetting after clicks.
+//         </p>
+        
+//         {/* Image Container */}
+//         <div className="w-full  overflow-hidden rounded-xl sm:rounded-2xl">
+//           {/* Replace with actual image when you have it */}
+//           <div className="relative w-full  h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
+//             {/* Placeholder for the image */}
+//             <div className="absolute inset-0 w-full h-full bg-black flex items-center justify-center overflow-hidden">
+//               When you have the actual image, replace this div with:
+//               <Image 
+//                 src={fns}
+//                 alt="Frequency and Scheduling Comparison"
+//                 fill
+//                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 1002px"
+//                 className="object-contain"
+//                 priority
+//               />
+          
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default FrequencyScheduling;
+
+
 import React from 'react';
 import Image from 'next/image';
-import fns from '../../assets/fns.png'
+import fnsg from '../../assets/fnsg.gif';
+
 const FrequencyScheduling = () => {
   return (
     <div className="w-full bg-[#FFF8F5] py-8 sm:py-12 md:py-16 flex justify-center">
@@ -1098,30 +1143,25 @@ const FrequencyScheduling = () => {
         <h2 className="text-[#101010] text-center sf-pro text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[102%] mb-4 sm:mb-6">
           Frequency & Scheduling
         </h2>
-        <p className="text-[#2F2F2F] text-center sf-pro text-sm sm:text-base font-normal leading-[138%] mb-8 sm:mb-10 md:mb-12 max-w-[1002px] mx-auto">
+        <p className="text-[#2F2F2F] text-center text-base sm:text-base font-normal leading-[138%] mb-8 sm:mb-10 md:mb-12 max-w-[1002px] mx-auto">
           Control how often users see your campaign, show it just once, repeat it daily, weekly, or monthly, or create custom rules like "up to 5 
           times a day" or "only after 2 days of last view." Set triggers based on views, clicks, interactions, or specific events. You can also 
           schedule start and end dates, with time zone support to match user locations. For the best experience, limit views to avoid user fatigue
           — like showing promos a few times a week or resetting after clicks.
         </p>
         
-        {/* Image Container */}
-        <div className="w-full  overflow-hidden rounded-xl sm:rounded-2xl">
-          {/* Replace with actual image when you have it */}
-          <div className="relative w-full  h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
-            {/* Placeholder for the image */}
-            <div className="absolute inset-0 w-full h-full bg-black flex items-center justify-center overflow-hidden">
-              When you have the actual image, replace this div with:
-              <Image 
-                src={fns}
-                alt="Frequency and Scheduling Comparison"
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 1002px"
-                className="object-contain"
-                priority
-              />
-          
-            </div>
+        {/* GIF Container */}
+        <div className="w-full overflow-hidden rounded-xl sm:rounded-2xl">
+          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
+            <Image 
+              src={fnsg}
+              alt="Frequency and Scheduling Comparison"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 1002px"
+              className="object-contain"
+              priority
+              unoptimized={true} 
+            />
           </div>
         </div>
       </div>

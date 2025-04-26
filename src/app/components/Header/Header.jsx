@@ -1193,7 +1193,7 @@ const Header = ({ style }) => {
     openContactModal(); // Open the modal
   }}
 >
-  Book a Call
+Schedule a Demo
 </InteractiveHoverButton>
           </div>
 
