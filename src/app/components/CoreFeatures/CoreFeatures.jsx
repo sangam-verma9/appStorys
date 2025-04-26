@@ -1,8 +1,21 @@
+
+
 // import React, { useState, useEffect } from "react";
 // import { Inter, Bricolage_Grotesque, Satisfy } from "next/font/google";
 // import pipf from "@/assets/pipf.png";
 // import storyf from "@/assets/storyf.png";
 // import reelf from "@/assets/reelf.png";
+// import banf from "@/assets/banf.png";
+// import floatf from "@/assets/floatf.png";
+// import coachf from "@/assets/coachf.png";
+// import csatf from "@/assets/csatf.png";
+// import surveyf from "@/assets/surveyf.png";
+// import toolf from "@/assets/toolf.png";
+// import scratchf from "@/assets/scratchf.png";
+// import widgetf from "@/assets/widgetf.png";
+// import quizf from "@/assets/quizf.png";
+// import bottomf from "@/assets/bottomf.png";
+// import spotlightf from "@/assets/spotlightf.png";
 
 // const inter = Inter({
 //   subsets: ["latin"],
@@ -28,18 +41,27 @@
 //     handleResize();
 
 //     // Add event listener
-//     window.addEventListener('resize', handleResize);
+//     window.addEventListener("resize", handleResize);
 
 //     // Cleanup
-//     return () => window.removeEventListener('resize', handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
+
+//   // Auto slide functionality
+//   useEffect(() => {
+//     const autoSlideInterval = setInterval(() => {
+//       setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
+//     }, 3000); // Change slide every 3 seconds
+
+//     // Clean up the interval when component unmounts
+//     return () => clearInterval(autoSlideInterval);
 //   }, []);
 
 //   const features = [
 //     {
 //       id: 0,
 //       title: "Stories",
-//       description:
-//         "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+//       description: "Add Instagram like stories. Each with dedicated CTA.",
 //       stats: [
 //         { value: "5x", label: "More Content Consumption" },
 //         { value: "23%", label: "Increase in Page Views" },
@@ -54,8 +76,7 @@
 //     {
 //       id: 1,
 //       title: "PiP Videos",
-//       description:
-//         "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+//       description: "Movable small video which can be expanded to full screen.",
 //       stats: [
 //         { value: "24%", label: "Boost in Multitasking Engagement" },
 //         { value: "64%", label: "Increase in Feature Adoption" },
@@ -70,11 +91,189 @@
 //     {
 //       id: 2,
 //       title: "Reels",
-//       description:
-//         "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+//       description: "TikTok style endless scrolling videos.",
 //       stats: [
 //         { value: "60%", label: "Increase in KYC Retention" },
 //         { value: "150%", label: "Increase in Session Duration" },
+//         { value: "15%", label: "Higher Daily Retention " },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
+//       textColor: "text-[#F200EA]",
+//       borderColor: "border-[#F200EA]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 3,
+//       title: "Banners",
+//       description:
+//         "Static or animated strips shown at the top or bottom of the screen. Perfect for announcements, offers, or important updates.",
+//       stats: [
+//         { value: "2.1x", label: "Higher CTRs" },
+//         { value: "1.1x", label: "More In-App Purchases" },
+//         { value: "55%", label: "Boost in Session Duration" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
+//       textColor: "text-[#0CB600]",
+//       borderColor: "border-[#0CB600]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 4,
+//       title: "Floater",
+//       description: "Small image which stays constant side of the screen.",
+//       stats: [
+//         { value: "4.2x", label: "Increase In Feature Discovery" },
+//         { value: "35%", label: "Improve in User Engagement" },
+//         { value: "3.3x", label: "More Interactions With In-App Offers" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#F3FBFF] to-white",
+//       textColor: "text-[#008FFF]",
+//       borderColor: "border-[#008FFF]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 5,
+//       title: "Widgets",
+//       description:
+//         "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
+//       stats: [
+//         { value: "8%", label: "Boost 8% CTR" },
+//         { value: "75%", label: "Higher Response Rate" },
+//         { value: "2%", label: "Increase in AOV" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#FFEBFE] to-white",
+//       textColor: "text-[#EF13E8]",
+//       borderColor: "border-[#EF13E8]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_38px_0px_rgba(54,51,47,0.18)]",
+//     },
+//     {
+//       id: 6,
+//       title: "Scratch Cards",
+//       description:
+//         "Interactive reward cards users can scratch to reveal offers, points, or surprises. Fun way to boost engagement.",
+//       stats: [
+//         { value: "15%", label: "Boost in App Stickness" },
+//         { value: "5x", label: "Increase in User Engagement" },
+//         { value: "2x", label: "Increase in User Participation" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#F3ECFF] to-white",
+//       textColor: "text-[#793BDE]",
+//       borderColor: "border-[#793BDE]",
+//       borderWidth: "border-[1.797px]",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 7,
+//       title: "Quizzes",
+//       description:
+//         "Levels of different questions with multiple choice with one correct answer",
+//       stats: [
+//         { value: "2x", label: "More User Engagement" },
+//         { value: "30%", label: "Increase In Knowledge Retention" },
+//         { value: "20%", label: "Growth in Daily Active Users (DAU)" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
+//       textColor: "text-[#0CB600]",
+//       borderColor: "border-[#0CB600]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 8,
+//       title: "Survey",
+//       description:
+//         "Take user input with a short survey. Get deep user insights.",
+//       stats: [
+//         {
+//           value: "15%",
+//           label: "Customer Feedback-driven Changes Increase Feature Usage",
+//         },
+//         { value: "35%", label: "Improvement in NPS Score" },
+//         { value: "3x", label: "Increase in User Feedback" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#F3FBFF] to-white",
+//       textColor: "text-[#008FFF]",
+//       borderColor: "border-[#008FFF]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 9,
+//       title: "CSAT Feedback",
+//       description:
+//         "Simple rating popup to measure how happy users are with your app. Redirect to App Store or Play Store.",
+//       stats: [
+//         { value: "15%", label: "Increase in Customer Retention" },
+//         { value: "20%", label: "Improvement in CSAT Score" },
+//         { value: "85%", label: "Higher Response Rate" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#FFEBFE] to-white",
+//       textColor: "text-[#EF13E8]",
+//       borderColor: "border-[#EF13E8]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_38px_0px_rgba(54,51,47,0.18)]",
+//     },
+//     {
+//       id: 10,
+//       title: "Tooltips",
+//       description:
+//         "Small pop ups that guide users. Great for onboarding and explaining features step-by-step.",
+//       stats: [
+//         { value: "30%", label: "Increase in Product Adoption" },
+//         { value: "2x", label: "Users Engage with Feature" },
+//         { value: "2x", label: "Users Engage with Feature" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#F3ECFF] to-white",
+//       textColor: "text-[#793BDE]",
+//       borderColor: "border-[#793BDE]",
+//       borderWidth: "border-[1.797px]",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 11,
+//       title: "Coachmarks",
+//       description:
+//         "Highlight a new feature. Perfect for feature launches and walkthroughs.",
+//       stats: [
+//         { value: "3.5x", label: "Faster Feature Adoption" },
+//         { value: "30%", label: "Improvement In User Onboarding" },
+//         { value: "35%", label: "Reduction in User Confusion" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#F0FFEF] to-white",
+//       textColor: "text-[#0CB600]",
+//       borderColor: "border-[#0CB600]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 12,
+//       title: "Spotlight",
+//       description:
+//         "Dim the screen to focus on one element. Great for drawing attention to new features or key actions.",
+//       stats: [
+//         { value: "3.5x", label: "Faster Feature Adoption" },
+//         { value: "30%", label: "Improvement In User Onboarding" },
+//         { value: "35%", label: "Reduction in User Confusion" },
+//       ],
+//       bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
+//       textColor: "text-[#F200EA]",
+//       borderColor: "border-[#F200EA]",
+//       borderWidth: "border-2",
+//       boxShadow: "shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)]",
+//     },
+//     {
+//       id: 13,
+//       title: "BottomSheets",
+//       description:
+//         "Dim the screen to focus on one element. Great for drawing attention to new features or key actions.",
+//       stats: [
+//         { value: "3.5x", label: "Faster Feature Adoption" },
+//         { value: "30%", label: "Improvement In User Onboarding" },
+//         { value: "35%", label: "Reduction in User Confusion" },
 //       ],
 //       bgStyle: "bg-gradient-to-b from-[#FFEFFE] to-white",
 //       textColor: "text-[#F200EA]",
@@ -85,6 +284,7 @@
 //   ];
 
 //   return (
+    
 //     <div className="w-full bg-[#FFF7F3]">
 //       <div className="sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1200px] py-8 md:py-12 lg:py-16 flex flex-col justify-center mx-auto px-4 sm:px-6 md:px-0">
 //         <h3
@@ -93,7 +293,7 @@
 //           Core Features
 //         </h3>
 //         <h1
-//           className={`${bricolageGrotesque.className} text-[32px] sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-14 leading-tight`}
+//           className={` font-sf-pro text-[32px] font-medium sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-16 leading-tight -mt-[5px]`}
 //         >
 //           Incredible User Experiences
 //         </h1>
@@ -104,7 +304,7 @@
 //             {features.map((feature, index) => (
 //               <div
 //                 key={feature.id}
-//                 className={`absolute transition-all duration-500 w-[90%] xs:w-[90%] sm:w-[85%] md:w-[85%] max-w-[380px] h-auto sm:h-[580px] md:h-[600px] rounded-[32px] ${
+//                 className={`absolute transition-all duration-500 w-[90%] xs:w-[90%] sm:w-[85%] md:w-[85%] max-w-[420px] h-auto sm:h-[580px] md:h-[600px] rounded-[32px] ${
 //                   feature.borderWidth
 //                 } ${feature.borderColor} ${feature.bgStyle} ${
 //                   feature.boxShadow
@@ -119,32 +319,132 @@
 //                 style={{
 //                   display:
 //                     (isMobile && index !== activeIndex) ||
-//                     (!isMobile && Math.abs(index - activeIndex) > 1 &&
-//                     !(activeIndex === 0 && index === features.length - 1) &&
-//                     !(activeIndex === features.length - 1 && index === 0))
+//                     (!isMobile &&
+//                       Math.abs(index - activeIndex) > 1 &&
+//                       !(activeIndex === 0 && index === features.length - 1) &&
+//                       !(activeIndex === features.length - 1 && index === 0))
 //                       ? "none"
 //                       : "block",
 //                 }}
 //               >
+
+
+// <div 
+//   className="absolute -top-7 -left-7 sm:-top-8 sm:-left-8 md:-top-7 md:-left-7 z-30 w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white"
+//   style={{
+//     backgroundColor: 
+//       index === 0 || index === 4 || index === 8
+//         ? "#008FFF"  // Blue
+//         : index === 1 || index === 6 || index === 10
+//         ? "#793BDE"  // Purple
+//         : index === 2 || index === 5 || index === 9 || index === 12 || index === 13
+//         ? "#F200EA"  // Pink
+//         : "#0CB600", // Green for 3, 7, 11
+//     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+//     border:"2px solid white"
+//   }}
+// >
+//   <span className="font-medium text-xl sm:text-2xl md:text-[22px]">
+//     {feature.id + 1}
+//   </span>
+// </div>
 //                 {/* Card Header */}
-//                 <div className={`rounded-full inline-block px-4 sm:px-5 md:px-6 py-1 sm:py-2 mb-3 md:mb-4 ${
-//                   index === 0
-//                     ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
-//                     : index === 1
+
+//                 <div
+//                   className={`rounded-full inline-block px-4 sm:px-5 md:px-6 py-1 sm:py-2 mb-3 md:mb-4 ${
+//                     index === 0
+//                       ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+//                       : index === 1
 //                       ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
-//                       : "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
-//                 }`} style={{
-//                   borderRadius: index === 0 ? "28.752px" : index === 1 ? "32px" : "28.774px",
-//                   borderWidth: index === 0 || index === 2 ? "0.899px" : "1px"
-//                 }}>
-//                   <h3 style={{
-//                     color: "#000",
-//                     fontFamily: "SF Pro, sans-serif",
-//                     fontSize: "18px",
-//                     fontWeight: "500",
-//                     lineHeight: "19.285px",
-//                     textTransform: "capitalize"
-//                   }} className="text-base sm:text-lg md:text-2xl">
+//                       : index === 2
+//                       ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+//                       : index === 3
+//                       ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+//                       : index === 4
+//                       ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+//                       : index === 5
+//                       ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+//                       : index === 6
+//                       ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
+//                       : index === 7
+//                       ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+//                       : index === 8
+//                       ? "border border-[#008FFF] bg-gradient-to-b from-[#F3FBFF] to-white"
+//                       : index === 9
+//                       ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+//                       : index === 10
+//                       ? "border border-[#793BDE] bg-gradient-to-b from-[#F3ECFF] to-white"
+//                       : index === 11
+//                       ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
+//                       : index === 12
+//                       ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+//                       : index === 13
+//                       ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+//                       : "border border-[#F200EA] bg-gradient-to-b from-[#F0FFEF] to-white"
+//                   }`}
+//                   style={{
+//                     borderRadius:
+//                       index === 0
+//                         ? "28.752px"
+//                         : index === 1
+//                         ? "32px"
+//                         : index === 2
+//                         ? "28.774px"
+//                         : index === 3
+//                         ? "32px"
+//                         : index === 4
+//                         ? "28.752px"
+//                         : index === 5
+//                         ? "32px"
+//                         : index === 6
+//                         ? "28.752px"
+//                         : index === 7
+//                         ? "32px"
+//                         : index === 8
+//                         ? "28.752px"
+//                         : index === 9
+//                         ? "32px"
+//                         : index === 10
+//                         ? "28.752px"
+//                         : "32px",
+//                     borderWidth:
+//                       index === 0
+//                         ? "0.899px"
+//                         : index === 1
+//                         ? "1px"
+//                         : index === 2
+//                         ? "0.899px"
+//                         : index === 3
+//                         ? "1px"
+//                         : index === 4
+//                         ? "0.899px"
+//                         : index === 5
+//                         ? "1px"
+//                         : index === 6
+//                         ? "0.899px"
+//                         : index === 7
+//                         ? "1px"
+//                         : index === 8
+//                         ? "0.899px"
+//                         : index === 9
+//                         ? "1px"
+//                         : index === 10
+//                         ? "0.899px"
+//                         : "1px",
+//                   }}
+//                 >
+//                   <h3
+//                     style={{
+//                       color: "#000",
+//                       fontFamily: "SF Pro, sans-serif",
+//                       fontSize: "18px",
+//                       fontWeight: "600",
+//                       lineHeight: "19.285px",
+//                       textTransform: "capitalize",
+//                       letterSpacing:"1px"
+//                     }}
+//                     className="text-base sm:text-lg md:text-2xl"
+//                   >
 //                     {feature.title}
 //                   </h3>
 //                 </div>
@@ -152,25 +452,26 @@
 //                 {/* Description */}
 //                 <p
 //                   style={{
-//                     color: "#2F2F2F",
-//                     fontFamily: "Inter, sans-serif",
+//                     color: "#000",
+//                     fontFamily: "SF Pro, sans-serif",
 //                     fontWeight: "400",
 //                     lineHeight: "128%",
-//                     textTransform: "capitalize",
+//                     // textTransform: "capitalize",
+//                     letterSpacing: "1px",
 //                   }}
-//                   className="mb-4 md:mb-8 text-xs sm:text-sm md:text-[13.975px]"
+//                   className="mb-4 md:mb-6 text-xs sm:text-sm md:text-[13.975px]"
 //                 >
 //                   {feature.description}
 //                 </p>
 
 //                 {/* Stats Section */}
-//                 <div className="flex flex-wrap justify-around gap-1 sm:gap-2 mb-4 md:mb-8">
+//                 <div className="flex flex-wrap justify-around gap-1 sm:gap-4 mb-4 md:mb-8">
 //                   {feature.stats.map((stat, i) => (
 //                     <div key={i} className="text-center">
 //                       <p
 //                         style={{
 //                           color: index === 2 ? "#F200EA" : "#008FFF",
-//                           textAlign: "center",
+//                           textAlign: "start",
 //                           fontFamily: "'Product Sans', sans-serif",
 //                           fontWeight: "700",
 //                           lineHeight: "128%",
@@ -182,8 +483,9 @@
 //                       </p>
 //                       <p
 //                         style={{
-//                           color: "#2F2F2F",
-//                           fontFamily: "Outfit, sans-serif",
+//                           color: "#000",
+//                           textAlign: "start",
+//                           fontFamily: "SF Pro, sans-serif",
 //                           fontWeight: "400",
 //                           lineHeight: "110%",
 //                           textTransform: "capitalize",
@@ -220,15 +522,92 @@
 //                       className="w-full h-full object-contain"
 //                     />
 //                   )}
+//                   {index === 3 && (
+//                     <img
+//                       src={banf.src}
+//                       alt="Banners Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                   {index === 4 && (
+//                     <img
+//                       src={floatf.src}
+//                       alt="Floater Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                   {index === 5 && (
+//                     <img
+//                       src={widgetf.src}
+//                       alt="Widgets Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                   {index === 6 && (
+//                     <img
+//                       src={scratchf.src}
+//                       alt="Scratch Cards Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                   {index === 7 && (
+//                     <img
+//                       src={quizf.src}
+//                       alt="Quizzes Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                   {index === 8 && (
+//                     <img
+//                       src={surveyf.src}
+//                       alt="Survey Feature"
+//                       className="w-full h-[90%] object-contain"
+//                     />
+//                   )}
+//                   {index === 9 && (
+//                     <img
+//                       src={csatf.src}
+//                       alt="CSAT Feedback Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                   {index === 10 && (
+//                     <img
+//                       src={toolf.src}
+//                       alt="Tooltips Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                   {index === 11 && (
+//                     <img
+//                       src={coachf.src}
+//                       alt="Coachmarks Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                     {index === 12 && (
+//                     <img
+//                       src={spotlightf.src}
+//                       alt="Coachmarks Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
+//                      {index === 13 && (
+//                     <img
+//                       src={bottomf.src}
+//                       alt="Coachmarks Feature"
+//                       className="w-full h-full object-contain"
+//                     />
+//                   )}
 //                 </div>
 //               </div>
 //             ))}
 //           </div>
 
+          
+
 //           {/* Navigation buttons - repositioned for better mobile experience */}
-//           <div
-//             className="absolute w-full z-30 flex justify-between top-1/2 -translate-y-1/2 pointer-events-none px-1 xs:px-2 sm:px-3 md:px-4"
-//           >
+//           <div className="absolute w-full z-30 flex justify-between top-1/2 -translate-y-1/2 pointer-events-none px-1 xs:px-2 sm:px-3 md:px-4">
 //             <button
 //               className="bg-[#FD5F03] text-white w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg pointer-events-auto transform -translate-x-0 sm:-translate-x-1"
 //               onClick={() =>
@@ -282,7 +661,8 @@
 
 // export default CoreFeatures;
 
-import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect, useRef } from "react";
 import { Inter, Bricolage_Grotesque, Satisfy } from "next/font/google";
 import pipf from "@/assets/pipf.png";
 import storyf from "@/assets/storyf.png";
@@ -299,9 +679,6 @@ import quizf from "@/assets/quizf.png";
 import bottomf from "@/assets/bottomf.png";
 import spotlightf from "@/assets/spotlightf.png";
 
-
-
-
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -315,6 +692,10 @@ const satisfy = Satisfy({ subsets: ["latin"], weight: ["400"] });
 const CoreFeatures = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
+  // Add a state to track whether auto-sliding is paused
+  const [isAutoPaused, setIsAutoPaused] = useState(false);
+  // Use ref for interval to properly clean it up
+  const autoSlideIntervalRef = useRef(null);
 
   // Track screen size to adjust mobile experience
   useEffect(() => {
@@ -332,15 +713,48 @@ const CoreFeatures = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Auto slide functionality
+  // Auto slide functionality with pause capability
   useEffect(() => {
-    const autoSlideInterval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
-    }, 3000); // Change slide every 3 seconds
+    // Start the interval only if auto-sliding is not paused
+    if (!isAutoPaused) {
+      autoSlideIntervalRef.current = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
+      }, 3000); // Change slide every 3 seconds
+    }
 
-    // Clean up the interval when component unmounts
-    return () => clearInterval(autoSlideInterval);
-  }, []);
+    // Clean up the interval when component unmounts or auto-sliding is paused
+    return () => {
+      if (autoSlideIntervalRef.current) {
+        clearInterval(autoSlideIntervalRef.current);
+        autoSlideIntervalRef.current = null;
+      }
+    };
+  }, [isAutoPaused]);
+
+  // Function to handle manual navigation
+  const handleNavigation = (direction) => {
+    // Pause auto-sliding when user interacts
+    setIsAutoPaused(true);
+    
+    // Update the active index based on direction
+    if (direction === 'prev') {
+      setActiveIndex((activeIndex - 1 + features.length) % features.length);
+    } else {
+      setActiveIndex((activeIndex + 1) % features.length);
+    }
+    
+    // Optional: You could add a timer to resume auto-sliding after a period of inactivity
+    // For example, after 10 seconds of no interaction
+    // This part is commented out as it's optional based on your UX preference
+    /*
+    if (resumeTimeoutRef.current) {
+      clearTimeout(resumeTimeoutRef.current);
+    }
+    resumeTimeoutRef.current = setTimeout(() => {
+      setIsAutoPaused(false);
+    }, 10000); // Resume after 10 seconds of no interaction
+    */
+  };
 
   const features = [
     {
@@ -373,6 +787,7 @@ const CoreFeatures = () => {
       borderWidth: "border-2",
       boxShadow: "shadow-[4px_8px_38px_0px_rgba(54,51,47,0.18)]",
     },
+    // ... rest of the features array remains unchanged
     {
       id: 2,
       title: "Reels",
@@ -569,7 +984,6 @@ const CoreFeatures = () => {
   ];
 
   return (
-    
     <div className="w-full bg-[#FFF7F3]">
       <div className="sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1200px] py-8 md:py-12 lg:py-16 flex flex-col justify-center mx-auto px-4 sm:px-6 md:px-0">
         <h3
@@ -578,14 +992,19 @@ const CoreFeatures = () => {
           Core Features
         </h3>
         <h1
-          className={` font-sf-pro text-[32px] font-medium sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-7 leading-tight -mt-[5px]`}
+          className={` font-sf-pro text-[32px] font-medium sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-16 leading-tight -mt-[5px]`}
         >
           Incredible User Experiences
         </h1>
 
         <div className="relative flex flex-col items-center">
           {/* Feature cards carousel */}
-          <div className="relative w-full h-[520px] xs:h-[550px] sm:h-[600px] md:h-[650px] flex justify-center overflow-visible">
+          <div 
+            className="relative w-full h-[520px] xs:h-[550px] sm:h-[600px] md:h-[650px] flex justify-center overflow-visible"
+            // Add mouse enter/leave handlers to pause/resume auto-sliding
+            onMouseEnter={() => setIsAutoPaused(true)}
+            onMouseLeave={() => setIsAutoPaused(false)}
+          >
             {features.map((feature, index) => (
               <div
                 key={feature.id}
@@ -611,7 +1030,31 @@ const CoreFeatures = () => {
                       ? "none"
                       : "block",
                 }}
+                // Add click handler to pause auto-sliding when user clicks on a card
+                onClick={() => {
+                  setIsAutoPaused(true);
+                  setActiveIndex(index);
+                }}
               >
+                <div 
+                  className="absolute -top-7 -left-7 sm:-top-8 sm:-left-8 md:-top-7 md:-left-7 z-30 w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white"
+                  style={{
+                    backgroundColor: 
+                      index === 0 || index === 4 || index === 8
+                        ? "#008FFF"  // Blue
+                        : index === 1 || index === 6 || index === 10
+                        ? "#793BDE"  // Purple
+                        : index === 2 || index === 5 || index === 9 || index === 12 || index === 13
+                        ? "#F200EA"  // Pink
+                        : "#0CB600", // Green for 3, 7, 11
+                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+                    border:"2px solid white"
+                  }}
+                >
+                  <span className="font-medium text-xl sm:text-2xl md:text-[22px]">
+                    {feature.id + 1}
+                  </span>
+                </div>
                 {/* Card Header */}
 
                 <div
@@ -641,6 +1084,8 @@ const CoreFeatures = () => {
                       : index === 11
                       ? "border border-[#0CB600] bg-gradient-to-b from-[#F0FFEF] to-white"
                       : index === 12
+                      ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
+                      : index === 13
                       ? "border border-[#F200EA] bg-gradient-to-b from-[#FFEFFE] to-white"
                       : "border border-[#F200EA] bg-gradient-to-b from-[#F0FFEF] to-white"
                   }`}
@@ -857,7 +1302,7 @@ const CoreFeatures = () => {
                      {index === 13 && (
                     <img
                       src={bottomf.src}
-                      alt="Coachmarks Feature"
+                      alt="BottomSheets Feature"
                       className="w-full h-full object-contain"
                     />
                   )}
@@ -870,11 +1315,7 @@ const CoreFeatures = () => {
           <div className="absolute w-full z-30 flex justify-between top-1/2 -translate-y-1/2 pointer-events-none px-1 xs:px-2 sm:px-3 md:px-4">
             <button
               className="bg-[#FD5F03] text-white w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg pointer-events-auto transform -translate-x-0 sm:-translate-x-1"
-              onClick={() =>
-                setActiveIndex(
-                  (activeIndex - 1 + features.length) % features.length
-                )
-              }
+              onClick={() => handleNavigation('prev')}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -893,9 +1334,7 @@ const CoreFeatures = () => {
             </button>
             <button
               className="bg-[#FD5F03] text-white w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg pointer-events-auto transform translate-x-0 sm:translate-x-1"
-              onClick={() =>
-                setActiveIndex((activeIndex + 1) % features.length)
-              }
+              onClick={() => handleNavigation('next')}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
