@@ -94,7 +94,266 @@
 // export default HeroSection;
 
 
-// HeroSection.jsx
+// // HeroSection.jsx
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import InteractiveHoverButton from './InteractiveHoverButton'; // Import the button component
+// import store from "../store/store"; // Adjust the path to your store
+
+// const HeroSection = () => {
+//   const texts = [
+//     "Engagement",
+//     "Retention",
+//     "Conversion Rate",
+//     "Stickiness",
+//     "Revenue",
+//   ];
+//   const [index, setIndex] = useState(0);
+//   const textColor = ["#FD5F03", "#03A1FD", "#793BDE", "#F200EA", "#0CB600"];
+  
+//   // Get the modal opening function from the store
+//   const { setRequestDemoClick, openContactModal } = store();
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+//     }, 3000);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <section className="bg-[#FFF7F3] w-full py-16 md:py-24 lg:py-32 md:-mt-[100px]">
+//       <div className="container mx-auto px-4">
+//         <div className="flex flex-col items-center justify-center">
+//           {/* Heading */}
+//           <h1 className="text-center w-full">
+//             <span className="block text-black font-bold text-4xl md:text-6xl lg:text-[72.048px] leading-tight md:leading-tight  capitalize font-sfpro">
+//               Increase
+//             </span>
+//             <div className="h-[60px] md:h-[90px] lg:h-[140px] relative flex items-center justify-center -mt-4 md:-mt-6 lg:-mt-8">
+//               <AnimatePresence mode="wait">
+//                 <motion.span
+//                   key={index}
+//                   initial={{ y: 20, opacity: 0 }}
+//                   animate={{ y: 0, opacity: 1 }}
+//                   exit={{ y: -20, opacity: 0 }}
+//                   transition={{
+//                     duration: 0.5,
+//                     ease: "easeInOut",
+//                   }}
+//                   style={{ color: textColor[index] }}
+//                   className="font-bold text-4xl md:text-6xl lg:text-[106.048px] leading-tight md:leading-tight lg:leading-[103.587px]  font-sfpro text-center"
+//                 >
+//                   {texts[index]}
+//                 </motion.span>
+//               </AnimatePresence>
+//             </div>
+//           </h1>
+
+//           {/* Paragraph */}
+//           <p className="text-black text-center text-lg md:text-xl lg:text-[28.05px] font-medium  font-sfpro mt-4 md:mt-4">
+//             For your App & website
+//           </p>
+
+//           {/* Call-to-action buttons */}
+//           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 md:mt-16">
+//             {/* Book a call button - replaced with Interactive Button */}
+//             <InteractiveHoverButton
+//               className="bg-[#FD5F03] border-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl"
+//               onClick={() => {
+//                 setRequestDemoClick(true);
+//                 openContactModal(); // Open the modal
+//               }}
+//             >
+//               Book a call
+//             </InteractiveHoverButton>
+
+//             {/* Watch a quick demo text */}
+//             <span className="text-black text-center text-lg md:text-xl lg:text-[20.909px] font-medium capitalize font-sfpro">
+//               Watch a quick demo
+//             </span>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
+
+
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import InteractiveHoverButton from './InteractiveHoverButton'; // Import the button component
+// import store from "../store/store"; // Adjust the path to your store
+
+// const HeroSection = () => {
+//   const texts = [
+//     "Engagement",
+//     "Retention",
+//     "Conversion Rate",
+//     "Stickiness",
+//     "Revenue",
+//   ];
+//   const [index, setIndex] = useState(0);
+//   const textColor = ["#FD5F03", "#03A1FD", "#793BDE", "#F200EA", "#0CB600"];
+  
+//   // Get the modal opening function from the store
+//   const { setRequestDemoClick, openContactModal } = store();
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+//     }, 3000);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   // Container animation variant
+//   const containerVariants = {
+//     hidden: { 
+//       opacity: 0,
+//     },
+//     visible: {
+//       opacity: 1,
+//       transition: {
+//         when: "beforeChildren",
+//         staggerChildren: 0.2,
+//         duration: 0.5
+//       }
+//     }
+//   };
+
+//   // Heading animation variant (from top)
+//   const headingVariants = {
+//     hidden: { 
+//       y: -100, 
+//       opacity: 0 
+//     },
+//     visible: {
+//       y: 0,
+//       opacity: 1,
+//       transition: { 
+//         type: "spring", 
+//         damping: 12,
+//         stiffness: 100
+//       }
+//     }
+//   };
+
+//   // Paragraph animation variant (from left)
+//   const paragraphVariants = {
+//     hidden: { 
+//       x: -100, 
+//       opacity: 0 
+//     },
+//     visible: {
+//       x: 0,
+//       opacity: 1,
+//       transition: { 
+//         type: "spring", 
+//         damping: 12,
+//         stiffness: 80
+//       }
+//     }
+//   };
+
+//   // Button animation variant (from right)
+//   const buttonVariants = {
+//     hidden: { 
+//       x: 100, 
+//       opacity: 0 
+//     },
+//     visible: {
+//       x: 0,
+//       opacity: 1,
+//       transition: { 
+//         type: "spring", 
+//         damping: 12,
+//         stiffness: 90
+//       }
+//     }
+//   };
+
+//   return (
+//     <section className="bg-[#FFF7F3] w-full py-16 md:py-24 lg:py-32 md:-mt-[100px]">
+//       <div className="container mx-auto px-4">
+//         <motion.div 
+//           className="flex flex-col items-center justify-center"
+//           variants={containerVariants}
+//           initial="hidden"
+//           animate="visible"
+//         >
+//           {/* Heading */}
+//           <motion.h1 
+//             className="text-center w-full"
+//             variants={headingVariants}
+//           >
+//             <span className="block text-black font-bold text-4xl md:text-6xl lg:text-[72.048px] leading-tight md:leading-tight capitalize font-sfpro">
+//               Increase
+//             </span>
+//             <div className="h-[60px] md:h-[90px] lg:h-[140px] relative flex items-center justify-center -mt-4 md:-mt-6 lg:-mt-8">
+//               <AnimatePresence mode="wait">
+//                 <motion.span
+//                   key={index}
+//                   initial={{ y: 20, opacity: 0 }}
+//                   animate={{ y: 0, opacity: 1 }}
+//                   exit={{ y: -20, opacity: 0 }}
+//                   transition={{
+//                     duration: 0.5,
+//                     ease: "easeInOut",
+//                   }}
+//                   style={{ color: textColor[index] }}
+//                   className="font-bold text-4xl md:text-6xl lg:text-[106.048px] leading-tight md:leading-tight lg:leading-[103.587px] font-sfpro text-center"
+//                 >
+//                   {texts[index]}
+//                 </motion.span>
+//               </AnimatePresence>
+//             </div>
+//           </motion.h1>
+
+//           {/* Paragraph */}
+//           <motion.p 
+//             className="text-black text-center text-lg md:text-xl lg:text-[28.05px] font-medium font-sfpro mt-4 md:mt-4"
+//             variants={paragraphVariants}
+//           >
+//             For your App & website
+//           </motion.p>
+
+//           {/* Call-to-action buttons */}
+//           <motion.div 
+//             className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 md:mt-16"
+//             variants={buttonVariants}
+//           >
+//             {/* Book a call button - replaced with Interactive Button */}
+//             <InteractiveHoverButton
+//               className="bg-[#FD5F03] border-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl"
+//               onClick={() => {
+//                 setRequestDemoClick(true);
+//                 openContactModal(); // Open the modal
+//               }}
+//             >
+//               Book a call
+//             </InteractiveHoverButton>
+
+//             {/* Watch a quick demo text */}
+//             <span className="text-black text-center text-lg md:text-xl lg:text-[20.909px] font-medium capitalize font-sfpro">
+//               Watch a quick demo
+//             </span>
+//           </motion.div>
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -123,13 +382,92 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Container animation variant - coming from left
+  const containerVariants = {
+    hidden: { 
+      opacity: 0,
+      x: -1000, // Start far off to the left
+    },
+    visible: {
+      opacity: 1,
+      x: 0, // End at normal position
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+        duration: 0.8,
+        type: "spring",
+        damping: 25,
+        stiffness: 100
+      }
+    }
+  };
+
+  // Heading animation variant (from top)
+  const headingVariants = {
+    hidden: { 
+      y: -100, 
+      opacity: 0 
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { 
+        type: "spring", 
+        damping: 12,
+        stiffness: 100
+      }
+    }
+  };
+
+  // Paragraph animation variant (from left)
+  const paragraphVariants = {
+    hidden: { 
+      x: -100, 
+      opacity: 0 
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { 
+        type: "spring", 
+        damping: 12,
+        stiffness: 80
+      }
+    }
+  };
+
+  // Button animation variant (from right)
+  const buttonVariants = {
+    hidden: { 
+      x: 100, 
+      opacity: 0 
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { 
+        type: "spring", 
+        damping: 12,
+        stiffness: 90
+      }
+    }
+  };
+
   return (
     <section className="bg-[#FFF7F3] w-full py-16 md:py-24 lg:py-32 md:-mt-[100px]">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center justify-center">
+        <motion.div 
+          className="flex flex-col items-center justify-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Heading */}
-          <h1 className="text-center w-full">
-            <span className="block text-black font-bold text-4xl md:text-6xl lg:text-[72.048px] leading-tight md:leading-tight  capitalize font-sfpro">
+          <motion.h1 
+            className="text-center w-full"
+            variants={headingVariants}
+          >
+            <span className="block text-black font-bold text-4xl md:text-6xl lg:text-[72.048px] leading-tight md:leading-tight capitalize font-sfpro">
               Increase
             </span>
             <div className="h-[60px] md:h-[90px] lg:h-[140px] relative flex items-center justify-center -mt-4 md:-mt-6 lg:-mt-8">
@@ -144,21 +482,27 @@ const HeroSection = () => {
                     ease: "easeInOut",
                   }}
                   style={{ color: textColor[index] }}
-                  className="font-bold text-4xl md:text-6xl lg:text-[106.048px] leading-tight md:leading-tight lg:leading-[103.587px]  font-sfpro text-center"
+                  className="font-bold text-4xl md:text-6xl lg:text-[106.048px] leading-tight md:leading-tight lg:leading-[103.587px] font-sfpro text-center"
                 >
                   {texts[index]}
                 </motion.span>
               </AnimatePresence>
             </div>
-          </h1>
+          </motion.h1>
 
           {/* Paragraph */}
-          <p className="text-black text-center text-lg md:text-xl lg:text-[28.05px] font-medium  font-sfpro mt-4 md:mt-4">
+          <motion.p 
+            className="text-black text-center text-lg md:text-xl lg:text-[28.05px] font-medium font-sfpro mt-4 md:mt-4"
+            variants={paragraphVariants}
+          >
             For your App & website
-          </p>
+          </motion.p>
 
           {/* Call-to-action buttons */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 md:mt-16">
+          <motion.div 
+            className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 md:mt-16"
+            variants={buttonVariants}
+          >
             {/* Book a call button - replaced with Interactive Button */}
             <InteractiveHoverButton
               className="bg-[#FD5F03] border-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl"
@@ -167,15 +511,15 @@ const HeroSection = () => {
                 openContactModal(); // Open the modal
               }}
             >
-              Book a call
+              Schedule a Demo
             </InteractiveHoverButton>
 
             {/* Watch a quick demo text */}
             <span className="text-black text-center text-lg md:text-xl lg:text-[20.909px] font-medium capitalize font-sfpro">
               Watch a quick demo
             </span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
