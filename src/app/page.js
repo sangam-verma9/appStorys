@@ -10,18 +10,22 @@ import TrustSection from "./components/TrustSection/TrustSection";
 import TestimonialsSection from "./components/Testimonials/Testimonials";
 import BlogSection from "./components/BlogSection";
 import HeroSection from "./components/HeroSection";
+import HyperPersonalization from "./components/HyperPersonalization";
+import SetupGoals from "./components/SetupGoals";
+import FrequencyScheduling from "./components/FrequencyAndScheduling";
 
 export default function Home() {
   return (
     <>
       <HeroSection/>
-      {/* <LandingPage /> */}
 
       <CoreFeatures/>
+      <HyperPersonalization/>
+      <SetupGoals/>
+      <FrequencyScheduling/>
       <Whyus />
       <Integrations/>
       <Sdks/>
-      {/* <div className="h-[2px] w-full bg-white"></div> */}
       <TestimonialsSection/>
       <TrustSection/>
      

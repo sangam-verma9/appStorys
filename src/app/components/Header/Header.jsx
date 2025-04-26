@@ -46,9 +46,12 @@ import mparticle_icon from "@/assets/mparticel_icon.png";
 import clevertap_icon from "@/assets/clevertap_icon.png";
 import moengage_icon from "@/assets/moengage_icon.png";
 import custom_audienec_icon from "@/assets/custom_audience_icon.png";
+import '../../globals.css'
 
 import { motion } from "framer-motion";
 import store from "../../store/store";
+import ContactModal from '../ContactModal'; 
+import InteractiveHoverButton from '../InteractiveHoverButton';
 
 // Load fonts
 const outfit = Outfit({
@@ -71,6 +74,8 @@ const Header = ({ style }) => {
     resources: false,
     sdks: false,
   });
+
+  const { setRequestDemoClick, isContactModalOpen, openContactModal, closeContactModal } = store();
 
   const [listVisible, setListVisible] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -105,17 +110,27 @@ const Header = ({ style }) => {
     }));
   };
 
-  const handleOptionClick = () => {
-    setDropdownOpen({
-      feature: false,
-      advanceSolutions: false,
-      resources: false,
-      sdks: false,
-    });
-    setListVisible(false);
-  };
+  // const handleOptionClick = () => {
+  //   setDropdownOpen({
+  //     feature: false,
+  //     advanceSolutions: false,
+  //     resources: false,
+  //     sdks: false,
+  //   });
+  //   setListVisible(false);
+  // };
 
-  const { setRequestDemoClick } = store();
+  const handleOptionClick = () => {
+  setDropdownOpen({
+    feature: false,
+    advanceSolutions: false,
+    resources: false,
+    sdks: false,
+  });
+  setListVisible(false);
+};
+
+  // const { setRequestDemoClick } = store();
 
   return (
     <header className="sticky top-0 z-50 bg-[#FFF7F3] w-full shadow-sm">
@@ -162,7 +177,7 @@ const Header = ({ style }) => {
                 <div className="fixed top-16 md:top-20 left-0 right-0 w-full bg-white shadow-lg mt-1 py-4 z-20">
                   <div className="w-full max-w-6xl mx-auto px-4">
                     <h3
-                      className={`text-left mb-4 px-4 py-2 ${outfit.className} font-light text-gray-500 text-sm border-b border-gray-200`}
+                      className={`text-left mb-4 px-4 py-2  sf-pro font-bold tracking-[1px] text-black font text-sm border-b border-gray-200`}
                     >
                       CORE FEATURES
                     </h3>
@@ -171,7 +186,7 @@ const Header = ({ style }) => {
                       {/* Rich Media Content */}
                       <div className="space-y-4">
                         <h4
-                          className={`${outfit.className} text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
+                          className={`sf-pro  text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
                         >
                           RICH MEDIA CONTENT
                         </h4>
@@ -194,18 +209,18 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Stories
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Rich media bite sized content
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
+                              className={`text-blue-600  transition-opacity duration-150 ${
                                 hoveredItem === "stories"
                                   ? "opacity-100"
                                   : "opacity-0"
@@ -232,12 +247,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Reels
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Present constantly scrolling short videos
                               </p>
@@ -270,12 +285,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 PIP Videos
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Non-intrusive movable on-screen video
                               </p>
@@ -308,12 +323,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Bottom Sheets
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Rich media bite sized content
                               </p>
@@ -332,7 +347,7 @@ const Header = ({ style }) => {
                       {/* Interactive Elements */}
                       <div className="space-y-4">
                         <h4
-                          className={`${outfit.className} text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
+                          className={`sf-pro text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
                         >
                           INTERACTIVE ELEMENTS
                         </h4>
@@ -355,12 +370,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Banner
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Automatic banner moving with screen
                               </p>
@@ -393,12 +408,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Floaters
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Small Image/GIF on screen floating with content
                               </p>
@@ -431,12 +446,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Widgets
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Customizable scalable images/animation
                               </p>
@@ -469,12 +484,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Scratch Card
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Gamification option to engage users
                               </p>
@@ -493,7 +508,7 @@ const Header = ({ style }) => {
                       {/* Take Action */}
                       <div className="space-y-4">
                         <h4
-                          className={`${outfit.className} text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
+                          className={`sf-pro text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
                         >
                           TAKE ACTION
                         </h4>
@@ -516,12 +531,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Quiz
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Ask users questions and engage them
                               </p>
@@ -554,12 +569,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Survey
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Get user inputs
                               </p>
@@ -592,12 +607,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 CSAT Feedback
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Measure services via feedback
                               </p>
@@ -616,7 +631,7 @@ const Header = ({ style }) => {
                       {/* Onboarding */}
                       <div className="space-y-4">
                         <h4
-                          className={`${outfit.className} text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
+                          className={`sf-pro text-sm text-gray-800 font-medium mb-2 pb-2 border-b border-gray-200`}
                         >
                           ONBOARDING
                         </h4>
@@ -639,12 +654,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Tooltips
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Onboarding journey for users
                               </p>
@@ -677,12 +692,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Coachmarks
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Highlight new features with wrapper
                               </p>
@@ -715,12 +730,12 @@ const Header = ({ style }) => {
                             </div>
                             <div className="flex-grow">
                               <p
-                                className={`text-sm ${bricolageGrotesque.className} text-gray-900 group-hover:text-blue-700`}
+                                className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
                                 Spotlight
                               </p>
                               <p
-                                className={`text-xs ${outfit.className} text-gray-500`}
+                                className={`text-xs sf-pro text-gray-500`}
                               >
                                 Get user attention to specific features
                               </p>
@@ -1170,84 +1185,16 @@ const Header = ({ style }) => {
       </div>
     </Link> */}
 
-<motion.div
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-    >
-      <Link
-        href="/contact"
-        className="rounded-full bg-[#FD5F03] h-[50px] text-white font-medium px-2 py-2.5 transition-colors duration-300 flex items-center relative overflow-hidden"
-        onClick={() => {
-          handleOptionClick && handleOptionClick();
-          setRequestDemoClick && setRequestDemoClick(true);
-        }}
-      >
-        {/* Background animation fill */}
-        <motion.div 
-          className="absolute inset-0 bg-[#ff5047] rounded-full"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          style={{ originX: 0 }}
-        />
-        
-        {/* Text with subtle float animation */}
-        <motion.span 
-          className="ml-4 relative z-10"
-          animate={{ x: isHovered ? 2 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          Contact Sales
-        </motion.span>
-        
-        {/* Arrow circle with animation */}
-        <motion.div 
-          className="ml-5 bg-white rounded-full w-[32px] h-[32px] flex items-center justify-center relative z-10"
-          animate={{ 
-            backgroundColor: isHovered ? "#ff5047" : "#ffffff",
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          {/* SVG Arrow with animations */}
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 14 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <motion.path
-              d="M2.91699 7H11.0837"
-              stroke={isHovered ? "#FFFFFF" : "#FD5F03"}
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              transition={{ duration: 0.2 }}
-            />
-            <motion.path
-              d="M7.58301 3.5L11.083 7L7.58301 10.5"
-              stroke={isHovered ? "#FFFFFF" : "#FD5F03"}
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              animate={{ x: isHovered ? 2 : 0 }}
-              transition={{ duration: 0.3 }}
-            />
-
-           
-          </svg>
-        </motion.div>
-        
-        {/* Subtle highlight effect */}
-        <motion.div
-          className="absolute inset-0 rounded-full bg-white opacity-0"
-          animate={{ opacity: isHovered ? 0.05 : 0 }}
-          transition={{ duration: 0.2 }}
-        />
-      </Link>
-    </motion.div>
+<InteractiveHoverButton
+  className="bg-[#FD5F03] border-2 border-[#FD5F03] text-white h-[50px] font-medium"
+  onClick={() => {
+    handleOptionClick && handleOptionClick();
+    setRequestDemoClick(true);
+    openContactModal(); // Open the modal
+  }}
+>
+  Contact Sales
+</InteractiveHoverButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -1463,19 +1410,19 @@ const Header = ({ style }) => {
                       RICH MEDIA CONTENT
                     </h5>
                     <Link
-                      href="/stories"
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image
-                        src={story}
-                        alt="Stories"
-                        width={20}
-                        height={20}
-                        className="mr-3"
-                      />
-                      <span>Stories</span>
-                    </Link>
+  href="/stories"
+  className="flex items-center py-2"
+  onClick={() => handleOptionClick()}
+>
+  <Image
+    src={story}
+    alt="Stories"
+    width={20}
+    height={20}
+    className="mr-3"
+  />
+  <span>Stories</span>
+</Link>
                     <Link
                       href="/reels"
                       className="flex items-center py-2"
@@ -1983,6 +1930,7 @@ const Header = ({ style }) => {
           </div>
         )}
       </div>
+      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </header>
   );
 };
