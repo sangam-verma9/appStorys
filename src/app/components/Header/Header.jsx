@@ -159,7 +159,7 @@ const Header = ({ style }) => {
           </div>
 
           {/* Navigation - Desktop */}
-          <nav className="hidden lg:flex items-center space-x-9">
+        <nav className="hidden xl:flex items-center space-x-6">
             <div className="relative dropdown-container">
               <button
                 onClick={() => handleClick("feature")}
@@ -1137,7 +1137,7 @@ const Header = ({ style }) => {
           </nav>
 
           {/* Action Buttons - Desktop */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden xl:flex items-center space-x-4">
             <Link
               href="https://admin.appstorys.com/"
               className="px-4 py-2 text-[#000] font-medium transition duration-150 hover:text-[#e05303]"
@@ -1147,44 +1147,7 @@ const Header = ({ style }) => {
               Login
             </Link>
 
-            {/* <Link
-      href="/contact"
-      className="group rounded-full bg-[#FD5F03] h-[50px] text-white font-medium px-2 py-2.5 transition duration-150 hover:bg-[#e05303] flex items-center"
-      onClick={() => {
-        handleOptionClick();
-        setRequestDemoClick(true);
-      }}
-    >
-      <span className="ml-4">Contact Sales</span>
-      <div className="ml-5 bg-white group-hover:bg-[#FD5F03] rounded-full w-[32px] h-[32px] flex items-center justify-center transition-colors duration-300">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 14 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="transition-colors duration-300"
-        >
-          <path
-            d="M2.91699 7H11.0837"
-            stroke="currentColor"
-            className="text-[#FD5F03] group-hover:text-white transition-colors duration-300"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M7.58301 3.5L11.083 7L7.58301 10.5"
-            stroke="currentColor"
-            className="text-[#FD5F03] group-hover:text-white transition-colors duration-300"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
-    </Link> */}
-
+           
 <InteractiveHoverButton
   className="bg-[#FD5F03] border-2 border-[#FD5F03] text-white h-[50px] font-medium"
   onClick={() => {
@@ -1199,7 +1162,7 @@ Schedule a Demo
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden flex items-center"
+            className="xl:hidden flex items-center"
             onClick={() => setListVisible(!listVisible)}
           >
             <Image
@@ -1211,173 +1174,7 @@ Schedule a Demo
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {/* {listVisible && (
-          <div className="lg:hidden bg-white border-t border-gray-200 px-4 py-3 shadow-lg">
-            <nav className="flex flex-col space-y-4">
-              <Link
-                href="/about"
-                className="py-2 text-gray-800"
-                onClick={() => handleOptionClick()}
-              >
-                About Us
-              </Link>
-              
-              <div>
-                <button
-                  onClick={() => handleClick("feature")}
-                  className="flex items-center justify-between w-full py-2 text-gray-800"
-                >
-                  <span>Features</span>
-                  <RiArrowDropDownLine 
-                    className={`h-6 w-6 transition-transform duration-200 ${dropdownOpen.feature ? "rotate-180" : ""}`} 
-                  />
-                </button>
-                
-                {dropdownOpen.feature && (
-                  <div className="pl-4 mt-2 space-y-3">
-                    <Link 
-                      href="/stories" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={story} alt="Stories" width={20} height={20} className="mr-3" />
-                      <span>Stories</span>
-                    </Link>
-                    <Link 
-                      href="/reels" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={reel} alt="Reels" width={20} height={20} className="mr-3" />
-                      <span>Reels</span>
-                    </Link>
-                    <Link 
-                      href="/pipVideos" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={pip} alt="PIP Videos" width={20} height={20} className="mr-3" />
-                      <span>PIP Videos</span>
-                    </Link>
-                    <Link 
-                      href="/banners" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={banner} alt="Banners" width={20} height={20} className="mr-3" />
-                      <span>Banners</span>
-                    </Link>
-                    <Link 
-                      href="/csats" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={csat} alt="CSATs" width={20} height={20} className="mr-3" />
-                      <span>CSATs</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
-              <div>
-                <button
-                  onClick={() => handleClick("advanceSolutions")}
-                  className="flex items-center justify-between w-full py-2 text-gray-800"
-                >
-                  <span>Advanced Solutions</span>
-                  <RiArrowDropDownLine 
-                    className={`h-6 w-6 transition-transform duration-200 ${dropdownOpen.advanceSolutions ? "rotate-180" : ""}`} 
-                  />
-                </button>
-                
-                {dropdownOpen.advanceSolutions && (
-                  <div className="pl-4 mt-2 space-y-3">
-                    <Link 
-                      href="/integrations/mixpanel" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={mparticle_icon} alt="Mixpanel" width={18} height={18} className="mr-3" />
-                      <span>Mixpanel</span>
-                    </Link>
-                    <Link 
-                      href="/integrations/clevertap" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={clevertap_icon} alt="CleverTap" width={18} height={18} className="mr-3" />
-                      <span>CleverTap</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
-              <div>
-                <button
-                  onClick={() => handleClick("resources")}
-                  className="flex items-center justify-between w-full py-2 text-gray-800"
-                >
-                  <span>Resources</span>
-                  <RiArrowDropDownLine 
-                    className={`h-6 w-6 transition-transform duration-200 ${dropdownOpen.resources ? "rotate-180" : ""}`} 
-                  />
-                </button>
-                
-                {dropdownOpen.resources && (
-                  <div className="pl-4 mt-2 space-y-3">
-                    <Link 
-                      href="/blogs" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={blog} alt="Blog" width={20} height={20} className="mr-3" />
-                      <span>Blog</span>
-                    </Link>
-                    <Link 
-                      href="/career" 
-                      className="flex items-center py-2"
-                      onClick={handleOptionClick}
-                    >
-                      <Image src={career} alt="Careers" width={20} height={20} className="mr-3" />
-                      <span>Careers</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
-              <Link
-                href="/contact"
-                className="py-2 text-gray-800"
-                onClick={() => handleOptionClick()}
-              >
-                Contact
-              </Link>
-              
-              <div className="pt-2 space-y-3">
-                <Link
-                  href="/contact"
-                  className="block w-full rounded-full bg-[#FD5F03] text-white font-medium text-center px-4 py-2.5"
-                  onClick={() => {
-                    handleOptionClick();
-                    setRequestDemoClick(true);
-                  }}
-                >
-                  Contact Sales
-                </Link>
-                
-                <Link
-                  href="https://admin.appstorys.com/"
-                  className="block w-full text-[#FD5F03] font-medium text-center px-4 py-2.5 border border-[#FD5F03] rounded-full"
-                  target="_blank"
-                  onClick={() => handleOptionClick()}
-                >
-                  Login
-                </Link>
-              </div>
-            </nav>
-          </div>
-        )} */}
+     
 
         {/* Mobile Navigation */}
         {listVisible && (
