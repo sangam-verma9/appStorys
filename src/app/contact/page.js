@@ -50,7 +50,7 @@ export default function GetInTouch() {
             {/* Form Section */}
             <section className='flex justify-start items-start max-w-[1400px] min-h-[70vh]'>
                 {/* <div className='w-[5px] h-[110vh] max-[895px]:hidden'>
-                    <div className='w-full h-[90%] bg-[#1F4D9C]'></div>
+                    <div className='w-full h-[90%] bg-[#FD5F03]'></div>
                     <div className='w-full h-[10%] bg-[#E9A63A]'></div>
                 </div> */}
                 <div className='flex justify-start items-start h-full w-full bg-[#fafafa] gap-y-[20px] min-[540px]:pl-[40px] min-[540px]:pr-[40px] min-[540px]:pt-[20px] min-[540px]:pb-[20px] gap-x-[21px] max-[1085px]:flex-col max-[540px]:px-[25px] max-[540px]:py-[25px]'>
@@ -61,13 +61,13 @@ export default function GetInTouch() {
                         </div>
                         <div className='flex flex-col justify-between items-start'>
                             <h1 className='text-[12px] tracking-[2px] leading-[119%] font-bold font-InstrumentSans'>REACH OUT TO US</h1>
-                            <a href="mailto:support@appstorys.com" target='_blank' className='font-semibold font-InstrumentSans text-[18px] leading-[119%] text-[#1F4D9C] hover:cursor-pointer'>support@appstorys.com</a>
+                            <a href="mailto:support@appstorys.com" target='_blank' className='font-semibold font-InstrumentSans text-[18px] leading-[119%] text-[#FD5F03] hover:cursor-pointer'>support@appstorys.com</a>
                         </div>
                     </div>
                     <div className='relative h-[687px] w-[65%] max-[1085px]:w-full flex justify-center items-center'>
                         <form className='flex flex-col justify-start items-center px-[80px] max-[617px]:px-[40px] py-[80px] bg-[#e8ecf3] gap-y-[31px] min-[1085px]:ml-[104px] w-full h-full max-[487px]:px-[25px]' onSubmit={handleSubmit}>
                             <div className='w-full justify-between items-start flex flex-col gap-y-[16px]'>
-                                <label htmlFor="Full Name" className='text-[#1F4D9C] leading-[150%] text-[16px] font-InstrumentSans'>Full Name&nbsp;<span className='text-[#D64830]'>*</span></label>
+                                <label htmlFor="Full Name" className='text-[#FD5F03] leading-[150%] text-[16px] font-InstrumentSans'>Full Name&nbsp;<span className='text-[#D64830]'>*</span></label>
                                 <input
                                     type="text"
                                     name='Full Name'
@@ -78,7 +78,7 @@ export default function GetInTouch() {
                                 />
                             </div>
                             <div className='w-full justify-between items-start flex flex-col gap-y-[16px] mt-[9px]'>
-                                <label htmlFor="Business Email" className='text-[#1F4D9C] leading-[150%] text-[16px] font-InstrumentSans'>Business Email&nbsp;<span className='text-[#D64830]'>*</span></label>
+                                <label htmlFor="Business Email" className='text-[#FD5F03] leading-[150%] text-[16px] font-InstrumentSans'>Business Email&nbsp;<span className='text-[#D64830]'>*</span></label>
                                 <input
                                     type="email"
                                     name='Business Email'
@@ -89,7 +89,7 @@ export default function GetInTouch() {
                                 />
                             </div>
                             <div className='w-full justify-between items-start flex flex-col gap-y-[16px] mt-[9px]'>
-                                <label htmlFor="Message" className='text-[#1F4D9C] leading-[150%] text-[16px] font-InstrumentSans'>Message&nbsp;<span className='text-[#D64830]'>*</span></label>
+                                <label htmlFor="Message" className='text-[#FD5F03] leading-[150%] text-[16px] font-InstrumentSans'>Message&nbsp;<span className='text-[#D64830]'>*</span></label>
                                 <textarea
                                     rows={3}
                                     type="text"
@@ -99,7 +99,7 @@ export default function GetInTouch() {
                                     onChange={(e) => { setMessage(e.target.value) }}
                                 />
                             </div>
-                            <button className='flex justify-center items-center py-[11px] px-[50px] gap-x-[8px] bg-[#1f4d9c] text-white rounded-[25px] mt-[25px] text-[10px] font-semibold font-InstrumentSans tracking-[1px]' type='submit'>
+                            <button className='flex justify-center items-center py-[11px] px-[50px] gap-x-[8px] bg-[#FD5F03] text-white rounded-[25px] mt-[25px] text-[10px] font-semibold font-InstrumentSans tracking-[1px]' type='submit'>
                                 <div className='h-[5px] w-[5px] bg-white rounded-full'></div>
                                 SUBMIT
                             </button>
@@ -115,8 +115,8 @@ export default function GetInTouch() {
                                         height={48}
                                         className="h-[48px] w-auto"
                                     />
-                                    <p className='text-[16px] font-InstrumentSans leading-[150%] text-[#1F4D9C] text-center min-[1046px]:w-[606px]'>Thank you for submitting the form. You'll be hearing from us shortly, so please keep an eye on your email inbox.</p>
-                                    <Link href='/' onClick={() => { setSubmitSuccess(false) }} className='h-[34px] w-[133px] bg-[#1F4D9C] flex justify-center items-center gap-x-[9px] text-white tracking-[1px] text-[10px] font-semibold font-InstrumentSans'>
+                                    <p className='text-[16px] font-InstrumentSans leading-[150%] text-[#FD5F03] text-center min-[1046px]:w-[606px]'>Thank you for submitting the form. You'll be hearing from us shortly, so please keep an eye on your email inbox.</p>
+                                    <Link href='/' onClick={() => { setSubmitSuccess(false) }} className='h-[34px] w-[133px] bg-[#FD5F03] flex justify-center items-center gap-x-[9px] text-white tracking-[1px] text-[10px] font-semibold font-InstrumentSans'>
                                         <div className='w-[5px] h-[5px] bg-white rounded-full'></div>
                                         OKAY
                                     </Link>
@@ -137,7 +137,7 @@ export default function GetInTouch() {
             </section>
 
             <section className='bg-[#fff] flex flex-col justify-start items-start py-[67px] px-[55px] max-[540px]:px-[25px] max-[540px]:py-[25px] max-w-[1500px] gap-y-[15.89px]'>
-                <h1 className='text-[12px] font-bold font-InstrumentSans text-[#1F4D9C] tracking-[2px] leading-[119%]'>OUR LOCATIONS</h1>
+                <h1 className='text-[12px] font-bold font-InstrumentSans text-[#FD5F03] tracking-[2px] leading-[119%]'>OUR LOCATIONS</h1>
                 <div className='flex justify-start max-[1051px]:justify-center items-center flex-wrap gap-x-[16.62px] max-[1440px]:gap-x-[2px] max-[1336px]:gap-x-[10px] max-[1336px]:gap-y-[10px] '>
                     <LocationCard country='INDIA' city='Mumbai' address='Office #3, Neelkanth, Next to Shreeji Heights, Sector 45A, Navi Mumbai, Maharashtra, India - 400706' />
                     <LocationCard country='INDIA' city='Noida' address='Office #37, Tapasya Corp Heights, Sector 126, Noida, Uttar Pradesh - 201301' />
