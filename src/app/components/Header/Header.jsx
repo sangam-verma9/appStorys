@@ -50,7 +50,7 @@ import '../../globals.css'
 
 import { motion } from "framer-motion";
 import store from "../../store/store";
-import ContactModal from '../ContactModal'; 
+import ContactModal from '../ContactModal';
 import InteractiveHoverButton from '../InteractiveHoverButton';
 
 // Load fonts
@@ -121,14 +121,14 @@ const Header = ({ style }) => {
   // };
 
   const handleOptionClick = () => {
-  setDropdownOpen({
-    feature: false,
-    advanceSolutions: false,
-    resources: false,
-    sdks: false,
-  });
-  setListVisible(false);
-};
+    setDropdownOpen({
+      feature: false,
+      advanceSolutions: false,
+      resources: false,
+      sdks: false,
+    });
+    setListVisible(false);
+  };
 
   // const { setRequestDemoClick } = store();
 
@@ -159,7 +159,7 @@ const Header = ({ style }) => {
           </div>
 
           {/* Navigation - Desktop */}
-        <nav className="hidden xl:flex items-center space-x-6">
+          <nav className="hidden xl:flex items-center space-x-6">
             <div className="relative dropdown-container">
               <button
                 onClick={() => handleClick("feature")}
@@ -167,9 +167,8 @@ const Header = ({ style }) => {
               >
                 Features
                 <RiArrowDropDownLine
-                  className={`ml-1 h-5 w-5 transition-transform duration-200 ${
-                    dropdownOpen.feature ? "rotate-180" : ""
-                  }`}
+                  className={`ml-1 h-5 w-5 transition-transform duration-200 ${dropdownOpen.feature ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -220,11 +219,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600  transition-opacity duration-150 ${
-                                hoveredItem === "stories"
+                              className={`text-blue-600  transition-opacity duration-150 ${hoveredItem === "stories"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -258,11 +256,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "reels"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "reels"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -296,11 +293,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "pip"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "pip"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -334,11 +330,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "bottom"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "bottom"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -381,11 +376,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "banner"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "banner"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -419,11 +413,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "floater"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "floater"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -457,11 +450,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "widgets"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "widgets"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -495,11 +487,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "scratch"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "scratch"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -542,11 +533,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "quiz"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "quiz"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -580,11 +570,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "survey"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "survey"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -618,11 +607,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "csat"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "csat"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -665,11 +653,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "tooltip"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "tooltip"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -703,11 +690,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "coach"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "coach"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -741,11 +727,10 @@ const Header = ({ style }) => {
                               </p>
                             </div>
                             <FaArrowRight
-                              className={`text-blue-600 transition-opacity duration-150 ${
-                                hoveredItem === "spotlight"
+                              className={`text-blue-600 transition-opacity duration-150 ${hoveredItem === "spotlight"
                                   ? "opacity-100"
                                   : "opacity-0"
-                              }`}
+                                }`}
                             />
                           </Link>
                         </div>
@@ -763,9 +748,8 @@ const Header = ({ style }) => {
               >
                 Advanced Solutions
                 <RiArrowDropDownLine
-                  className={`ml-1 h-5 w-5 transition-transform duration-200 ${
-                    dropdownOpen.advanceSolutions ? "rotate-180" : ""
-                  }`}
+                  className={`ml-1 h-5 w-5 transition-transform duration-200 ${dropdownOpen.advanceSolutions ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -939,9 +923,8 @@ const Header = ({ style }) => {
               >
                 Resources
                 <RiArrowDropDownLine
-                  className={`ml-1 h-5 w-5 transition-transform duration-200 ${
-                    dropdownOpen.resources ? "rotate-180" : ""
-                  }`}
+                  className={`ml-1 h-5 w-5 transition-transform duration-200 ${dropdownOpen.resources ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -1147,17 +1130,17 @@ const Header = ({ style }) => {
               Login
             </Link>
 
-           
-<InteractiveHoverButton
-  className="bg-[#FD5F03] border-2 border-[#FD5F03] text-white h-[50px] font-medium"
-  onClick={() => {
-    handleOptionClick && handleOptionClick();
-    setRequestDemoClick(true);
-    openContactModal(); // Open the modal
-  }}
->
-Schedule a Demo
-</InteractiveHoverButton>
+
+            <InteractiveHoverButton
+              className="bg-[#FD5F03] border-2 border-[#FD5F03] text-white h-[50px] font-medium"
+              onClick={() => {
+                handleOptionClick && handleOptionClick();
+                setRequestDemoClick(true);
+                openContactModal(); // Open the modal
+              }}
+            >
+              Schedule a Demo
+            </InteractiveHoverButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -1174,7 +1157,7 @@ Schedule a Demo
           </button>
         </div>
 
-     
+
 
         {/* Mobile Navigation */}
         {listVisible && (
@@ -1195,9 +1178,8 @@ Schedule a Demo
                 >
                   <span>Features</span>
                   <RiArrowDropDownLine
-                    className={`h-6 w-6 transition-transform duration-200 ${
-                      dropdownOpen.feature ? "rotate-180" : ""
-                    }`}
+                    className={`h-6 w-6 transition-transform duration-200 ${dropdownOpen.feature ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
@@ -1207,19 +1189,19 @@ Schedule a Demo
                       RICH MEDIA CONTENT
                     </h5>
                     <Link
-  href="/stories"
-  className="flex items-center py-2"
-  onClick={() => handleOptionClick()}
->
-  <Image
-    src={story}
-    alt="Stories"
-    width={20}
-    height={20}
-    className="mr-3"
-  />
-  <span>Stories</span>
-</Link>
+                      href="/stories"
+                      className="flex items-center py-2"
+                      onClick={() => handleOptionClick()}
+                    >
+                      <Image
+                        src={story}
+                        alt="Stories"
+                        width={20}
+                        height={20}
+                        className="mr-3"
+                      />
+                      <span>Stories</span>
+                    </Link>
                     <Link
                       href="/reels"
                       className="flex items-center py-2"
@@ -1425,9 +1407,8 @@ Schedule a Demo
                 >
                   <span>Advanced Solutions</span>
                   <RiArrowDropDownLine
-                    className={`h-6 w-6 transition-transform duration-200 ${
-                      dropdownOpen.advanceSolutions ? "rotate-180" : ""
-                    }`}
+                    className={`h-6 w-6 transition-transform duration-200 ${dropdownOpen.advanceSolutions ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
@@ -1560,9 +1541,8 @@ Schedule a Demo
                 >
                   <span>Resources</span>
                   <RiArrowDropDownLine
-                    className={`h-6 w-6 transition-transform duration-200 ${
-                      dropdownOpen.resources ? "rotate-180" : ""
-                    }`}
+                    className={`h-6 w-6 transition-transform duration-200 ${dropdownOpen.resources ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
