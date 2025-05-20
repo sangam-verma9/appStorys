@@ -53,7 +53,7 @@ export default function GetInTouch() {
                     <div className='w-full h-[90%] bg-[#FD5F03]'></div>
                     <div className='w-full h-[10%] bg-[#E9A63A]'></div>
                 </div> */}
-                <div className='flex justify-start items-start h-full w-full bg-[#fafafa] gap-y-[20px] min-[540px]:pl-[40px] min-[540px]:pr-[40px] min-[540px]:pt-[20px] min-[540px]:pb-[20px] gap-x-[21px] max-[1085px]:flex-col max-[540px]:px-[25px] max-[540px]:py-[25px]'>
+                <div className='flex justify-start items-start h-full w-full bg-[#fff] gap-y-[20px] min-[540px]:pl-[40px] min-[540px]:pr-[40px] min-[540px]:pt-[20px] min-[540px]:pb-[20px] gap-x-[21px] max-[1085px]:flex-col max-[540px]:px-[25px] max-[540px]:py-[25px]'>
                     <div className='w-[20%] flex flex-col justify-start items-start gap-y-[80px] max-[1085px]:w-full'>
                         <div className='flex flex-col min-[1085px]:justify-between items-start min-[1085px]:h-[209px] gap-y-[34px]'>
                             <h1 className='text-[54px] font-semibold font-InstrumentSans leading-[107%] min-[1085px]:w-[231px]'>Let's Get In Touch</h1>
@@ -65,7 +65,7 @@ export default function GetInTouch() {
                         </div>
                     </div>
                     <div className='relative h-[687px] w-[65%] max-[1085px]:w-full flex justify-center items-center'>
-                        <form className='flex flex-col justify-start items-center px-[80px] max-[617px]:px-[40px] py-[80px] bg-[#e8ecf3] gap-y-[31px] min-[1085px]:ml-[104px] w-full h-full max-[487px]:px-[25px]' onSubmit={handleSubmit}>
+                        <form className='flex flex-col justify-start items-center px-[80px] max-[617px]:px-[40px] py-[80px] bg-[#FFF7F3] gap-y-[31px] min-[1085px]:ml-[104px] w-full h-full max-[487px]:px-[25px]' onSubmit={handleSubmit}>
                             <div className='w-full justify-between items-start flex flex-col gap-y-[16px]'>
                                 <label htmlFor="Full Name" className='text-[#FD5F03] leading-[150%] text-[16px] font-InstrumentSans'>Full Name&nbsp;<span className='text-[#D64830]'>*</span></label>
                                 <input

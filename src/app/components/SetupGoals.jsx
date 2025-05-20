@@ -60,27 +60,46 @@
 
 
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import goals from "../../assets/goals.png";
+// import goals from "../../assets/goals.png";
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const SetupGoals = () => {
+  const [animationData, setAnimationData] = useState(null);
+  useEffect(() => {
+      const loadAnimation = async () => {
+        try {
+          const animData = await import('../../assets/goalsfiles.json');
+          setAnimationData(animData.default || animData);
+        } catch (error) {
+          try {
+            const response = await fetch('/assets/heromain.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const data = await response.json();
+            console.log('Animation data fetched:', data);
+            setAnimationData(data);
+          } catch (fetchError) {
+            console.error('Both import and fetch failed:', fetchError);
+          }
+        }
+      };
+  
+      loadAnimation();
+    }, []);
   return (
     <div className="w-full py-12 md:py-16 bg-[#FFF7F3]">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Image Container */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0 order-1 md:order-1">
-          <div className="w-full h-[400px] md:h-[500px] lg:h-[616px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] relative">
-            <div className="w-full h-full relative">
-              <Image 
-                src={goals} 
-                alt="Setup Goals & Track Outcomes illustration" 
-                fill
-                style={{ objectFit: "contain" }}
-                priority
-              />
-            </div>
-          </div>
+          <Lottie
+            animationData={animationData}
+            loop={false}
+            autoplay={true}
+            style={{ width: '100%', height: 'auto' }}
+          />
         </div>
         
         {/* Right Column - Text */}

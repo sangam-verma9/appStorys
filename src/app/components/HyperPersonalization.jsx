@@ -681,7 +681,7 @@
 //             any manual work.
 //           </p>
 //         </div>
- 
+
 //         {/* Right Column - Animated Container */}
 //         <div className="w-full md:w-[731px] h-[500px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">
 //           {/* Loading state */}
@@ -849,13 +849,13 @@ const HyperPersonalization = () => {
 
     const animationInterval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
-    }, 2000); // Change every 2 seconds
+    }, 4000); // Change every 2 seconds
 
     return () => clearInterval(animationInterval);
   }, [imagesLoaded, images.length]);
 
   return (
-    <div className="w-full py-12 md:py-16 bg-[#FFF7F3]">
+    <div className="w-full py-5 md:py-8 bg-[#FFF7F3]">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Text */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0 order-2 md:order-1">
@@ -870,7 +870,7 @@ const HyperPersonalization = () => {
             any manual work.
           </p>
         </div>
- 
+
         {/* Right Column - Animated Container */}
         <div className="w-full md:w-1/2 order-1 md:order-2">
           <div className="w-full h-[400px] md:h-[500px] lg:h-[616px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">

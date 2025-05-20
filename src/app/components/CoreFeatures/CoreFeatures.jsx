@@ -27,7 +27,7 @@ const satisfy = Satisfy({ subsets: ['latin'], weight: ['400'] });
 
 
 const getFeatureImage = (imageName) => {
-  switch(imageName) {
+  switch (imageName) {
     case "sc1": return sc1;
     case "sc2": return sc2;
     case "sc3": return sc3;
@@ -46,9 +46,9 @@ const getFeatureImage = (imageName) => {
   }
 };
 
-const FeatureCard = ({ number, title, description, metrics, imageName }) => {
+const FeatureCard = ({ number, title, description, metrics, imageName}) => {
   const featureImage = getFeatureImage(imageName || `sc${number}`);
-  
+
   return (
     <div className="w-full max-w-[582px] h-[651px] flex-shrink-0 rounded-[12px] border-[2px] border-[#008FFF] bg-white shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)] p-6 flex flex-col items-center mx-auto overflow-visible">
       {/* Image container with outer positioning for the number */}
@@ -57,33 +57,36 @@ const FeatureCard = ({ number, title, description, metrics, imageName }) => {
         <div className="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-[#008FFF] flex items-center justify-center z-10 text-white text-xl font-bold border-white border-2">
           {number}
         </div>
-        
+
         {/* Inner box with image */}
-        <div className="w-full h-[380px] rounded-[12px] border-[2px] border-solid border-[#008FFF] overflow-hidden">
+        <div className="w-full h-[368px] rounded-[12px] border-[2px] border-solid border-[#008FFF] overflow-hidden ">
           {/* Feature image */}
           <div className="w-full h-full relative">
-            <Image 
+            <Image
               src={featureImage}
               alt={`${title} feature`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-contain p-2"
+              className={`object-contain`}
               priority={number <= 3}
+              style={{
+                marginLeft: number ==13 ?-8 :0
+              }}
             />
           </div>
         </div>
       </div>
-      
+
       {/* Title */}
       <h3 className="text-black font-sf-pro text-[24px] font-medium leading-[19px] capitalize mb-4 w-full text-left">
         {title}
       </h3>
-      
+
       {/* Description */}
-      <p className="w-full max-w-[305px] text-[#2F2F2F] font-sf-pro text-[14px] font-normal leading-[128%] text-left mb-8">
+      <p className="w-full max-w-[305px] text-[#2F2F2F] font-sf-pro text-[14px] font-normal leading-[128%] text-left mb-8 h-[50px]">
         {description}
       </p>
-      
+
       {/* Metrics - Changed from flex to grid for better responsiveness */}
       {/* <div className="w-full grid grid-cols-3 gap-2 mt-auto">
         {metrics && metrics.length > 0 ? metrics.map((metric, index) => (
@@ -102,22 +105,22 @@ const FeatureCard = ({ number, title, description, metrics, imageName }) => {
         )}
       </div> */}
 
-      <div className="w-full grid grid-cols-3 gap-2 mt-auto">
-  {metrics && metrics.length > 0 ? metrics.map((metric, index) => (
-    <div key={index} className="flex flex-col items-start">
-      <p className="text-[#008FFF] text-start font-product-sans text-[24px] md:text-[28px] lg:text-[34px] font-bold leading-[110%] capitalize">
-        {metric.value}
-      </p>
-      <p className="text-[#2F2F2F] text-start font-sf-pro text-[9px] md:text-[10px] lg:text-[11px] font-medium leading-[110%] capitalize max-w-[80px]">
-        {metric.label}
-      </p>
-    </div>
-  )) : (
-    <div className="flex justify-center w-full col-span-3">
-      <p className="text-gray-500">No metrics available</p>
-    </div>
-  )}
-</div>
+      <div className="w-full grid grid-cols-3 gap-2">
+        {metrics && metrics.length > 0 ? metrics.map((metric, index) => (
+          <div key={index} className="flex flex-col items-start">
+            <p className="text-[#008FFF] text-start font-product-sans text-[24px] md:text-[28px] lg:text-[34px] font-bold leading-[110%] capitalize">
+              {metric.value}
+            </p>
+            <p className="text-[#2F2F2F] text-start font-sf-pro text-[9px] md:text-[10px] lg:text-[11px] font-medium leading-[110%] capitalize max-w-[80px]">
+              {metric.label}
+            </p>
+          </div>
+        )) : (
+          <div className="flex justify-center w-full col-span-3">
+            <p className="text-gray-500">No metrics available</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
@@ -125,13 +128,13 @@ const FeatureCard = ({ number, title, description, metrics, imageName }) => {
 const FeatureCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
-  
+
   // Features data
   const features = [
     {
       id: 1,
       title: "Stories",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description: "Elevate brand’s impact with engaging short stories that inform and influence.",
       imageName: "sc1",
       metrics: [
         { value: "5x", label: "More Content Consumption" },
@@ -141,8 +144,8 @@ const FeatureCarousel = () => {
     },
     {
       id: 2,
-      title: "PIP Videos",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      title: "Pip Videos",
+      description: "Deliver key updates with PiP videos. Engage users seamlessly, without disruption.",
       imageName: "sc2",
       metrics: [
         { value: "24%", label: "Boost In Marketing Engagement" },
@@ -153,7 +156,7 @@ const FeatureCarousel = () => {
     {
       id: 3,
       title: "Reels",
-      description: "Create easy-to-consume, visually engaging stories that capture user attention instantly.",
+      description: "Display eye-catching, brief video content to capture users' attention immediately",
       imageName: "sc3",
       metrics: [
         { value: "7x", label: "More Content Consumption" },
@@ -180,7 +183,7 @@ const FeatureCarousel = () => {
       metrics: [
         { value: "4x", label: "Improved CTR" },
         { value: "29%", label: "Higher Brand Recall" },
-        { value: "41%", label: "Better Message Delivery" }
+        { value: "41%", label: `Better Message Delivery ` }
       ]
     },
     {
@@ -302,17 +305,17 @@ const FeatureCarousel = () => {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex + slidesToShow >= features.length 
-        ? 0 
+    setCurrentIndex((prevIndex) =>
+      prevIndex + slidesToShow >= features.length
+        ? 0
         : prevIndex + slidesToShow
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex - slidesToShow < 0 
-        ? Math.max(0, features.length - slidesToShow) 
+    setCurrentIndex((prevIndex) =>
+      prevIndex - slidesToShow < 0
+        ? Math.max(0, features.length - slidesToShow)
         : prevIndex - slidesToShow
     );
   };
@@ -322,7 +325,7 @@ const FeatureCarousel = () => {
   return (
     <div className="w-full bg-[#FFF7F3]">
       <div className="sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1200px] py-8 md:py-12 lg:py-16 flex flex-col justify-center mx-auto px-4 sm:px-6 md:px-0">
-      <h3 className={`text-[#FD5F03] text-[22px] md:text-[26px] text-center ${satisfy.className}`}>Core Features</h3>
+        <h3 className={`text-[#FD5F03] text-[22px] md:text-[26px] text-center ${satisfy.className}`}>Core Features</h3>
         <h1 className="font-sf-pro text-[32px] font-medium sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-16 leading-tight -mt-[5px]">
           Incredible User Experiences
         </h1>
@@ -344,8 +347,8 @@ const FeatureCarousel = () => {
           </div>
 
           {/* Navigation buttons */}
-          <button 
-            onClick={prevSlide} 
+          <button
+            onClick={prevSlide}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 lg:-translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
             aria-label="Previous slide"
           >
@@ -353,8 +356,8 @@ const FeatureCarousel = () => {
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
-          <button 
-            onClick={nextSlide} 
+          <button
+            onClick={nextSlide}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 lg:translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
             aria-label="Next slide"
           >

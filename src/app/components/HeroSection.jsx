@@ -36,7 +36,7 @@ const HeroSection = () => {
         setAnimationData(animData.default || animData);
       } catch (error) {
         console.log('Dynamic import failed, trying fetch...', error);
-        
+
         // Method 2: Try fetch as fallback
         try {
           const response = await fetch('/assets/heromain.json');
@@ -90,11 +90,11 @@ const HeroSection = () => {
           </p>
 
           {/* Animation container */}
-          <div className="w-full mt-10 md:mt-16 flex justify-center">
+          <div className="w-full mt-0 md:mt-0 flex justify-center">
             <div className="relative w-full max-w-6xl">
               {/* Show Lottie animation when data is loaded */}
               {animationData && (
-                <div className="relative w-full" style={{minHeight: "400px"}}>
+                <div className="relative w-full" style={{ minHeight: "400px" }}>
                   {/* <Lottie
                     animationData={animationData}
                     loop={true}
@@ -103,11 +103,11 @@ const HeroSection = () => {
                     onLoadedData={() => console.log('Lottie animation loaded successfully!')}
                   /> */}
                   <Lottie
-  animationData={animationData}
-  loop={false}
-  autoplay={true}
-  style={{ width: '100%', height: 'auto' }}
-/>
+                    animationData={animationData}
+                    loop={false}
+                    autoplay={true}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
 
                 </div>
               )}
@@ -117,7 +117,7 @@ const HeroSection = () => {
           {/* Call-to-action button with increased width */}
           <div className="flex justify-center -mt-40 md:-mt-8">
             <InteractiveHoverButton
-              className="bg-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl"
+              className="bg-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl border-2 border-[#FD5F03]"
               onClick={() => {
                 setRequestDemoClick(true);
                 openContactModal();
