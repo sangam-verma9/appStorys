@@ -116,7 +116,7 @@ const FeatureCarousel = () => {
     {
       id: 1,
       title: "Stories",
-      description: "Let your brand connect with the audience and elevate your presence through short stories, leave a lasting impression.",
+      description: "Let your brand connect with the audience and elevate your presence through short stories, leavening a lasting impression.",
       imageName: "sc1",
       metrics: [
         { value: "5x", label: "More Content Consumption" },
@@ -127,7 +127,7 @@ const FeatureCarousel = () => {
     {
       id: 2,
       title: "PiP Videos",
-      description: "Keep users informed with picture-in-picture videos that deliver updates without interrupting their experience.",
+      description: "Keep users informed with picture-in-picture videos that deliver updates without disrupting their browsing experience.",
       imageName: "sc2",
       metrics: [
         { value: "24%", label: "Boost In Marketing Engagement" },
@@ -138,7 +138,7 @@ const FeatureCarousel = () => {
     {
       id: 3,
       title: "Reels",
-      description: "let your audience engage and interact with the eye-catching videos that get your message across in seconds without disrupting their browsing experience.",
+      description: "Let your audience engage and interact with the eye-catching videos that get your message across in seconds.",
       imageName: "sc3",
       metrics: [
         { value: "7x", label: "More Content Consumption" },
