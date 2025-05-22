@@ -828,7 +828,7 @@ import hp3 from "../../assets/hp3.png";
 import hp4 from "../../assets/hp4.png";
 import hp5 from "../../assets/hp5.png";
 import "../globals.css";
-import "./hyperPersonalizationcss.css"
+import "./hyperpersonalizationcss.css"
 
 const HyperPersonalization = () => {
   const images = [hp1, hp2, hp3, hp4, hp5];
