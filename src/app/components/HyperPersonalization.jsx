@@ -873,7 +873,7 @@ const HyperPersonalization = () => {
 
         {/* Right Column - Animated Container */}
         <div className="w-full md:w-1/2 order-1 md:order-2">
-          <div className="w-full h-[400px] md:h-[500px] lg:h-[616px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">
+          <div className="w-full h-[400px] md:h-[450px] lg:h-[450px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">
             {/* Loading state */}
             {!imagesLoaded && (
               <div className="absolute inset-0 flex items-center justify-center">

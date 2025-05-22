@@ -39,6 +39,7 @@ import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 import Script from "next/script";
+import TopBanner from "./topbanner/TopBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,7 +50,7 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: "swap", 
+  display: "swap",
 });
 
 export const metadata = {
@@ -84,7 +85,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "AppStorys - Better In-App User Experiences",
     description: "Discover AppStorys, a SaaS platform that boosts app engagement with stories, PiP videos, banners, and more.",
-    images: ["/twitter-image.jpg"], 
+    images: ["/twitter-image.jpg"],
   },
   robots: {
     index: true,
@@ -101,7 +102,7 @@ export const metadata = {
   authors: [{ name: "AppStorys Team" }],
   publisher: "AppStorys",
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#4f46e5", 
+  themeColor: "#4f46e5",
 };
 
 export default function RootLayout({ children }) {
@@ -137,7 +138,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <Script
-          id="google-analytics"   
+          id="google-analytics"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -148,6 +149,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        <TopBanner />
         <Header />
         <main>{children}</main>
         <Footer />
