@@ -3,8 +3,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Inter, Bricolage_Grotesque, Satisfy } from 'next/font/google';
-import "../animateborder.css"
 import Image from 'next/image';
+import "./FeatureCard.css"
 
 // Import all feature images
 import sc1 from "../../../assets/sc1.png";
@@ -50,7 +50,7 @@ const FeatureCard = ({ number, title, description, metrics, imageName }) => {
   const featureImage = getFeatureImage(imageName || `sc${number}`);
 
   return (
-    <div className="w-full max-w-[582px] h-[651px] flex-shrink-0 rounded-[12px] border-[2px] border-[#008FFF] bg-white shadow-[4px_8px_32px_0px_rgba(148,114,80,0.18)] p-6 flex flex-col items-center mx-auto overflow-visible">
+    <div className={`w-full max-w-[582px] h-[651px] flex-shrink-0 rounded-[12px] bg-white p-6  flex flex-col items-center mx-auto overflow-visible`}>
       {/* Image container with outer positioning for the number */}
       <div className="relative w-full max-w-[527px] mb-6">
         {/* Number indicator positioned absolutely relative to parent */}
@@ -86,24 +86,6 @@ const FeatureCard = ({ number, title, description, metrics, imageName }) => {
       <p className="w-full max-w-[305px] text-[#2F2F2F] font-sf-pro text-[14px] font-normal leading-[128%] text-left mb-8 h-[50px]">
         {description}
       </p>
-
-      {/* Metrics - Changed from flex to grid for better responsiveness */}
-      {/* <div className="w-full grid grid-cols-3 gap-2 mt-auto">
-        {metrics && metrics.length > 0 ? metrics.map((metric, index) => (
-          <div key={index} className="flex flex-col items-start">
-            <p className="text-[#008FFF] text-start font-product-sans text-[32px] md:text-[38px] lg:text-[41px] font-bold leading-[110%] capitalize">
-              {metric.value}
-            </p>
-            <p className="text-[#2F2F2F] text-start font-sf-pro text-[10px] md:text-[11px] lg:text-[12px] font-medium leading-[110%] capitalize max-w-[80px]">
-              {metric.label}
-            </p>
-          </div>
-        )) : (
-          <div className="flex justify-center w-full col-span-3">
-            <p className="text-gray-500">No metrics available</p>
-          </div>
-        )}
-      </div> */}
 
       <div className="w-full grid grid-cols-3 gap-2">
         {metrics && metrics.length > 0 ? metrics.map((metric, index) => (
@@ -335,13 +317,15 @@ const FeatureCarousel = () => {
           <div className="flex justify-center gap-4 md:gap-6 overflow-hidden">
             {visibleFeatures.map((feature) => (
               <div key={feature.id} className="w-full md:w-1/2 lg:w-1/3 px-2">
-                <FeatureCard
-                  number={feature.id}
-                  title={feature.title}
-                  description={feature.description}
-                  metrics={feature.metrics}
-                  imageName={feature.imageName}
-                />
+                <div className="feature-card-container p-[2px] overflow-hidden rounded-[12px]" data-animated="true">
+                  <FeatureCard
+                    number={feature.id}
+                    title={feature.title}
+                    description={feature.description}
+                    metrics={feature.metrics}
+                    imageName={feature.imageName}
+                  />
+                </div>
               </div>
             ))}
           </div>

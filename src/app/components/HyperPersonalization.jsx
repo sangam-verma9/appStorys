@@ -828,6 +828,7 @@ import hp3 from "../../assets/hp3.png";
 import hp4 from "../../assets/hp4.png";
 import hp5 from "../../assets/hp5.png";
 import "../globals.css";
+import "./HyperPersonalizationcss.css"
 
 const HyperPersonalization = () => {
   const images = [hp1, hp2, hp3, hp4, hp5];
@@ -873,133 +874,136 @@ const HyperPersonalization = () => {
 
         {/* Right Column - Animated Container */}
         <div className="w-full md:w-1/2 order-1 md:order-2">
-          <div className="w-full h-[400px] md:h-[450px] lg:h-[450px] flex-shrink-0 rounded-[21px] border-2 border-[#FF5E00] bg-[#FFE4D5] overflow-hidden relative">
-            {/* Loading state */}
-            {!imagesLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p>Loading animation...</p>
-              </div>
-            )}
+          <div className="hyperpersonalization-card overflow-hidden p-[2px] rounded-[21px]" data-animated="true">
+            <div className=" w-full h-[300px] md:h-[450px] lg:h-[450px] flex-shrink-0 rounded-[21px] bg-[#FFE4D5] overflow-hidden relative">
+              {/* Loading state */}
+              {!imagesLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <p>Loading animation...</p>
+                </div>
+              )}
 
-            {/* Continuous animation */}
-            {imagesLoaded && (
-              <>
-                {images.map((image, index) => {
-                  // Calculate position in animation cycle
-                  const position =
-                    (index - activeIndex + images.length) % images.length;
+              {/* Continuous animation */}
+              {imagesLoaded && (
+                <>
+                  {images.map((image, index) => {
+                    // Calculate position in animation cycle
+                    const position =
+                      (index - activeIndex + images.length) % images.length;
 
-                  // Determine if this image is active, entering, or exiting
-                  const isActive = position === 0;
-                  const isEntering = position === images.length - 1;
-                  const isExiting = position === 1;
+                    // Determine if this image is active, entering, or exiting
+                    const isActive = position === 0;
+                    const isEntering = position === images.length - 1;
+                    const isExiting = position === 1;
 
-                  // Different animation states
-                  let animateProps = {};
-                  let initial = {};
-                  let transition = {};
+                    // Different animation states
+                    let animateProps = {};
+                    let initial = {};
+                    let transition = {};
 
-                  if (isActive) {
-                    // Current active image
-                    animateProps = {
-                      opacity: 1,
-                      scale: 1,
-                      zIndex: 10,
-                    };
-                    initial = {
-                      opacity: 0,
-                      scale: 1.05,
-                    };
-                    transition = {
-                      opacity: { duration: 0.8, ease: "easeInOut" },
-                      scale: { duration: 3, ease: "easeOut" },
-                    };
-                  } else if (isEntering) {
-                    // Image about to enter
-                    animateProps = {
-                      opacity: 0,
-                      scale: 1.05,
-                      zIndex: 5,
-                    };
-                    initial = {
-                      opacity: 0,
-                      scale: 1.05,
-                    };
-                    transition = {
-                      opacity: { duration: 0.5, ease: "easeIn" },
-                      scale: { duration: 0.8, ease: "easeIn" },
-                    };
-                  } else if (isExiting) {
-                    // Image that was active and is now exiting
-                    animateProps = {
-                      opacity: 0,
-                      scale: 1,
-                      zIndex: 8,
-                    };
-                    initial = {
-                      opacity: 1,
-                      scale: 1,
-                    };
-                    transition = {
-                      opacity: { duration: 1.2, ease: "easeOut" },
-                      scale: { duration: 0.8, ease: "easeOut" },
-                    };
-                  } else {
-                    // Other images (inactive)
-                    animateProps = {
-                      opacity: 0,
-                      scale: 1,
-                      zIndex: 1,
-                    };
-                    initial = {
-                      opacity: 0,
-                      scale: 1,
-                    };
-                    transition = {
-                      opacity: { duration: 0.5 },
-                      scale: { duration: 0.5 },
-                    };
-                  }
+                    if (isActive) {
+                      // Current active image
+                      animateProps = {
+                        opacity: 1,
+                        scale: 1,
+                        zIndex: 10,
+                      };
+                      initial = {
+                        opacity: 0,
+                        scale: 1.05,
+                      };
+                      transition = {
+                        opacity: { duration: 0.8, ease: "easeInOut" },
+                        scale: { duration: 3, ease: "easeOut" },
+                      };
+                    } else if (isEntering) {
+                      // Image about to enter
+                      animateProps = {
+                        opacity: 0,
+                        scale: 1.05,
+                        zIndex: 5,
+                      };
+                      initial = {
+                        opacity: 0,
+                        scale: 1.05,
+                      };
+                      transition = {
+                        opacity: { duration: 0.5, ease: "easeIn" },
+                        scale: { duration: 0.8, ease: "easeIn" },
+                      };
+                    } else if (isExiting) {
+                      // Image that was active and is now exiting
+                      animateProps = {
+                        opacity: 0,
+                        scale: 1,
+                        zIndex: 8,
+                      };
+                      initial = {
+                        opacity: 1,
+                        scale: 1,
+                      };
+                      transition = {
+                        opacity: { duration: 1.2, ease: "easeOut" },
+                        scale: { duration: 0.8, ease: "easeOut" },
+                      };
+                    } else {
+                      // Other images (inactive)
+                      animateProps = {
+                        opacity: 0,
+                        scale: 1,
+                        zIndex: 1,
+                      };
+                      initial = {
+                        opacity: 0,
+                        scale: 1,
+                      };
+                      transition = {
+                        opacity: { duration: 0.5 },
+                        scale: { duration: 0.5 },
+                      };
+                    }
 
-                  return (
-                    <motion.div
-                      key={`image-${index}`}
-                      className="absolute inset-0"
-                      initial={initial}
-                      animate={animateProps}
-                      transition={transition}
-                    >
-                      <Image
-                        src={image}
-                        alt={`Personalization visualization ${index + 1}`}
-                        fill
-                        style={{ objectFit: "contain" }}
-                        priority
-                        quality={100}
-                      />
-                    </motion.div>
-                  );
-                })}
+                    return (
+                      <motion.div
+                        key={`image-${index}`}
+                        className="absolute inset-0"
+                        initial={initial}
+                        animate={animateProps}
+                        transition={transition}
+                      >
+                        <Image
+                          src={image}
+                          alt={`Personalization visualization ${index + 1}`}
+                          fill
+                          style={{ objectFit: "contain" }}
+                          priority
+                          quality={100}
+                        />
+                      </motion.div>
+                    );
+                  })}
 
-                {/* Subtle visual enhancement layer */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none"
-                  animate={{
-                    opacity: [0.02, 0.08, 0.02],
-                  }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 3,
-                    ease: "easeInOut",
-                  }}
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(255,255,255,0.05) 30%, rgba(255,94,0,0.03) 70%)",
-                  }}
-                />
-              </>
-            )}
+                  {/* Subtle visual enhancement layer */}
+                  <motion.div
+                    className="absolute inset-0 pointer-events-none"
+                    animate={{
+                      opacity: [0.02, 0.08, 0.02],
+                    }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 3,
+                      ease: "easeInOut",
+                    }}
+                    style={{
+                      background:
+                        "radial-gradient(circle, rgba(255,255,255,0.05) 30%, rgba(255,94,0,0.03) 70%)",
+                    }}
+                  />
+                </>
+              )}
+            </div>
           </div>
+
         </div>
       </div>
     </div>

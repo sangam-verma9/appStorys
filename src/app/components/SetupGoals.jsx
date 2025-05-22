@@ -22,7 +22,7 @@
 //             </div>
 //           </div>
 //         </div>
-        
+
 //         {/* Right Column - Text */}
 //         <div className="w-full md:w-1/2 sf-pro">
 //           <h2 className='sm:text-[22px]' style={{
@@ -75,25 +75,25 @@ const SetupGoals = () => {
     threshold: 0.3,
   });
   useEffect(() => {
-      const loadAnimation = async () => {
+    const loadAnimation = async () => {
+      try {
+        const animData = await import('../../assets/goalsfiles.json');
+        setAnimationData(animData.default || animData);
+      } catch (error) {
         try {
-          const animData = await import('../../assets/goalsfiles.json');
-          setAnimationData(animData.default || animData);
-        } catch (error) {
-          try {
-            const response = await fetch('/assets/heromain.json');
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.json();
-            console.log('Animation data fetched:', data);
-            setAnimationData(data);
-          } catch (fetchError) {
-            console.error('Both import and fetch failed:', fetchError);
-          }
+          const response = await fetch('/assets/heromain.json');
+          if (!response.ok) throw new Error('Network response was not ok');
+          const data = await response.json();
+          console.log('Animation data fetched:', data);
+          setAnimationData(data);
+        } catch (fetchError) {
+          console.error('Both import and fetch failed:', fetchError);
         }
-      };
-  
-      loadAnimation();
-    }, []);
+      }
+    };
+
+    loadAnimation();
+  }, []);
   return (
     <div className="w-full py-12 md:py-16 bg-[#FFF7F3]">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
@@ -102,16 +102,20 @@ const SetupGoals = () => {
           ref={ref}
           className="w-full md:w-1/2 mb-8 md:mb-0 order-1 md:order-1"
         >
-          {inView && animationData && (
-            <Lottie
-              animationData={animationData}
-              loop={true}
-              autoplay={true}
-              style={{ width: '100%', height: 'auto' }}
-            />
-          )}
+          <div className="hyperpersonalization-card overflow-hidden bg-[#FFE4D5] p-[2px] rounded-[21px]" data-animated="true">
+            {inView && animationData && (
+              <Lottie
+                animationData={animationData}
+                loop={true}
+                autoplay={true}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            )}
+
+          </div>
+
         </div>
-        
+
         {/* Right Column - Text */}
         <div className="w-full md:w-1/2 order-2 md:order-2">
           <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] md:leading-[102%] mb-4 md:mb-6 capitalize">
