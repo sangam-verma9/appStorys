@@ -59,10 +59,10 @@ const Bookademo = () => {
                 <div className='mr-[50px]'>
                     <h1 className='text-[60px] font-bold mb-2'>Let’s Connect!</h1>
                     <p className='text-[#282828] text-[20px] mb-8 pr-[80px]'>
-                        Let’s explore how AppStorys can help accelerate your user engagement and monetization goals.
+                        Discover how AppStorys can boost your user engagement and help you reach your goals.
                         <br />
                         <br />
-                        In this brief 15-minute session, we’ll understand your specific needs and walk you through how our solutions can deliver results.
+                        Join us for a brief 15-minute session where we’ll understand your specific requirements and demonstrate how AppStorys can help you accelerate engagement and drive revenue through tailored solutions.
                     </p>
                     {/* <div>
                         <InteractiveHoverButton
