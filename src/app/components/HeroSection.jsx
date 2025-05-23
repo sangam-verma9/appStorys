@@ -7,6 +7,7 @@ import InteractiveHoverButton from "./InteractiveHoverButton";
 import store from "../store/store";
 
 import dynamic from 'next/dynamic';
+import Link from "next/link";
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
@@ -14,7 +15,9 @@ const HeroSection = () => {
   const texts = ["Engagement", "Retention", "Stickiness", " Revenue"];
   const [index, setIndex] = useState(0);
   const textColor = ["#FD5F03", "#03A1FD", "#793BDE", "#F200EA", "#0CB600"];
-  const [animationData, setAnimationData] = useState(null);
+  const [animationData1, setAnimationData1] = useState(null);
+  const [animationData2, setAnimationData2] = useState(null);
+  const [animationData3, setAnimationData3] = useState(null);
 
   const { setRequestDemoClick, openContactModal } = store();
 
@@ -31,19 +34,26 @@ const HeroSection = () => {
     const loadAnimation = async () => {
       try {
         // Method 1: Try dynamic import first
-        const animData = await import('../../assets/heromain.json');
-        console.log('Animation data loaded:', animData);
-        setAnimationData(animData.default || animData);
+        const animData1 = await import('../../assets/Herosection-screen-1.json');
+        const animData2 = await import('../../assets/Herosection-screen-2.json');
+        const animData3 = await import('../../assets/Herosection-screen-3.json');
+        setAnimationData1(animData1.default || animData1);
+        setAnimationData2(animData2.default || animData2);
+        setAnimationData3(animData3.default || animData3);
       } catch (error) {
-        console.log('Dynamic import failed, trying fetch...', error);
-
-        // Method 2: Try fetch as fallback
         try {
-          const response = await fetch('/assets/heromain.json');
-          if (!response.ok) throw new Error('Network response was not ok');
-          const data = await response.json();
-          console.log('Animation data fetched:', data);
-          setAnimationData(data);
+          const response1 = await fetch('/assets/Herosection-screen-1.json');
+          const response2 = await fetch('/assets/Herosection-screen-2.json');
+          const response3 = await fetch('/assets/Herosection-screen-3.json');
+          if (!response1.ok) throw new Error('Network response1 was not ok');
+          if (!response2.ok) throw new Error('Network response2 was not ok');
+          if (!response3.ok) throw new Error('Network response3 was not ok');
+          const data1 = await response1.json();
+          const data2 = await response2.json();
+          const data3 = await response3.json();
+          setAnimationData1(data1);
+          setAnimationData2(data2);
+          setAnimationData3(data3);
         } catch (fetchError) {
           console.error('Both import and fetch failed:', fetchError);
         }
@@ -91,40 +101,59 @@ const HeroSection = () => {
 
           {/* Animation container */}
           <div className="w-full mt-0 md:mt-0 flex justify-center">
-            <div className="relative w-full max-w-6xl">
-              {/* Show Lottie animation when data is loaded */}
-              {animationData && (
-                <div className="relative w-full" style={{ minHeight: "400px" }}>
-                  {/* <Lottie
-                    animationData={animationData}
-                    loop={true}
-                    autoplay={true}
-                    style={{ width: '100%', height: 'auto' }}
-                    onLoadedData={() => console.log('Lottie animation loaded successfully!')}
-                  /> */}
-                  <Lottie
-                    animationData={animationData}
-                    loop={false}
-                    autoplay={true}
-                    style={{ width: '100%', height: 'auto' }}
-                  />
-
-                </div>
-              )}
+            <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-3">
+              <div>
+                {animationData1 && (
+                  <div className="relative w-full" style={{ minHeight: "400px" }}>
+                    <Lottie
+                      animationData={animationData1}
+                      loop={false}
+                      autoplay={true}
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+                  </div>
+                )}
+              </div>
+              <div>
+                {animationData2 && (
+                  <div className="relative w-full" style={{ minHeight: "400px" }}>
+                    <Lottie
+                      animationData={animationData2}
+                      loop={false}
+                      autoplay={true}
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+                  </div>
+                )}
+              </div>
+              <div>
+                {animationData3 && (
+                  <div className="relative w-full" style={{ minHeight: "400px" }}>
+                    <Lottie
+                      animationData={animationData3}
+                      loop={false}
+                      autoplay={true}
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
           {/* Call-to-action button with increased width */}
-          <div className="flex justify-center -mt-40 md:-mt-8">
-            <InteractiveHoverButton
-              className="bg-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl border-2 border-[#FD5F03]"
-              onClick={() => {
-                setRequestDemoClick(true);
-                openContactModal();
-              }}
-            >
-              Schedule a Demo
-            </InteractiveHoverButton>
+          <div className="flex justify-center  md:-mt-8">
+            <Link href={"/bookademo"} >
+              <InteractiveHoverButton
+                className="bg-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl border-2 border-[#FD5F03]"
+              // onClick={() => {
+              //   setRequestDemoClick(true);
+              //   openContactModal();
+              // }}
+              >
+                Schedule a Demo
+              </InteractiveHoverButton>
+            </Link>
           </div>
         </div>
       </div>

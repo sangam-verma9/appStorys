@@ -83,7 +83,7 @@ const FeatureCard = ({ number, title, description, metrics, imageName }) => {
       </h3>
 
       {/* Description */}
-      <p className="w-full max-w-[305px] text-[#2F2F2F] font-sf-pro text-[14px] font-normal leading-[128%] text-left mb-8 h-[50px]">
+      <p className="w-full  text-[#2F2F2F] font-sf-pro text-[14px] font-normal leading-[128%] text-left mb-8 h-[50px]">
         {description}
       </p>
 
@@ -333,7 +333,7 @@ const FeatureCarousel = () => {
           {/* Navigation buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 lg:-translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+            className="absolute z-50 left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 lg:-translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
             aria-label="Previous slide"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -342,7 +342,7 @@ const FeatureCarousel = () => {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 lg:translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+            className="absolute z-50 right-0 top-1/2 transform -translate-y-1/2 translate-x-4 lg:translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
             aria-label="Next slide"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -173,7 +173,7 @@ const Header = ({ style }) => {
               </button>
 
               {dropdownOpen.feature && (
-                <div className="fixed top-16 md:top-20 left-0 right-0 w-full bg-white shadow-lg mt-1 py-4 z-20">
+                <div className="fixed top-16 md:top-30 left-0 right-0 w-full bg-white shadow-lg mt-1 py-4 z-20">
                   <div className="w-full max-w-6xl mx-auto px-4">
                     <h3
                       className={`text-left mb-4 px-4 py-2  sf-pro font-bold tracking-[1px] text-black font text-sm border-b border-gray-200`}
@@ -754,7 +754,7 @@ const Header = ({ style }) => {
               </button>
 
               {dropdownOpen.advanceSolutions && (
-                <div className="fixed top-16 md:top-20 left-0 right-0 w-full bg-white shadow-lg mt-1 z-20">
+                <div className="fixed top-16 md:top-30 left-0 right-0 w-full bg-white shadow-lg mt-1 z-20">
                   <div className="w-full max-w-6xl mx-auto">
                     <div className="grid grid-cols-3">
                       <div className="py-2 border-r border-gray-200 min-h-[300px]">
@@ -929,7 +929,7 @@ const Header = ({ style }) => {
               </button>
 
               {dropdownOpen.resources && (
-                <div className="fixed top-16 md:top-20 left-0 right-0 w-full bg-white shadow-lg mt-1 py-4 z-20">
+                <div className="fixed top-16 md:top-30 left-0 right-0 w-full bg-white shadow-lg mt-1 py-4 z-20">
                   <div className="w-full max-w-6xl mx-auto px-4">
                     <h3 className="text-lg font-medium mb-2">OUR SDKs</h3>
 

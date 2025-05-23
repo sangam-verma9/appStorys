@@ -9,7 +9,7 @@ import { FaTimes } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import axios from 'axios';
 import Link from "next/link";
-
+import { RiLoader4Line } from "react-icons/ri";
 const ContactModal = ({ isOpen, onClose }) => {
   // Form state
   const [name, setName] = useState('');
@@ -18,11 +18,12 @@ const ContactModal = ({ isOpen, onClose }) => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // Handle form submission - using the same pattern as GetInTouch
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const response = await axios.post(
         'https://backend.appstorys.com/api/v1/form/create-response/',
@@ -31,10 +32,12 @@ const ContactModal = ({ isOpen, onClose }) => {
 
       if (response.status === 201) {
         setSubmitSuccess(true);
+        setLoading(false);
       }
     }
     catch (error) {
       console.error("Error submitting form:", error);
+      setLoading(false);
     }
   };
 
@@ -57,7 +60,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       if (event.keyCode === 27) onClose();
     };
     window.addEventListener("keydown", handleEsc);
-    
+
     // Prevent scrolling on body when modal is open
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -79,10 +82,10 @@ const ContactModal = ({ isOpen, onClose }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-       <div 
-         className="fixed inset-0 backdrop-blur-[2px] bg-black/50 z-50 flex items-center justify-center"
-         onClick={handleBackdropClick}
-       >
+        <div
+          className="fixed inset-0 backdrop-blur-[2px] bg-black/50 z-50 flex items-center justify-center"
+          onClick={handleBackdropClick}
+        >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -114,7 +117,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FD5F03] focus:border-transparent"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address <span className="text-red-500">*</span>
@@ -130,7 +133,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FD5F03] focus:border-transparent"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
                     Company Name
@@ -145,7 +148,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FD5F03] focus:border-transparent"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                     Phone Number
@@ -160,7 +163,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FD5F03] focus:border-transparent"
                   />
                 </div>
-                
+
                 {/* <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message <span className="text-red-500">*</span>
@@ -176,14 +179,22 @@ const ContactModal = ({ isOpen, onClose }) => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FD5F03] focus:border-transparent"
                   ></textarea>
                 </div> */}
-                
+
                 <div className="pt-4">
                   <button
                     type="submit"
-                    className="w-full bg-[#FD5F03] hover:bg-[#e05303] text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex justify-center items-center cursor-pointer"
+                    disabled={loading}
+                    className={`w-full bg-[#FD5F03] ${loading ? "opacity-60 cursor-not-allowed" : "hover:bg-[#e05303]"
+                      } text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex justify-center items-center`}
                   >
-                    <span>Submit Request</span>
+                    <span className="flex items-center">
+                      Submit Request
+                      {loading && (
+                        <RiLoader4Line className="ml-2 w-[25px] h-[25px] animate-spin" />
+                      )}
+                    </span>
                   </button>
+
                 </div>
               </form>
             ) : (
@@ -200,27 +211,27 @@ const ContactModal = ({ isOpen, onClose }) => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Success title */}
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">Thank You!</h3>
-                
+
                 {/* Success message */}
                 <p className='text-gray-600 text-center mx-auto max-w-sm mb-8'>
                   Your message has been successfully sent. We appreciate your interest and will get back to you shortly via email.
                 </p>
-                
+
                 {/* Close button */}
-                <button 
-                  onClick={() => { 
+                <button
+                  onClick={() => {
                     setSubmitSuccess(false);
                     onClose();
-                   
+
                     setName('');
                     setEmail('');
                     setCompany('');
                     setPhone('');
                     setMessage('');
-                  }} 
+                  }}
                   className='px-8 py-3 bg-[#FD5F03] text-white font-medium rounded-lg hover:bg-[#e05303] transition-colors duration-300 flex items-center justify-center'
                 >
                   <span>Close</span>
@@ -229,15 +240,15 @@ const ContactModal = ({ isOpen, onClose }) => {
             )}
 
             {/* Close button - positioned in the top right */}
-         {!submitSuccess && (
-  <button 
-    onClick={onClose}
-    className="absolute top-4 right-4 text-orange-500 hover:text-gray-700 transition-colors cursor-pointer"
-    aria-label="Close"
-  >
-    <MdCancel size={30} />
-  </button>
-)}
+            {!submitSuccess && (
+              <button
+                onClick={onClose}
+                className="absolute top-4 right-4 text-orange-500 hover:text-gray-700 transition-colors cursor-pointer"
+                aria-label="Close"
+              >
+                <MdCancel size={30} />
+              </button>
+            )}
           </motion.div>
         </div>
       )}

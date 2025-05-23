@@ -1132,11 +1132,40 @@
 // export default FrequencyScheduling;
 
 
-import React from 'react';
-import Image from 'next/image';
-import fnsg from '../../assets/fnsg.gif';
+import React, { useEffect, useState } from 'react';
+
+import dynamic from 'next/dynamic';
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+
 
 const FrequencyScheduling = () => {
+  const [animationData, setAnimationData] = useState(null);
+    // Load animation data
+    useEffect(() => {
+      const loadAnimation = async () => {
+        try {
+          // Method 1: Try dynamic import first
+          const animData = await import('../../assets/fnsglottie.json');
+          console.log('Animation data loaded:', animData);
+          setAnimationData(animData.default || animData);
+        } catch (error) {
+          console.log('Dynamic import failed, trying fetch...', error);
+  
+          // Method 2: Try fetch as fallback
+          try {
+            const response = await fetch('/assets/heromain.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const data = await response.json();
+            console.log('Animation data fetched:', data);
+            setAnimationData(data);
+          } catch (fetchError) {
+            console.error('Both import and fetch failed:', fetchError);
+          }
+        }
+      };
+  
+      loadAnimation();
+    }, []);
   return (
     <div className="w-full bg-[#FFF8F5] py-8 sm:py-12 md:py-16 flex justify-center">
       <div className="w-full max-w-[1002px] mx-auto px-4 sm:px-6 md:px-8">
@@ -1153,15 +1182,16 @@ const FrequencyScheduling = () => {
         {/* GIF Container */}
         <div className="w-full overflow-hidden rounded-xl sm:rounded-2xl">
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
-            <Image 
-              src={fnsg}
-              alt="Frequency and Scheduling Comparison"
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 1002px"
-              className="object-contain"
-              priority
-              unoptimized={true} 
-            />
+            {animationData && (
+              <div className="relative w-full" style={{ minHeight: "400px" }}>
+                <Lottie
+                  animationData={animationData}
+                  loop={true}
+                  autoplay={true}
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
