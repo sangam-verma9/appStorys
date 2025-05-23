@@ -100,11 +100,11 @@ const HeroSection = () => {
           </p>
 
           {/* Animation container */}
-          <div className="w-full mt-0 md:mt-0 flex justify-center">
-            <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-3">
+          <div className="w-full mt-0 flex justify-center">
+            <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 ">
               <div>
                 {animationData1 && (
-                  <div className="relative w-full" style={{ minHeight: "400px" }}>
+                  <div className="relative w-full" style={{ minHeight: "100px" }}>
                     <Lottie
                       animationData={animationData1}
                       loop={false}
@@ -114,9 +114,9 @@ const HeroSection = () => {
                   </div>
                 )}
               </div>
-              <div>
+              <div >
                 {animationData2 && (
-                  <div className="relative w-full" style={{ minHeight: "400px" }}>
+                  <div className="relative w-full" style={{ minHeight: "100px" }}>
                     <Lottie
                       animationData={animationData2}
                       loop={false}
@@ -126,9 +126,9 @@ const HeroSection = () => {
                   </div>
                 )}
               </div>
-              <div>
+              <div >
                 {animationData3 && (
-                  <div className="relative w-full" style={{ minHeight: "400px" }}>
+                  <div className="relative w-full" style={{ minHeight: "100px" }}>
                     <Lottie
                       animationData={animationData3}
                       loop={false}
@@ -142,7 +142,7 @@ const HeroSection = () => {
           </div>
 
           {/* Call-to-action button with increased width */}
-          <div className="flex justify-center  md:-mt-8">
+          <div className="flex justify-center md:mt-8">
             <Link href={"/bookademo"} >
               <InteractiveHoverButton
                 className="bg-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl border-2 border-[#FD5F03]"

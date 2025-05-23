@@ -260,7 +260,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <main className="flex flex-col justify-center items-center w-full bg-[#ffffff] ">
+    <main className="flex flex-col justify-center items-center w-full bg-[#ffffff]">
       {/* Hero Section */}
       <section className="flex justify-center items-center bg-[#fff] w-full max-[1078px]:flex-col">
         <div className='w-[44%] flex flex-col justify-center items-center min-[1078px]:h-[80vh] bg-white max-[1078px]:w-full'>

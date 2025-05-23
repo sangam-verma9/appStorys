@@ -19,13 +19,13 @@
 //           schedule start and end dates, with time zone support to match user locations. For the best experience, limit views to avoid user fatigue
 //           — like showing promos a few times a week or resetting after clicks.
 //         </p>
-        
+
 //         <div className="w-full bg-black rounded-2xl p-12 text-white relative">
 //           <div className="flex justify-between mb-8">
 //             <h3 className="text-xl font-medium underline">Without Frequency:</h3>
 //             <h3 className="text-xl font-medium underline">With Frequency:</h3>
 //           </div>
-          
+
 //           <div className="flex items-center justify-between relative min-h-[400px]">
 //             {/* Left side - problems */}
 //             <div className="w-1/4 flex flex-col space-y-6 z-10">
@@ -35,14 +35,14 @@
 //                   <div className="font-medium">Fatigue Risk</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="bg-[#262626] rounded-lg p-3 w-[180px]">
 //                 <div className="text-center">
 //                   <div className="font-medium">Visual</div>
 //                   <div className="font-medium">Overload</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="bg-[#262626] rounded-lg p-3 w-[180px]">
 //                 <div className="text-center">
 //                   <div className="font-medium">Poor</div>
@@ -50,7 +50,7 @@
 //                   <div className="font-medium">Timing</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="bg-[#262626] rounded-lg p-3 w-[180px]">
 //                 <div className="text-center">
 //                   <div className="font-medium">Manual</div>
@@ -59,7 +59,7 @@
 //                 </div>
 //               </div>
 //             </div>
-            
+
 //             {/* Middle - scheduling interface image */}
 //             <div className="flex-1 flex justify-center z-10 px-2">
 //               {/* This will be replaced with the actual image */}
@@ -72,7 +72,7 @@
 //                   height={340}
 //                   className="rounded-lg"
 //                 /> */}
-                
+
 //                 {/* Placeholder UI - This will be removed once you have the actual image */}
 //                 <div className="w-full h-full bg-white rounded-lg text-black p-4">
 //                   <div className="flex items-center justify-between mb-2">
@@ -84,11 +84,11 @@
 //                       <div className="bg-blue-500 w-4 h-4 rounded-full ml-4"></div>
 //                     </div>
 //                   </div>
-                  
+
 //                   <div className="text-xs text-gray-500 mb-4">
 //                     Allow campaigns to be scheduled and shown based automatically based on a schedule
 //                   </div>
-                  
+
 //                   {/* Days scheduling */}
 //                   <div className="space-y-2 text-sm">
 //                     {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map((day) => (
@@ -108,7 +108,7 @@
 //                         </div>
 //                       </div>
 //                     ))}
-                    
+
 //                     {['Saturday', 'Sunday'].map((day) => (
 //                       <div key={day} className="flex items-center justify-between">
 //                         <div className="flex items-center">
@@ -121,13 +121,13 @@
 //                       </div>
 //                     ))}
 //                   </div>
-                  
+
 //                   <div className="mt-4 border-t pt-3">
 //                     <div className="flex justify-between items-center text-xs">
 //                       <span>Automatically Archive Campaign After Shutdown</span>
 //                       <button className="bg-blue-50 text-blue-600 px-2 py-0.5 rounded text-xs">Set Up</button>
 //                     </div>
-                    
+
 //                     <div className="flex justify-between items-center mt-2 text-xs">
 //                       <span>Automatically Archive Campaign After Shutdown</span>
 //                       <div className="bg-gray-200 rounded-full w-8 h-5 flex items-center px-0.5">
@@ -138,7 +138,7 @@
 //                 </div>
 //               </div>
 //             </div>
-            
+
 //             {/* Right side - benefits */}
 //             <div className="w-1/4 flex flex-col items-end space-y-6 z-10">
 //               <div className="bg-[#6A3DD4] rounded-lg p-3 w-[180px]">
@@ -147,21 +147,21 @@
 //                   <div className="font-medium">Timing</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="bg-[#65AA47] rounded-lg p-3 w-[180px]">
 //                 <div className="text-center">
 //                   <div className="font-medium">Pre-Plan</div>
 //                   <div className="font-medium">Outreach</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="bg-[#E67635] rounded-lg p-3 w-[180px]">
 //                 <div className="text-center">
 //                   <div className="font-medium">Higher</div>
 //                   <div className="font-medium">Conversion</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="bg-[#8E43D2] rounded-lg p-3 w-[180px]">
 //                 <div className="text-center">
 //                   <div className="font-medium">Automated</div>
@@ -169,7 +169,7 @@
 //                 </div>
 //               </div>
 //             </div>
-            
+
 //             {/* Animated connection lines */}
 //             <div className="absolute inset-0 pointer-events-none overflow-visible">
 //               {/* Left side connection lines (animated) */}
@@ -193,7 +193,7 @@
 //                     ease: "linear"
 //                   }}
 //                 />
-                
+
 //                 {/* Line 2 - Visual Overload */}
 //                 <motion.path 
 //                   d="M 180,142 C 230,110 280,120 360,170" 
@@ -213,7 +213,7 @@
 //                     ease: "linear"
 //                   }}
 //                 />
-                
+
 //                 {/* Line 3 - Poor Outreach Timing */}
 //                 <motion.path 
 //                   d="M 180,226 C 230,240 280,230 360,210" 
@@ -233,7 +233,7 @@
 //                     ease: "linear"
 //                   }}
 //                 />
-                
+
 //                 {/* Line 4 - Manual Campaign Management */}
 //                 <motion.path 
 //                   d="M 180,310 C 230,340 280,300 360,250" 
@@ -254,7 +254,7 @@
 //                   }}
 //                 />
 //               </motion.svg>
-              
+
 //               {/* Animated colored strings from center to right */}
 //               <div className="absolute inset-0">
 //                 {/* All animated paths in a single SVG for better sync */}
@@ -278,7 +278,7 @@
 //                       ease: "linear"
 //                     }}
 //                   />
-                  
+
 //                   {/* Green line - Pre-Plan Outreach */}
 //                   <motion.path 
 //                     d="M 500,170 C 560,120 610,105 680,142" 
@@ -298,7 +298,7 @@
 //                       ease: "linear"
 //                     }}
 //                   />
-                  
+
 //                   {/* Orange line - Higher Conversion */}
 //                   <motion.path 
 //                     d="M 500,210 C 560,240 610,250 680,226" 
@@ -318,7 +318,7 @@
 //                       ease: "linear"
 //                     }}
 //                   />
-                  
+
 //                   {/* Purple line - Automated Workflow */}
 //                   <motion.path 
 //                     d="M 500,250 C 550,330 600,370 680,310" 
@@ -367,13 +367,13 @@
 // //           schedule start and end dates, with time zone support to match user locations. For the best experience, limit views to avoid user fatigue
 // //           — like showing promos a few times a week or resetting after clicks.
 // //         </p>
-        
+
 // //         <div className="w-full bg-black rounded-2xl p-12 text-white relative">
 // //           <div className="flex justify-between mb-8">
 // //             <h3 className="text-xl font-medium underline">Without Frequency:</h3>
 // //             <h3 className="text-xl font-medium underline">With Frequency:</h3>
 // //           </div>
-          
+
 // //           <div className="flex items-center justify-between relative min-h-[400px]">
 // //             {/* Left side - problems */}
 // //             <div className="w-1/4 flex flex-col space-y-6 z-10">
@@ -391,7 +391,7 @@
 // //                   <div className="font-medium">Fatigue Risk</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '129.464px',
 // //                 height: '65.413px',
@@ -406,7 +406,7 @@
 // //                   <div className="font-medium">Overload</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '129.464px',
 // //                 height: '65.413px',
@@ -422,7 +422,7 @@
 // //                   <div className="font-medium">Timing</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '129.464px',
 // //                 height: '65.413px',
@@ -439,7 +439,7 @@
 // //                 </div>
 // //               </div>
 // //             </div>
-            
+
 // //             {/* Center - Sun-like glowing circles */}
 // //             <div className="flex-1 flex justify-center items-center relative z-0">
 // //               {/* Outer glow circle */}
@@ -451,7 +451,7 @@
 // //                 opacity: '0.3',
 // //                 background: '#FB6901'
 // //               }}></div>
-              
+
 // //               {/* Middle glow circle */}
 // //               <div style={{
 // //                 width: '250px',
@@ -461,7 +461,7 @@
 // //                 opacity: '0.5',
 // //                 background: '#FB6901'
 // //               }}></div>
-              
+
 // //               {/* Inner glow circle */}
 // //               <div style={{
 // //                 width: '130px',
@@ -471,7 +471,7 @@
 // //                 background: '#FB6901'
 // //               }}></div>
 // //             </div>
-            
+
 // //             {/* Right side - benefits */}
 // //             <div className="w-1/4 flex flex-col items-end space-y-6 z-10">
 // //               <div style={{
@@ -488,7 +488,7 @@
 // //                   <div className="font-medium">Timing</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '103.571px',
 // //                 height: '65.413px',
@@ -503,7 +503,7 @@
 // //                   <div className="font-medium">Outreach</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '103.571px',
 // //                 height: '65.413px',
@@ -518,7 +518,7 @@
 // //                   <div className="font-medium">Conversion</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '103.571px',
 // //                 height: '65.413px',
@@ -534,7 +534,7 @@
 // //                 </div>
 // //               </div>
 // //             </div>
-            
+
 // //             {/* Animated connection lines */}
 // //             <div className="absolute inset-0 pointer-events-none overflow-visible">
 // //               {/* Left side connection lines (animated) */}
@@ -558,7 +558,7 @@
 // //                     ease: "easeInOut"
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Line 2 - Visual Overload */}
 // //                 <motion.path 
 // //                   d="M 130,130 C 200,120 270,130 340,150" 
@@ -579,7 +579,7 @@
 // //                     delay: 0.2
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Line 3 - Poor Outreach Timing */}
 // //                 <motion.path 
 // //                   d="M 130,210 C 200,220 270,210 340,190" 
@@ -600,7 +600,7 @@
 // //                     delay: 0.4
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Line 4 - Manual Campaign Management */}
 // //                 <motion.path 
 // //                   d="M 130,290 C 200,280 270,260 340,220" 
@@ -622,7 +622,7 @@
 // //                   }}
 // //                 />
 // //               </motion.svg>
-              
+
 // //               {/* Right side connection lines (animated with colors) */}
 // //               <motion.svg width="100%" height="100%" className="absolute inset-0">
 // //                 {/* Purple line - Consistent Timing */}
@@ -644,7 +644,7 @@
 // //                     ease: "easeInOut"
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Green line - Pre-Plan Outreach */}
 // //                 <motion.path 
 // //                   d="M 520,150 C 590,170 660,120 730,130" 
@@ -665,7 +665,7 @@
 // //                     delay: 0.2
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Orange line - Higher Conversion */}
 // //                 <motion.path 
 // //                   d="M 520,190 C 590,210 660,220 730,210" 
@@ -686,7 +686,7 @@
 // //                     delay: 0.4
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Purple line - Automated Workflow */}
 // //                 <motion.path 
 // //                   d="M 520,220 C 590,290 660,320 730,290" 
@@ -736,13 +736,13 @@
 // //           schedule start and end dates, with time zone support to match user locations. For the best experience, limit views to avoid user fatigue
 // //           — like showing promos a few times a week or resetting after clicks.
 // //         </p>
-        
+
 // //         <div className="w-full bg-black rounded-2xl p-12 text-white relative">
 // //           <div className="flex justify-between mb-8">
 // //             <h3 className="text-xl font-medium underline">Without Frequency:</h3>
 // //             <h3 className="text-xl font-medium underline">With Frequency:</h3>
 // //           </div>
-          
+
 // //           <div className="flex items-center justify-between relative min-h-[400px]">
 // //             {/* Left side - problems */}
 // //             <div className="w-1/4 flex flex-col justify-between z-10" style={{ height: '390px' }}>
@@ -760,7 +760,7 @@
 // //                   <div className="font-medium">Fatigue Risk</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '129.464px',
 // //                 height: '65.413px',
@@ -775,7 +775,7 @@
 // //                   <div className="font-medium">Overload</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '129.464px',
 // //                 height: '65.413px',
@@ -791,7 +791,7 @@
 // //                   <div className="font-medium">Timing</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '129.464px',
 // //                 height: '65.413px',
@@ -808,7 +808,7 @@
 // //                 </div>
 // //               </div>
 // //             </div>
-            
+
 // //             {/* Center - Sun-like glowing circles */}
 // //             <div className="flex-1 flex justify-center items-center relative z-0">
 // //               {/* Outer glow circle */}
@@ -820,7 +820,7 @@
 // //                 opacity: '0.3',
 // //                 background: '#FB6901'
 // //               }}></div>
-              
+
 // //               {/* Middle glow circle */}
 // //               <div style={{
 // //                 width: '250px',
@@ -830,7 +830,7 @@
 // //                 opacity: '0.5',
 // //                 background: '#FB6901'
 // //               }}></div>
-              
+
 // //               {/* Inner glow circle */}
 // //               <div style={{
 // //                 width: '130px',
@@ -840,7 +840,7 @@
 // //                 background: '#FB6901'
 // //               }}></div>
 // //             </div>
-            
+
 // //             {/* Right side - benefits */}
 // //             <div className="w-1/4 flex flex-col justify-between z-10" style={{ height: '390px' }}>
 // //               <div style={{
@@ -857,7 +857,7 @@
 // //                   <div className="font-medium">Timing</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '103.571px',
 // //                 height: '65.413px',
@@ -872,7 +872,7 @@
 // //                   <div className="font-medium">Outreach</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '103.571px',
 // //                 height: '65.413px',
@@ -887,7 +887,7 @@
 // //                   <div className="font-medium">Conversion</div>
 // //                 </div>
 // //               </div>
-              
+
 // //               <div style={{
 // //                 width: '103.571px',
 // //                 height: '65.413px',
@@ -903,7 +903,7 @@
 // //                 </div>
 // //               </div>
 // //             </div>
-            
+
 // //             {/* Animated connection lines */}
 // //             <div className="absolute inset-0 pointer-events-none overflow-visible">
 // //               {/* Left side connection lines (animated) */}
@@ -927,7 +927,7 @@
 // //                     ease: "easeInOut"
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Line 2 - Visual Overload */}
 // //                 <motion.path 
 // //                   d="M 130,130 C 180,130 270,130 340,170" 
@@ -948,7 +948,7 @@
 // //                     delay: 0.2
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Line 3 - Poor Outreach Timing */}
 // //                 <motion.path 
 // //                   d="M 130,228 C 180,228 270,200 340,190" 
@@ -969,7 +969,7 @@
 // //                     delay: 0.4
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Line 4 - Manual Campaign Management */}
 // //                 <motion.path 
 // //                   d="M 130,326 C 180,326 270,260 340,220" 
@@ -991,7 +991,7 @@
 // //                   }}
 // //                 />
 // //               </motion.svg>
-              
+
 // //               {/* Right side connection lines (animated with colors) */}
 // //               <motion.svg width="100%" height="100%" className="absolute inset-0">
 // //                 {/* Purple line - Consistent Timing */}
@@ -1013,7 +1013,7 @@
 // //                     ease: "easeInOut"
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Green line - Pre-Plan Outreach */}
 // //                 <motion.path 
 // //                   d="M 520,150 C 590,130 660,130 730,130" 
@@ -1034,7 +1034,7 @@
 // //                     delay: 0.2
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Orange line - Higher Conversion */}
 // //                 <motion.path 
 // //                   d="M 520,190 C 590,228 660,228 730,228" 
@@ -1055,7 +1055,7 @@
 // //                     delay: 0.4
 // //                   }}
 // //                 />
-                
+
 // //                 {/* Purple line - Automated Workflow */}
 // //                 <motion.path 
 // //                   d="M 520,220 C 590,326 660,326 730,326" 
@@ -1104,7 +1104,7 @@
 //           schedule start and end dates, with time zone support to match user locations. For the best experience, limit views to avoid user fatigue
 //           — like showing promos a few times a week or resetting after clicks.
 //         </p>
-        
+
 //         {/* Image Container */}
 //         <div className="w-full  overflow-hidden rounded-xl sm:rounded-2xl">
 //           {/* Replace with actual image when you have it */}
@@ -1120,7 +1120,7 @@
 //                 className="object-contain"
 //                 priority
 //               />
-          
+
 //             </div>
 //           </div>
 //         </div>
@@ -1140,45 +1140,45 @@ const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const FrequencyScheduling = () => {
   const [animationData, setAnimationData] = useState(null);
-    // Load animation data
-    useEffect(() => {
-      const loadAnimation = async () => {
+  // Load animation data
+  useEffect(() => {
+    const loadAnimation = async () => {
+      try {
+        // Method 1: Try dynamic import first
+        const animData = await import('../../assets/fnsglottie.json');
+        console.log('Animation data loaded:', animData);
+        setAnimationData(animData.default || animData);
+      } catch (error) {
+        console.log('Dynamic import failed, trying fetch...', error);
+
+        // Method 2: Try fetch as fallback
         try {
-          // Method 1: Try dynamic import first
-          const animData = await import('../../assets/fnsglottie.json');
-          console.log('Animation data loaded:', animData);
-          setAnimationData(animData.default || animData);
-        } catch (error) {
-          console.log('Dynamic import failed, trying fetch...', error);
-  
-          // Method 2: Try fetch as fallback
-          try {
-            const response = await fetch('/assets/heromain.json');
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.json();
-            console.log('Animation data fetched:', data);
-            setAnimationData(data);
-          } catch (fetchError) {
-            console.error('Both import and fetch failed:', fetchError);
-          }
+          const response = await fetch('/assets/heromain.json');
+          if (!response.ok) throw new Error('Network response was not ok');
+          const data = await response.json();
+          console.log('Animation data fetched:', data);
+          setAnimationData(data);
+        } catch (fetchError) {
+          console.error('Both import and fetch failed:', fetchError);
         }
-      };
-  
-      loadAnimation();
-    }, []);
+      }
+    };
+
+    loadAnimation();
+  }, []);
   return (
-    <div className="w-full bg-[#FFF8F5] py-8 sm:py-12 md:py-16 flex justify-center">
+    <div className="w-full bg-[#FFF8F5] mb-[-80px] md:mb-0 md:py-16 flex justify-center">
       <div className="w-full max-w-[1002px] mx-auto px-4 sm:px-6 md:px-8">
         <h2 className="text-[#101010] text-center sf-pro text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[102%] mb-4 sm:mb-6">
           Frequency & Scheduling
         </h2>
         <p className="text-[#2F2F2F] text-center text-base sm:text-base font-normal leading-[138%] mb-8 sm:mb-10 md:mb-12 max-w-[1002px] mx-auto">
-          Control how often users see your campaign, show it just once, repeat it daily, weekly, or monthly, or create custom rules like "up to 5 
-          times a day" or "only after 2 days of last view." Set triggers based on views, clicks, interactions, or specific events. You can also 
+          Control how often users see your campaign, show it just once, repeat it daily, weekly, or monthly, or create custom rules like "up to 5
+          times a day" or "only after 2 days of last view." Set triggers based on views, clicks, interactions, or specific events. You can also
           schedule start and end dates, with time zone support to match user locations. For the best experience, limit views to avoid user fatigue
           — like showing promos a few times a week or resetting after clicks.
         </p>
-        
+
         {/* GIF Container */}
         <div className="w-full overflow-hidden rounded-xl sm:rounded-2xl">
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
