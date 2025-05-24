@@ -64,16 +64,11 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 // import goals from "../../assets/goals.png";
 import dynamic from 'next/dynamic';
-import { useInView } from 'react-intersection-observer';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const SetupGoals = () => {
   const [animationData, setAnimationData] = useState(null);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
   useEffect(() => {
     const loadAnimation = async () => {
       try {
@@ -99,18 +94,18 @@ const SetupGoals = () => {
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Image Container */}
         <div
-          ref={ref}
           className="w-full md:w-1/2 mb-8 md:mb-0 order-1 md:order-1"
         >
           <div className="hyperpersonalization-card overflow-hidden bg-[#FFE4D5] p-[2px] rounded-[21px]" data-animated="true">
-            {inView && animationData && (
+            {animationData &&(
               <Lottie
                 animationData={animationData}
                 loop={true}
                 autoplay={true}
                 style={{ width: '100%', height: 'auto' }}
               />
-            )}
+            )
+            }
 
           </div>
 
