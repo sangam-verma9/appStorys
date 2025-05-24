@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image'
 import React from 'react'
 import logo from "@/assets/favicon.png";
@@ -10,6 +11,9 @@ import footer_img1 from "@/assets/footer_img1.png"
 import footer_img2 from "@/assets/footer_img2.png"
 import Link from 'next/link';
 
+import store from "../store/store";
+import ContactModal from './ContactModal';
+
 
 
 const outfit = Outfit({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
@@ -20,12 +24,16 @@ const poppins = Poppins({
 });
 // sm: px - 14 md: px - 20 lg: px - 32 xl: px - 40 px - 10
 const Footer = () => {
+  const { setRequestDemoClick, isContactModalOpen, openContactModal, closeContactModal } = store();
   return (
     <div className='w-full bg-gradient-to-b from-white to-[#FFEBE0]'>
       <div className='sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-8 mx-auto'>
         <div className={`flex flex-col sm:flex-row sm:justify-between sm:items-center`}>
           <h2 className={`text-[28px]  leading-tight font-medium`}>Get started today or schedule<br /> a quick 15 min demo</h2>
-          <div className='mt-5 sm:mt-0'><Link className={`  px-8 py-3 bg-[#FD5F03] cursor-pointer rounded-md text-white text-md sm:text-xl font-bold`} href={"/bookademo"} >BOOK A DEMO</Link></div>
+          <div className='mt-5 sm:mt-0'><button className={`  px-8 py-3 bg-[#FD5F03] cursor-pointer rounded-md text-white text-md sm:text-xl font-bold`} onClick={() => {
+            setRequestDemoClick(true);
+            openContactModal();
+          }}>BOOK A DEMO</button></div>
         </div>
         <div className='w-[100%] h-[0.8px] bg-[#fcf1e4] relative my-4'></div>
         <div className='flex flex-col sm:flex-row justify-between sm:items-center my-4 py-2'>
@@ -136,6 +144,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </div>
   )
 }

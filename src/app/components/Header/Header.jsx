@@ -48,9 +48,7 @@ import moengage_icon from "@/assets/moengage_icon.png";
 import custom_audienec_icon from "@/assets/custom_audience_icon.png";
 import '../../globals.css'
 
-import { motion } from "framer-motion";
 import store from "../../store/store";
-import ContactModal from '../ContactModal';
 import InteractiveHoverButton from '../InteractiveHoverButton';
 
 // Load fonts
@@ -75,11 +73,10 @@ const Header = ({ style }) => {
     sdks: false,
   });
 
-  const { setRequestDemoClick, isContactModalOpen, openContactModal, closeContactModal } = store();
+  const { setRequestDemoClick } = store();
 
   const [listVisible, setListVisible] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [isHovered, setIsHovered] = useState(false);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -1133,13 +1130,10 @@ const Header = ({ style }) => {
 
             <InteractiveHoverButton
               className="bg-[#FD5F03] border-2 border-[#FD5F03] text-white h-[50px] font-medium"
-              onClick={() => {
-                handleOptionClick && handleOptionClick();
-                setRequestDemoClick(true);
-                openContactModal(); // Open the modal
-              }}
             >
-              Schedule a Demo
+              <Link href={"/bookademo"}>
+                Schedule a Demo
+              </Link>
             </InteractiveHoverButton>
           </div>
 
@@ -1707,7 +1701,6 @@ const Header = ({ style }) => {
           </div>
         )}
       </div>
-      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </header>
   );
 };
