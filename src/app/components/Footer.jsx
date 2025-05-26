@@ -33,7 +33,7 @@ const Footer = () => {
           <div className='mt-5 sm:mt-0'><button className={`  px-8 py-3 bg-[#FD5F03] cursor-pointer rounded-md text-white text-md sm:text-xl font-bold`} onClick={() => {
             setRequestDemoClick(true);
             openContactModal();
-          }}>BOOK A DEMO</button></div>
+          }}>SCHEDULE A DEMO</button></div>
         </div>
         <div className='w-[100%] h-[0.8px] bg-[#fcf1e4] relative my-4'></div>
         <div className='flex flex-col sm:flex-row justify-between sm:items-center my-4 py-2'>

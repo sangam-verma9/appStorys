@@ -151,7 +151,7 @@ const HeroSection = () => {
               //   openContactModal();
               // }}
               >
-                Schedule a Demo
+                Book a Demo
               </InteractiveHoverButton>
             </Link>
           </div>
