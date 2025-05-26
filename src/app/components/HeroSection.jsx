@@ -68,7 +68,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">
           <h1 className="text-center w-full flex justify-center items-center flex-col">
-            <span className="text-black font-bold text-4xl md:text-[57px] lg:text-[72px]">
+            <span className="text-black font-bold text-5xl md:text-[57px] lg:text-[72px]">
               Increase
             </span>
             <span className="inline-block relative ">
@@ -83,7 +83,7 @@ const HeroSection = () => {
                     ease: "easeInOut",
                   }}
                   style={{ color: textColor[index] }}
-                  className="font-bold text-4xl md:text-6xl lg:text-[100px] absolute transform left-1/2 -translate-x-1/2"
+                  className="font-bold text-5xl md:text-6xl lg:text-[100px] absolute transform left-1/2 -translate-x-1/2"
                 >
                   {texts[index]}
                 </motion.span>
@@ -100,7 +100,7 @@ const HeroSection = () => {
           </p>
 
           {/* Animation container */}
-          <div className="w-full mt-0 flex justify-center">
+          <div className="w-full mt-0 md:mt-10 flex justify-center">
             <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 ">
               <div>
                 {animationData1 && (

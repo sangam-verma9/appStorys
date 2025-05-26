@@ -146,7 +146,7 @@ const Bookademo = () => {
                         <br />
                         Join us for a brief 15-minute session where we’ll understand your specific requirements and demonstrate how AppStorys can help you accelerate engagement and drive revenue through tailored solutions.
                     </p>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
+                    <div className=' hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
                         <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
                             <h3 className='font-bold'>Book a Demo</h3>
                             <p className='text-sm text-gray-500'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
@@ -164,7 +164,7 @@ const Bookademo = () => {
                             <p className='text-sm text-gray-500'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
                         </div>
                     </div>
-                    <div className=' mt-5 w-[300px]  md:w-[600px]'>
+                    <div className='hidden md:grid mt-5 w-[300px]  md:w-[600px]'>
                         <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#f8d6c5]">
 
                             <div className="relative h-72 md:h-48 pb-8 pt-3 ">
@@ -210,6 +210,66 @@ const Bookademo = () => {
                             className="calendly-inline-widget w-full h-full"
                             data-url="https://calendly.com/appstorys-support/30min"
                         ></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div className='grid visible md:hidden grid-cols-1 md:grid-cols-2 gap-2 justify-center px-10 mb-5'>
+                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <h3 className='font-bold'>Book a Demo</h3>
+                        <p className='text-sm text-gray-500'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
+                    </div>
+                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <h3 className='font-bold'>Have questions? Contact Us</h3>
+                        <p className='text-sm text-gray-500'>If you have any questions or just want to say “Hi”, we’d love to connect with you.</p>
+                    </div>
+                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <h3 className='font-bold'>Discover our platform</h3>
+                        <p className='text-sm text-gray-500'>See all features live in a demo App connected to our powerful dashboard and understand how we can achieve your target KPIs</p>
+                    </div>
+                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <h3 className='font-bold'>Media Enquiry/Partnerships</h3>
+                        <p className='text-sm text-gray-500'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
+                    </div>
+                </div>
+            </div>
+            <div className='mb-8'>
+                <div className='visible md:hidden mt-5 w-[400px]  md:w-[600px] px-10'>
+                    <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#f8d6c5]">
+
+                        <div className="relative h-72 md:h-48 pb-8 pt-3 ">
+                            <div
+                                className="flex transition-transform duration-500 ease-in-out h-full"
+                                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                            >
+                                {testimonials.map((testimonial) => (
+                                    <div
+                                        key={testimonial.id}
+                                        className="w-full flex-shrink-0 flex items-center justify-center p-8 md:p-12 "
+                                    >
+                                        <div className="text-center">
+                                            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium italic">
+                                                {testimonial.text}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+
+                        <div className="absolute bottom-4 mt-1 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                            {testimonials.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => goToSlide(index)}
+                                    className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex
+                                        ? 'bg-orange-500 scale-110'
+                                        : 'bg-gray-300 hover:bg-gray-400'
+                                        }`}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

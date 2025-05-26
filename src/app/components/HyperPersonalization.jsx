@@ -859,7 +859,7 @@ const HyperPersonalization = () => {
     <div className="w-full py-5 md:py-8 bg-[#FFF7F3]">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Text */}
-        <div className="w-full md:w-1/2 mb-8 md:mb-0 order-2 md:order-1">
+        <div className="w-full md:w-1/2 mb-8 md:mb-0 ">
           <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] md:leading-[102%] mb-4 md:mb-6 capitalize">
             Hyper Personalization Using Cohorts
           </h2>
@@ -873,7 +873,7 @@ const HyperPersonalization = () => {
         </div>
 
         {/* Right Column - Animated Container */}
-        <div className="w-full md:w-1/2 order-1 md:order-2">
+        <div className="w-full md:w-1/2 ">
           <div className="hyperpersonalization-card overflow-hidden p-[2px] rounded-[21px]" data-animated="true">
             <div className=" w-full h-[300px] md:h-[450px] lg:h-[450px] flex-shrink-0 rounded-[21px] bg-[#FFE4D5] overflow-hidden relative">
               {/* Loading state */}

@@ -94,7 +94,7 @@ const SetupGoals = () => {
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Image Container */}
         <div
-          className="w-full md:w-1/2 mb-8 md:mb-0 order-1 md:order-1"
+          className="w-full md:w-1/2 mb-8 md:mb-0 order-2 md:order-1"
         >
           <div className="hyperpersonalization-card overflow-hidden bg-[#FFE4D5] p-[2px] rounded-[21px]" data-animated="true">
             {animationData &&(
@@ -112,7 +112,7 @@ const SetupGoals = () => {
         </div>
 
         {/* Right Column - Text */}
-        <div className="w-full md:w-1/2 order-2 md:order-2">
+        <div className="w-full md:w-1/2 order-1 md:order-2">
           <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] md:leading-[102%] mb-4 md:mb-6 capitalize">
             Setup Goals & <br className="hidden sm:block" /> Track Outcomes
           </h2>
