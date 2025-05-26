@@ -8,6 +8,7 @@ import featureFloater from '../../assets/feature_floater.png';
 import floaterBanner1 from '../../assets/floater_banner_1.png';
 import floaterBanner2 from '../../assets/floater_banner_2.png';
 import floaterBanner3 from '../../assets/floater_banner_3.png';
+import Link from "next/link";
 
 export default function Floaters() {
   const setRequestDemoClick = () => {
@@ -21,22 +22,22 @@ export default function Floaters() {
       <section className="w-full bg-gradient-to-b from-[#FFEADD] to-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-16 lg:px-28">
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 py-16">
-            <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
+            <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3 order-2">
               <h1 className="text-4xl md:text-5xl lg:text-[65.5px] text-black font-semibold leading-tight">
                 Guide Users With Floaters
               </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
                 Floaters provide non-intrusive guidance and reminders to users, helping them discover key features or promotions.
               </p>
-              <button 
+              <Link
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
-                onClick={() => setRequestDemoClick(true)}
+                href={"/bookademo"}
               >
                 <div className="h-[5px] w-[5px] bg-white rounded-full"></div>
                 REQUEST A DEMO
-              </button>
+              </Link>
             </div>
-            <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full md:w-1/2 flex justify-center order-1">
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
                 <Image
                   src={featureFloater}
@@ -85,15 +86,15 @@ export default function Floaters() {
                 </div>
               </div>
               <div className="w-full lg:w-1/2">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
                     Floating Action Button For Maximum Impact
                   </h2>
                   <ul className="flex flex-col gap-3">
-                    <li className="feature-list text-lg md:text-xl">
+                    <li className="feature-list text-lg ">
                       Utilize floaters to deliver timely messages, special offers, or helpful tips without disrupting the user experience.
                     </li>
-                    <li className="feature-list text-lg md:text-xl">
+                    <li className="feature-list text-lg ">
                       These subtle yet impactful prompts glide into view, guiding users toward important actions or highlighting new features.
                     </li>
                   </ul>
@@ -104,15 +105,15 @@ export default function Floaters() {
             {/* Feature 2 */}
             <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-1/2">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
                     New Feature Adoption
                   </h2>
                   <ul className="flex flex-col gap-3">
-                    <li className="feature-list text-lg md:text-xl">
+                    <li className="feature-list text-lg ">
                       By strategically placing floaters at key moments, you can guide users to try out new functionalities, ensuring they fully benefit from your app's evolving capabilities
                     </li>
-                    <li className="feature-list text-lg md:text-xl">
+                    <li className="feature-list text-lg ">
                       Boost user engagement and satisfaction by making it easy for them to discover and adopt the innovative features you've introduced.
                     </li>
                   </ul>
@@ -147,15 +148,15 @@ export default function Floaters() {
                 </div>
               </div>
               <div className="w-full lg:w-1/2">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
                     Non-Intrusive Feature Discovery
                   </h2>
                   <ul className="flex flex-col gap-3">
-                    <li className="feature-list text-lg md:text-xl">
+                    <li className="feature-list text-lg ">
                       Help users find the best of features without interrupting their navigation
                     </li>
-                    <li className="feature-list text-lg md:text-xl">
+                    <li className="feature-list text-lg ">
                       Grab user attention and drive them to explore new features.
                     </li>
                   </ul>

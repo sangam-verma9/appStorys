@@ -7,16 +7,18 @@ import axios from 'axios';
 import LocationCard from "../components/LocationCard";
 import getInTouchComp from '../../assets/get_in_touch_comp.png';
 import tickYellow from '../../assets/tick_yellow.png';
+import { RiLoader4Line } from "react-icons/ri";
 
 export default function GetInTouch() {
     const [fullName, setFullName] = useState('');
     const [businessEmail, setBusinessEmail] = useState('');
     const [message, setMessage] = useState('');
     const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setLoading(true);
         try {
             const response = await axios.post(
                 'https://backend.appstorys.com/api/v1/form/create-response/',
@@ -25,10 +27,12 @@ export default function GetInTouch() {
 
             if (response.status === 201) {
                 setSubmitSuccess(true);
+                setLoading(false);
             }
         }
         catch (error) {
             // console.log("Error : ", error)
+            setLoading(false);
         }
         // setSubmitSuccess(true);
     };
@@ -56,7 +60,7 @@ export default function GetInTouch() {
                 <div className='flex justify-start items-start h-full w-full bg-[#fff] gap-y-[20px] min-[540px]:pl-[40px] min-[540px]:pr-[40px] min-[540px]:pt-[20px] min-[540px]:pb-[20px] gap-x-[21px] max-[1085px]:flex-col max-[540px]:px-[25px] max-[540px]:py-[25px]'>
                     <div className='w-[20%] flex flex-col justify-start items-start gap-y-[80px] max-[1085px]:w-full'>
                         <div className='flex flex-col min-[1085px]:justify-between items-start min-[1085px]:h-[209px] gap-y-[34px]'>
-                            <h1 className='text-[54px] font-semibold font-InstrumentSans leading-[107%] min-[1085px]:w-[231px]'>Let's Get In Touch</h1>
+                            <h1 className='text-[54px] font-semibold font-InstrumentSans leading-[107%] min-[1085px]:w-[231px]'>Let's get in touch</h1>
                             <p className='text-[16px] font-InstrumentSans text-[#545454]'>Ready to boost your app's engagement? Reach out today, and let's explore how AppStorys can help you grow.</p>
                         </div>
                         <div className='flex flex-col justify-between items-start'>
@@ -72,6 +76,7 @@ export default function GetInTouch() {
                                     type="text"
                                     name='Full Name'
                                     value={fullName}
+                                    required
                                     className='py-[14px] pl-[16px] w-full rounded-[2px] font-InstrumentSans bg-white'
                                     placeholder='Please enter full name'
                                     onChange={(e) => { setFullName(e.target.value) }}
@@ -83,6 +88,7 @@ export default function GetInTouch() {
                                     type="email"
                                     name='Business Email'
                                     value={businessEmail}
+                                    required
                                     className='py-[14px] pl-[16px] w-full rounded-[2px] font-InstrumentSans bg-white'
                                     placeholder='email@company.com'
                                     onChange={(e) => { setBusinessEmail(e.target.value) }}
@@ -95,13 +101,17 @@ export default function GetInTouch() {
                                     type="text"
                                     name='Message'
                                     value={message}
+                                    required
                                     className='py-[14px] pl-[16px] w-full rounded-[2px] font-InstrumentSans bg-white'
                                     onChange={(e) => { setMessage(e.target.value) }}
                                 />
                             </div>
-                            <button className='flex justify-center items-center py-[11px] px-[50px] gap-x-[8px] bg-[#FD5F03] text-white rounded-[25px] mt-[25px] text-[10px] font-semibold font-InstrumentSans tracking-[1px]' type='submit'>
-                                <div className='h-[5px] w-[5px] bg-white rounded-full'></div>
+                            <button className='flex justify-center cursor-pointer items-center py-[11px] px-[50px] gap-x-[8px] bg-[#FD5F03] hover:bg-[#FD5F03] text-white rounded-[25px] mt-[25px] text-[15px] font-semibold font-InstrumentSans tracking-[1px]' type='submit'>
+                                <div className='h-[8px] w-[8px] bg-white rounded-full'></div>
                                 SUBMIT
+                                {loading && (
+                                    <RiLoader4Line className="ml-2 w-[25px] h-[25px] animate-spin" />
+                                )}
                             </button>
                         </form>
                         {

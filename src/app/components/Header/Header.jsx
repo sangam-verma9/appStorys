@@ -290,7 +290,7 @@ const Header = ({ style }) => {
                               <p
                                 className={`text-sm sf-pro text-gray-900 group-hover:text-blue-700`}
                               >
-                                PIP Videos
+                                PiP Videos
                               </p>
                               <p
                                 className={`text-xs sf-pro text-gray-500`}

@@ -96,7 +96,7 @@ const HeroSection = () => {
 
           {/* Paragraph */}
           <p className="text-black text-center text-lg md:text-xl lg:text-[28.05px] font-medium mt-5 lg:mt-14">
-            For your App & website
+            for your App & website
           </p>
 
           {/* Animation container */}

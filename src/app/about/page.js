@@ -265,7 +265,7 @@ export default function AboutUs() {
       <section className="flex justify-center items-center bg-[#fff] w-full max-[1078px]:flex-col">
         <div className='w-[44%] flex flex-col justify-center items-center min-[1078px]:h-[80vh] bg-white max-[1078px]:w-full'>
           <div className='h-[80%] flex flex-col justify-end items-start min-[1350px]:pl-[72px] min-[1350px]:pr-[130px] gap-y-[42px] pb-[69px] w-full bg-[#FFF7F3] max-[1350px]:justify-center max-[1350px]:items-center max-[1350px]:px-[20px] max-[1350px]:py-[20px] max-[1078px]:py-[40px] max-[1078px]:w-full max-[1078px]:gap-y-[20px]'>
-            <h1 className='leading-[91%] text-[60px] font-semibold font-InstrumentSans max-[573px]:text-[40px]'>We As An Organization</h1>
+            <h1 className='leading-[91%] text-[60px] font-semibold font-InstrumentSans max-[573px]:text-[40px]'>We as an Organization</h1>
             <p className='text-[16px] font-InstrumentSans leading-[135%]'>AppStorys, a part of the AppVersal group of companies, helps App developers integrate user experiences in their App without developer effort. Our state of the art systems are built to scale and capable of delivering interactive user experiences to million of users at scale</p>
           </div>
         </div>
@@ -293,7 +293,7 @@ export default function AboutUs() {
         <div className='flex justify-start items-start h-full w-full bg-[#ffffff] max-[1280px]:flex-col min-[1280px]:pl-[77px]'>
           <div className='w-[40%] max-[1280px]:w-full flex flex-col justify-start items-start gap-y-[14px] min-[1280px]:pt-[70px] max-[1280px]:py-[25px]'>
             <h2 id="mission-heading" className='text-[0.8px] font-bold font-InstrumentSans text-[#fd5f03] leading-[119%] tracking-[2px] max-[1280px]:px-[25px]'>OUR MISSION</h2>
-            <h3 className='text-[42px] leading-[111%] tracking-[0px] font-InstrumentSans font-semibold max-[1280px]:px-[25px] max-[487px]:text-[40px]'>Where We See Ourselves <br />In 2 Years</h3>
+            <h3 className='text-[42px] leading-[111%] tracking-[0px] font-InstrumentSans font-semibold max-[1280px]:px-[25px] max-[487px]:text-[40px]'>Our Future</h3>
             <article className='bg-[#fd5d03] pt-[40px] pl-[32px] pb-[45px] pr-[59px] mt-[66px] max-[825px]:mt-[40px]'>
               <p className='text-[#fff] text-[14px] font-medium leading-[150%]'>In two years, AppStorys aims to be a leader in app engagement and retention, powering thousands of apps worldwide. We envision expanding our SDK to include AI-driven personalization and advanced analytics, partnering with top-tier developers to enhance user interaction and growth. With a stronger global presence and cutting-edge technology, we plan to double our client base and become the go-to platform for improving app experiences.</p>
             </article>
@@ -360,7 +360,7 @@ export default function AboutUs() {
       </section>
 
       {/* Steps Section */}
-      <StepsSection />
+      {/* <StepsSection /> */}
 
       {/* Testimonials */}
       <Testimonial_About />

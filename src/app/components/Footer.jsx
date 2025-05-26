@@ -45,16 +45,16 @@ const Footer = () => {
           </div>
           <div className='flex justify-center sm:justify-normal'>
             <p >
-              <FaLinkedin className='w-[35px] h-[35px] mr-3 cursor-pointer' />
+              <Link href={"https://www.linkedin.com/company/appstorys/"}><FaLinkedin className='w-[35px] h-[35px] mr-3 cursor-pointer' /></Link>
             </p>
             <p >
-              <FaInstagram className='w-[35px] h-[35px] mr-3 cursor-pointer' />
+              <Link href={"https://www.instagram.com/appstorys__/"}><FaInstagram className='w-[35px] h-[35px] mr-3 cursor-pointer' /></Link>
             </p>
             <p>
-              <FaXTwitter className='w-[35px] h-[35px] mr-3 cursor-pointer' />
+              <Link href={"https://x.com/AppStorys_"}><FaXTwitter className='w-[35px] h-[35px] mr-3 cursor-pointer' /></Link>
             </p>
             <p >
-              <FaYoutube className='w-[35px] h-[35px] mr-3 cursor-pointer' />
+              <Link href={"https://www.youtube.com/@appstorys00"}><FaYoutube className='w-[35px] h-[35px] mr-3 cursor-pointer' /></Link>
             </p>
           </div>
         </div>
@@ -83,14 +83,14 @@ const Footer = () => {
             <div className='flex flex-col justify-between'>
               <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
                 <h3 className={` capitalize text-[18px] `}>Our SDKs</h3>
-                <Link href="/ios" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  `}>iOS</Link>
-                <Link href="/android" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>android</Link>
-                <Link href="/flutter" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>flutter</Link>
-                <Link href="/react-native" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>react native</Link>
-                <Link href="/reactjs" className={` font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>React.js</Link>
-                <Link href="/angular" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>angular</Link>
-                <Link href="/wordpress" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>wordpress</Link>
-                <Link href="/shopify" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>shopify</Link>
+                <p href="/ios" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  `}>iOS</p>
+                <p href="/android" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>android</p>
+                <p href="/flutter" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>flutter</p>
+                <p href="/react-native" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>react native</p>
+                <p href="/reactjs" className={` font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>React.js</p>
+                <p href="/angular" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>angular</p>
+                <p href="/wordpress" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>wordpress</p>
+                <p href="/shopify" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>shopify</p>
               </div>
               <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
                 <h3 className={` capitalize  text-[18px]`}>resources</h3>
@@ -104,23 +104,23 @@ const Footer = () => {
           <div className='flex justify-center'>
             <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
               <h3 className={` capitalize  text-[18px]`}>Integrations</h3>
-              <Link href="/clevertap" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>cleverTap</Link>
-              <Link href="/moengage" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>MoEngage</Link>
-              <Link href="/mixpanel" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Mixpanel</Link>
-              <Link href="/mparticle" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>mParticle</Link>
-              <Link href="/custom-audiences" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Custom Audiences</Link>
+              <p href="/clevertap" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>cleverTap</p>
+              <p href="/moengage" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>MoEngage</p>
+              <p href="/mixpanel" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Mixpanel</p>
+              <p href="/mparticle" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>mParticle</p>
+              <p href="/custom-audiences" className={` font-extralight text-[#2b2a2a] hover:text-[#000000] `}>Custom Audiences</p>
             </div>
           </div>
           <div className='flex sm:justify-end justify-center'>
             <div className='flex flex-col justify-between'>
               <div className='flex flex-col text-center sm:text-left mb-5 sm:mb-0'>
                 <h3 className={` capitalize text-[18px] `}>security</h3>
-                <Link href="/soc2" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>SOC 2 verified</Link>
-                <Link href="/encryption" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>encrypted</Link>
-                <Link href="/fraud-monitoring" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>24/7 Global Fraud Monitoring</Link>
-                <Link href="/aws-servers" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>AWS Servers - No data collected</Link>
-                <Link href="/gdpr" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>GDPR Compliant</Link>
-                <Link href="/rbi" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>RBI Compliant</Link>
+                <p href="/soc2" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>SOC 2 verified</p>
+                <p href="/encryption" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>encrypted</p>
+                <p href="/fraud-monitoring" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>24/7 Global Fraud Monitoring</p>
+                <p href="/aws-servers" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>AWS Servers - No data collected</p>
+                <p href="/gdpr" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>GDPR Compliant</p>
+                <p href="/rbi" className={` font-extralight text-[#2b2a2a] hover:text-[#000000]  capitalize`}>RBI Compliant</p>
               </div>
               <div className='flex flex-col text-center sm:text-left mt-5'>
                 <h3 className={` capitalize text-[18px] `}>company</h3>

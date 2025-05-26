@@ -29,11 +29,11 @@ import React from 'react';
 
 const FeatureTicker = ({ number1, number2, number3, heading1, heading2, heading3 }) => {
   return (
-    <section className="bg-black w-full px-6 py-8 md:py-6 lg:px-12 xl:px-12 xl:h-30">
+    <section className="bg-black w-full px-6 py-8 md:py-6 lg:px-12 xl:px-12 xl:h-25">
       <div className="flex flex-col gap-6 sm:gap-8 md:flex-row md:justify-between md:items-center max-w-7xl mx-auto">
         {/* First Feature */}
         <div className="flex items-center gap-4 w-full">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white font-sans">
+          <h1 className="text-2xl sm:text-4xl font-bold text-white font-sans">
             {number1}
           </h1>
           <p className="text-lg sm:text-xl font-semibold text-white font-sans capitalize leading-tight">
@@ -43,7 +43,7 @@ const FeatureTicker = ({ number1, number2, number3, heading1, heading2, heading3
 
         {/* Second Feature */}
         <div className="flex items-center gap-4 w-full">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white font-sans">
+          <h1 className="text-2xl sm:text-4xl font-bold text-white font-sans">
             {number2}
           </h1>
           <p className="text-lg sm:text-xl font-semibold text-white font-sans capitalize leading-tight">
@@ -53,7 +53,7 @@ const FeatureTicker = ({ number1, number2, number3, heading1, heading2, heading3
 
         {/* Third Feature */}
         <div className="flex items-center gap-4 w-full">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white font-sans">
+          <h1 className="text-2xl sm:text-4xl font-bold text-white font-sans">
             {number3}
           </h1>
           <p className="text-lg sm:text-xl font-semibold text-white font-sans capitalize leading-tight">

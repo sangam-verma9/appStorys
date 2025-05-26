@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { IoAdd, IoRemove } from 'react-icons/io5';
+import bookademogroup1 from '@/assets/bookademogroup1.png'
+import bookademogroup2 from '@/assets/bookademogroup2.png'
+import bookademogroup3 from '@/assets/bookademogroup3.png'
+import bookademogroup4 from '@/assets/bookademogroup4.png'
+import faq_icon from '@/assets/faq_icon.png'
 const cn = (...classes) => {
     return classes.filter(Boolean).join(' ');
 };
@@ -147,25 +152,29 @@ const Bookademo = () => {
                         Join us for a brief 15-minute session where we’ll understand your specific requirements and demonstrate how AppStorys can help you accelerate engagement and drive revenue through tailored solutions.
                     </p>
                     <div className=' hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
-                        <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                            <h3 className='font-bold'>Book a Demo</h3>
-                            <p className='text-sm text-gray-500'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
+                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                            <img src={bookademogroup1.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
+                            <h3 className='font-bold mb-1'>Book a Demo</h3>
+                            <p className='text-sm mb-2'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
                         </div>
-                        <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                            <h3 className='font-bold'>Have questions? Contact Us</h3>
-                            <p className='text-sm text-gray-500'>If you have any questions or just want to say “Hi”, we’d love to connect with you.</p>
+                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                            <img src={bookademogroup2.src} alt="bookademogroup2" width={50} height={50} className='mb-1' />
+                            <h3 className='font-bold mb-1'>Have questions? Contact Us</h3>
+                            <p className='text-sm mb-2'>If you have any questions or just want to say “Hi”, we’d love to connect with you.</p>
                         </div>
-                        <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                            <h3 className='font-bold'>Discover our platform</h3>
-                            <p className='text-sm text-gray-500'>See all features live in a demo App connected to our powerful dashboard and understand how we can achieve your target KPIs</p>
+                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                            <img src={bookademogroup3.src} alt="bookademogroup3" width={50} height={50} className='mb-1' />
+                            <h3 className='font-bold mb-1'>Discover our platform</h3>
+                            <p className='text-sm mb-2'>See all features live in a demo App connected to our powerful dashboard and understand how we can achieve your target KPIs</p>
                         </div>
-                        <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                            <h3 className='font-bold'>Media Enquiry/Partnerships</h3>
-                            <p className='text-sm text-gray-500'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
+                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                            <img src={bookademogroup4.src} alt="bookademogroup4" width={50} height={50} className='mb-1' />
+                            <h3 className='font-bold mb-1'>Media Enquiry/Partnerships</h3>
+                            <p className='text-sm mb-2'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
                         </div>
                     </div>
                     <div className='hidden md:grid mt-5 w-[300px]  md:w-[600px]'>
-                        <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#f8d6c5]">
+                        <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#FD5F03]">
 
                             <div className="relative h-72 md:h-48 pb-8 pt-3 ">
                                 <div
@@ -178,7 +187,7 @@ const Bookademo = () => {
                                             className="w-full flex-shrink-0 flex items-center justify-center p-8 md:p-12 "
                                         >
                                             <div className="text-center">
-                                                <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium italic">
+                                                <p className=" text-lg md:text-xl leading-relaxed text-[16px] ">
                                                     {testimonial.text}
                                                 </p>
                                             </div>
@@ -215,27 +224,31 @@ const Bookademo = () => {
             </div>
             <div>
                 <div className='grid visible md:hidden grid-cols-1 md:grid-cols-2 gap-2 justify-center px-10 mb-5'>
-                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                        <h3 className='font-bold'>Book a Demo</h3>
-                        <p className='text-sm text-gray-500'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
+                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <img src={bookademogroup1.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
+                        <h3 className='font-bold mb-1'>Book a Demo</h3>
+                        <p className='text-sm mb-2'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
                     </div>
-                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                        <h3 className='font-bold'>Have questions? Contact Us</h3>
-                        <p className='text-sm text-gray-500'>If you have any questions or just want to say “Hi”, we’d love to connect with you.</p>
+                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <img src={bookademogroup2.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
+                        <h3 className='font-bold mb-1'>Have questions? Contact Us</h3>
+                        <p className='text-sm mb-2'>If you have any questions or just want to say “Hi”, we’d love to connect with you.</p>
                     </div>
-                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                        <h3 className='font-bold'>Discover our platform</h3>
-                        <p className='text-sm text-gray-500'>See all features live in a demo App connected to our powerful dashboard and understand how we can achieve your target KPIs</p>
+                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <img src={bookademogroup3.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
+                        <h3 className='font-bold mb-1'>Discover our platform</h3>
+                        <p className='text-sm mb-2'>See all features live in a demo App connected to our powerful dashboard and understand how we can achieve your target KPIs</p>
                     </div>
-                    <div className='bg-white py-5 px-8 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
-                        <h3 className='font-bold'>Media Enquiry/Partnerships</h3>
-                        <p className='text-sm text-gray-500'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
+                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                        <img src={bookademogroup4.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
+                        <h3 className='font-bold mb-1'>Media Enquiry/Partnerships</h3>
+                        <p className='text-sm mb-2'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
                     </div>
                 </div>
             </div>
             <div className='mb-8'>
                 <div className='visible md:hidden mt-5 w-[400px]  md:w-[600px] px-10'>
-                    <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#f8d6c5]">
+                    <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#FD5F03]">
 
                         <div className="relative h-72 md:h-48 pb-8 pt-3 ">
                             <div
@@ -248,7 +261,7 @@ const Bookademo = () => {
                                         className="w-full flex-shrink-0 flex items-center justify-center p-8 md:p-12 "
                                     >
                                         <div className="text-center">
-                                            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium italic">
+                                            <p className=" text-lg md:text-xl leading-relaxed text-[16px]">
                                                 {testimonial.text}
                                             </p>
                                         </div>
@@ -288,7 +301,8 @@ const Bookademo = () => {
                                 onClick={() => toggleFAQ(index)}
                                 className="w-full px-6 py-5 flex items-center justify-between text-left"
                             >
-                                <h3 className="text-lg md:text-xl font-semibold text-gray-800 pr-4">
+                                <h3 className="text-lg md:text-xl flex items-center font-semibold text-gray-800 pr-4">
+                                    <span><img src={faq_icon.src} alt="faqicon" width={20} height={20} className='mr-4' /></span>
                                     {faq.question}
                                 </h3>
                                 <div className="flex-shrink-0">
