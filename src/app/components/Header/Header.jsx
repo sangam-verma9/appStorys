@@ -1687,14 +1687,14 @@ const Header = ({ style }) => {
 
               <div className="pt-2 space-y-3">
                 <Link
-                  href="/contact"
+                  href="/bookademo"
                   className="block w-full rounded-full bg-[#FD5F03] text-white font-medium text-center px-4 py-2.5"
                   onClick={() => {
                     handleOptionClick();
                     setRequestDemoClick(true);
                   }}
                 >
-                  Contact Sales
+                  Book a Demo
                 </Link>
 
                 <Link

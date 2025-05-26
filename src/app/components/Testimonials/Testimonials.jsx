@@ -428,19 +428,19 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      text: '"AppStorys has completely transformed how we engage with our users. The widgets and floater allow us to place key actions strategically, ensuring higher interaction rates. Our engagement levels have soared, and users find our app more intuitive !"',
+      text: '"AppStorys has revolutionized our user engagement. With the strategic placement of widgets and the floater, we can guide users to key actions seamlessly. Interaction rates have significantly increased, and our app now feels more intuitive and user-friendly than ever."',
       author: 'PRIYA S.',
       position: 'Product Manager At A Fintech App'
     },
     {
       id: 2,
-      text: '"The impact AppStorys has had on our user experience is remarkable."',
+      text: '"AppStorys has made a tremendous difference in how users interact with our app."',
       author: 'MICHAEL T.',
       position: 'CTO at Health Tech Startup'
     },
     {
       id: 3,
-      text: '"What impressed us most about AppStorys is how seamlessly it integrated with our existing systems. The analytics provided give us actionable insights that have helped us refine our user journey continuously."',
+      text: '"What stood out most about AppStorys was its effortless integration with our current setup. The in-depth analytics offer clear, actionable insights that continuously help us enhance the user journey."',
       author: 'SARAH L.',
       position: 'VP of Product at E-commerce Platform'
     }
