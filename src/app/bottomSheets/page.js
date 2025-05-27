@@ -31,10 +31,10 @@ export default function BottomSheet() {
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
               <h1 className="text-4xl md:text-5xl lg:text-[59px] text-black font-semibold leading-tight md:leading-[0.97]">
-                Bottomsheet
+                Boost Engagement with Interactive BottomSheets
               </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
-                Enhance your app with custom Bottomsheet that offer personalized, interactive features. Easily integrate and customize for a seamless user experience, boosting engagement and app performance.
+                Elevate your app with custom BottomSheets designed for personalized, interactive experiences. Seamlessly integrate and tailor them to match your app’s style, enhancing user engagement and overall performance.
               </p>
               <Link
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
@@ -52,12 +52,12 @@ export default function BottomSheet() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3.5x"
-            number2="30%"
-            number3="3.6x"
-            heading1="More Accurate Insights"
-            heading2="Improvement in feedback response rates"
-            heading3="Relevant Insights Gain"
+            number1="4.6x"
+            number2="29%"
+            number3="33%"
+            heading1="increased CTAs"
+            heading2="Higher Attention"
+            heading3="Drop in User Exits"
           />
         </div>
       </section>
@@ -83,14 +83,14 @@ export default function BottomSheet() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Enhance Your App with Custom Bottomsheet
+                    Stand Out
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg ">
-                      Enhance user experience by integrating custom Bottomsheet into your app.
+                      AppStorys uses eye-catching visuals to grab user attention exactly when it matters.
                     </li>
                     <li className="feature-list text-lg ">
-                      Offer interactive, personalized features that engage users and simplify their journey.
+                      Customizable UI elements help differentiate your product experience from the competition.
                     </li>
                   </ul>
                 </div>
@@ -102,14 +102,14 @@ export default function BottomSheet() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Custom Bottomsheet for Better Engagement
+                    Quick Interactions
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg ">
-                      Deliver personalized, dynamic widgets that adjust to user behavior.
+                      Tappable widgets and prompts enable instant user actions without extra clicks.
                     </li>
                     <li className="feature-list text-lg ">
-                      Use smart triggers to show relevant content at the right time, boosting engagement and satisfaction.
+                      Key tasks are surfaced contextually, reducing time spent navigating menus.
                     </li>
                   </ul>
                 </div>
@@ -145,14 +145,14 @@ export default function BottomSheet() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Get Real-Time Insights with Interactive Widgets
+                    Reduce Frictions
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg ">
-                      Collect valuable feedback instantly with interactive widgets.
+                      Context-aware guidance walks users through complex flows effortlessly.
                     </li>
                     <li className="feature-list text-lg ">
-                      Leverage real-time data to make informed decisions that drive retention and growth.
+                      Helps lower drop-offs by clarifying next steps and reducing uncertainty.
                     </li>
                   </ul>
                 </div>
