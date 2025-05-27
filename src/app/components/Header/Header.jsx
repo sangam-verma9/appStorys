@@ -1194,7 +1194,7 @@ const Header = ({ style }) => {
                     <Link
                       href="/stories"
                       className="flex items-center py-2"
-                      onClick={() => handleOptionClick()}
+                      // onClick={() => handleOptionClick()}
                     >
                       <Image
                         src={story}
@@ -1208,7 +1208,7 @@ const Header = ({ style }) => {
                     <Link
                       href="/reels"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <Image
                         src={reel}
