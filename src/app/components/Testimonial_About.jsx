@@ -28,44 +28,46 @@ const Testimonial_About = () => {
             />
           </div>
         </h1>
-        <h1 className='text-[42px] font-semibold font-InstrumentSans leading-[119%] tracking-[2px] text-center max-[666px]:text-[35px] min-[666px]:w-[629px] capitalize max-[425px]:text-[40px]'>Backed By Our Established Parent Company With Leading Clients</h1>
-        <div className='mt-[1.5px] flex justify-between items-center w-[70%] max-[982px]:flex-col'>
-          <div className="relative h-[40px] w-[150px]">
-            <Image
-              src={testi1}
-              alt='AppStorys Testi_1'
-              width={150}
-              height={40}
-              style={{ width: 'auto', height: '40px', objectFit: "contain" }}
-            />
-          </div>
-          {/* Testi_2 is commented out in the original code */}
-          <div className="relative h-[92px] w-[150px]">
-            <Image
-              src={testi3}
-              alt='AppStorys Testi_3'
-              width={150}
-              height={92}
-              style={{ width: 'auto', height: '92px', objectFit: "contain" }}
-            />
-          </div>
-          <div className="relative h-[134px] w-[150px]">
-            <Image
-              src={testi4}
-              alt='AppStorys Testi_4'
-              width={150}
-              height={134}
-              style={{ width: 'auto', height: '134px', objectFit: "contain" }}
-            />
-          </div>
-          <div className="relative h-[38px] w-[150px]">
-            <Image
-              src={testi5}
-              alt='AppStorys Testi_5'
-              width={150}
-              height={38}
-              style={{ width: 'auto', height: '38px', objectFit: "contain" }}
-            />
+        <h1 className='text-[30px] mt-2 font-semibold font-InstrumentSans leading-[119%] tracking-[2px] text-center max-[666px]:text-[30px] min-[666px]:w-[629px] capitalize max-[425px]:text-[30px]'>Backed By Our Established Parent Company With Leading Clients</h1>
+        <div className='flex justify-center'>
+          <div className='mt-[1.5px] grid grid-cols-2 md:grid-cols-4 justify-between items-center w-[100%]'>
+            <div className="relative h-[40px] w-[150px]">
+              <Image
+                src={testi1}
+                alt='AppStorys Testi_1'
+                width={150}
+                height={40}
+                style={{ width: 'auto', height: '40px', objectFit: "contain" }}
+              />
+            </div>
+            {/* Testi_2 is commented out in the original code */}
+            <div className="relative h-[92px] w-[150px] px-2 ml-3">
+              <Image
+                src={testi3}
+                alt='AppStorys Testi_3'
+                width={150}
+                height={92}
+                style={{ width: 'auto', height: '92px', objectFit: "contain" }}
+              />
+            </div>
+            <div className="relative h-[134px] w-[150px]">
+              <Image
+                src={testi4}
+                alt='AppStorys Testi_4'
+                width={150}
+                height={134}
+                style={{ width: 'auto', height: '134px', objectFit: "contain" }}
+              />
+            </div>
+            <div className="relative h-[38px] w-[150px] px-2 ml-3">
+              <Image
+                src={testi5}
+                alt='AppStorys Testi_5'
+                width={150}
+                height={38}
+                style={{ width: 'auto', height: '38px', objectFit: "contain" }}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -270,30 +270,30 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="w-[56%] max-[1078px]:w-full">
-          <Image
-            src={aboutBanner}
+          <img
+            src={aboutBanner.src}
             alt="AppStorys team collaborating on innovative app development solutions"
-            width={800}
-            height={634}
+            // width={500}
+            // height={200}
             style={{
-              objectFit: "cover",
-              height: "634px",
+              // objectFit: "cover",
+              // height: "634px",
               width: "100%",
               maxWidth: "100%",
               display: "block"
             }}
-            className="max-[1280px]:h-[550px] max-[1157px]:h-[450px] max-[1078px]:h-auto"
+            className=" px-5"
             priority
           />
         </div>
       </section>
 
       {/* Our Mission */}
-      <section className='flex justify-start items-start w-full min-h-[60vh] max-w-[1400px] mt-10' aria-labelledby="mission-heading">
+      <section className='flex justify-start items-start w-full min-h-[60vh] max-w-[1400px] mt-5' aria-labelledby="mission-heading">
         <div className='flex justify-start items-start h-full w-full  max-[1280px]:flex-col min-[1280px]:pl-[77px]'>
           <div className='w-[40%] max-[1280px]:w-full flex flex-col justify-start items-start gap-y-[14px] min-[1280px]:pt-[70px] max-[1280px]:py-[25px]'>
             <h2 id="mission-heading" className='text-[0.8px] font-bold font-InstrumentSans text-[#fd5f03] leading-[119%] tracking-[2px] max-[1280px]:px-[25px]'>OUR MISSION</h2>
-            <h3 className='text-[42px] leading-[111%] tracking-[0px] font-InstrumentSans font-semibold max-[1280px]:px-[25px] max-[487px]:text-[40px]'>Our Future</h3>
+            <h3 className='text-[32px] leading-[111%] tracking-[0px] font-InstrumentSans font-semibold max-[1280px]:px-[25px] max-[487px]:text-[40px]'>Our Future</h3>
             <article className='bg-[#fd5d03] pt-[40px] pl-[32px] pb-[45px] pr-[59px] mt-[66px] max-[825px]:mt-[40px]'>
               <p className='text-[#fff] text-[14px] font-medium leading-[150%]'>In two years, AppStorys aims to be a leader in app engagement and retention, powering thousands of apps worldwide. We envision expanding our SDK to include AI-driven personalization and advanced analytics, partnering with top-tier developers to enhance user interaction and growth. With a stronger global presence and cutting-edge technology, we plan to double our client base and become the go-to platform for improving app experiences.</p>
             </article>
@@ -304,7 +304,7 @@ export default function AboutUs() {
               alt="AppStorys mission and future vision illustration with growth trajectory"
               width={600}
               height={470}
-              className='h-[470.78px] w-auto max-[805px]:w-full max-[805px]:h-auto'
+              className='h-[470.78px] w-auto max-[805px]:w-full max-[805px]:h-auto px-5'
               style={{ objectFit: "contain" }}
               loading="lazy"
             />
@@ -339,7 +339,7 @@ export default function AboutUs() {
       {/* <WhyUsSection /> */}
 
       {/* Our Offices */}
-      <div className='bg-white w-full flex justify-center'>
+      <div className='bg-white w-full flex justify-center pb-10'>
         <section className='flex justify-between items-start w-full max-w-[1400px] min-h-[60vh] relative overflow-hidden max-[1220px]:flex-col max-[1220px]:h-auto max-[1220px]:gap-y-[20px]' aria-labelledby="offices-heading">
           <div className='w-[30%] max-[1381px]:w-[50%] flex flex-col min-[1220px]:pl-[117px] max-[1381px]:pl-[50px] justify-start items-start h-full pt-[75.64px] gap-y-[30.36px] z-[1000] max-[1220px]:w-full max-[1220px]:px-[25px]'>
             <h2 id="offices-heading" className='text-[54px] font-semibold font-InstrumentSans text-[#000] leading-[127%] -tracking-[0.5px]'>Our Global Offices</h2>
