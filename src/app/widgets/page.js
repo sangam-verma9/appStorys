@@ -36,12 +36,12 @@ export default function Widgets() {
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
               <h1 className="text-4xl md:text-5xl lg:text-[59px] text-black font-semibold leading-tight md:leading-[0.97]">
-                Elevate Your App's Functionality with Custom Widgets
+                Scrollable Widgets
               </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
                 Enhance your app with custom widgets that offer personalized, interactive features. Easily integrate and customize for a seamless user experience, boosting engagement and app performance.
               </p>
-              <Link 
+              <Link
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"
                 href={"/bookademo"}
               >
@@ -88,7 +88,7 @@ export default function Widgets() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Boost Your App's Functionality with Custom Widgets
+                    Enhance Your App with Custom Widgets
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg ">
@@ -107,7 +107,7 @@ export default function Widgets() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Personalized Widgets for Optimal User Engagement
+                    Custom Widgets for Better Engagement
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg ">
@@ -150,7 +150,7 @@ export default function Widgets() {
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-6 px-5">
                   <h2 className="text-3xl md:text-4xl lg:text-[46px] font-semibold leading-tight">
-                    Unlock Real-Time Insights with Interactive Widgets
+                    Get Real-Time Insights with Interactive Widgets
                   </h2>
                   <ul className="flex flex-col gap-3">
                     <li className="feature-list text-lg ">

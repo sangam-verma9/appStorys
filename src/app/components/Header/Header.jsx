@@ -4,9 +4,14 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Outfit, Bricolage_Grotesque, Poppins } from "next/font/google";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { AiFillAndroid } from "react-icons/ai";
+import { AiFillAndroid, AiTwotoneThunderbolt } from "react-icons/ai";
 import { FaApple, FaArrowRight } from "react-icons/fa";
 import { useRouter } from "next/navigation"
+import { LuHeartHandshake } from "react-icons/lu";
+import { MdFeedback } from "react-icons/md";
+import { FaBlog } from "react-icons/fa6";
+import { TfiGallery } from "react-icons/tfi";
+import { TbNotebook } from "react-icons/tb";
 
 import {
   FaReact,
@@ -926,9 +931,9 @@ const Header = ({ style }) => {
               {dropdownOpen.resources && (
                 <div className={`fixed top-16 ${scrolled ? "md:top-19" : "md:top-30"} left-0 right-0 w-full bg-white shadow-lg mt-1 py-4 z-20`}>
                   <div className="w-full max-w-6xl mx-auto px-4">
-                    <h3 className="text-lg font-medium mb-2">OUR SDKs</h3>
+                    <h3 className="text-lg font-medium mb-2">OUR SDKs & Resources</h3>
 
-                    <div className="grid grid-cols-2 border-t border-gray-200">
+                    <div className="grid grid-cols-3 border-t border-gray-200">
                       <div className="py-2 border-r border-gray-200">
                         <h4 className="p-3 text-base font-medium">Mobile</h4>
 
@@ -1028,7 +1033,7 @@ const Header = ({ style }) => {
                         </div>
                       </div>
 
-                      <div className="py-2">
+                      <div className="py-2 border-r border-gray-200">
                         <h4 className="p-3 text-base font-medium">Web</h4>
 
                         <div className="border-t border-gray-200">
@@ -1090,6 +1095,101 @@ const Header = ({ style }) => {
                             </span>
                           </Link>
                         </div>
+                      </div>
+
+                      <div className="py-2">
+                        <h4 className="p-3 text-base font-medium">Resources</h4>
+
+                        <div className="border-t border-gray-200">
+                          <Link
+                            href="/adoption"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <LuHeartHandshake className="text-green-500 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Adoption
+                            </span>
+                          </Link>
+                        </div>
+
+                        <div className="border-t border-gray-200">
+                          <Link
+                            href="/activation"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <AiTwotoneThunderbolt className="text-yellow-500 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Activation
+                            </span>
+                          </Link>
+                        </div>
+
+                        <div className="border-t border-gray-200">
+                          <Link
+                            href="/feedback"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <MdFeedback className="text-blue-500 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Feedback
+                            </span>
+                          </Link>
+                        </div>
+
+                        <div className="border-t border-gray-200">
+                          <Link
+                            href="/blog"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <FaBlog className="text-orange-500 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Blog
+                            </span>
+                          </Link>
+                        </div>
+
+                        <div className="border-t border-gray-200">
+                          <Link
+                            href="/inspiration-gallery"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <TfiGallery className="text-pink-600 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Inspiration gallery
+                            </span>
+                          </Link>
+                        </div>
+
+                        <div className="border-t border-gray-200">
+                          <Link
+                            href="/ebook"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <TbNotebook className="text-black-600 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Ebook
+                            </span>
+                          </Link>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -1721,35 +1821,92 @@ const Header = ({ style }) => {
                     <h5 className="font-medium text-gray-700 mt-3 mb-1">
                       RESOURCES
                     </h5>
-                    <Link
-                      href="/blogs"
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/adoption');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
-                      <Image
-                        src={blog}
-                        alt="Blog"
-                        width={20}
-                        height={20}
-                        className="mr-3"
-                      />
+                      <LuHeartHandshake className="text-green-500 text-xl w-5 h-5 mr-2" />
+                      <span>Adoption</span>
+                    </div>
+                    <div
+                      className="flex items-center py-2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/activation');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
+                    >
+                      <AiTwotoneThunderbolt className="text-yellow-500 text-xl w-5 h-5 mr-2" />
+                      <span>Activation</span>
+                    </div>
+                    <div
+                      className="flex items-center py-2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/feedback');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
+                    >
+                      <MdFeedback className="text-blue-500 text-xl w-5 h-5 mr-2" />
+                      <span>Feedback</span>
+                    </div>
+                    <div
+                      className="flex items-center py-2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/blog');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
+                    >
+                      <FaBlog className="text-orange-500 text-xl w-5 h-5 mr-2" />
                       <span>Blog</span>
-                    </Link>
-                    <Link
-                      href="/career"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/inspiration-gallery');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
-                      <Image
-                        src={career}
-                        alt="Careers"
-                        width={20}
-                        height={20}
-                        className="mr-3"
-                      />
-                      <span>Careers</span>
-                    </Link>
+                      <TfiGallery className="text-pink-500 text-xl w-5 h-5 mr-2" />
+                      <span>Inspiration Gallery</span>
+                    </div>
+                    <div
+                      className="flex items-center py-2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/ebook');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
+                    >
+                      <TbNotebook className="text-black-500 text-xl w-5 h-5 mr-2" />
+                      <span>Ebook</span>
+                    </div>
                   </div>
+
                 )}
               </div>
 
