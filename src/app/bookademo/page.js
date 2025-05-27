@@ -7,7 +7,6 @@ import bookademogroup2 from '@/assets/bookademogroup2.png'
 import bookademogroup3 from '@/assets/bookademogroup3.png'
 import bookademogroup4 from '@/assets/bookademogroup4.png'
 import faq_icon from '@/assets/faq_icon.png'
-import { IoMailOutline } from "react-icons/io5";
 const cn = (...classes) => {
     return classes.filter(Boolean).join(' ');
 };
@@ -152,7 +151,7 @@ const Bookademo = () => {
                         <br />
                         Join us for a brief 15-minute session where we’ll understand your specific requirements and demonstrate how AppStorys can help you accelerate engagement and drive revenue through tailored solutions.
                     </p>
-                    <p className='mb-8 text-[20px] flex items-center'>You can also reach us via Email: <a href="mailto:support@appstorys.com" className='text-[#fd5f03]'>support@appstorys.com</a><IoMailOutline className='ml-2 w-5 h-5 text-[#fd5f03]' /> </p>
+                    <p className='mb-8 text-[20px] flex items-center'>You can also reach us via Email: &nbsp; <span><a href="mailto:support@appstorys.com" className='text-[#fd5f03]'>support@appstorys.com</a></span> </p>
                     <div className=' hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
                         <div className='bg-white py-5 px-5 rounded-lg border-2 border-[#FD5F03]'>
                             <img src={bookademogroup1.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
