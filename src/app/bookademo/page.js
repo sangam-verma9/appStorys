@@ -143,7 +143,7 @@ const Bookademo = () => {
     return (
         <div className='w-full bg-[#FFF7F3] justify-center grid'>
             <div className='grid lg:grid-cols-2 sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-8 mx-auto items-start mt-5'>
-                <div className='mr-[50px] mb-5 grid justify-center'>
+                <div className=' mr-0 md:mr-[50px] mb-5 grid justify-center'>
                     <h1 className='md:text-[60px] text-[40px] font-bold mb-2'>Let’s Connect!</h1>
                     <p className='text-[#282828] text-[20px] mb-2 md:pr-[80px] pr-[0px]'>
                         Discover how AppStorys can boost your user engagement and help you reach your goals.
@@ -151,7 +151,7 @@ const Bookademo = () => {
                         <br />
                         Join us for a brief 15-minute session where we’ll understand your specific requirements and demonstrate how AppStorys can help you accelerate engagement and drive revenue through tailored solutions.
                     </p>
-                    <p className='mb-8 text-[20px] flex items-center'>You can also reach us via Email: &nbsp; <span><a href="mailto:support@appstorys.com" className='text-[#fd5f03]'>support@appstorys.com</a></span> </p>
+                    <p className='mb-8 text-[20px]'>You can also reach us via Email: &nbsp; <span><a href="mailto:support@appstorys.com" className='text-[#fd5f03]'>support@appstorys.com</a></span> </p>
                     <div className=' hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
                         <div className='bg-white py-5 px-5 rounded-lg border-2 border-[#FD5F03]'>
                             <img src={bookademogroup1.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
