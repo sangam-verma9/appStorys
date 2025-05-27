@@ -6,6 +6,7 @@ import { Outfit, Bricolage_Grotesque, Poppins } from "next/font/google";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { AiFillAndroid } from "react-icons/ai";
 import { FaApple, FaArrowRight } from "react-icons/fa";
+import { useRouter } from "next/navigation"
 
 import {
   FaReact,
@@ -66,6 +67,7 @@ const bricolageGrotesque = Bricolage_Grotesque({
 });
 
 const Header = ({ style }) => {
+  const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState({
     feature: false,
     advanceSolutions: false,
@@ -87,10 +89,10 @@ const Header = ({ style }) => {
   const [listVisible, setListVisible] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest(".dropdown-container")) {
+      if (!event.target.closest(".dropdown-container") &&
+        !event.target.closest(".mobile-nav-container")) {
         setDropdownOpen({
           feature: false,
           advanceSolutions: false,
@@ -105,7 +107,6 @@ const Header = ({ style }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
   const handleClick = (link) => {
     setDropdownOpen((prevState) => ({
       feature: link === "feature" ? !prevState.feature : false,
@@ -116,16 +117,6 @@ const Header = ({ style }) => {
     }));
   };
 
-  // const handleOptionClick = () => {
-  //   setDropdownOpen({
-  //     feature: false,
-  //     advanceSolutions: false,
-  //     resources: false,
-  //     sdks: false,
-  //   });
-  //   setListVisible(false);
-  // };
-
   const handleOptionClick = () => {
     setDropdownOpen({
       feature: false,
@@ -135,8 +126,6 @@ const Header = ({ style }) => {
     });
     setListVisible(false);
   };
-
-  // const { setRequestDemoClick } = store();
 
   return (
     <header className="sticky top-0 z-50 bg-[#FFF7F3] w-full shadow-sm">
@@ -770,7 +759,7 @@ const Header = ({ style }) => {
 
                         <div className="border-t border-gray-200">
                           <Link
-                            href="/integrations/mixpanel"
+                            href="#"
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -790,7 +779,7 @@ const Header = ({ style }) => {
 
                         <div className="border-t border-gray-200">
                           <Link
-                            href="/integrations/clevertap"
+                            href="#"
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -810,7 +799,7 @@ const Header = ({ style }) => {
 
                         <div className="border-t border-gray-200">
                           <Link
-                            href="/integrations/moengage"
+                            href="#"
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -830,7 +819,7 @@ const Header = ({ style }) => {
 
                         <div className="border-t border-gray-200">
                           <Link
-                            href="/integrations/custom"
+                            href="#"
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1164,7 +1153,7 @@ const Header = ({ style }) => {
 
         {/* Mobile Navigation */}
         {listVisible && (
-          <div className="lg:hidden bg-white border-t border-gray-200 px-4 py-3 shadow-lg max-h-[85vh] overflow-y-auto">
+          <div className="xl:hidden bg-white border-t border-gray-200 px-4 py-3 shadow-lg max-h-[85vh] overflow-y-auto mobile-nav-container">
             <nav className="flex flex-col space-y-4">
               <Link
                 href="/about"
@@ -1176,7 +1165,10 @@ const Header = ({ style }) => {
 
               <div>
                 <button
-                  onClick={() => handleClick("feature")}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleClick("feature");
+                  }}
                   className="flex items-center justify-between w-full py-2 text-gray-800"
                 >
                   <span>Features</span>
@@ -1191,10 +1183,16 @@ const Header = ({ style }) => {
                     <h5 className="font-medium text-gray-700 mt-2 mb-1">
                       RICH MEDIA CONTENT
                     </h5>
-                    <Link
-                      href="/stories"
+                    <div
                       className="flex items-center py-2"
-                      // onClick={() => handleOptionClick()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/stories');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={story}
@@ -1204,11 +1202,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Stories</span>
-                    </Link>
-                    <Link
-                      href="/reels"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      // onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/reels');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={reel}
@@ -1218,11 +1222,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Reels</span>
-                    </Link>
-                    <Link
-                      href="/pipVideos"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/pipVideos');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={pip}
@@ -1232,11 +1242,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>PIP Videos</span>
-                    </Link>
-                    <Link
-                      href="/bottomSheets"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/bottomSheets');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={bottom_sheet}
@@ -1246,15 +1262,21 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Bottom Sheets</span>
-                    </Link>
+                    </div>
 
                     <h5 className="font-medium text-gray-700 mt-3 mb-1">
                       INTERACTIVE ELEMENTS
                     </h5>
-                    <Link
-                      href="/banners"
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/banners');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={banner}
@@ -1264,11 +1286,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Banners</span>
-                    </Link>
-                    <Link
-                      href="/floaters"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/floaters');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={floater}
@@ -1278,11 +1306,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Floaters</span>
-                    </Link>
-                    <Link
-                      href="/widgets"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/widgets');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={widget}
@@ -1292,11 +1326,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Widgets</span>
-                    </Link>
-                    <Link
-                      href="/scratchCards"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/scratchCards');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={scratch}
@@ -1306,15 +1346,21 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Scratch Cards</span>
-                    </Link>
+                    </div>
 
                     <h5 className="font-medium text-gray-700 mt-3 mb-1">
                       TAKE ACTION
                     </h5>
-                    <Link
-                      href="/quizzes"
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/quizzes');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={quiz}
@@ -1324,11 +1370,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Quizzes</span>
-                    </Link>
-                    <Link
-                      href="/surveys"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/surveys');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={survey}
@@ -1338,11 +1390,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Surveys</span>
-                    </Link>
-                    <Link
-                      href="/csats"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/csats');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={csat}
@@ -1352,15 +1410,21 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>CSAT Feedback</span>
-                    </Link>
+                    </div>
 
                     <h5 className="font-medium text-gray-700 mt-3 mb-1">
                       ONBOARDING
                     </h5>
-                    <Link
-                      href="/tooltips"
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/tooltips');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={tooltip}
@@ -1370,11 +1434,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Tooltips</span>
-                    </Link>
-                    <Link
-                      href="/coachmarks"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/coachmarks');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={coach}
@@ -1384,11 +1454,17 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Coachmarks</span>
-                    </Link>
-                    <Link
-                      href="/spotlights"
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/spotlights');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
                       <Image
                         src={spot}
@@ -1398,7 +1474,7 @@ const Header = ({ style }) => {
                         className="mr-3"
                       />
                       <span>Spotlights</span>
-                    </Link>
+                    </div>
                   </div>
                 )}
               </div>
@@ -1421,7 +1497,7 @@ const Header = ({ style }) => {
                       INTEGRATIONS
                     </h5>
                     <Link
-                      href="/integrations/mixpanel"
+                      href="#"
                       className="flex items-center py-2"
                       onClick={handleOptionClick}
                     >
@@ -1435,7 +1511,7 @@ const Header = ({ style }) => {
                       <span>mParticle</span>
                     </Link>
                     <Link
-                      href="/integrations/clevertap"
+                      href="#"
                       className="flex items-center py-2"
                       onClick={handleOptionClick}
                     >
@@ -1449,7 +1525,7 @@ const Header = ({ style }) => {
                       <span>CleverTap</span>
                     </Link>
                     <Link
-                      href="/integrations/moengage"
+                      href="#"
                       className="flex items-center py-2"
                       onClick={handleOptionClick}
                     >
@@ -1463,7 +1539,7 @@ const Header = ({ style }) => {
                       <span>MoEngage</span>
                     </Link>
                     <Link
-                      href="/integrations/custom"
+                      href="#"
                       className="flex items-center py-2"
                       onClick={handleOptionClick}
                     >

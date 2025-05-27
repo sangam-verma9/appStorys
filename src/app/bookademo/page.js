@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import { IoAdd, IoRemove } from 'react-icons/io5';
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import bookademogroup1 from '@/assets/bookademogroup1.png'
 import bookademogroup2 from '@/assets/bookademogroup2.png'
 import bookademogroup3 from '@/assets/bookademogroup3.png'
@@ -142,7 +142,7 @@ const Bookademo = () => {
 
     return (
         <div className='w-full bg-[#FFF7F3] justify-center grid'>
-            <div className='grid lg:grid-cols-2 sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-8 mx-auto items-center'>
+            <div className='grid lg:grid-cols-2 sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-8 mx-auto items-start mt-5'>
                 <div className='mr-[50px] mb-5 grid justify-center'>
                     <h1 className='md:text-[60px] text-[40px] font-bold mb-2'>Let’s Connect!</h1>
                     <p className='text-[#282828] text-[20px] mb-8 md:pr-[80px] pr-[0px]'>
@@ -152,22 +152,22 @@ const Bookademo = () => {
                         Join us for a brief 15-minute session where we’ll understand your specific requirements and demonstrate how AppStorys can help you accelerate engagement and drive revenue through tailored solutions.
                     </p>
                     <div className=' hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
-                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                        <div className='bg-white py-5 px-5 rounded-lg border-2 border-[#FD5F03]'>
                             <img src={bookademogroup1.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
                             <h3 className='font-bold mb-1'>Book a Demo</h3>
                             <p className='text-sm mb-2'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
                         </div>
-                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                        <div className='bg-white py-5 px-5 rounded-lg border-2 border-[#FD5F03]'>
                             <img src={bookademogroup2.src} alt="bookademogroup2" width={50} height={50} className='mb-1' />
                             <h3 className='font-bold mb-1'>Have questions? Contact Us</h3>
                             <p className='text-sm mb-2'>If you have any questions or just want to say “Hi”, we’d love to connect with you.</p>
                         </div>
-                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                        <div className='bg-white py-5 px-5 rounded-lg border-2 border-[#FD5F03]'>
                             <img src={bookademogroup3.src} alt="bookademogroup3" width={50} height={50} className='mb-1' />
                             <h3 className='font-bold mb-1'>Discover our platform</h3>
                             <p className='text-sm mb-2'>See all features live in a demo App connected to our powerful dashboard and understand how we can achieve your target KPIs</p>
                         </div>
-                        <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#FD5F03]'>
+                        <div className='bg-white py-5 px-5 rounded-lg border-2 border-[#FD5F03]'>
                             <img src={bookademogroup4.src} alt="bookademogroup4" width={50} height={50} className='mb-1' />
                             <h3 className='font-bold mb-1'>Media Enquiry/Partnerships</h3>
                             <p className='text-sm mb-2'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
@@ -187,7 +187,7 @@ const Bookademo = () => {
                                             className="w-full flex-shrink-0 flex items-center justify-center p-8 md:p-12 "
                                         >
                                             <div className="text-center">
-                                                <p className=" text-lg md:text-xl leading-relaxed text-[16px] ">
+                                                <p className=" leading-relaxed text-[16px] ">
                                                     {testimonial.text}
                                                 </p>
                                             </div>
@@ -213,7 +213,7 @@ const Bookademo = () => {
                     </div>
                 </div>
 
-                <div className='bg-white rounded-2xl ml-[10px]'>
+                <div className='bg-white rounded-2xl ml-[10px] border-2 border-[#FD5F03]'>
                     <div className="calendly-container w-full h-[900px] overflow-hidden rounded-2xl">
                         <div
                             className="calendly-inline-widget w-full h-full"
@@ -224,22 +224,22 @@ const Bookademo = () => {
             </div>
             <div>
                 <div className='grid visible md:hidden grid-cols-1 md:grid-cols-2 gap-2 justify-center px-10 mb-5'>
-                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                    <div className='bg-white py-5 px-5 rounded-lg  border-2 border-[#FD5F03]'>
                         <img src={bookademogroup1.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
                         <h3 className='font-bold mb-1'>Book a Demo</h3>
                         <p className='text-sm mb-2'>A quick 15 minute demo to show you the power of AppStorys. Explore all features, a quick walkthrough of the dashboard and understand how we can help you improve your core App metrics.</p>
                     </div>
-                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                    <div className='bg-white py-5 px-5 rounded-lg  border-2 border-[#FD5F03]'>
                         <img src={bookademogroup2.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
                         <h3 className='font-bold mb-1'>Have questions? Contact Us</h3>
                         <p className='text-sm mb-2'>If you have any questions or just want to say “Hi”, we’d love to connect with you.</p>
                     </div>
-                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                    <div className='bg-white py-5 px-5 rounded-lg  border-2 border-[#FD5F03]'>
                         <img src={bookademogroup3.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
                         <h3 className='font-bold mb-1'>Discover our platform</h3>
                         <p className='text-sm mb-2'>See all features live in a demo App connected to our powerful dashboard and understand how we can achieve your target KPIs</p>
                     </div>
-                    <div className='bg-white py-5 px-5 rounded-lg shadow-lg border-2 border-[#f8d6c5]'>
+                    <div className='bg-white py-5 px-5 rounded-lg  border-2 border-[#FD5F03]'>
                         <img src={bookademogroup4.src} alt="bookademogroup1" width={50} height={50} className='mb-1' />
                         <h3 className='font-bold mb-1'>Media Enquiry/Partnerships</h3>
                         <p className='text-sm mb-2'>Part of a media group or have a partnership proposal? Our marketing & partnerships team would love to hear you out.</p>
@@ -261,7 +261,7 @@ const Bookademo = () => {
                                         className="w-full flex-shrink-0 flex items-center justify-center p-8 md:p-12 "
                                     >
                                         <div className="text-center">
-                                            <p className=" text-lg md:text-xl leading-relaxed text-[16px]">
+                                            <p className=" leading-relaxed text-[16px]">
                                                 {testimonial.text}
                                             </p>
                                         </div>
@@ -307,9 +307,9 @@ const Bookademo = () => {
                                 </h3>
                                 <div className="flex-shrink-0">
                                     {openIndex === index ? (
-                                        <IoRemove className="w-6 h-6 text-[#FD5F03]  transition-transform duration-200" />
+                                        <FaChevronUp className="w-4 h-4 md:w-6 md:h-6 text-[#FD5F03]  transition-transform duration-200" />
                                     ) : (
-                                        <IoAdd className="w-6 h-6 text-[#FD5F03] transition-transform duration-200" />
+                                        <FaChevronDown className="w-4 h-4 md:w-6 md:h-6 text-[#FD5F03] transition-transform duration-200" />
                                     )}
                                 </div>
                             </button>
