@@ -1,6 +1,6 @@
 // app/surveys/page.js
 export const metadata = {
-    title: "Surveys | In-App Feedback Collection Tool | AppStorys",
+    title: "Bottomsheet | In-App Feedback Collection Tool | AppStorys",
     description: "Add engaging, customizable surveys to your app with AppStorys. Collect valuable user feedback, gather insights, and improve your product with interactive survey tools.",
     keywords: "app surveys, in-app surveys, feedback collection, user insights, survey tools, mobile surveys, data collection, AppStorys features, customer feedback",
     openGraph: {
