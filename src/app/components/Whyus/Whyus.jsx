@@ -256,7 +256,7 @@ const Whyus = () => {
                 <h1 className={`font-sf-pro text-[30px] md:text-[56px] font-medium capitalize text-center mb-2 leading-none`}>Advanced Features</h1>
                 <div className='mx-auto'>
                     <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 justify-evenly'>
-                        <div className='h-[450px] w-[360px] scale-[0.88] md:scale-[0.9] md:w-[370px]'>
+                        <div className='h-[450px] w-[370px] scale-[0.9]'>
                             <TiltedCard>
                                 <div className="h-full w-full px-7 py-10  rounded-2xl">
                                     <h3 className={`font-sf-pro font-medium card-whyus-heading pb-1 -mt-2 text-[23px] capitalize mb-2`}>Security #1 Priority</h3>
