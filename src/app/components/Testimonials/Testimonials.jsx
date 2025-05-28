@@ -79,7 +79,7 @@
 //               }}
 //             />
 //           )}
-          
+
 //           {/* Next Card (Right) - Hidden on smallest screens */}
 //           {currentIndex < testimonials.length - 1 && (
 //             <div 
@@ -91,7 +91,7 @@
 //               }}
 //             />
 //           )}
-          
+
 //           {/* Current Card (Center) */}
 //           <div 
 //             className="absolute top-0 left-1/2 w-full sm:w-[85%] h-[340px] sm:h-[280px] md:h-[340px] rounded-[13px] border border-white/24 z-20 p-4 sm:p-8 md:p-12 flex flex-col justify-between"
@@ -111,12 +111,12 @@
 //                 className="h-4 sm:h-5 md:h-6 w-auto"
 //               />
 //             </div>
-            
+
 //             {/* Testimonial Text - Adjusted font sizes and overflow handling */}
 //             <div className="text-white text-base sm:text-lg md:text-xl mb-4 sm:mb-8 pt-6 sm:pt-8  max-h-[300px] sm:max-h-[320px] md:max-h-[180px] pr-2">
 //               <p>{testimonials[currentIndex].text}</p>
 //             </div>
-            
+
 //             {/* Author Info */}
 //             <div>
 //               <p className="text-[#FFF] text-sm sm:text-base md:text-[16px] font-normal">
@@ -200,14 +200,14 @@
 //   useEffect(() => {
 //     // Don't auto-slide when the user is hovering
 //     if (isHovered) return;
-    
+
 //     const slideInterval = setInterval(() => {
 //       // Advance to next slide, or go back to the first slide if at the end
 //       setCurrentIndex(prevIndex => 
 //         prevIndex < testimonials.length - 1 ? prevIndex + 1 : 0
 //       );
 //     }, 3000); // 3 seconds per slide
-    
+
 //     // Clean up interval on component unmount
 //     return () => clearInterval(slideInterval);
 //   }, [isHovered, testimonials.length]);
@@ -273,14 +273,14 @@
 //               index === (currentIndex + 1) % testimonials.length
 //             ) position = 'right';
 //             else position = 'hidden';
-            
+
 //             // Only render cards that are visible
 //             if (position === 'hidden' && window.innerWidth < 640) return null;
-            
+
 //             // Style based on position
 //             let cardStyle = {};
 //             let cardClass = "absolute top-0 rounded-[13px] border border-white/24 transition-all duration-500";
-            
+
 //             if (position === 'center') {
 //               cardStyle = {
 //                 left: '50%',
@@ -324,7 +324,7 @@
 //                 position: 'absolute',
 //               };
 //             }
-            
+
 //             return (
 //               <div
 //                 key={testimonial.id}
@@ -343,12 +343,12 @@
 //                         className="h-4 sm:h-5 md:h-6 w-auto"
 //                       />
 //                     </div>
-                    
+
 //                     {/* Testimonial Text */}
 //                     <div className="text-white text-base sm:text-lg md:text-xl mb-4 sm:mb-8 pt-6 sm:pt-8 max-h-[300px] sm:max-h-[320px] md:max-h-[180px] pr-2">
 //                       <p>{testimonial.text}</p>
 //                     </div>
-                    
+
 //                     {/* Author Info */}
 //                     <div>
 //                       <p className="text-[#FFF] text-sm sm:text-base md:text-[16px] font-normal">
@@ -413,14 +413,14 @@ const TestimonialsSection = () => {
   // Initialize window width on client-side only
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-    
+
     // Add resize listener
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    
+
     window.addEventListener('resize', handleResize);
-    
+
     // Clean up
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -429,20 +429,20 @@ const TestimonialsSection = () => {
     {
       id: 1,
       text: '"AppStorys has revolutionized our user engagement. With the strategic placement of widgets and the floater, we can guide users to key actions seamlessly. Interaction rates have significantly increased, and our app now feels more intuitive and user-friendly than ever."',
-      author: 'PRIYA S.',
-      position: 'Product Manager At A Fintech App'
+      author: '',
+      position: 'Product Manager At SciPlay'
     },
     {
       id: 2,
       text: '"AppStorys has made a tremendous difference in how users interact with our app."',
-      author: 'MICHAEL T.',
-      position: 'CTO at Health Tech Startup'
+      author: '',
+      position: 'VP of Growth at BooHoo'
     },
     {
       id: 3,
       text: '"What stood out most about AppStorys was its effortless integration with our current setup. The in-depth analytics offer clear, actionable insights that continuously help us enhance the user journey."',
-      author: 'SARAH L.',
-      position: 'VP of Product at E-commerce Platform'
+      author: '',
+      position: 'Head of Growth at Lifeboost Coffee '
     }
   ];
 
@@ -450,14 +450,14 @@ const TestimonialsSection = () => {
   useEffect(() => {
     // Don't auto-slide when the user is hovering
     if (isHovered) return;
-    
+
     const slideInterval = setInterval(() => {
       // Advance to next slide, or go back to the first slide if at the end
-      setCurrentIndex(prevIndex => 
+      setCurrentIndex(prevIndex =>
         prevIndex < testimonials.length - 1 ? prevIndex + 1 : 0
       );
     }, 3000); // 3 seconds per slide
-    
+
     // Clean up interval on component unmount
     return () => clearInterval(slideInterval);
   }, [isHovered, testimonials.length]);
@@ -495,7 +495,7 @@ const TestimonialsSection = () => {
           <h3 className={`${satisfy.className} text-xl sm:text-2xl text-white mb-2`}>
             Testimonials
           </h3>
-          <h2 
+          <h2
             className="text-white text-3xl sm:text-4xl md:text-[48px] font-medium px-4"
             style={{
               fontFamily: '"SF Pro Display", sans-serif',
@@ -508,7 +508,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Responsive container for stacked cards - Added hover detection */}
-        <div 
+        <div
           className="relative mx-auto h-[440px] sm:h-[320px] md:h-[400px] w-full max-w-[320px] sm:max-w-[500px] md:max-w-[720px] pb-16"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -530,14 +530,14 @@ const TestimonialsSection = () => {
               index === (currentIndex + 1) % testimonials.length
             ) position = 'right';
             else position = 'hidden';
-            
+
             // Only render cards that are visible
             if (position === 'hidden' && windowWidth < 640) return null;
-            
+
             // Style based on position
             let cardStyle = {};
             let cardClass = "absolute top-0 rounded-[13px] border border-white/24 transition-all duration-500";
-            
+
             if (position === 'center') {
               cardStyle = {
                 left: '50%',
@@ -581,7 +581,7 @@ const TestimonialsSection = () => {
                 position: 'absolute',
               };
             }
-            
+
             return (
               <div
                 key={testimonial.id}
@@ -592,20 +592,20 @@ const TestimonialsSection = () => {
                   <>
                     {/* Stars in top right */}
                     <div className="absolute top-4 sm:top-8 md:top-8 right-4 sm:right-8 md:right-12">
-                      <Image 
+                      <Image
                         src={star}
-                        alt="5 Star Rating" 
-                        width={120} 
+                        alt="5 Star Rating"
+                        width={120}
                         height={24}
                         className="h-4 sm:h-5 md:h-6 w-auto"
                       />
                     </div>
-                    
+
                     {/* Testimonial Text */}
                     <div className="text-white text-base sm:text-lg md:text-xl mb-4 sm:mb-8 pt-6 sm:pt-8 max-h-[300px] sm:max-h-[320px] md:max-h-[180px] pr-2">
                       <p>{testimonial.text}</p>
                     </div>
-                    
+
                     {/* Author Info */}
                     <div>
                       <p className="text-[#FFF] text-sm sm:text-base md:text-[16px] font-normal">
@@ -623,8 +623,8 @@ const TestimonialsSection = () => {
 
           {/* Navigation Controls - Fixed positioning */}
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center items-center gap-2 mt-6">
-            <button 
-              onClick={prevSlide} 
+            <button
+              onClick={prevSlide}
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center border border-white/30 text-white hover:bg-white/10"
               style={{
                 background: 'linear-gradient(90deg, rgba(132, 77, 10, 0.4) 0%, rgba(21, 21, 23, 0.2) 100%)'
@@ -632,8 +632,8 @@ const TestimonialsSection = () => {
             >
               <IoIosArrowBack size={18} className="sm:text-lg md:text-xl" />
             </button>
-            <button 
-              onClick={nextSlide} 
+            <button
+              onClick={nextSlide}
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center border border-white/30 text-white hover:bg-white/10"
               style={{
                 background: 'linear-gradient(90deg, rgba(21, 21, 23, 0.2) 0%, rgba(132, 77, 10, 0.4) 100%)'

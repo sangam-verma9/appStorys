@@ -763,8 +763,7 @@ const Header = ({ style }) => {
                         </h4>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -779,12 +778,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               mParticle
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -799,12 +797,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               CleverTap
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -819,12 +816,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               MoEngage
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -839,7 +835,7 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               Custom Audiences
                             </span>
-                          </Link>
+                          </div>
                         </div>
                       </div>
 
@@ -879,35 +875,63 @@ const Header = ({ style }) => {
                             </span>
                           </div>
                         </div>
+                        <div className="border-t border-gray-200">
+                          <div className="flex items-center gap-3 p-3">
+                            <span className="text-base text-gray-800">
+                              Goals & Impact Measurement
+                            </span>
+                          </div>
+                        </div>
                       </div>
 
                       <div className="py-2">
                         <h4 className="p-3 text-base font-medium">
-                          Goals & Impact Measurement
+                          Use Cases
                         </h4>
 
                         <div className="border-t border-gray-200">
-                          <div className="flex items-center gap-3 p-3">
-                            <span className="text-base text-gray-800">
-                              Setup Goals
+                          <Link
+                            href="/adoption"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <LuHeartHandshake className="text-green-500 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Adoption
                             </span>
-                          </div>
+                          </Link>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <div className="flex items-center gap-3 p-3">
-                            <span className="text-base text-gray-800">
-                              Measure Impact
+                          <Link
+                            href="/activation"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <AiTwotoneThunderbolt className="text-yellow-500 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Activation
                             </span>
-                          </div>
+                          </Link>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <div className="flex items-center gap-3 p-3">
-                            <span className="text-base text-gray-800">
-                              Goal-Based Event Tracking
+                          <Link
+                            href="/feedback"
+                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
+                            onClick={handleOptionClick}
+                          >
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <MdFeedback className="text-blue-500 text-xl" />
+                            </div>
+                            <span className="text-base text-gray-800 ml-2">
+                              Feedback
                             </span>
-                          </div>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1099,51 +1123,6 @@ const Header = ({ style }) => {
 
                       <div className="py-2">
                         <h4 className="p-3 text-base font-medium">Resources</h4>
-
-                        <div className="border-t border-gray-200">
-                          <Link
-                            href="/adoption"
-                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
-                          >
-                            <div className="w-6 h-6 flex items-center justify-center">
-                              <LuHeartHandshake className="text-green-500 text-xl" />
-                            </div>
-                            <span className="text-base text-gray-800 ml-2">
-                              Adoption
-                            </span>
-                          </Link>
-                        </div>
-
-                        <div className="border-t border-gray-200">
-                          <Link
-                            href="/activation"
-                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
-                          >
-                            <div className="w-6 h-6 flex items-center justify-center">
-                              <AiTwotoneThunderbolt className="text-yellow-500 text-xl" />
-                            </div>
-                            <span className="text-base text-gray-800 ml-2">
-                              Activation
-                            </span>
-                          </Link>
-                        </div>
-
-                        <div className="border-t border-gray-200">
-                          <Link
-                            href="/feedback"
-                            className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
-                          >
-                            <div className="w-6 h-6 flex items-center justify-center">
-                              <MdFeedback className="text-blue-500 text-xl" />
-                            </div>
-                            <span className="text-base text-gray-800 ml-2">
-                              Feedback
-                            </span>
-                          </Link>
-                        </div>
 
                         <div className="border-t border-gray-200">
                           <Link
@@ -1685,30 +1664,59 @@ const Header = ({ style }) => {
                       <span>Automated Growth Journeys</span>
                     </Link>
 
+                    <Link
+                      href="#"
+                      className="flex items-center py-2"
+                      onClick={handleOptionClick}
+                    >
+                      <span>GOALS & IMPACT MEASUREMENT</span>
+                    </Link>
+
                     <h5 className="font-medium text-gray-700 mt-3 mb-1">
-                      GOALS & IMPACT MEASUREMENT
+                      USE CASES
                     </h5>
-                    <Link
-                      href="#"
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/adoption');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
-                      <span>Setup Goals</span>
-                    </Link>
-                    <Link
-                      href="#"
+                      <LuHeartHandshake className="text-green-500 text-xl w-5 h-5 mr-2" />
+                      <span>Adoption</span>
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/activation');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
-                      <span>Measure Impact</span>
-                    </Link>
-                    <Link
-                      href="#"
+                      <AiTwotoneThunderbolt className="text-yellow-500 text-xl w-5 h-5 mr-2" />
+                      <span>Activation</span>
+                    </div>
+                    <div
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        router.push('/feedback');
+                        setTimeout(() => {
+                          handleOptionClick();
+                        }, 100);
+                      }}
                     >
-                      <span>Goal-Based Event Tracking</span>
-                    </Link>
+                      <MdFeedback className="text-blue-500 text-xl w-5 h-5 mr-2" />
+                      <span>Feedback</span>
+                    </div>
                   </div>
                 )}
               </div>
@@ -1821,48 +1829,7 @@ const Header = ({ style }) => {
                     <h5 className="font-medium text-gray-700 mt-3 mb-1">
                       RESOURCES
                     </h5>
-                    <div
-                      className="flex items-center py-2"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        router.push('/adoption');
-                        setTimeout(() => {
-                          handleOptionClick();
-                        }, 100);
-                      }}
-                    >
-                      <LuHeartHandshake className="text-green-500 text-xl w-5 h-5 mr-2" />
-                      <span>Adoption</span>
-                    </div>
-                    <div
-                      className="flex items-center py-2"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        router.push('/activation');
-                        setTimeout(() => {
-                          handleOptionClick();
-                        }, 100);
-                      }}
-                    >
-                      <AiTwotoneThunderbolt className="text-yellow-500 text-xl w-5 h-5 mr-2" />
-                      <span>Activation</span>
-                    </div>
-                    <div
-                      className="flex items-center py-2"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        router.push('/feedback');
-                        setTimeout(() => {
-                          handleOptionClick();
-                        }, 100);
-                      }}
-                    >
-                      <MdFeedback className="text-blue-500 text-xl w-5 h-5 mr-2" />
-                      <span>Feedback</span>
-                    </div>
+                    
                     <div
                       className="flex items-center py-2"
                       onClick={(e) => {

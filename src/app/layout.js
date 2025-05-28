@@ -57,7 +57,7 @@ export const metadata = {
   title: "AppStorys - Better In-App User Experiences",
   description: "Discover AppStorys, a SaaS platform that boosts app engagement with stories, PiP videos, banners, and more. Drive growth seamlessly with interactive tools.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
     // apple: "/apple-icon.png", 
     // shortcut: "/favicon.png",
   },
