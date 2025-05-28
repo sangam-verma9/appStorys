@@ -4,10 +4,10 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureWidget from '../../assets/feature_Widget.png';
-import widgetBanner1 from '../../assets/widget_banner_1.png';
-import widgetBanner2 from '../../assets/widget_banner_2.png';
-import widgetBanner3 from '../../assets/widget_banner_3.png';
+import featureWidget from '../../assets/feature_bottomsheet.png';
+import widgetBanner1 from '../../assets/bottomsheet_banner_1.png';
+import widgetBanner2 from '../../assets/bottomsheet_banner_2.png';
+import widgetBanner3 from '../../assets/bottomsheet_banner_3.png';
 import Link from "next/link";
 
 export default function BottomSheet() {
@@ -31,10 +31,10 @@ export default function BottomSheet() {
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-3">
               <h1 className="text-4xl md:text-5xl lg:text-[59px] text-black font-semibold leading-tight md:leading-[0.97]">
-                Boost Engagement with Interactive BottomSheets
+                Boost Engagement with Interactive Bottom Sheets
               </h1>
               <p className="text-black text-base md:text-lg max-w-[500px] mt-6">
-                Elevate your app with custom BottomSheets designed for personalized, interactive experiences. Seamlessly integrate and tailor them to match your app’s style, enhancing user engagement and overall performance.
+                Elevate your app with custom Bottom Sheets designed for personalized, interactive experiences. Seamlessly integrate and tailor them to match your app’s style, enhancing user engagement and overall performance.
               </p>
               <Link
                 className="rounded-full bg-[#FF5E00] text-white px-8 py-3 text-sm font-bold tracking-wider flex items-center gap-2 mt-8"

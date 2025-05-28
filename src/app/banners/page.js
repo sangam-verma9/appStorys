@@ -72,7 +72,7 @@ export default function Banners() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-16">
           <div className="flex flex-col gap-16">
             {/* Feature 1 */}
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
+            <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
@@ -134,7 +134,7 @@ export default function Banners() {
             </div>
 
             {/* Feature 3 */}
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
+            <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
