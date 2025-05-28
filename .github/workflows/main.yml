@@ -43,7 +43,7 @@ jobs:
 
       - name: Deploy exported static files to EC2
         run: |
-          rsync -avz --no-times \
+          rsync -avz --no-times --no-perms \
             -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa" \
             out/ \
             ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/appstorys
