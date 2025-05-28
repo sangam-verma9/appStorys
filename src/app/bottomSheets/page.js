@@ -4,10 +4,10 @@ import Image from "next/image";
 import React from 'react';
 import FeatureTicker from "../components/FeatureTicker";
 import StepsSection from "../components/StepsSection";
-import featureWidget from '../../assets/feature_bottomsheet.png';
-import widgetBanner1 from '../../assets/bottomsheet_banner_1.png';
-import widgetBanner2 from '../../assets/bottomsheet_banner_2.png';
-import widgetBanner3 from '../../assets/bottomsheet_banner_3.png';
+import featurebottomsheet from '../../assets/feature_bottomsheet.png';
+import bottomsheetBanner1 from '../../assets/bottomsheet_banner_1.png';
+import bottomsheetBanner2 from '../../assets/bottomsheet_banner_2.png';
+import bottomsheetBanner3 from '../../assets/bottomsheet_banner_3.png';
 import Link from "next/link";
 
 export default function BottomSheet() {
@@ -20,7 +20,7 @@ export default function BottomSheet() {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] w-auto">
                 <Image
-                  src={featureWidget}
+                  src={featurebottomsheet}
                   alt="AppStorys feature widget"
                   width={400}
                   height={502}
@@ -71,7 +71,7 @@ export default function BottomSheet() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={widgetBanner1}
+                    src={bottomsheetBanner1}
                     alt="AppStorys widget banner 1"
                     width={400}
                     height={421}
@@ -117,7 +117,7 @@ export default function BottomSheet() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={widgetBanner2}
+                    src={bottomsheetBanner2}
                     alt="AppStorys widget banner 2"
                     width={400}
                     height={421}
@@ -133,7 +133,7 @@ export default function BottomSheet() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-auto">
                   <Image
-                    src={widgetBanner3}
+                    src={bottomsheetBanner3}
                     alt="AppStorys widget banner 3"
                     width={400}
                     height={421}
