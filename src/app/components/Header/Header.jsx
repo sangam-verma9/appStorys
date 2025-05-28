@@ -326,7 +326,7 @@ const Header = ({ style }) => {
                               <p
                                 className={`text-xs sf-pro text-gray-500`}
                               >
-                                Rich media bite sized content
+                                Boost Engagement With Interactive Bottom Sheet
                               </p>
                             </div>
                             <FaArrowRight
@@ -962,8 +962,7 @@ const Header = ({ style }) => {
                         <h4 className="p-3 text-base font-medium">Mobile</h4>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -973,12 +972,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               iOS
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -988,12 +986,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               Android
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1003,12 +1000,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               React Native
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1023,12 +1019,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               Flutter
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1038,12 +1033,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               React.js
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1053,7 +1047,7 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               Angular
                             </span>
-                          </Link>
+                          </div>
                         </div>
                       </div>
 
@@ -1061,8 +1055,7 @@ const Header = ({ style }) => {
                         <h4 className="p-3 text-base font-medium">Web</h4>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1072,12 +1065,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               React.js
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1087,12 +1079,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               Angular
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1102,12 +1093,11 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               Wordpress
                             </span>
-                          </Link>
+                          </div>
                         </div>
 
                         <div className="border-t border-gray-200">
-                          <Link
-                            href="#"
+                          <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1117,7 +1107,7 @@ const Header = ({ style }) => {
                             <span className="text-base text-gray-800 ml-2">
                               Shopify
                             </span>
-                          </Link>
+                          </div>
                         </div>
                       </div>
 
@@ -1156,7 +1146,7 @@ const Header = ({ style }) => {
 
                         <div className="border-t border-gray-200">
                           <Link
-                            href="/ebook"
+                            href="/AppStoryseBook.pdf"
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
