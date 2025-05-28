@@ -306,7 +306,7 @@ const FeatureCarousel = () => {
 
   return (
     <div className="w-full bg-[#FFF7F3]">
-      <div className="sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1200px] py-8 md:py-12 lg:py-16 flex flex-col justify-center mx-auto px-4 sm:px-6 md:px-0">
+      <div className="sm:w-[95%] md:w-[90%] lg:w-[85%] xl:w-[1200px] py-2 md:py-5 flex flex-col justify-center mx-auto px-4 sm:px-6 md:px-0">
         <h3 className={`text-[#FD5F03] text-[22px] md:text-[26px] text-center ${satisfy.className}`}>Core Features</h3>
         <h1 className="font-sf-pro text-[32px] font-medium sm:text-[38px] md:text-[46px] lg:text-[56px] capitalize text-center mb-8 md:mb-16 leading-tight -mt-[5px]">
           Incredible User Experiences

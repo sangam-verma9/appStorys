@@ -326,7 +326,7 @@ const Header = ({ style }) => {
                               <p
                                 className={`text-xs sf-pro text-gray-500`}
                               >
-                                Boost Engagement With Interactive Bottom Sheet
+                                Boost Engagement With Interactive Bottom Sheets
                               </p>
                             </div>
                             <FaArrowRight

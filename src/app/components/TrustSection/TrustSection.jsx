@@ -13,7 +13,7 @@ const satisfy = Satisfy({ subsets: ['latin'], weight: ['400'] });
 const TrustSection = () => {
 
   const boxImages = [
-    t1,  
+    t1,
     t2,
     t3,
     t4
@@ -26,18 +26,18 @@ const TrustSection = () => {
         {/* <h3 className={`${satisfy.className} text-[#FD5F03] text-2xl mb-2`}>
           How It Works
         </h3> */}
-        <h2 className="text-4xl md:text-5xl font-medium leading-tight">
+        <h2 className="text-2xl md:text-5xl font-medium leading-tight">
           AppStorys is <br></br>
-           trusted by developers globally
+          trusted by developers globally
         </h2>
       </div>
 
       {/* Left Side - Direct Box Images */}
       <div className="flex flex-wrap justify-center gap-1 md:gap-0 order-last md:order-first">
         {boxImages.map((image, index) => (
-          <Image 
+          <Image
             key={index}
-            src={image} 
+            src={image}
             alt={`Certification ${index + 1}`}
             className="w-[150px] h-[150px] md:w-[150px] md:h-[150px] object-contain"
           />
@@ -65,7 +65,7 @@ export default TrustSection;
 // const TrustSection = () => {
 
 //   const boxImages = [
-//     t1,  
+//     t1,
 //     t2,
 //     t3,
 //     t4
@@ -78,7 +78,7 @@ export default TrustSection;
 //         <h3 className={`${satisfy.className} text-[#FD5F03] text-2xl mb-2`}>
 //           How It Works
 //         </h3>
-//         <h2 
+//         <h2
 //           className="text-black text-[40px] md:text-[50.287px] font-medium capitalize"
 //           style={{
 //             fontFamily: '"SF Pro Display", sans-serif',
@@ -93,9 +93,9 @@ export default TrustSection;
 //       {/* Left Side - Direct Box Images */}
 //       <div className="flex flex-wrap justify-center gap-1 md:gap-0 order-last md:order-first">
 //         {boxImages.map((image, index) => (
-//           <Image 
+//           <Image
 //             key={index}
-//             src={image} 
+//             src={image}
 //             alt={`Certification ${index + 1}`}
 //             className="w-[150px] h-[150px] md:w-[150px] md:h-[150px] object-contain"
 //           />

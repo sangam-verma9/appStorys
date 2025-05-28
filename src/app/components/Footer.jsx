@@ -131,8 +131,8 @@ const Footer = () => {
           <div><p className={` font-extralight text-[14px] mb-5 sm:mb-0`}>2025 AppStorys Inc. All rights reserved</p></div>
           <div><p className={` text-[18px] mb-5 sm:mb-0`}>Made with ❤️ in USA & India</p></div>
           <div className='flex w-[20%] justify-end'>
-            <img src={footer_img1.src} height={10} width={40} alt='footer img 1' className='mx-4' />
-            <img src={footer_img2.src} height={10} width={50} alt='footer img 2' />
+            <img src={footer_img1.src} height={15} width={50} alt='footer img 1' className='mx-4' />
+            <img src={footer_img2.src} height={15} width={65} alt='footer img 2' />
           </div>
         </div>
       </div>
