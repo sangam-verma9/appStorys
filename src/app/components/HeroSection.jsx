@@ -142,7 +142,7 @@ const HeroSection = () => {
           </div>
 
           {/* Call-to-action button with increased width */}
-          <div className="flex justify-center md:mt-8">
+          <div className="flex justify-center mt-8">
             <Link href={"/bookademo"} >
               <InteractiveHoverButton
                 className="bg-[#FD5F03] text-white w-[200px] h-[58.61px] font-medium text-xl border-2 border-[#FD5F03]"

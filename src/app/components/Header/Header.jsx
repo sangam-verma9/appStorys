@@ -1185,7 +1185,7 @@ const Header = ({ style }) => {
                               <TbNotebook className="text-black-600 text-xl" />
                             </div>
                             <span className="text-base text-gray-800 ml-2">
-                              Ebook
+                              eBook
                             </span>
                           </Link>
                         </div>
@@ -1903,7 +1903,7 @@ const Header = ({ style }) => {
                       }}
                     >
                       <TbNotebook className="text-black-500 text-xl w-5 h-5 mr-2" />
-                      <span>Ebook</span>
+                      <span>eBook</span>
                     </div>
                   </div>
 

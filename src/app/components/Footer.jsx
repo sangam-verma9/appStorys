@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import React from 'react'
 import logo from "@/assets/favicon.png";
-import { Outfit, Bricolage_Grotesque, Poppins } from 'next/font/google';
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -15,13 +14,6 @@ import store from "../store/store";
 import ContactModal from './ContactModal';
 
 
-
-const outfit = Outfit({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
-const bricolageGrotesque = Bricolage_Grotesque({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600', '700', '800'] });
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-});
 // sm: px - 14 md: px - 20 lg: px - 32 xl: px - 40 px - 10
 const Footer = () => {
   const { setRequestDemoClick, isContactModalOpen, openContactModal, closeContactModal } = store();

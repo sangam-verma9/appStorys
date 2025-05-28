@@ -23,7 +23,7 @@
 //     stiffness: 100,
 //     mass: 2,
 //   };
-  
+
 //   const rotateX = useSpring(0, springConfig);
 //   const rotateY = useSpring(0, springConfig);
 //   const scale = useSpring(1, springConfig);
@@ -31,15 +31,15 @@
 //   function handleMouse(e) {
 //     if (!ref.current) return;
 //     const rect = ref.current.getBoundingClientRect();
-    
+
 //     // Calculate mouse position relative to card center
 //     const offsetX = e.clientX - rect.left - rect.width / 2;
 //     const offsetY = e.clientY - rect.top - rect.height / 2;
-    
+
 //     // Calculate rotation based on mouse position
 //     const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
 //     const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
-    
+
 //     rotateX.set(rotationX);
 //     rotateY.set(rotationY);
 //   }
@@ -96,7 +96,7 @@
 //                                 </div>
 //                             </TiltedCard>
 //                         </div>
-                        
+
 //                         <div className='h-[460px] w-[380px] scale-[0.9]'>
 //                             <TiltedCard>
 //                                 <div className="h-full w-full px-7 py-10">
@@ -109,7 +109,7 @@
 //                                 </div>
 //                             </TiltedCard>
 //                         </div>
-                        
+
 //                         <div className='h-[460px] w-[380px] scale-[0.9]'>
 //                             <TiltedCard>
 //                                 <div className="h-full w-full px-7 py-10">
@@ -123,7 +123,7 @@
 //                                 </div>
 //                             </TiltedCard>
 //                         </div>
-                        
+
 //                         <div className='h-[460px] w-[380px] scale-[0.9] lg:-mt-5'>
 //                             <TiltedCard>
 //                                 <div className="h-full w-full px-7 py-10">
@@ -137,7 +137,7 @@
 //                                 </div>
 //                             </TiltedCard>
 //                         </div>
-                        
+
 //                         <div className='h-[460px] w-[380px] scale-[0.9] lg:-mt-5'>
 //                             <TiltedCard>
 //                                 <div className="h-full w-full px-7 py-10">
@@ -150,7 +150,7 @@
 //                                 </div>
 //                             </TiltedCard>
 //                         </div>
-                        
+
 //                         <div className='h-[460px] w-[380px] scale-[0.9] lg:-mt-5'>
 //                             <TiltedCard>
 //                                 <div className="h-full w-full px-7 py-10">
@@ -189,63 +189,63 @@ const bricolageGrotesque = Bricolage_Grotesque({ subsets: ['latin'], weight: ['2
 const satisfy = Satisfy({ subsets: ['latin'], weight: ['400'] });
 
 const TiltedCard = ({ children, rotateAmplitude = 12, scaleOnHover = 1.05 }) => {
-  const ref = useRef(null);
-  const springConfig = {
-    damping: 30,
-    stiffness: 100,
-    mass: 2,
-  };
-  
-  const rotateX = useSpring(0, springConfig);
-  const rotateY = useSpring(0, springConfig);
-  const scale = useSpring(1, springConfig);
+    const ref = useRef(null);
+    const springConfig = {
+        damping: 30,
+        stiffness: 100,
+        mass: 2,
+    };
 
-  function handleMouse(e) {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    
-    // Calculate mouse position relative to card center
-    const offsetX = e.clientX - rect.left - rect.width / 2;
-    const offsetY = e.clientY - rect.top - rect.height / 2;
-    
-    // Calculate rotation based on mouse position
-    const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
-    const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
-    
-    rotateX.set(rotationX);
-    rotateY.set(rotationY);
-  }
+    const rotateX = useSpring(0, springConfig);
+    const rotateY = useSpring(0, springConfig);
+    const scale = useSpring(1, springConfig);
 
-  function handleMouseEnter() {
-    scale.set(scaleOnHover);
-  }
+    function handleMouse(e) {
+        if (!ref.current) return;
+        const rect = ref.current.getBoundingClientRect();
 
-  function handleMouseLeave() {
-    scale.set(1);
-    rotateX.set(0);
-    rotateY.set(0);
-  }
+        // Calculate mouse position relative to card center
+        const offsetX = e.clientX - rect.left - rect.width / 2;
+        const offsetY = e.clientY - rect.top - rect.height / 2;
 
-  return (
-    <motion.div
-      ref={ref}
-      className="h-full w-full [perspective:1200px]"
-      onMouseMove={handleMouse}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <motion.div
-        className="h-full w-full rounded-3xl bg-white border border-[#DEDFE3] shadow-[2px_4px_38px_0px_rgba(0,0,0,0.07)] [transform-style:preserve-3d]"
-        style={{
-          rotateX,
-          rotateY,
-          scale,
-        }}
-      >
-        {children}
-      </motion.div>
-    </motion.div>
-  );
+        // Calculate rotation based on mouse position
+        const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
+        const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
+
+        rotateX.set(rotationX);
+        rotateY.set(rotationY);
+    }
+
+    function handleMouseEnter() {
+        scale.set(scaleOnHover);
+    }
+
+    function handleMouseLeave() {
+        scale.set(1);
+        rotateX.set(0);
+        rotateY.set(0);
+    }
+
+    return (
+        <motion.div
+            ref={ref}
+            className="h-full w-full [perspective:1200px]"
+            onMouseMove={handleMouse}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <motion.div
+                className="h-full w-full rounded-3xl bg-white border border-[#DEDFE3] shadow-[2px_4px_38px_0px_rgba(0,0,0,0.07)] [transform-style:preserve-3d]"
+                style={{
+                    rotateX,
+                    rotateY,
+                    scale,
+                }}
+            >
+                {children}
+            </motion.div>
+        </motion.div>
+    );
 };
 
 const Whyus = () => {
@@ -256,7 +256,7 @@ const Whyus = () => {
                 <h1 className={`font-sf-pro text-[30px] md:text-[56px] font-medium capitalize text-center mb-2 leading-none`}>Advanced Features</h1>
                 <div className='mx-auto'>
                     <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 justify-evenly'>
-                        <div className='h-[450px] w-[380px] scale-[0.9] '>
+                        <div className='h-[450px] w-[360px] scale-[0.88] md:scale-[0.9] md:w-[370px]'>
                             <TiltedCard>
                                 <div className="h-full w-full px-7 py-10  rounded-2xl">
                                     <h3 className={`font-sf-pro font-medium card-whyus-heading pb-1 -mt-2 text-[23px] capitalize mb-2`}>Security #1 Priority</h3>
@@ -268,8 +268,8 @@ const Whyus = () => {
                                 </div>
                             </TiltedCard>
                         </div>
-                        
-                        <div className='h-[450px] w-[380px] scale-[0.9]'>
+
+                        <div className='h-[450px] w-[370px] scale-[0.9]'>
                             <TiltedCard>
                                 <div className="h-full w-full px-7 py-10  rounded-2xl">
                                     <h3 className={`font-sf-pro font-medium card-whyus-heading pb-1 -mt-2 text-[23px] capitalize mb-2`}>Easy Audience segmentation</h3>
@@ -281,8 +281,8 @@ const Whyus = () => {
                                 </div>
                             </TiltedCard>
                         </div>
-                        
-                        <div className='h-[450px] w-[380px] scale-[0.9]'>
+
+                        <div className='h-[450px] w-[370px] scale-[0.9]'>
                             <TiltedCard>
                                 <div className="h-full w-full px-7 py-10  rounded-2xl">
                                     <h3 className={`font-sf-pro font-medium card-whyus-heading pb-1 -mt-2 text-[23px] capitalize mb-2`}>Real time Analysis</h3>
@@ -295,8 +295,8 @@ const Whyus = () => {
                                 </div>
                             </TiltedCard>
                         </div>
-                        
-                        <div className='h-[450px] w-[380px] scale-[0.9] lg:-mt-5'>
+
+                        <div className='h-[450px] w-[370px] scale-[0.9] lg:-mt-5'>
                             <TiltedCard>
                                 <div className="h-full w-full px-7 py-10  rounded-2xl">
                                     <h3 className={`font-sf-pro font-medium card-whyus-heading pb-1 -mt-2 text-[23px] capitalize mb-2`}>Quick Integration</h3>
@@ -309,8 +309,8 @@ const Whyus = () => {
                                 </div>
                             </TiltedCard>
                         </div>
-                        
-                        <div className='h-[450px] w-[380px] scale-[0.9] lg:-mt-5'>
+
+                        <div className='h-[450px] w-[370px] scale-[0.9] lg:-mt-5'>
                             <TiltedCard>
                                 <div className="h-full w-full px-7 py-10 rounded-2xl">
                                     <h3 className={`font-sf-pro font-medium card-whyus-heading pb-1 -mt-2 text-[23px] capitalize mb-2`}>Tailored campaigns</h3>
@@ -322,8 +322,8 @@ const Whyus = () => {
                                 </div>
                             </TiltedCard>
                         </div>
-                        
-                        <div className='h-[450px] w-[380px] scale-[0.9] lg:-mt-5'>
+
+                        <div className='h-[450px] w-[370px] scale-[0.9] lg:-mt-5'>
                             <TiltedCard>
                                 <div className="h-full w-full px-7 py-10  rounded-2xl">
                                     <h3 className={`font-sf-pro font-medium card-whyus-heading pb-1 -mt-2 text-[23px] capitalize mb-2`}>Powerful Dashboard</h3>

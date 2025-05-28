@@ -102,7 +102,7 @@ export const metadata = {
   authors: [{ name: "AppStorys Team" }],
   publisher: "AppStorys",
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#4f46e5",
+  // themeColor: "#4f46e5",
 };
 
 export default function RootLayout({ children }) {
