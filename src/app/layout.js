@@ -33,13 +33,13 @@
 //   );
 // }
 
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 import Script from "next/script";
 import TopBanner from "./topbanner/TopBanner";
+import ScrollToTop from './components/ScrollToTop'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -106,6 +106,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <head>
@@ -151,7 +152,10 @@ export default function RootLayout({ children }) {
         />
         <TopBanner />
         <Header />
-        <main>{children}</main>
+        <main>
+          <ScrollToTop />
+          {children}
+          </main>
         <Footer />
       </body>
     </html>

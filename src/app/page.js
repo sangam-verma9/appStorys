@@ -12,8 +12,14 @@ import HeroSection from "./components/HeroSection";
 import HyperPersonalization from "./components/HyperPersonalization";
 import SetupGoals from "./components/SetupGoals";
 import FrequencyScheduling from "./components/FrequencyAndScheduling";
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Home() {
+  const pathname = usePathname();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <HeroSection/>

@@ -23,7 +23,7 @@ const Adoption = () => {
                         <h3 className={`${satisfy.className} text-[#FD5F03] text-[20px] `}>Boost Feature Adoption with AppStorys</h3>
                         <p className='text-[50px] font-bold leading-none my-1'>Turn passive users into power users.</p>
                         <p className='lg:pr-[200px] mt-5'>Drive meaningful product engagement by guiding users to discover and adopt high-impact features—at the right moment.</p>
-                        <Link className='flex justify-center cursor-pointer items-center py-[14px] px-[20px]  gap-x-[8px] bg-[#FD5F03] text-white rounded-[25px] mt-[25px] text-[10px] font-semibold font-InstrumentSans tracking-[1px] lg:w-[35%]'
+                        <Link className='flex justify-center cursor-pointer items-center py-[14px] px-[20px]  gap-x-[8px] bg-[#FD5F03] text-white rounded-[25px] mt-[25px] text-[12px] font-semibold font-InstrumentSans tracking-[1px] lg:w-[35%]'
                             href={"/bookademo"}>
                             <div className='h-[5px] w-[5px] bg-white rounded-full'></div>
                             Request A Demo
@@ -35,7 +35,7 @@ const Adoption = () => {
             <div className='grid lg:grid-cols-2 bg-[#fff] sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-8 mx-auto items-center'>
                 <div className='flex flex-col mb-10 lg:mb-0'>
                     <h2 className='mb-4 font-bold text-[30px]'>Key Features</h2>
-                    <div className='flex flex-col pr-[50px]'>
+                    <div className='flex flex-col pr-[50px] gap-y-5'>
                         <div className='flex'>
                             <img src={key_points.src} alt="point" className='w-[20px] h-[20px] mr-4 mt-2' />
                             <p><span className='font-bold'>Contextual In-App Messages</span><br />Surface tooltips, nudges, and spotlights to promote features exactly when users need them.</p>
