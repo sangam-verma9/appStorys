@@ -7,7 +7,7 @@ import Image from 'next/image';
 import "./FeatureCard.css"
 
 // Import all feature images
-import sc1 from "../../../assets/sc1.png";
+import sc1 from "../../../assets/sc1-1.gif";
 import sc2 from "../../../assets/sc2.png";
 import sc3 from "../../../assets/sc3.png";
 import sc4 from "../../../assets/sc4.png";

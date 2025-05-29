@@ -3,7 +3,9 @@
 import React, { useState } from 'react'
 import feedback1 from '@/assets/feedback1.png'
 import feedback2 from '@/assets/feedback2.png'
-import feedback3 from '@/assets/feedback3.png'
+import dropdown1 from '@/assets/feedback-csat.png'
+import dropdown2 from '@/assets/feedback-survey.png'
+import dropdown3 from '@/assets/feedback-quiz.png'
 import { Satisfy } from "next/font/google";
 import Link from 'next/link';
 import key_points from '@/assets/key_points.png'
@@ -19,7 +21,7 @@ const satisfy = Satisfy({
 });
 
 const Feedback = () => {
-    const [openSection, setOpenSection] = useState('');
+    const [openSection, setOpenSection] = useState('CSAT');
 
     const toggleSection = (section) => {
         setOpenSection(openSection === section ? '' : section);
@@ -44,6 +46,19 @@ const Feedback = () => {
                     </div>
                 </div>
             </div>
+
+            <section className="w-full">
+                <div className=" mx-auto">
+                    <FeatureTicker
+                        number1="5x"
+                        number2="40%"
+                        number3="28%"
+                        heading1="more feedback submisstions"
+                        heading2="increase actionable Insights"
+                        heading3="high response rate"
+                    />
+                </div>
+            </section>
 
             <div className='grid lg:grid-cols-2 bg-[#fff] sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-8 mx-auto items-center'>
                 <div className='flex flex-col mb-10 lg:mb-0'>
@@ -77,9 +92,9 @@ const Feedback = () => {
             </div>
 
             <div className='bg-[#fff] sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[1300px] px-10 py-16 mx-auto'>
-                <div className='grid lg:grid-cols-2 gap-8 lg:gap-16 items-start'>
+                <div className='grid lg:grid-cols-2 gap-8 lg:gap-16 items-center'>
                     {/* Left content */}
-                    <div className='order-2 lg:order-1'>
+                    <div className='order-1'>
                         <h3 className={`${satisfy.className} text-[#FD5F03] text-[22px] md:text-[26px] `}>Our Services</h3>
                         <h2 className='text-[40px] lg:text-[48px] font-bold leading-tight mb-6'>
                             Capture Insights While Users Engage
@@ -95,14 +110,14 @@ const Feedback = () => {
                                     className='flex justify-between items-center cursor-pointer py-2'
                                     onClick={() => toggleSection('CSAT')}
                                 >
-                                    <h3 className='text-[24px] font-bold text-black'>CSAT</h3>
+                                    <h3 className='text-[24px] font-medium '>CSAT</h3>
                                     <div className={`transform transition-transform duration-200 ${openSection === 'CSAT' ? 'rotate-180' : ''}`}>
                                         <FaAngleDown />
                                     </div>
                                 </div>
                                 {openSection === 'CSAT' && (
                                     <div className='mt-3 '>
-                                        <p className='mb-2'>Trigger follow-up journeys or team alerts based on survey responses.</p>
+                                        <p className='mb-2'>Capture real-time CSAT and trigger alerts or journeys to close the loop.</p>
                                         <Link href={"/csats"} className='text-[#FD5F03] cursor-pointer hover:underline text-sm'>Read more</Link>
                                     </div>
                                 )}
@@ -114,33 +129,33 @@ const Feedback = () => {
                                     className='flex justify-between items-center cursor-pointer py-2'
                                     onClick={() => toggleSection('Survey')}
                                 >
-                                    <h3 className='text-[24px] font-bold text-black'>Survey</h3>
+                                    <h3 className='text-[24px] font-medium '>Survey</h3>
                                     <div className={`transform transition-transform duration-200 ${openSection === 'Survey' ? 'rotate-180' : ''}`}>
                                         <FaAngleDown />
                                     </div>
                                 </div>
                                 {openSection === 'Survey' && (
                                     <div className='mt-3 '>
-                                        <p className='mb-2'>Create comprehensive surveys to gather detailed user feedback and insights about your product experience.</p>
+                                        <p className='mb-2'>Act on feedback with timely, in-product surveys</p>
                                         <Link href={"/surveys"} className='text-[#FD5F03] cursor-pointer hover:underline text-sm'>Read more</Link>
                                     </div>
                                 )}
                             </div>
 
                             {/* Quizzes Section */}
-                            <div className='border-b border-gray-200 pb-4'>
+                            <div className=' pb-4'>
                                 <div
                                     className='flex justify-between items-center cursor-pointer py-2'
                                     onClick={() => toggleSection('Quizzes')}
                                 >
-                                    <h3 className='text-[24px] font-bold text-black'>Quizzes</h3>
+                                    <h3 className='text-[24px] font-medium '>Quizzes</h3>
                                     <div className={`transform transition-transform duration-200 ${openSection === 'Quizzes' ? 'rotate-180' : ''}`}>
                                         <FaAngleDown />
                                     </div>
                                 </div>
                                 {openSection === 'Quizzes' && (
                                     <div className='mt-3 '>
-                                        <p className='mb-2'>Engage users with interactive quizzes to understand their preferences and guide them to relevant features.</p>
+                                        <p className='mb-2'>Test knowledge in real time with in-product quizzes</p>
                                         <Link href={"/quizzes"} className='text-[#FD5F03] cursor-pointer hover:underline text-sm'>Read more</Link>
                                     </div>
                                 )}
@@ -149,29 +164,40 @@ const Feedback = () => {
                     </div>
 
                     {/* Right image */}
-                    <div className='order-1 lg:order-2 flex justify-center lg:pl-[80px]'>
+                    <div className='order-2 flex justify-center lg:pl-[80px]'>
                         <div className='w-full max-w-[400px] lg:max-w-none'>
-                            <img
-                                src={feedback3.src}
-                                alt="Mobile app feedback interface"
-                                className='w-full h-auto object-contain'
-                            />
+                            {
+                                openSection === 'CSAT' && (
+                                    <img
+                                        src={dropdown1.src}
+                                        alt="Mobile app feedback interface"
+                                        className='w-full h-auto object-contain'
+                                    />
+                                )
+                            }
+                            {
+                                openSection === 'Survey' && (
+                                    <img
+                                        src={dropdown2.src}
+                                        alt="Mobile app feedback interface"
+                                        className='w-full h-auto object-contain'
+                                    />
+                                )
+                            }
+                            {
+                                openSection === 'Quizzes' && (
+                                    <img
+                                        src={dropdown3.src}
+                                        alt="Mobile app feedback interface"
+                                        className='w-full h-auto object-contain'
+                                    />
+                                )
+                            }
                         </div>
                     </div>
                 </div>
             </div>
-            <section className="w-full">
-                <div className=" mx-auto">
-                    <FeatureTicker
-                        number1="5x"
-                        number2="40%"
-                        number3="28%"
-                        heading1="more feedback submisstions"
-                        heading2="increase actionable Insights"
-                        heading3="high response rate"
-                    />
-                </div>
-            </section>
+
             <Integrations />
             <TestimonialsSection />
             <BlogSection />
