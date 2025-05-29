@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Satisfy } from "next/font/google";
 import blog1 from "@/assets/blog1.png";
 import blog2 from "@/assets/blog2.png";
+import Link from "next/link";
 
 // Only keep Satisfy font from Google Fonts
 const satisfy = Satisfy({ subsets: ["latin"], weight: ["400"] });
@@ -80,7 +81,7 @@ const BlogSection = () => {
             </h2>
 
             <div className="mt-16">
-              <a
+              <Link
                 href="/blogs"
                 className="inline-flex items-center justify-center font-sf-pro font-medium text-white"
                 style={{
@@ -108,7 +109,7 @@ const BlogSection = () => {
                   <path d="M12 8l4 4-4 4" />
                   <path d="M8 12h8" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -765,7 +765,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <Image
@@ -784,7 +784,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <Image
@@ -803,7 +803,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <Image
@@ -822,7 +822,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <Image
@@ -964,7 +964,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaApple className="text-black text-xl" />
@@ -978,7 +978,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <AiFillAndroid className="text-green-500 text-xl" />
@@ -992,7 +992,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaReact className="text-blue-400 text-xl" />
@@ -1006,7 +1006,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <Image
@@ -1025,7 +1025,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaReact className="text-blue-400 text-xl" />
@@ -1039,7 +1039,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaAngular className="text-red-600 text-xl" />
@@ -1057,7 +1057,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaReact className="text-blue-400 text-xl" />
@@ -1071,7 +1071,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaAngular className="text-red-600 text-xl" />
@@ -1085,7 +1085,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaWordpressSimple className="text-gray-700 text-xl" />
@@ -1099,7 +1099,7 @@ const Header = ({ style }) => {
                         <div className="border-t border-gray-200">
                           <div
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
-                            onClick={handleOptionClick}
+                          // onClick={handleOptionClick}
                           >
                             <div className="w-6 h-6 flex items-center justify-center">
                               <FaShopify className="text-green-600 text-xl" />
@@ -1116,7 +1116,7 @@ const Header = ({ style }) => {
 
                         <div className="border-t border-gray-200">
                           <Link
-                            href="/blog"
+                            href="/blogs"
                             className="flex items-center gap-3 p-3 hover:bg-gray-50"
                             onClick={handleOptionClick}
                           >
@@ -1124,7 +1124,7 @@ const Header = ({ style }) => {
                               <FaBlog className="text-orange-500 text-xl" />
                             </div>
                             <span className="text-base text-gray-800 ml-2">
-                              Blog
+                              Blogs
                             </span>
                           </Link>
                         </div>
@@ -1568,7 +1568,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <Image
                         src={mparticle_icon}
@@ -1582,7 +1582,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <Image
                         src={clevertap_icon}
@@ -1596,7 +1596,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <Image
                         src={moengage_icon}
@@ -1610,7 +1610,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <Image
                         src={custom_audienec_icon}
@@ -1628,28 +1628,28 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <span>Real-Time Targeting</span>
                     </Link>
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <span>Behaviour-Driven Campaigns</span>
                     </Link>
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <span>Feature Adoption Insights</span>
                     </Link>
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <span>Automated Growth Journeys</span>
                     </Link>
@@ -1657,7 +1657,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                      // onClick={handleOptionClick}
                     >
                       <span>GOALS & IMPACT MEASUREMENT</span>
                     </Link>
@@ -1731,7 +1731,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                    // onClick={handleOptionClick}
                     >
                       <div className="w-6 h-6 flex items-center justify-center">
                         <FaApple className="text-black text-xl" />
@@ -1741,7 +1741,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                    // onClick={handleOptionClick}
                     >
                       <div className="w-6 h-6 flex items-center justify-center">
                         <AiFillAndroid className="text-green-500 text-xl" />
@@ -1761,7 +1761,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                    // onClick={handleOptionClick}
                     >
                       <div className="w-6 h-6 flex items-center justify-center">
                         <Image
@@ -1778,7 +1778,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                    // onClick={handleOptionClick}
                     >
                       <div className="w-6 h-6 flex items-center justify-center">
                         <FaReact className="text-blue-400 text-xl" />
@@ -1788,7 +1788,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                    // onClick={handleOptionClick}
                     >
                       <div className="w-6 h-6 flex items-center justify-center">
                         <FaAngular className="text-red-600 text-xl" />
@@ -1798,7 +1798,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                    // onClick={handleOptionClick}
                     >
                       <div className="w-6 h-6 flex items-center justify-center">
                         <FaWordpressSimple className="text-gray-700 text-xl" />
@@ -1808,7 +1808,7 @@ const Header = ({ style }) => {
                     <Link
                       href="#"
                       className="flex items-center py-2"
-                      onClick={handleOptionClick}
+                    // onClick={handleOptionClick}
                     >
                       <div className="w-6 h-6 flex items-center justify-center">
                         <FaShopify className="text-green-600 text-xl" />
@@ -1819,20 +1819,20 @@ const Header = ({ style }) => {
                     <h5 className="font-medium text-gray-700 mt-3 mb-1">
                       RESOURCES
                     </h5>
-                    
+
                     <div
                       className="flex items-center py-2"
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        router.push('/blog');
+                        router.push('/blogs');
                         setTimeout(() => {
                           handleOptionClick();
                         }, 100);
                       }}
                     >
                       <FaBlog className="text-orange-500 text-xl w-5 h-5 mr-2" />
-                      <span>Blog</span>
+                      <span>Blogs</span>
                     </div>
                     <div
                       className="flex items-center py-2"

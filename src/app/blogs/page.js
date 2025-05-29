@@ -49,12 +49,10 @@ export default function Blogs() {
       </section>
 
       <section className='flex justify-start items-center min-[1078px]:h-[422px] bg-[#E2E9F3] w-full gap-x-[100.09px] max-[1282px]:gap-x-[50px] px-[25px] max-[1078px]:flex-col max-[1078px]:gap-y-[20px] max-[1078px]:py-[20px]'>
-        <div className="relative w-[780px] max-[1282px]:w-[680px] h-[auto]">
+        <div className="relative md:w-1/2 w-full">
           <Image
             src={blogAppRetentionMain}
             alt="AppStorys Blog_App_Retention_main"
-            width={780}
-            height={300}
             style={{ objectFit: "contain", width: "100%", height: "auto" }}
             priority
           />
@@ -82,13 +80,13 @@ export default function Blogs() {
             data.map((element, index) => (
               <SimilarBlogCard
                 key={index}
-                index={index} 
-                link={element.link} 
-                image={element.image} 
-                heading={element.heading} 
-                para={element.para} 
-                date={element.date} 
-                time={element.time} 
+                index={index}
+                link={element.link}
+                image={element.image}
+                heading={element.heading}
+                para={element.para}
+                date={element.date}
+                time={element.time}
               />
             ))
           }
