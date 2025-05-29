@@ -8,6 +8,10 @@ import { Satisfy } from "next/font/google";
 import Link from 'next/link';
 import key_points from '@/assets/key_points.png'
 import { FaAngleDown } from "react-icons/fa6";
+import TestimonialsSection from '../components/Testimonials/Testimonials';
+import Integrations from '../components/Integrations/Integrations';
+import BlogSection from '../components/BlogSection';
+import FeatureTicker from '../components/FeatureTicker';
 
 const satisfy = Satisfy({
     subsets: ["latin"],
@@ -76,12 +80,12 @@ const Feedback = () => {
                 <div className='grid lg:grid-cols-2 gap-8 lg:gap-16 items-start'>
                     {/* Left content */}
                     <div className='order-2 lg:order-1'>
-                        <h3 className={`${satisfy.className} text-[#FD5F03] text-[20px] mb-4`}>Our Services</h3>
+                        <h3 className={`${satisfy.className} text-[#FD5F03] text-[22px] md:text-[26px] `}>Our Services</h3>
                         <h2 className='text-[40px] lg:text-[48px] font-bold leading-tight mb-6'>
                             Capture Insights While Users Engage
                         </h2>
                         <p className='mb-8 text-[16px] leading-relaxed'>
-                            Use contextual, in-product surveys and micro-feedback to learn what your users think, want, and struggle with—when it matters most.
+                            Gather real-time insights through contextual surveys and micro-feedback, capturing what users think, need, and struggle with—right when it matters most.
                         </p>
 
                         <div className='space-y-4'>
@@ -156,6 +160,21 @@ const Feedback = () => {
                     </div>
                 </div>
             </div>
+            <section className="w-full">
+                <div className=" mx-auto">
+                    <FeatureTicker
+                        number1="5x"
+                        number2="40%"
+                        number3="28%"
+                        heading1="more feedback submisstions"
+                        heading2="increase actionable Insights"
+                        heading3="high response rate"
+                    />
+                </div>
+            </section>
+            <Integrations />
+            <TestimonialsSection />
+            <BlogSection />
         </div>
     )
 }

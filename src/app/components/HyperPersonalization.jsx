@@ -977,7 +977,7 @@ const HyperPersonalization = () => {
                           fill
                           style={{ objectFit: "contain" }}
                           priority
-                          quality={100}
+                        // quality={100}
                         />
                       </motion.div>
                     );

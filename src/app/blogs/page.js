@@ -19,7 +19,7 @@ export default function Blogs() {
       para: 'In todays competitive mobile app landscape, retaining users is as crucial as acquiring them ...',
       date: '20 October 2023',
       time: 5,
-      link: '/blogs/5-Ways-to-Increase-App-Retention'
+      link: '/blog-5-Ways-to-Increase-App-Retention'
     },
     {
       image: blogAppEngagementMain,
@@ -27,7 +27,7 @@ export default function Blogs() {
       para: 'In todays fast-paced digital world, grabbing and holding users  attention is more challenging than ever ...',
       date: '20 October 2023',
       time: 5,
-      link: '/blogs/5-Ways-Stories-Can-Help-You-Increase-App-Engagement'
+      link: '/blog-5-Ways-Stories-Can-Help-You-Increase-App-Engagement'
     },
     {
       image: blogAppSaasMain,
@@ -35,7 +35,7 @@ export default function Blogs() {
       para: 'Customer churn is a critical issue for SaaS (Software as a Service) companies, impacting revenue and growth ...',
       date: '20 October 2023',
       time: 5,
-      link: '/blogs/5-Causes-and-Symptoms-of-Customer-Churn-in-SaaS-Companies'
+      link: '/blog-5-Causes-and-Symptoms-of-Customer-Churn-in-SaaS-Companies'
     },
   ];
 
@@ -64,7 +64,7 @@ export default function Blogs() {
             <div className="h-[2.98px] w-[2.98px] bg-[#E9A63A] rounded-full"></div>12th October 2024<div className="h-[2.98px] w-[2.98px] bg-[#E9A63A] rounded-full"></div> 04 mins. Read mins. read
           </p>
           <p className='font-InstrumentSans text-[14px] leading-[150%] text-[#657BA0] min-[1282px]:w-[361px]'>In today's competitive mobile app landscape, retaining users is as crucial as acquiring them ...</p>
-          <Link href='/blogs/5-Ways-to-Increase-App-Retention' className='underline hover:cursor-pointer underline-offset-4 text-[#1F4D9C] font-InstrumentSans text-[14px] mt-[58px] max-[966px]:mt-[30px] max-[537px]:mt-[20px]'>Read More</Link>
+          <Link href='/blog-5-Ways-to-Increase-App-Retention' className='underline hover:cursor-pointer underline-offset-4 text-[#1F4D9C] font-InstrumentSans text-[14px] mt-[58px] max-[966px]:mt-[30px] max-[537px]:mt-[20px]'>Read More</Link>
         </div>
       </section>
 

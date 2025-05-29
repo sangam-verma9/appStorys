@@ -138,7 +138,7 @@ const BlogSection = () => {
                   <p className="font-sf-pro text-sm text-gray-600 mb-3">
                     {post.excerpt}
                   </p>
-                  <a
+                  <Link
                     href="/blogs"
                     className="flex items-center text-orange-500 font-medium font-sf-pro"
                   >
@@ -158,7 +158,7 @@ const BlogSection = () => {
                       <path d="M5 12h14" />
                       <path d="M12 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>

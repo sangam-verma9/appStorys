@@ -5,6 +5,10 @@ import adoption1 from '@/assets/adoption1.png'
 import { Satisfy } from "next/font/google";
 import Link from 'next/link';
 import key_points from '@/assets/key_points.png'
+import Integrations from '../components/Integrations/Integrations';
+import TestimonialsSection from '../components/Testimonials/Testimonials';
+import BlogSection from '../components/BlogSection';
+import FeatureTicker from '../components/FeatureTicker';
 
 const satisfy = Satisfy({
     subsets: ["latin"],
@@ -62,6 +66,21 @@ const Adoption = () => {
 
                 </div>
             </div>
+            <section className="w-full">
+                <div className=" mx-auto">
+                    <FeatureTicker
+                        number1="4x"
+                        number2="30%"
+                        number3="25%"
+                        heading1="increase feature engagement"
+                        heading2="Increase in users returning"
+                        heading3="higher completion rate"
+                    />
+                </div>
+            </section>
+            <Integrations />
+            <TestimonialsSection />
+            <BlogSection />
         </div>
     )
 }
