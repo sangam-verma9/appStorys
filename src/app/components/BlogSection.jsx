@@ -70,7 +70,7 @@ const BlogSection = () => {
           {/* Left column: Title and button */}
           <div className="lg:col-span-4">
             <p
-              className={`${satisfy.className} text-purple-600 text-[22px] font-normal mb-2`}
+              className={`${satisfy.className} text-orange-600 text-[22px] font-normal mb-2`}
             >
               Blogs
             </p>

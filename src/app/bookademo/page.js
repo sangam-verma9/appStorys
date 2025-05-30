@@ -151,7 +151,7 @@ const Bookademo = () => {
                         <br />
                         Join us for a brief 15-minute session where we’ll understand your specific requirements and demonstrate how AppStorys can help you accelerate engagement and drive revenue through tailored solutions.
                     </p>
-                    <p className='mb-8 text-[20px]'>You can also reach us via Email: &nbsp; <span><a href="mailto:support@appstorys.com" className='text-[#fd5f03]'>support@appstorys.com</a></span> </p>
+                    <p className='mb-8 text-[20px] font-semibold'>You can also reach us via Email: &nbsp; <span><a href="mailto:support@appstorys.com" className='text-[#fd5f03]'>support@appstorys.com</a></span> </p>
                     <div className=' hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
                         <div className='bg-white py-5 px-5 rounded-lg border-2 border-[#FD5F03]'>
                             <div className='flex justify-between'>
