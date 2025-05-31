@@ -1,9 +1,8 @@
-"use client"
-import React, { useState } from 'react'
+import React from 'react';
+import { notFound } from 'next/navigation';
 import { Satisfy } from "next/font/google";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from 'next/link';
-import inspriation_main_image from "@/assets/inspriation_gallery_main.png"
 const satisfy = Satisfy({ subsets: ["latin"], weight: ["400"] });
 const cardsData = [
     {
@@ -242,96 +241,102 @@ const cardsData = [
     }
 ];
 
-const page = () => {
-    const [activeTag, setActiveTag] = useState('All');
+export async function generateStaticParams() {
+    return cardsData.map(card => {
+        const slug = card.link.split('/').pop();
+        return { slug };
+    });
+}
 
-    const tags = ['All', 'Activation', 'Adoption', 'Engagement', 'Conversion', 'Feedback'];
+export default async function InspirationDetail({ params }) {
+    const { slug } = await params;
 
-
-    const filteredCards = activeTag === 'All'
-        ? cardsData
-        : cardsData.filter(card => card.tags.includes(activeTag));
+    const card = cardsData.find(item => item.link.endsWith(slug));
+    const threerand = Array.from({ length: 3 }, () => Math.floor(Math.random() * 18));
+    const filteredCards = [];
+    threerand.forEach((ele) => {
+        filteredCards.push(cardsData[ele]);
+    })
+    if (!card) return notFound();
 
     return (
-        <>
-            <div className="bg-[#FFFFFF] min-h-screen flex flex-col justify-center w-full">
-                <div className="max-w-[1200px] mx-auto">
-                    <img src={inspriation_main_image.src} alt="main_image" className='object-cover' />
-                </div>
-                <div className='flex justify-center  py-12 px-4 sm:px-6 lg:px-8'>
-                    <div className="w-full justify-center flex flex-col max-w-[1200px]">
-                        {/* Tag Filter Buttons */}
-                        <div className="flex flex-wrap gap-2 mb-8 justify-center">
-                            {tags.map((tag) => (
-                                <button
-                                    key={tag}
-                                    onClick={() => setActiveTag(tag)}
-                                    className={`px-6 py-[10px] rounded-lg font-medium transition-all duration-200 ${activeTag === tag
-                                        ? 'bg-orange-500 text-white shadow-lg'
-                                        : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-                                        }`}
-                                >
-                                    {tag}
-                                </button>
-                            ))}
+        <div className="min-h-screen p-6 w-full flex justify-center">
+            <div className='max-w-[1200px]'>
+                <div className='flex flex-col md:flex-row justify-between mt-[20px] md:mt-[50px] mb-[30px] md:mb-0'>
+                    <div className='w-full md:w-2/3 md:pr-[60px]'>
+                        <h4 className={`${satisfy.className} text-orange-500 text-xl sm:text-2xl font-normal mb-3 sm:mb-4`}>
+                            Inspiration Gallery
+                        </h4>
+                        <h1 className="text-3xl font-bold mb-4">{card.main_content_heading}</h1>
+                        <p className="mb-4 text-lg">{card.main_content}</p>
+                    </div>
+                    <div className='w-full md:w-1/3 flex flex-col justify-center '>
+                        <div className='w-full flex justify-center'>
+                            <img src={card.logo} alt={card.name} className="h-16 rounded-3xl px-4 py-2 mb-4 w-[150px] object-contain" style={{ backgroundColor: `${card.background_color}` }} />
                         </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filteredCards.map((card, index) => (
-                                <div
-                                    key={index}
-                                    className="rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-[600px] border border-white"
-                                    style={{ backgroundColor: card.background_color }}
-                                >
-                                    <div className="flex items-center justify-between mb-6">
-                                        <div className="flex items-center gap-3">
-                                            <img
-                                                src={card.logo}
-                                                alt={`${card.name} logo`}
-                                                className="w-auto max-w-[150px] h-auto rounded-lg object-contain"
-                                            />
-                                        </div>
-
-                                        <div className="w-[150px] h-[300px] bg-gray-800 rounded-2xl p-1 flex-shrink-0 overflow-hidden ">
-                                            <div className="w-full h-full bg-white rounded-xl flex items-center justify-center overflow-hidden">
-                                                <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={card.video} autoPlay muted loop playsInline />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className='h-[180px]'>
-                                        <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${card.text_color}` }}>
-                                            {card.main_content_heading}
-                                        </h5>
-
-                                        <p className={`text-sm mb-6 leading-relaxed `} style={{ color: `${card.text_color}` }}>
-                                            {card.main_content.length > 120
-                                                ? `${card.main_content.substring(0, 120)}...`
-                                                : card.main_content}
-                                        </p>
-
-                                    </div>
-                                    <Link
-                                        href={card.link}
-                                        className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 text-black shadow border border-gray-400 bg-white`}
-                                    >
-                                        Read More
-                                        <FaArrowRight className="w-4 h-4" />
-                                    </Link>
+                        <div className='flex w-full justify-center'>
+                            <div className="w-[200px] h-[400px] bg-gray-800 rounded-2xl p-1 flex-shrink-0 overflow-hidden ">
+                                <div className="w-full h-full bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                                    <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={card.video} autoPlay muted loop playsInline />
                                 </div>
-                            ))}
-                        </div>
-
-                        {filteredCards.length === 0 && (
-                            <div className="text-center py-12">
-                                <p className="text-gray-500 text-lg">No cards found for the selected tag.</p>
                             </div>
-                        )}
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full mb-[30px] mb:mb-[70px]" >
+                    <h2 className="text-3xl font-bold mb-4">{card.why_this_works_heading}</h2>
+                    <p className='text-lg'>{card.why_this_works_content}</p>
+                </div>
+                <div className='bg-[#FFF7F3] rounded-lg md:p-8 p-4'>
+                    <h2 className='text-center text-[#FD5F03] text-4xl font-semibold mb-[30px] md:mb-0'>Browse more inpirations</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-[100px] md:py-[60px]">
+                        {filteredCards.map((card, index) => (
+                            <div
+                                key={index}
+                                className="rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-[500px] border border-white"
+                                style={{ backgroundColor: card.background_color }}
+                            >
+                                <div className="flex items-center justify-between mb-6">
+                                    <div className="flex items-center gap-3">
+                                        <img
+                                            src={card.logo}
+                                            alt={`${card.name} logo`}
+                                            className="w-auto max-w-[120px] h-auto rounded-lg object-contain"
+                                        />
+                                    </div>
+
+                                    <div className="w-[100px] h-[200px] bg-gray-800 rounded-2xl p-1 flex-shrink-0 overflow-hidden ">
+                                        <div className="w-full h-full bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                                            <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={card.video} autoPlay muted loop playsInline />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='h-[180px]'>
+                                    <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${card.text_color}` }}>
+                                        {card.main_content_heading}
+                                    </h5>
+
+                                    <p className={`text-sm mb-6 leading-relaxed `} style={{ color: `${card.text_color}` }}>
+                                        {card.main_content.length > 120
+                                            ? `${card.main_content.substring(0, 120)}...`
+                                            : card.main_content}
+                                    </p>
+
+                                </div>
+                                <Link
+                                    href={card.link}
+                                    className={`inline-flex items-center gap-2 px-5 py-2 rounded-lg font-medium transition-all duration-200 text-black shadow border border-gray-400 bg-white`}
+                                >
+                                    Read More
+                                    <FaArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
-    )
-}
 
-export default page;
+        </div>
+    );
+}
