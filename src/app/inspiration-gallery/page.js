@@ -280,7 +280,7 @@ const page = () => {
                             {filteredCards.map((card, index) => (
                                 <div
                                     key={index}
-                                    className="rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-[600px] border border-white"
+                                    className="rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-[580px] border border-white"
                                     style={{ backgroundColor: card.background_color }}
                                 >
                                     <div className="flex items-center justify-between mb-6">
