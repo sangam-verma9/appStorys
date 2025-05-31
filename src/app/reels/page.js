@@ -55,12 +55,12 @@ export default function Reels() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3x"
-            number2="28%"
-            number3="47%"
-            heading1="Increase in User Interactions with Visual Conten"
-            heading2="Growth in Conversion Rates"
-            heading3="Boost in User Engagement"
+            number1="35%"
+            number2="60%"
+            number3="45%"
+            heading1="Increase in engagement rate"
+            heading2="Increase in page views"
+            heading3="Decrease in time to first feature use"
           />
         </div>
       </section>

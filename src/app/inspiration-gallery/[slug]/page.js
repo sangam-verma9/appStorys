@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { Satisfy } from "next/font/google";
 import { FaArrowRight } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
 import Link from 'next/link';
 const satisfy = Satisfy({ subsets: ["latin"], weight: ["400"] });
 const cardsData = [
@@ -236,7 +237,7 @@ const cardsData = [
         "main_content_heading": "Zyadashop using Coachmarks",
         "main_content": "Zyadashop, a fast-growing e-commerce platform, has seamlessly integrated Coachmarks into its app experience to onboard users and highlight key features. These interactive guides appear contextually across the interface in prime visibility zones  where they immediately capture attention. Instead of relying on lengthy tutorials or static onboarding screens, Zyadashop delivers dynamic, step- by - step Coachmarks that point out important elements in real time.This approach feels intuitive and mirrors the guidance style users are familiar with from modern productivity and design tools.It reduces friction, enabling users to effortlessly navigate the app  from discovering trending collections and applying coupons to tracking orders and managing returns.",
         "link": "/inspiration-gallery/zyadashop",
-        "background_color": "#1872f0",
+        "background_color": "#3C329D",
         "text_color": "#ffffff"
     }
 ];
@@ -267,7 +268,7 @@ export default async function InspirationDetail({ params }) {
                         <h4 className={`${satisfy.className} text-orange-500 text-xl sm:text-2xl font-normal mb-3 sm:mb-4`}>
                             Inspiration Gallery
                         </h4>
-                        <h1 className="text-3xl font-bold mb-4">{card.main_content_heading}</h1>
+                        <h1 className="md:text-4xl text-3xl font-bold md:mb-6 mb-4">{card.main_content_heading}</h1>
                         <p className="mb-4 text-lg">{card.main_content}</p>
                     </div>
                     <div className='w-full md:w-1/3 flex flex-col justify-center '>
@@ -275,7 +276,7 @@ export default async function InspirationDetail({ params }) {
                             <img src={card.logo} alt={card.name} className="h-16 rounded-3xl px-4 py-2 mb-4 w-[150px] object-contain" style={{ backgroundColor: `${card.background_color}` }} />
                         </div>
                         <div className='flex w-full justify-center'>
-                            <div className="w-[200px] h-[400px] bg-gray-800 rounded-2xl p-1 flex-shrink-0 overflow-hidden ">
+                            <div className="w-[250px] h-[500px] bg-gray-800 rounded-2xl p-1 flex-shrink-0 overflow-hidden ">
                                 <div className="w-full h-full bg-white rounded-xl flex items-center justify-center overflow-hidden">
                                     <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={card.video} autoPlay muted loop playsInline />
                                 </div>
@@ -284,12 +285,12 @@ export default async function InspirationDetail({ params }) {
                     </div>
                 </div>
                 <div className="w-full mb-[30px] mb:mb-[70px]" >
-                    <h2 className="text-3xl font-bold mb-4">{card.why_this_works_heading}</h2>
+                    <h2 className="md:text-4xl text-3xl font-bold mb-4">{card.why_this_works_heading}</h2>
                     <p className='text-lg'>{card.why_this_works_content}</p>
                 </div>
-                <div className='bg-[#FFF7F3] rounded-lg md:p-8 p-4'>
-                    <h2 className='text-center text-[#FD5F03] text-4xl font-semibold mb-[30px] md:mb-0'>Browse more inpirations</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-[100px] md:py-[60px]">
+                <div className='bg-[#FFF7F3] rounded-lg p-2'>
+                    <h2 className='text-center text-[#FD5F03] text-4xl font-semibold mb-[30px] md:mb-0 p-5'>Browse more inspirations</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
                         {filteredCards.map((card, index) => (
                             <div
                                 key={index}
@@ -312,7 +313,7 @@ export default async function InspirationDetail({ params }) {
                                     </div>
                                 </div>
 
-                                <div className='h-[180px]'>
+                                <div className='h-[170px]'>
                                     <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${card.text_color}` }}>
                                         {card.main_content_heading}
                                     </h5>
@@ -333,6 +334,11 @@ export default async function InspirationDetail({ params }) {
                                 </Link>
                             </div>
                         ))}
+                    </div>
+                    <div className='w-full flex justify-center my-5'>
+                        <Link href={"/blogs"} className=' h-[40px] py-4 px-5 bg-[#FD5F03]  text-white rounded-xl flex items-center'>
+                            View all <FaAngleRight className='ml-1' />
+                        </Link>
                     </div>
                 </div>
             </div>

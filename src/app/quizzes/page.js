@@ -57,12 +57,12 @@ export default function Quizzes() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="4x"
-            number2="19%"
-            number3="33%"
-            heading1="more survey responses"
-            heading2="increase in customer satisfaction"
-            heading3="more actionable insights"
+            number1="40%"
+            number2="50%"
+            number3="15%"
+            heading1="Increase in engagement"
+            heading2="Increase in personalization"
+            heading3="Increase in session length"
           />
         </div>
       </section>

@@ -57,12 +57,12 @@ export default function Surveys() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="4x"
-            number2="19%"
+            number1="5x"
+            number2="20%"
             number3="33%"
-            heading1="more survey responses"
-            heading2="increase in customer satisfaction"
-            heading3="more actionable insights"
+            heading1="More survey responses"
+            heading2="Upliftment in engagement"
+            heading3="More actionable insights"
           />
         </div>
       </section>

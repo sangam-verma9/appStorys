@@ -237,7 +237,7 @@ const cardsData = [
         "main_content_heading": "Zyadashop using Coachmarks",
         "main_content": "Zyadashop, a fast-growing e-commerce platform, has seamlessly integrated Coachmarks into its app experience to onboard users and highlight key features. These interactive guides appear contextually across the interface in prime visibility zones  where they immediately capture attention. Instead of relying on lengthy tutorials or static onboarding screens, Zyadashop delivers dynamic, step- by - step Coachmarks that point out important elements in real time.This approach feels intuitive and mirrors the guidance style users are familiar with from modern productivity and design tools.It reduces friction, enabling users to effortlessly navigate the app  from discovering trending collections and applying coupons to tracking orders and managing returns.",
         "link": "/inspiration-gallery/zyadashop",
-        "background_color": "#1872f0",
+        "background_color": "#3C329D",
         "text_color": "#ffffff"
     }
 ];
@@ -299,7 +299,7 @@ const page = () => {
                                         </div>
                                     </div>
 
-                                    <div className='h-[180px]'>
+                                    <div className='h-[160px]'>
                                         <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${card.text_color}` }}>
                                             {card.main_content_heading}
                                         </h5>

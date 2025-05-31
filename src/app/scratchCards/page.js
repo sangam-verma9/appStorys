@@ -57,12 +57,12 @@ export default function ScratchCards() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3x"
-            number2="50%"
-            number3="33%"
-            heading1="Higher User Engagement with Gamification Elements"
-            heading2="Increase in User Loyalty Through Surprise Rewards"
-            heading3="Boost in Conversion Rates from Scratch Card Incentives"
+            number1="65%"
+            number2="20%"
+            number3="15%"
+            heading1="Increase in engagement rate"
+            heading2="Upliftment in D7 retention"
+            heading3="Boost in NPS score"
           />
         </div>
       </section>

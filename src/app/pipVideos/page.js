@@ -56,12 +56,12 @@ export default function PiP() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="24%"
-            number2="64%"
-            number3="4.2x"
-            heading1="increase in views"
-            heading2="increase in feature Adoption"
-            heading3="Increase In Sales"
+            number1="60%"
+            number2="32%"
+            number3="10%"
+            heading1="Increase in feature adoption"
+            heading2="Decrease in time to first feature use"
+            heading3="Increase in 7-day retention"
           />
         </div>
       </section>

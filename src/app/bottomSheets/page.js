@@ -52,12 +52,12 @@ export default function BottomSheet() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="4.6x"
-            number2="29%"
-            number3="33%"
-            heading1="increased CTAs"
-            heading2="Higher Attention"
-            heading3="Drop in User Exits"
+            number1="32%"
+            number2="27%"
+            number3="40%"
+            heading1="Increase in featuer adoption"
+            heading2="Decrease in time to value"
+            heading3="Increase in conversion"
           />
         </div>
       </section>

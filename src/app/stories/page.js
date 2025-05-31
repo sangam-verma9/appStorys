@@ -55,12 +55,12 @@ export default function Stories() {
       <section className="w-full">
         <div className=" mx-auto">
           <FeatureTicker
-            number1="5x"
-            number2="23%"
-            number3="37%"
-            heading1="more content consumption"
-            heading2="increase in page views"
-            heading3="Decrease in bounce rate"
+            number1="50%"
+            number2="37%"
+            number3="15%"
+            heading1="Increase in feature adoption"
+            heading2="Increase in page views"
+            heading3="Increase in feature usage"
           />
         </div>
       </section>

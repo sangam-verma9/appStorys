@@ -57,12 +57,12 @@ export default function CSATs() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3.5x"
-            number2="30%"
-            number3="3.6x"
-            heading1="More Accurate Insights"
-            heading2="Improvement in feedback response rates"
-            heading3="Relevant Insights Gain"
+            number1="30%"
+            number2="20%"
+            number3="15%"
+            heading1="Improvement in CSAT score"
+            heading2="Increase in NPS score"
+            heading3="Reduction in churn rate"
           />
         </div>
       </section>

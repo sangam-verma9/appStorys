@@ -57,12 +57,12 @@ export default function Coachmarks() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3.5x"
-            number2="30%"
+            number1="45%"
+            number2="40%"
             number3="35%"
-            heading1="Faster feature Adoption"
-            heading2="improvement In user Onboarding"
-            heading3="Reduction in user confusion"
+            heading1="Increase in feature adoption rate"
+            heading2="reduction in time to first user value"
+            heading3="Increase in onboarding task completion"
           />
         </div>
       </section>

@@ -23,7 +23,6 @@ export default function Home() {
   return (
     <>
       <HeroSection/>
-
       <CoreFeatures/>
       <HyperPersonalization/>
       <SetupGoals/>
@@ -33,7 +32,6 @@ export default function Home() {
       <Sdks/>
       <TestimonialsSection/>
       <TrustSection/>
-     
       {/* <HowItWorks/> */}
       <BlogSection/>
     </>

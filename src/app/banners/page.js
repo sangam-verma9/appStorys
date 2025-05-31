@@ -57,12 +57,12 @@ export default function Banners() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="2.1x"
-            number2="1.1x"
-            number3="55%"
-            heading1="Increase in user engagement"
-            heading2="More In-App purchases"
-            heading3="Boost In-session Duration"
+            number1="50%"
+            number2="20%"
+            number3="40%"
+            heading1="Increase in feature adoption"
+            heading2="Increase in CTR"
+            heading3="Reduction in time to value"
           />
         </div>
       </section>

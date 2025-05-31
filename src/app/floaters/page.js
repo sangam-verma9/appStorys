@@ -57,12 +57,12 @@ export default function Floaters() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="4.2x"
-            number2="35%"
-            number3="4.2x"
-            heading1="Increase In feature discovery"
-            heading2="improvement in user engagement"
-            heading3="more interactions with In-App Offers"
+            number1="45%"
+            number2="25%"
+            number3="30%"
+            heading1="Upliftment in feature adoption"
+            heading2="Increase in feature CTR"
+            heading3="Reduction in time to value"
           />
         </div>
       </section>

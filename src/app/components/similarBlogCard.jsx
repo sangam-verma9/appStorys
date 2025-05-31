@@ -46,7 +46,7 @@ import Link from "next/link";
 
 export default function SimilarBlogCard({ index, link, image, heading, para, date, time }) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+    <div className="max-w-sm min-h-[450px] bg-white border border-gray-200 rounded-lg shadow">
       <Link href={link}>
         <Image
           src={image}
@@ -57,22 +57,24 @@ export default function SimilarBlogCard({ index, link, image, heading, para, dat
         />
       </Link>
       <div className="p-5">
-        <Link href={link}>
-          <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 hover:text-blue-600">
-            {heading}
-          </h5>
-        </Link>
-        <p className="mb-3 font-normal text-gray-700">
-          {para}
-        </p>
-        <div className="flex items-center text-sm text-gray-500 mb-3">
-          <span>{date}</span>
-          <span className="mx-2">•</span>
-          <span>{time} min read</span>
+        <div className='min-h-[200px]'>
+          <Link href={link}>
+            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 hover:text-blue-600">
+              {heading}
+            </h5>
+          </Link>
+          <p className="mb-3 font-normal text-gray-700">
+            {para}
+          </p>
+          <div className="flex items-center text-sm text-gray-500 mb-3">
+            <span>{date}</span>
+            <span className="mx-2">•</span>
+            <span>{time} min read</span>
+          </div>
         </div>
         <Link
           href={link}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-orange-500 rounded-lg hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
           Read more
           <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

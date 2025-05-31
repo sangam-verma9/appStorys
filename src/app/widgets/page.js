@@ -57,12 +57,12 @@ export default function Widgets() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3.5x"
+            number1="25%"
             number2="30%"
-            number3="3.6x"
-            heading1="More Accurate Insights"
-            heading2="Improvement in feedback response rates"
-            heading3="Relevant Insights Gain"
+            number3="28%"
+            heading1="Upliftment in feature adoption"
+            heading2="Increase in conversion"
+            heading3="Increase in feature interaction rate"
           />
         </div>
       </section>

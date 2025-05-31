@@ -57,12 +57,12 @@ export default function Spotlights() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3.5x"
-            number2="30%"
-            number3="3.6x"
-            heading1="More Accurate Insights"
-            heading2="Improvement in feedback response rates"
-            heading3="Relevant Insights Gain"
+            number1="60%"
+            number2="20%"
+            number3="35%"
+            heading1="Increase in feature adoption"
+            heading2="Upliftment in conversion rate"
+            heading3="Reduction in time to first use value"
           />
         </div>
       </section>

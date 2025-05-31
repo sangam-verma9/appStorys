@@ -119,9 +119,9 @@ const FeatureCarousel = () => {
       description: "Let your brand connect with the audience and elevate your presence through short stories, leavening a lasting impression.",
       imageName: "sc1",
       metrics: [
-        { value: "5x", label: "More Content Consumption" },
-        { value: "23%", label: "Increase In Page Views" },
-        { value: "37%", label: "Decrease In Bounce Rate" }
+        { value: "50%", label: "Increase in Feature Adoption" },
+        { value: "37%", label: "Increase in Page Views" },
+        { value: "15%", label: "Increase in Feature Usage" }
       ]
     },
     {
@@ -130,9 +130,9 @@ const FeatureCarousel = () => {
       description: "Keep users informed with picture-in-picture videos that deliver updates without disrupting their browsing experience.",
       imageName: "sc2",
       metrics: [
-        { value: "24%", label: "Boost In Marketing Engagement" },
-        { value: "64%", label: "Increase In Feature Adoption" },
-        { value: "0.3x", label: "Decrease In Bounce Rate" }
+        { value: "60%", label: "Increase in Feature Adoption" },
+        { value: "32%", label: "Decrease in Time to First Feature Use" },
+        { value: "10%", label: "Increase in 7-Day Retention" }
       ]
     },
     {
@@ -141,9 +141,9 @@ const FeatureCarousel = () => {
       description: "Let your audience engage and interact with the eye-catching videos that get your message across in seconds.",
       imageName: "sc3",
       metrics: [
-        { value: "7x", label: "More Content Consumption" },
-        { value: "60%", label: "Increase In Retention" },
-        { value: "15%", label: "Increase In Session Duration" }
+        { value: "35%", label: "Increase in Engagement Rate" },
+        { value: "60%", label: "Increase in Page Views" },
+        { value: "45%", label: "Decrease in Time to First Feature Use" }
       ]
     },
     {
@@ -152,9 +152,9 @@ const FeatureCarousel = () => {
       description: "Rich media bite sized content for immersive user experiences.",
       imageName: "sc4",
       metrics: [
-        { value: "3x", label: "Better User Engagement" },
-        { value: "45%", label: "Higher Conversion Rate" },
-        { value: "18%", label: "Reduced Exit Rate" }
+        { value: "32%", label: "Increase in Feature Adoption" },
+        { value: "27%", label: "Decrease in Time to Value" },
+        { value: "40%", label: "Increase in Conversion" }
       ]
     },
     {
@@ -163,9 +163,9 @@ const FeatureCarousel = () => {
       description: "Automatic banner moving with screen for persistent visibility.",
       imageName: "sc5",
       metrics: [
-        { value: "4x", label: "Improved CTR" },
-        { value: "29%", label: "Higher Brand Recall" },
-        { value: "41%", label: `Better Message Delivery ` }
+        { value: "50%", label: "Increase in Feature Adoption" },
+        { value: "20%", label: "Increase in CTR" },
+        { value: "40%", label: "Reduction in Time to Value" }
       ]
     },
     {
@@ -174,9 +174,9 @@ const FeatureCarousel = () => {
       description: "Small Image/GIF on screen floating with content for subtle engagement.",
       imageName: "sc6",
       metrics: [
-        { value: "2.5x", label: "Better Engagement" },
-        { value: "37%", label: "Improved Visibility" },
-        { value: "15%", label: "Higher Response Rate" }
+        { value: "45%", label: "Upliftment in Feature Adoption" },
+        { value: "25%", label: "Increase in Feature CTR" },
+        { value: "30%", label: "Reduction in Time to Value" }
       ]
     },
     {
@@ -185,9 +185,9 @@ const FeatureCarousel = () => {
       description: "Customizable scalable images/animation for enhanced UX.",
       imageName: "sc7",
       metrics: [
-        { value: "6x", label: "More Interactions" },
-        { value: "52%", label: "Better Feature Discovery" },
-        { value: "33%", label: "Higher Session Time" }
+        { value: "25%", label: "Upliftment in Feature Adoption" },
+        { value: "30%", label: "Increase in Conversion" },
+        { value: "28%", label: "Increase in Feature Interaction Rate" }
       ]
     },
     {
@@ -196,9 +196,9 @@ const FeatureCarousel = () => {
       description: "Gamification option to engage users and boost interactions.",
       imageName: "sc8",
       metrics: [
-        { value: "8x", label: "Higher Engagement" },
-        { value: "75%", label: "Increased Participation" },
-        { value: "43%", label: "Better Conversion" }
+        { value: "65%", label: "Increase in Engagement Rate" },
+        { value: "20%", label: "Upliftment in D7 Retention" },
+        { value: "15%", label: "Boost in NPS Score" }
       ]
     },
     {
@@ -207,9 +207,9 @@ const FeatureCarousel = () => {
       description: "Ask users questions and engage them in interactive learning.",
       imageName: "sc9",
       metrics: [
-        { value: "4.5x", label: "Better Learning Outcome" },
-        { value: "68%", label: "Increased Knowledge Retention" },
-        { value: "39%", label: "Higher User Satisfaction" }
+        { value: "40%", label: "Increase in Engagement" },
+        { value: "50%", label: "Increase in Personalization" },
+        { value: "15%", label: "Increase in Session Length" }
       ]
     },
     {
@@ -218,9 +218,9 @@ const FeatureCarousel = () => {
       description: "Get user inputs systematically for improved product development.",
       imageName: "sc10",
       metrics: [
-        { value: "3.8x", label: "Better Data Collection" },
-        { value: "57%", label: "Increased Response Rate" },
-        { value: "41%", label: "Higher Completion Rate" }
+        { value: "5x", label: "More Survey Response" },
+        { value: "20%", label: "Upliftment in Engagement" },
+        { value: "33%", label: "More Actionable Insights" }
       ]
     },
     {
@@ -229,9 +229,9 @@ const FeatureCarousel = () => {
       description: "Measure services via feedback for continuous improvement.",
       imageName: "sc11",
       metrics: [
-        { value: "3.2x", label: "Better Service Insights" },
-        { value: "43%", label: "Increased Customer Loyalty" },
-        { value: "28%", label: "Higher Service Rating" }
+        { value: "30%", label: "Improvement in CSAT Score" },
+        { value: "20%", label: "Increase in NPS Score" },
+        { value: "15%", label: "Reduction in Churn Rate" }
       ]
     },
     {
@@ -240,9 +240,9 @@ const FeatureCarousel = () => {
       description: "Onboarding journey for users with helpful contextual information.",
       imageName: "sc12",
       metrics: [
-        { value: "2.7x", label: "Better Feature Adoption" },
-        { value: "49%", label: "Reduced Support Tickets" },
-        { value: "31%", label: "Higher User Proficiency" }
+        { value: "55%", label: "Increase in Activation Rate" },
+        { value: "40%", label: "Increase in Task Completion Rate" },
+        { value: "35%", label: "Reduction in Time to First User Value" }
       ]
     },
     {
@@ -251,9 +251,9 @@ const FeatureCarousel = () => {
       description: "Highlight new features with wrapper for better discoverability.",
       imageName: "sc13",
       metrics: [
-        { value: "4.2x", label: "Better Feature Discovery" },
-        { value: "56%", label: "Increased User Engagement" },
-        { value: "35%", label: "Higher Feature Usage" }
+        { value: "45%", label: "Increase in Feature Adoption Rate" },
+        { value: "40%", label: "Reduction in Time to First User Value" },
+        { value: "75%", label: "Increase in Onboarding Task Completion" }
       ]
     },
     {
@@ -262,12 +262,13 @@ const FeatureCarousel = () => {
       description: "Get user attention to specific features for enhanced focus.",
       imageName: "sc14",
       metrics: [
-        { value: "5.5x", label: "Better Feature Focus" },
-        { value: "65%", label: "Increased Core Feature Usage" },
-        { value: "38%", label: "Higher User Satisfaction" }
+        { value: "60%", label: "Increase in Feature Adoption" },
+        { value: "20%", label: "Upliftment in Conversion Rate" },
+        { value: "35%", label: "Reduction in Time to First User Value" }
       ]
     }
   ];
+
 
   // Update slides to show based on screen size
   useEffect(() => {
@@ -333,7 +334,7 @@ const FeatureCarousel = () => {
           {/* Navigation buttons */}
           <button
             onClick={prevSlide}
-            className="absolute z-50 left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 lg:-translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+            className="absolute z-20 left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 lg:-translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
             aria-label="Previous slide"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -342,7 +343,7 @@ const FeatureCarousel = () => {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute z-50 right-0 top-1/2 transform -translate-y-1/2 translate-x-4 lg:translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+            className="absolute z-20 right-0 top-1/2 transform -translate-y-1/2 translate-x-4 lg:translate-x-16 bg-[#FD5F03] text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
             aria-label="Next slide"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

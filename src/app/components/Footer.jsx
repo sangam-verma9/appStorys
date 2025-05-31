@@ -9,10 +9,14 @@ import { FaYoutube } from "react-icons/fa";
 import footer_img1 from "@/assets/footer_img1.png"
 import footer_img2 from "@/assets/footer_img2.png"
 import Link from 'next/link';
+import { Poppins } from "next/font/google";
 
 import store from "../store/store";
 import ContactModal from './ContactModal';
-
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 // sm: px - 14 md: px - 20 lg: px - 32 xl: px - 40 px - 10
 const Footer = () => {
@@ -30,8 +34,8 @@ const Footer = () => {
         <div className='w-[100%] h-[0.8px] bg-[#fcf1e4] relative my-4'></div>
         <div className='flex flex-col sm:flex-row justify-between sm:items-center my-4 py-2'>
           <div className='flex mb-5 sm:mb-0 justify-center sm:justify-normal items-center'>
-            <img src={logo.src} alt={`${logo}`} className="mr-2 w-[5%] " />
-            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-semibold text-[30px] leading-[110%] `}>
+            <img src={logo.src} alt={`${logo}`} className="mr-2 md:w-[5%] w-[10%] " />
+            <h1 className={`hover:cursor-pointer text-[#FD5F03] font-semibold text-[30px] ${poppins.className} leading-[110%] `}>
               AppStorys
             </h1>
           </div>
@@ -88,7 +92,7 @@ const Footer = () => {
                 <h3 className={` capitalize  text-[18px]`}>resources</h3>
                 <Link href="/blogs" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>blog</Link>
                 <Link href="/inspiration-gallery" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>inspiration gallery</Link>
-                <Link href="/appstorys-book" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>appStorys book</Link>
+                <Link href="/AppStoryseBook.pdf" className={` font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>AppStorys eBook</Link>
               </div>
             </div>
           </div>

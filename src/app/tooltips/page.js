@@ -51,12 +51,12 @@ export default function Tooltips() {
       <section className="w-full">
         <div className="mx-auto">
           <FeatureTicker
-            number1="3.2x"
-            number2="28%"
-            number3="42%"
-            heading1="More feature adoption "
-            heading2="Increase in task completion "
-            heading3="less user friction "
+            number1="55%"
+            number2="40%"
+            number3="35%"
+            heading1="Increase in activation rate"
+            heading2="Increase in task completion rate"
+            heading3="Reduction in time to fisrt user value"
           />
         </div>
       </section>
