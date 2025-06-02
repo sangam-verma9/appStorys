@@ -15,9 +15,8 @@ export const metadata = {
 };
 
 import Script from 'next/script';
-import InspirationGallery from './page';
 
-export default function InspirationGalleryPage() {
+export default function InspirationGalleryPage({ children }) {
     return (
         <>
             <Script
@@ -68,7 +67,7 @@ export default function InspirationGalleryPage() {
                     })
                 }}
             />
-            <InspirationGallery />
+            {children}
         </>
     );
 }

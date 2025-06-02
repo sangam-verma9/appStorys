@@ -42,8 +42,8 @@ const cardsData = [
         "main_content_heading": "Urban Company gathers feedback using CSAT",
         "main_content": "Urban Company, India’s leading home-services marketplace, has seamlessly embedded lightweight CSAT prompts into its app flow to collect feedback at the most relevant moments. Right after a service be it a massage, plumbing job, or home cleaning is marked complete, users are presented with a simple, emoji-based rating scale accompanied by an optional text box.This frictionless, in-app prompt appears before users exit the order screen, ensuring the experience is still fresh and feedback is detailed and meaningful. There’s no need to dig through emails or browse history tabs the feedback form is right where and when it matters.",
         "link": "/inspiration-gallery/urbanCompany",
-        "background_color": "#3C329D",
-        "text_color": "#ffffff"
+        "background_color": "#ffffff",
+        "text_color": "#000000"
     },
     {
         "name": "Unacademy",
