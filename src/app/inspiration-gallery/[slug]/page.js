@@ -346,7 +346,7 @@ export default async function InspirationDetail({ params }) {
                         ))}
                     </div>
                     <div className='w-full flex justify-center my-5'>
-                        <Link href={"/blogs"} className=' h-[40px] py-4 px-5 bg-[#FD5F03]  text-white rounded-xl flex items-center'>
+                        <Link href={"/inspiration-gallery"} className=' h-[40px] py-4 px-5 bg-[#FD5F03]  text-white rounded-xl flex items-center'>
                             View all <FaAngleRight className='ml-1' />
                         </Link>
                     </div>

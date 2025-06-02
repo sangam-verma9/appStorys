@@ -341,7 +341,7 @@ export default function AboutUs() {
       {/* Our Offices */}
       <div className='bg-white w-full flex justify-center pb-10'>
         <section className='flex justify-between items-start w-full max-w-[1400px] min-h-[60vh] relative overflow-hidden max-[1220px]:flex-col max-[1220px]:h-auto max-[1220px]:gap-y-[20px]' aria-labelledby="offices-heading">
-          <div className='w-[30%] max-[1381px]:w-[50%] flex flex-col min-[1220px]:pl-[117px] max-[1381px]:pl-[50px] justify-start items-start h-full pt-[75.64px] gap-y-[30.36px] z-[1000] max-[1220px]:w-full max-[1220px]:px-[25px]'>
+          <div className='w-[30%] max-[1381px]:w-[50%] flex flex-col min-[1220px]:pl-[117px] max-[1381px]:pl-[50px] justify-start items-start h-full pt-[75.64px] gap-y-[30.36px] z-[20] max-[1220px]:w-full max-[1220px]:px-[25px]'>
             <h2 id="offices-heading" className='text-[54px] font-semibold font-InstrumentSans text-[#000] leading-[127%] -tracking-[0.5px]'>Our Global Offices</h2>
             <p className='text-black text-[16px] leading-[130%]'>We are a global leader in app engagement and retention, with diverse teams delivering innovative solutions worldwide. Our expertise in SDK integration empowers app developers to unlock growth and enhance user experiences.</p>
           </div>
