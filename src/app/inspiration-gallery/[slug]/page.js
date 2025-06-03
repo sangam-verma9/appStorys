@@ -253,7 +253,18 @@ export default async function InspirationDetail({ params }) {
     const { slug } = await params;
 
     const card = cardsData.find(item => item.link.endsWith(slug));
-    const threerand = Array.from({ length: 3 }, () => Math.floor(Math.random() * 18));
+    function getRandomUniqueNumbers(count, min, max) {
+        const numbers = new Set();
+
+        while (numbers.size < count) {
+            const num = Math.floor(Math.random() * (max - min + 1)) + min;
+            numbers.add(num);
+        }
+
+        return Array.from(numbers);
+    }
+    const threerand = getRandomUniqueNumbers(3, 0, 18);
+    // const threerand = Array.from({ length: 3 }, () => Math.floor(Math.random() * 18));
     const filteredCards = [];
     threerand.forEach((ele) => {
         filteredCards.push(cardsData[ele]);
@@ -271,7 +282,7 @@ export default async function InspirationDetail({ params }) {
                         <h1 className="md:text-[50px] text-3xl font-bold md:mb-6 mb-4">{card.main_content_heading}</h1>
                         {card.main_content.map((ele, ind) => {
                             return (
-                                <p className="mb-4 md:text-[20px] text-[18px]">{card.main_content[ind]}</p>
+                                <p className="mb-4 md:text-[20px] text-[18px]" key={ind}>{card.main_content[ind]}</p>
                             )
                         })}
 
@@ -293,7 +304,7 @@ export default async function InspirationDetail({ params }) {
                     <h2 className="md:text-[50px] text-3xl font-bold mb-4 ">{card.why_this_works_heading}</h2>
                     {card.why_this_works_content.map((ele, ind) => {
                         return (
-                            <p className=' mb-4 md:text-[20px] text-[18px]'>{card.why_this_works_content[ind]}</p>
+                            <p className=' mb-4 md:text-[20px] text-[18px]' key={ind}>{card.why_this_works_content[ind]}</p>
                         )
                     })}
 
