@@ -253,7 +253,18 @@ export default async function InspirationDetail({ params }) {
     const { slug } = await params;
 
     const card = cardsData.find(item => item.link.endsWith(slug));
-    const threerand = Array.from({ length: 3 }, () => Math.floor(Math.random() * 18));
+    function getRandomUniqueNumbers(count, min, max) {
+        const numbers = new Set();
+
+        while (numbers.size < count) {
+            const num = Math.floor(Math.random() * (max - min + 1)) + min;
+            numbers.add(num);
+        }
+
+        return Array.from(numbers);
+    }
+    const threerand = getRandomUniqueNumbers(3, 0, 18);
+    // const threerand = Array.from({ length: 3 }, () => Math.floor(Math.random() * 18));
     const filteredCards = [];
     threerand.forEach((ele) => {
         filteredCards.push(cardsData[ele]);
