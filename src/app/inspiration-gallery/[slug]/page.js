@@ -334,38 +334,38 @@ export default async function InspirationDetail({ params }) {
                             <div
                                 key={index}
                                 className="rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-[485px] border border-white"
-                                style={{ backgroundColor: cardsData[index].background_color }}
+                                style={{ backgroundColor: cardsData[card].background_color }}
                             >
                                 <div className="flex items-center justify-between mb-6">
                                     <div className="flex items-center gap-3">
                                         <img
-                                            src={cardsData[index].logo}
-                                            alt={`${cardsData[index].name} logo`}
+                                            src={cardsData[card].logo}
+                                            alt={`${cardsData[card].name} logo`}
                                             className="w-auto max-w-[120px] h-auto rounded-lg object-contain"
                                         />
                                     </div>
 
                                     <div className="w-[100px] h-[200px] bg-gray-800 rounded-2xl p-1 flex-shrink-0 overflow-hidden ">
                                         <div className="w-full h-full bg-white rounded-xl flex items-center justify-center overflow-hidden">
-                                            <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={cardsData[index].video} autoPlay muted loop playsInline />
+                                            <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={cardsData[card].video} autoPlay muted loop playsInline />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className='h-[170px]'>
-                                    <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${cardsData[index].text_color}` }}>
-                                        {cardsData[index].main_content_heading}
+                                    <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${cardsData[card].text_color}` }}>
+                                        {cardsData[card].main_content_heading}
                                     </h5>
 
-                                    <p className={`text-sm mb-6 leading-relaxed `} style={{ color: `${cardsData[index].text_color}` }}>
-                                        {cardsData[index].main_content[0].length > 120
-                                            ? `${cardsData[index].main_content[0].substring(0, 120)}...`
-                                            : cardsData[index].main_content[0]}
+                                    <p className={`text-sm mb-6 leading-relaxed `} style={{ color: `${cardsData[card].text_color}` }}>
+                                        {cardsData[card].main_content[0].length > 120
+                                            ? `${cardsData[card].main_content[0].substring(0, 120)}...`
+                                            : cardsData[card].main_content[0]}
                                     </p>
 
                                 </div>
                                 <Link
-                                    href={cardsData[index].link}
+                                    href={cardsData[card].link}
                                     className={`inline-flex items-center gap-2 px-5 py-2 rounded-lg font-medium transition-all duration-200 text-black shadow border border-gray-400 bg-white`}
                                 >
                                     Read More
