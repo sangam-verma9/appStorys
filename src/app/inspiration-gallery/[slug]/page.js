@@ -282,7 +282,7 @@ export default async function InspirationDetail({ params }) {
                         <h1 className="md:text-[50px] text-3xl font-bold md:mb-6 mb-4">{card.main_content_heading}</h1>
                         {card.main_content.map((ele, ind) => {
                             return (
-                                <p className="mb-4 md:text-[20px] text-[18px]" key={ind}>{card.main_content[ind]}</p>
+                                <p className="mb-4 md:text-[20px] text-[18px]" >{card.main_content[ind]}</p>
                             )
                         })}
 
@@ -304,7 +304,7 @@ export default async function InspirationDetail({ params }) {
                     <h2 className="md:text-[50px] text-3xl font-bold mb-4 ">{card.why_this_works_heading}</h2>
                     {card.why_this_works_content.map((ele, ind) => {
                         return (
-                            <p className=' mb-4 md:text-[20px] text-[18px]' key={ind}>{card.why_this_works_content[ind]}</p>
+                            <p className=' mb-4 md:text-[20px] text-[18px]'>{card.why_this_works_content[ind]}</p>
                         )
                     })}
 
