@@ -17,7 +17,8 @@ const cardsData = [
         "main_content": ["Zomato, one of India’s leading food delivery platforms, has seamlessly integrated Instagram-style Stories into its app experience to boost user engagement and highlight key features. These stories are positioned prominently at the top of the homepage a prime visibility zone  where they immediately capture attention.", " Instead of relying on static banners or hidden menus, Zomato delivers dynamic, tappable cards that auto- advance, feel intuitive, and mimic the swipe - friendly behavior users are already accustomed to on social media platforms.This familiar format reduces friction, enabling users to effortlessly explore everything the app has to offer  from trending restaurants and seasonal specials to exclusive deals, loyalty benefits, and new product launches."],
         "link": "/inspiration-gallery/zomato",
         "background_color": "#FF3044",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations":[1,2,3]
     },
     {
         "name": "Zepto",
@@ -30,7 +31,8 @@ const cardsData = [
         "main_content": ["Zepto, India’s breakneck-fast grocery delivery app, relies on mobile-native bottom sheets to surface additional details without ever disrupting the user flow. Instead of forcing users to navigate to new screens or endure full-screen modals, Zepto elegantly slides up contextual panels from the bottom of the screen", "These sheets keep the main interface visible in the background, reinforcing spatial awareness and preserving the user’s place in the journey.Whether it’s selecting item variants, confirming substitutions, picking a delivery slot, or applying a discount code, bottom sheets keep all actions lightweight, intuitive, and thumb- friendly. ", "This approach enables one - handed usage, progressive disclosure of relevant options, and fluid gesture - based navigation all within a modern, swipeable design pattern that users instantly understand."],
         "link": "/inspiration-gallery/zepto",
         "background_color": "#3E0067",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [0, 2, 3]
     },
     {
         "name": "Urban Company",
@@ -43,7 +45,8 @@ const cardsData = [
         "main_content": ["Urban Company, India’s leading home-services marketplace, has seamlessly embedded lightweight CSAT prompts into its app flow to collect feedback at the most relevant moments. Right after a service be it a massage, plumbing job, or home cleaning is marked complete, users are presented with a simple, emoji-based rating scale accompanied by an optional text box.", " This frictionless, in-app prompt appears before users exit the order screen, ensuring the experience is still fresh and feedback is detailed and meaningful. There’s no need to dig through emails or browse history tabs the feedback form is right where and when it matters."],
         "link": "/inspiration-gallery/urbanCompany",
         "background_color": "#ffffff",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [1, 6, 3]
     },
     {
         "name": "Unacademy",
@@ -56,7 +59,8 @@ const cardsData = [
         "main_content": ["Unacademy, one of India’s most prominent online learning platforms, has thoughtfully embedded interactive tooltips into its onboarding journey to help new users navigate the app with ease. From the moment learners sign in, smart, contextual cues guide them through key features  like finding top educators, joining live classes, setting learning goals, or exploring structured courses  all without overwhelming the experience.", "Instead of using lengthy tutorials or static help pages, Unacademy breaks down guidance into short, digestible steps that appear just when needed. Tooltips appear as minimal, focused pop-ups  often with a single sentence and a clear CTA like “Try now” or “Swipe to continue.” This progressive, in-context approach gives users just the right amount of direction at each step, allowing them to explore with confidence."],
         "link": "/inspiration-gallery/unacademy",
         "background_color": "#FFFFFF",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [11, 12, 5]
     },
     {
         "name": "Uber",
@@ -69,7 +73,8 @@ const cardsData = [
         "main_content": ["Uber, the global ride-hailing giant, has seamlessly woven real-time CSAT prompts into the post-ride experience to continuously monitor quality and user sentiment. The moment a ride concludes, users are instantly prompted to rate their driver on a 1–5 star scale with optional tags like “Clean Car” or “Safe Driving”  and a text box to leave detailed feedback if desired. It’s quick, familiar, and requires almost no thought, making it effortless for riders to share their experience while it’s still fresh.", "Instead of relying on follow-up emails or infrequent surveys, Uber keeps feedback capture tightly integrated within the ride flow itself. The prompt appears just as the ride ends, when riders are still in the app confirming the fare or booking their next trip. This timing ensures high response rates, accurate insights, and actionable signals for Uber’s platform to continuously improve service quality, reward top drivers, and address issues in real time."],
         "link": "/inspiration-gallery/uber",
         "background_color": "#0A0A0A",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [3, 6, 9]
     },
     {
         "name": "Swiggy",
@@ -82,7 +87,8 @@ const cardsData = [
         "main_content": ["Swiggy, one of India’s leading food and grocery delivery platforms, uses floating tips to offer seamless, real-time guidance throughout the app. These subtle, animated cues often anchored near new or complex features  help users discover options like group ordering, scheduled delivery, or Swiggy One benefits without needing to search or dig through FAQs. Floating tips appear just when they’re needed, enhancing exploration without interrupting flow.", "Instead of relying on heavy onboarding screens or static tooltips buried in settings, Swiggy deploys floating tips contextually  for example, nudging a user to apply a coupon, explore a new tab, or activate tracking on a live order. These micro-guides float lightly over the UI, using simple language and minimal design, so users can take action with a single tap or swipe. The experience is highly visual and designed for mobile-native behavior, where attention spans are short and time is limited."],
         "link": "/inspiration-gallery/swiggy1",
         "background_color": "#FC5A20",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [8, 9, 13]
     },
     {
         "name": "Zomato",
@@ -95,7 +101,8 @@ const cardsData = [
         "main_content": "Zomato, India’s premier food delivery platform, leverages modals, those brief, focused overlays  to streamline user journeys and surface high-priority content at just the right moment. Whether it's nudging users toward a limited-time offer, highlighting a new feature, or prompting action like adding items to cart, Zomato uses modals as contextual touchpoints that feel helpful, not intrusive. These pop-ups are visually clean, mobile-optimized, and behaviorally intelligent. They appear when user intent is clearest  right after a search, during checkout, or on first app open  and they often include simple visuals, quick CTAs, and a clear path forward. Zomato’s modals don’t interrupt; they inform, guide, and convert.",
         "link": "/inspiration-gallery/zomato",
         "background_color": "#FF3044",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [15, 12, 16]
     },
     {
         "name": "Zepto",
@@ -108,7 +115,8 @@ const cardsData = [
         "main_content": ["Zomato, India’s premier food delivery platform, leverages modals, those brief, focused overlays  to streamline user journeys and surface high-priority content at just the right moment. Whether it's nudging users toward a limited-time offer, highlighting a new feature, or prompting action like adding items to cart, Zomato uses modals as contextual touchpoints that feel helpful, not intrusive.", "These pop-ups are visually clean, mobile-optimized, and behaviorally intelligent. They appear when user intent is clearest  right after a search, during checkout, or on first app open  and they often include simple visuals, quick CTAs, and a clear path forward. Zomato’s modals don’t interrupt; they inform, guide, and convert."],
         "link": "/inspiration-gallery/zepto",
         "background_color": "#3E0067",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [11, 17, 18]
     },
     {
         "name": "Spotify",
@@ -121,7 +129,8 @@ const cardsData = [
         "main_content": ["Spotify, the world’s most popular music streaming platform, uses sleek in-app modals to keep users informed about new features, personalized playlists, and product changes without breaking the flow of listening. Whether it’s highlighting a fresh Spotify Wrapped experience, introducing a new AI DJ, or nudging users to explore collaborative playlists, these modals are strategically placed to appear between interactions never mid-song.", "Instead of cluttering the homepage with banners or relying solely on email updates, Spotify delivers visually clean, mobile-first modals that are easy to absorb and dismiss. Typically appearing as overlays during app launches or post-interaction pauses, they use bold visuals, brief copy, and a single, clear call-to-action like “Try Now” or “Dismiss.” This keeps the user experience fluid while ensuring that important updates don’t get lost in menus or overlooked in app stores."],
         "link": "/inspiration-gallery/spotify",
         "background_color": "#1ED760",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [6, 4, 1]
     },
     {
         "name": "Swiggy",
@@ -134,7 +143,8 @@ const cardsData = [
         "main_content": ["Swiggy, India’s iconic orange-branded food-delivery app, bakes a lightweight CSAT check into the very last step of every order. The moment a delivery partner marks an order “delivered,” a compact sheet slides up on the live-tracking screen with a five-point smiley scale and a few quick-select tags like “Packaging,” “Temperature,” or “Delivery Time.” A single tap logs the rider restaurant combo’s score, a second tap lets customers add a short note or photo if something needs attention.", " Because the prompt appears while the customer is still looking at the order details checking bill totals or confirming cutlery, the experience feels like a natural part of the flow, not an extra chore. Swiggy pipes these instant ratings to restaurant dashboards, delivery-partner scorecards, and its own quality control engine closing the feedback loop in real time and allowing the platform to reward stellar service or step in when things go wrong."],
         "link": "/inspiration-gallery/swiggy2",
         "background_color": "#FC5A20",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [3, 5, 14]
     },
     {
         "name": "Porter",
@@ -147,7 +157,8 @@ const cardsData = [
         "main_content": ["Porter, India’s go-to logistics platform for on-demand mini-truck and two-wheeler deliveries, has embedded lightning-quick CSAT surveys at the very end of every trip. The moment a package is marked “delivered,” a slim survey sheet slides up in-app, showing a familiar five-emoji scale plus quick-select tags like “Driver Courtesy,” “Timeliness,” or “Package Handling.” ", " One tap locks in the score  a second tap lets shippers add a short note or photo if something needs attention. Because the ask appears while the customer is still viewing fare details or tracking proofs, feedback feels like a natural last step never an extra chore. Porter pipes each rating straight to driver dashboards, city-level ops teams, and its real-time quality engine, so stellar partners get rewarded and issues are addressed within minutes, not days."],
         "link": "/inspiration-gallery/porter",
         "background_color": "#FFFFFF",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [2, 6, 8]
     },
     {
         "name": "Paytm",
@@ -160,7 +171,8 @@ const cardsData = [
         "main_content": ["Paytm, one of India’s leading digital payment platforms, has creatively integrated Scratchcards into its app experience to boost user engagement and reward loyal customers. These Scratchcards appear prominently after transactions in a prime visibility zone where they immediately catch the user’s eye.", " Instead of relying on traditional cashback or static offers, Paytm delivers interactive, tappable Scratchcards that feel playful and rewarding. This gamified format taps into users’ curiosity and excitement, encouraging them to engage actively rather than passively scrolling through deals or wallet balances."],
         "link": "/inspiration-gallery/paytm",
         "background_color": "#E9F7FD",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [12, 14, 17]
     },
     {
         "name": "Mudrex",
@@ -173,7 +185,8 @@ const cardsData = [
         "main_content": ["Mudrex, a leading platform for crypto investment, has effectively integrated Modals into its user experience to drive conversions and spotlight core features and initiatives. These Modals appear strategically during the user journey in high-impact zones, capturing attention at crucial decision points.", " Rather than relying on static banners or scattered notifications, Mudrex employs dynamic, focused Modals that encourage users to take meaningful actions — from signing up for new strategies to exploring exclusive investment opportunities. One standout example shown in the video is the Mudrex Premier League, where users participate in a competitive battle between Delhi and Mumbai. This engaging campaign is seamlessly promoted through Modals, making the experience feel interactive and compelling. The targeted approach ensures users are guided through complex decisions with clarity and purpose, all while enhancing engagement in a fun and timely way"],
         "link": "/inspiration-gallery/mudrex",
         "background_color": "#F1E2FB",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [3, 6, 8]
     },
     {
         "name": "Furlenco",
@@ -186,7 +199,8 @@ const cardsData = [
         "main_content": ["Furlenco, a leading furniture rental platform, has seamlessly integrated In-App Widgets into its app experience to boost user engagement and highlight personalized offerings. These widgets are positioned strategically across the app in prime visibility zones where they immediately capture attention.", " Instead of relying on generic menus or static product listings, Furlenco delivers dynamic, interactive widgets that update in real-time, feel intuitive, and mirror the personalized feeds users are familiar with from other apps. This familiar format reduces friction, enabling users to effortlessly discover tailored furniture suggestions, exclusive deals, and flexible rental "],
         "link": "/inspiration-gallery/furlenco",
         "background_color": "#009BAD",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [11, 9, 8]
     },
     {
         "name": "coinDCX",
@@ -199,7 +213,8 @@ const cardsData = [
         "main_content": ["CoinDCX, one of India’s leading crypto-investment platforms, has seamlessly woven bite-sized Tooltips into its app experience to guide users and demystify complex concepts. These smart hints pop up context-fully beside buttons, charts, and order forms prime visibility zones where they immediately catch the eye when a user needs help most.", " Instead of relying on long FAQs or hidden help centers, CoinDCX delivers dynamic, tappable bubbles that surface plain-language explanations, key stats, and quick links to deeper learning. This on-the-spot guidance reduces friction, empowering users to explore everything the app offers from setting stop-loss orders and understanding funding rates to comparing staking yields and tracking tax summaries."],
         "link": "/inspiration-gallery/coinDCX",
         "background_color": "#ffffff",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [14, 16, 17]
     },
     {
         "name": "Blinkit",
@@ -212,7 +227,8 @@ const cardsData = [
         "main_content": ["Blinkit, one of India’s fastest-growing quick-commerce platforms, has seamlessly integrated vibrant Banners into its app experience to boost user engagement and surface high-value content. These banners are positioned prominently on the homepage  a prime visibility zone  where they instantly draw attention.", " Instead of depending on passive product listings or static menus, Blinkit delivers bold, tappable banners that spotlight trending items, time-sensitive deals, and seasonal essentials. The format is visually impactful and feels intuitive, giving users a clear and immediate path to explore new offers and top categories."],
         "link": "/inspiration-gallery/blinkit",
         "background_color": "#F8CB46",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "more_inspirations": [9, 7, 5]
     },
     {
         "name": "Airtel",
@@ -225,7 +241,8 @@ const cardsData = [
         "main_content": ["Airtel, one of India’s largest telecom providers, has seamlessly integrated Tooltips into its app experience to enhance user guidance and simplify complex features. These helpful hints are placed contextually beside key actions  in prime visibility zones where they instantly support user decisions.", " Instead of relying on external help centers or buried FAQs, Airtel delivers real-time, tappable Tooltips that surface concise, relevant information exactly when and where users need it. This guided approach reduces confusion, making it easier to navigate everything from bill payments and plan upgrades to data usage insights and service requests."],
         "link": "/inspiration-gallery/airtel",
         "background_color": "#E90000",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [15, 12, 13]
     },
     {
         "name": "Zyadashop",
@@ -238,7 +255,8 @@ const cardsData = [
         "main_content": ["Zyadashop, a fast-growing e-commerce platform, has seamlessly integrated Coachmarks into its app experience to onboard users and highlight key features. These interactive guides appear contextually across the interface in prime visibility zones  where they immediately capture attention.", " Instead of relying on lengthy tutorials or static onboarding screens, Zyadashop delivers dynamic, step- by - step Coachmarks that point out important elements in real time.This approach feels intuitive and mirrors the guidance style users are familiar with from modern productivity and design tools.It reduces friction, enabling users to effortlessly navigate the app  from discovering trending collections and applying coupons to tracking orders and managing returns."],
         "link": "/inspiration-gallery/zyadashop",
         "background_color": "#3C329D",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "more_inspirations": [7, 12, 14]
     }
 ];
 
@@ -253,22 +271,22 @@ export default async function InspirationDetail({ params }) {
     const { slug } = await params;
 
     const card = cardsData.find(item => item.link.endsWith(slug));
-    function getRandomUniqueNumbers(count, min, max) {
-        const numbers = new Set();
+    // function getRandomUniqueNumbers(count, min, max) {
+    //     const numbers = new Set();
 
-        while (numbers.size < count) {
-            const num = Math.floor(Math.random() * (max - min + 1)) + min;
-            numbers.add(num);
-        }
+    //     while (numbers.size < count) {
+    //         const num = Math.floor(Math.random() * (max - min + 1)) + min;
+    //         numbers.add(num);
+    //     }
 
-        return Array.from(numbers);
-    }
-    const threerand = getRandomUniqueNumbers(3, 0, 18);
+    //     return Array.from(numbers);
+    // }
+    // const threerand = getRandomUniqueNumbers(3, 0, 18);
     // const threerand = Array.from({ length: 3 }, () => Math.floor(Math.random() * 18));
-    const filteredCards = [];
-    threerand.forEach((ele) => {
-        filteredCards.push(cardsData[ele]);
-    })
+    // const filteredCards = [];
+    // threerand.forEach((ele) => {
+    //     filteredCards.push(cardsData[ele]);
+    // })
     if (!card) return notFound();
 
     return (
@@ -312,42 +330,42 @@ export default async function InspirationDetail({ params }) {
                 <div className='bg-[#FFF7F3] rounded-lg p-2'>
                     <h2 className='text-center text-[#FD5F03] text-4xl font-semibold mb-[30px] md:mb-0 p-5'>Browse more inspirations</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
-                        {filteredCards.map((card, index) => (
+                        {card.more_inspirations.map((card, index) => (
                             <div
                                 key={index}
                                 className="rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-[485px] border border-white"
-                                style={{ backgroundColor: card.background_color }}
+                                style={{ backgroundColor: cardsData[index].background_color }}
                             >
                                 <div className="flex items-center justify-between mb-6">
                                     <div className="flex items-center gap-3">
                                         <img
-                                            src={card.logo}
-                                            alt={`${card.name} logo`}
+                                            src={cardsData[index].logo}
+                                            alt={`${cardsData[index].name} logo`}
                                             className="w-auto max-w-[120px] h-auto rounded-lg object-contain"
                                         />
                                     </div>
 
                                     <div className="w-[100px] h-[200px] bg-gray-800 rounded-2xl p-1 flex-shrink-0 overflow-hidden ">
                                         <div className="w-full h-full bg-white rounded-xl flex items-center justify-center overflow-hidden">
-                                            <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={card.video} autoPlay muted loop playsInline />
+                                            <video className={`text-xl font-semibold mb-4 rounded-2xl}`} src={cardsData[index].video} autoPlay muted loop playsInline />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className='h-[170px]'>
-                                    <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${card.text_color}` }}>
-                                        {card.main_content_heading}
+                                    <h5 className={`text-lg font-medium mb-2 `} style={{ color: `${cardsData[index].text_color}` }}>
+                                        {cardsData[index].main_content_heading}
                                     </h5>
 
-                                    <p className={`text-sm mb-6 leading-relaxed `} style={{ color: `${card.text_color}` }}>
-                                        {card.main_content[0].length > 120
-                                            ? `${card.main_content[0].substring(0, 120)}...`
-                                            : card.main_content[0]}
+                                    <p className={`text-sm mb-6 leading-relaxed `} style={{ color: `${cardsData[index].text_color}` }}>
+                                        {cardsData[index].main_content[0].length > 120
+                                            ? `${cardsData[index].main_content[0].substring(0, 120)}...`
+                                            : cardsData[index].main_content[0]}
                                     </p>
 
                                 </div>
                                 <Link
-                                    href={card.link}
+                                    href={cardsData[index].link}
                                     className={`inline-flex items-center gap-2 px-5 py-2 rounded-lg font-medium transition-all duration-200 text-black shadow border border-gray-400 bg-white`}
                                 >
                                     Read More
