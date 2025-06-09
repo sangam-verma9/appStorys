@@ -35,7 +35,7 @@ const cardsData = [
     {
         "name": "Urban Company",
         "tags": ["Feedback"],
-        "video": "/inspiration/videos/Uber Using CSAT.mp4",
+        "video": "/inspiration/videos/Urban Company using CSAT.mp4",
         "logo": "/inspiration/logos/urbancompany_logo.png",
         "why_this_works_heading": "Why It Feels Effortless",
         "why_this_works_content": "The CSAT prompt is perfectly timed to capture emotions at their peak right after the service concludes leading to more accurate and relevant responses. The emoji-based scale mirrors familiar social gestures, requiring almost no cognitive effort to engage with. Because it's built into the flow, users can rate their experience in under five seconds without navigating away from their service summary. Each rating is immediately routed to both the professional and Urban Company’s internal quality team, turning quick taps into real-time action. Customers see their input reflected in pro ratings and future service standards, reinforcing a sense of accountability and care. By keeping feedback native, instant, and low-effort, Urban Company transforms a chore into a moment of meaningful connection—one that builds trust without interrupting the user journey",

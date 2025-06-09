@@ -126,7 +126,7 @@ const Footer = () => {
                 <Link href="/security" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>Security</Link>
                 <Link href="/privacypolicy" className={` font-extralight  text-[#2b2a2a] hover:text-[#000000] `}>Terms of Service</Link>
                 <Link href="/privacypolicy" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>privacy Policy</Link>
-                <Link href="/privacypolicy" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>refund policy</Link>
+                {/* <Link href="/privacypolicy" className={` font-extralight capitalize text-[#2b2a2a] hover:text-[#000000] `}>refund policy</Link> */}
               </div>
             </div>
           </div>
